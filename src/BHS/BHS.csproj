@@ -1,0 +1,155 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{93B10386-19F1-4F78-8B4E-E7EBBC95E516}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BHS</RootNamespace>
+    <AssemblyName>BHS</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ApplicationIcon>PterisGlobal.ico</ApplicationIcon>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Debug\BHS.XML</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="log4net, Version=1.2.10.0, Culture=neutral, PublicKeyToken=1b44e1d426115821, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="PALS, Version=3.0.0.28885, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Lib\PALS.dll</HintPath>
+    </Reference>
+    <Reference Include="PALS.Configure, Version=3.0.0.39145, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\PALS.Configure.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Common.cs" />
+    <Compile Include="Engine\TCPClientChains\Application\Initializer.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Engine\TCPClientChains\Configure\GlobalContext.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Engine\TCPClientChains\Configure\XmlSettingLoader.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Engine\TCPClientChains\DataPersistor\Database\Persistor.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Engine\TCPClientChains\DataPersistor\Database\PersistorParameters.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Engine\TCPClientChains\Messages\Handlers\P1500.cs" />
+    <Compile Include="Engine\TCPClientChains\Messages\Handlers\AbstractMessageHandler.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Engine\TCPClientChains\Messages\Handlers\BMAM.cs" />
+    <Compile Include="Engine\TCPClientChains\Messages\Handlers\BSDI.cs" />
+    <Compile Include="Engine\TCPClientChains\Messages\Handlers\DLPS.cs" />
+    <Compile Include="Engine\TCPClientChains\Messages\Handlers\IRD.cs" />
+    <Compile Include="Engine\TCPClientChains\Messages\Handlers\TPTI.cs" />
+    <Compile Include="Engine\TCPClientChains\Messages\Handlers\FPTI.cs" />
+    <Compile Include="Engine\TCPClientChains\Messages\Handlers\FBTI.cs" />
+    <Compile Include="Engine\TCPClientChains\Messages\Handlers\CRAI.cs" />
+    <Compile Include="Engine\TCPClientChains\Messages\Handlers\PV1K.cs" />
+    <Compile Include="Engine\TCPClientChains\Messages\Handlers\MER.cs" />
+    <Compile Include="Engine\TCPClientChains\Messages\Handlers\ITI.cs" />
+    <Compile Include="Engine\TCPClientChains\Messages\Handlers\ILT.cs" />
+    <Compile Include="Engine\TCPClientChains\Messages\Handlers\IPR.cs" />
+    <Compile Include="Engine\TCPClientChains\Messages\Handlers\ISE.cs" />
+    <Compile Include="Engine\TCPClientChains\Messages\Handlers\ISC.cs" />
+    <Compile Include="Engine\TCPClientChains\Messages\Handlers\ICR.cs" />
+    <Compile Include="Engine\TCPClientChains\Messages\Handlers\GID.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Engine\TCPClientChains\Messages\Handlers\GRNF.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Engine\TCPClientChains\Messages\Handlers\IncomingMessageInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Engine\TCPClientChains\Messages\Handlers\MessageHandler.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Engine\TCPClientChains\Messages\Handlers\MessageHandlerParameters.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Engine\TCPClientChains\Messages\Handlers\AFAI.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Engine\TCPClientChains\Messages\Handlers\SessionForwarder.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MessageSendRequestEventArgs.cs" />
+    <Compile Include="Gateway\TCPClientTCPClientChains\Application\Initializer.cs" />
+    <Compile Include="Gateway\TCPClientTCPClientChains\Messages\Handlers\GW2InternalSessionForwarder.cs" />
+    <Compile Include="Gateway\TCPClientTCPClientChains\Messages\Handlers\GW2ExternalSessionForwarder.cs" />
+    <Compile Include="Gateway\TCPClientTCPClientChains\Messages\Handlers\MessageHandler.cs" />
+    <Compile Include="Gateway\TCPClientTCPClientChains\Configure\GlobalContext.cs" />
+    <Compile Include="Gateway\TCPClientTCPClientChains\Configure\XmlSettingLoader.cs" />
+    <Compile Include="Gateway\TCPClientTCPClientChains\Messages\Handlers\MessageHandlerParameters.cs" />
+    <Compile Include="MessageEventArgs.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Utilities.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="BHS.cd" />
+    <None Include="Engine\TCPClientChains\Engine Designs_TCPClientChain.pdf" />
+    <None Include="Gateway\TCPClientTCPClientChains\Gateway Designs_TCPClientTCPClientChain.pdf" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="PterisGlobal.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Gateway\TCPServerTCPClientChains\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

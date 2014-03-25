@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<config>
+  <configSet name="Telegrams">
+    <!--You can enter any other messages in this block-->
+    <!--Specical Chars Example: AB&lt;31&gt;&lt;32&gt;And&amp;-->
+<!--000500861240M1        M1-05               011234567837831234560000000000ATR1<00><00><00><00><00><00><03><A3>01-->
+    <telegram>EIP RegisterSession Reply</telegram>
+    <telegram>6500 0400 000a0215 00000000 53414332504c4331 00000000 0100 0000</telegram>
+    <telegram>009000120000</telegram>
+    <telegram>000200200001SAC2PLC1</telegram>
+    <telegram>000200200002SAC2PLC2</telegram>
+    <telegram>000300641234SS1       SS1-01              01234567890000000000NB</telegram>
+    <telegram>000300641234SS1       SS1-01              01234567890000000000SB</telegram>
+    <telegram>000400741234SS1       SS1-03              01234567890000000000X-RAY1    1A</telegram>
+    <telegram>000400741235SS1       SS1-03              98765432109897969594X-RAY1    3A</telegram>
+    <telegram>000400741236SS1       SS1-03              12323434567879707172X-RAY1    3R</telegram>
+    <telegram>000400741237SS1       SS1-03              11223344551234123455X-RAY1    1U</telegram>
+    <telegram>000400741238SS1       SS1-03              13131313139988776655X-RAY1    2T</telegram>
+    <telegram>000400741239SS1       SS1-03              14253647589911335577X-RAY1    2N</telegram>
+    <telegram>000500861234M1        M1-05               012345678901234502340000000000ATR10000000300</telegram>
+    <telegram>000500861234M1        M1-05               012345678901234502340000000000ATR10000000200</telegram>
+    <telegram>000700841234M1        M1-07               OB1-C               0123456789012345023401</telegram>
+    <telegram>000800841234SS1       SS1-20              SS1C-01             0123456789012345023400</telegram>
+    <telegram>000900621234SS1       SS1-07              01234567890123450234</telegram>
+    <telegram>001000801234SS1       SS1-02              0123456789000000000020081231-230559078</telegram>
+    <telegram>001000801272SS1       SS1-02              2131415161827364509120060101-000000000</telegram>
+    <telegram>001601021277ME        ME-13               05111111110123456789                                      01</telegram>
+    <telegram>001601021277ME        ME-13               02111111110000000000SQ 123                                02</telegram>
+    <telegram>001601021277ME        ME-13               02111111110000000000                  OB1-C               03</telegram>
+    <telegram>001601021277ME        ME-13               02111111110000000000                                      04</telegram>
+    <telegram>001601021277ME        ME-13               02111111110000000000                                      05</telegram>
+    <telegram>00180044123401234567890000000000SF1       00</telegram>
+		<telegram>00230046123401234567890123456789XRay-SS1  0001</telegram>
+		<telegram>00230058123401234567890123456789XRay-SS1  00<01><AB><AB><AB><AB><AB><AB><AB><AB><AB><AB><AB><AB><00></telegram>
+		<telegram>00230058123401234567890123456789XRay-SS1  00<96><00><FF><FF><FF><FF><FF><FF><FF><FF><FF><FF><FF><FF></telegram>
+		<telegram>00240062123401234567890123456789BSD1      20090915-12195908800</telegram>
+    <telegram>009900121278</telegram>
+    <telegram>009900121279</telegram>
+  </configSet>
+</config>

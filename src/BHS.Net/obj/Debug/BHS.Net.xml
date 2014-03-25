@@ -1,0 +1,319 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+BHS.Net
+</name>
+</assembly>
+<members>
+<member name="P:BHS.Net.ServiceMonitor.Configure.GlobalContext.Company">
+	<summary>
+  Company name
+  </summary>
+</member><member name="P:BHS.Net.ServiceMonitor.Configure.GlobalContext.Department">
+	<summary>
+  Department name
+  </summary>
+</member><member name="P:BHS.Net.ServiceMonitor.Configure.GlobalContext.Author">
+	<summary>
+  Author name
+  </summary>
+</member><member name="P:BHS.Net.ServiceMonitor.Configure.GlobalContext.AppName">
+	<summary>
+  AppName name
+  </summary>
+</member><member name="P:BHS.Net.ServiceMonitor.Configure.GlobalContext.AppStartedTime">
+	<summary>
+  AppName name
+  </summary>
+</member><member name="M:BHS.Net.ServiceMonitor.Net.Handlers.ServerMsgForwarder.Send(PALS.Telegrams.Telegram@)">
+	<para>Outgoing message which is passed to MessageCollector.Send() method will
+ be forwarded down to the communication channel that was specified in the 
+ ChannelName property of the message. 
+ 
+ If there is not any ChannelName was given to this property, then the message
+ will be sent to all opened channels whose ChannelName was in the class
+ internal Opened channel list.</para>
+</member><member name="T:BHS.Net.ServiceMonitor.Net.Handlers.ServerMsgForwarder">
+ -----------------------------------------------------------------------------
+ Project	 : DBT2_BHS
+ Class	 : ServiceMonitor.Net.Handlers.ServerMsgForwarder
+ 
+ -----------------------------------------------------------------------------
+ <summary>
+ Intermedia class between its top layer business data handler class 
+ (DBT2_BHS.SortEngine.Application.MessageHandler) and its bottom layer network
+ communication protocol chain classes. This class itself is the most top
+ class in the protocol chain classes. It receives the incoming message from 
+ its bottom chain class by its MessageReceived() method. And then forwards the 
+ received incoming message to MessageHandler class by event firing 
+ (OnReceived event). 
+ </summary>
+	<remarks>
+	</remarks>
+	<history>
+ 	[xujian]	12/19/2005	Created
+ </history>
+ -----------------------------------------------------------------------------
+
+</member><member name="P:BHS.Net.ServiceMonitor.Application.MessageHandler.ServerForwarder">
+ -----------------------------------------------------------------------------
+ <summary>
+ The reference to the instant of DBT2_BHS.ServiceMonitor.Net.Handlers.ServerMsgForwarder
+ class. 
+ 
+ This class property was assigned with the actual value by class constructor. 
+ </summary>
+	<value></value>
+	<remarks>
+	</remarks>
+	<history>
+ 	[xujian]	12/19/2005	Created
+ </history>
+ -----------------------------------------------------------------------------
+
+</member><member name="M:BHS.Net.ServiceMonitor.Application.MessageHandler.IncomingMessageHandling(PALS.Telegrams.Common.MessageAndSource@)">
+	<para>According to interface protocol design (ItemTracking protocol and 
+ TCPServer2Client protocol), the ItemTracking message will only come from the
+ SAC2PLC-GW service to PLC interfaces; the BagEvent (BEV) message will only come 
+ from the SAC2PLC-GW service to SortEngent service interface; the Running 
+ Status Request (SRQ) and Reply (SRP) message will only come from the 
+ SAC2PLC-GW service to BHSConsole GUI application interface.</para>
+</member><member name="T:BHS.Net.ServiceMonitor.Application.MessageHandler">
+ -----------------------------------------------------------------------------
+ Project	 : BHS
+ Class	 : ServiceMonitor.Application.MessageHandler
+ 
+ -----------------------------------------------------------------------------
+ <summary>
+		<para>All received messages will be buffered into class internal incoming
+ queue before data handling process is taken. Only one message queue was 
+ implemented for all incoming messages that are received from both
+ MessageCollector and MessageForwarder classes.</para>
+		<para>There is no outgoing message queue was implemented in this layer class.
+ It because all acknowledge required outgoing messages will be buffered by
+ bottom ACK class. Such message won't be lost in case of the sending process
+ failure or it is not acknowledged. But for those acknowledge unrequired 
+ message, they are not buffered in any layer. Such message will be sent and 
+ forget. Hence, if the connection is broken at the time of Send() method
+ is invoked, this acknowledge unrequired message will be lost. Hence, all
+ critical messages should be defined as the acknowledge required message in 
+ the interface protocol design.</para>
+		<para>According to interface protocol design (ItemTracking protocol and 
+ TCPServer2Client protocol), the ItemTracking message will only come from the
+ SAC2PLC-GW service to PLC interfaces; the BagEvent (BEV) message will only come 
+ from the SAC2PLC-GW service to SortEngent service interface; the Running 
+ Status Request (SRQ) and Reply (SRP) message will only come from the 
+ SAC2PLC-GW service to BHSConsole GUI application interface.</para>
+		<para>All incoming ItemTracking protocol messages, which are received from 
+ remote PLC via TCPClient channel, will be encoded into BagEvent message and 
+ sent to SortEngine via TCPServer channel.</para>
+		<para>All incoming BagEvent protocol messages, which are received from 
+ SortEngine via TCPServer channel, will be decoded. If the decoded data is 
+ the ItemTracking protocol message, then the decoded data will be sent to
+ remote PLC via TCPClient channel.</para>
+		<para>If the received message is the Running Status Request (SRQ) message, then
+ the system classes internal status will be collected by this class and 
+ encapsulated into Running Status Reply (SRP) message and sent to remote 
+ requester. According to desing, the SRQ and SRP messages will be received 
+ and sent only via TCPServer channel to remote BHSConsole application, not via
+ TCPClient channel to remote PLCs.</para>
+		<para>One DataHandlingThread is implemented in the class to handle all 
+ received messages that were buffered in the incoming message queue.</para>
+		<para>In order to use TCPClient class, the follow settings has to be defined
+ in the XML configuration file. They are:</para>
+		<para><![CDATA[
+	    <configSet name="Telegram_Formats">
+         <!--The "" or "?" shall be used if the value of attributes is not constant.-->
+         <!--The value of offset and length attributes is number of bytes -->
+         <!--The "acknowledge" indicates whether this message is the acknowledgement required message -->
+         <!--The "sequence" indicates whether this sequence field need to be assigned the new value before sent out -->
+         <!--The "alias" attribute of "telegram" node is constant value for all projects-->
+         <!--The "name" attribute of "field" node is constant value for all projects-->
+         <telegramSet name="Application_Telegrams">
+             <telegram alias="SRQ" name="Status_Request_Message" sequence="True" acknowledge="False">
+	                <field name="Type" offset="0" length="4" default="49,48,48,49"/>
+	                <field name="Length" offset="4" length="4" default="?"/>
+	                <field name="Sequence" offset="8" length="4" default="?"/>
+	                <field name="Class" offset="12" length="?" default="?"/>
+             </telegram>		
+             <telegram alias="SRP" name="Status_Reply_Message" sequence="False" acknowledge="False">
+       	        <field name="Type" offset="0" length="4" default="49,48,48,50"/>
+       	        <field name="Length" offset="4" length="4" default="?"/>
+       	        <field name="Sequence" offset="8" length="4" default="?"/>
+       	        <field name="Status" offset="12" length="?" default="?"/>
+             </telegram>		
+ 			<telegram alias="STR" name="Service_Start_Command_Message" sequence="True" acknowledge="False">
+ 				<field name="Type" offset="0" length="4" default="48,49,48,52"/>
+ 				<field name="Length" offset="4" length="4" default="?"/>
+ 				<field name="Sequence" offset="8" length="4" default="?"/>
+ 				<field name="Services" offset="12" length="?" default="?"/>
+ 			</telegram>		
+ 			<telegram alias="STO" name="Service_Stop_Command_Message" sequence="True" acknowledge="False">
+ 				<field name="Type" offset="0" length="4" default="48,49,48,53"/>
+ 				<field name="Length" offset="4" length="4" default="?"/>
+ 				<field name="Sequence" offset="8" length="4" default="?"/>
+ 				<field name="Services" offset="12" length="?" default="?"/>
+ 			</telegram>		
+	        </telegramSet>	
+     </configSet>	
+ ]]></para>
+	</summary>
+	<remarks>
+	</remarks>
+	<history>
+ 	[xujian]	12/5/2005	Created
+ </history>
+ -----------------------------------------------------------------------------
+
+</member><member name="P:BHS.Net.ServiceMonitor.Application.Initializer.PerfMonitor">
+ -----------------------------------------------------------------------------
+ <summary>
+ Class property to return the ClassStatus object of current class.
+ </summary>
+	<value></value>
+	<remarks>
+	</remarks>
+	<history>
+ 	[xujian]	11/2/2005	Created
+ </history>
+ -----------------------------------------------------------------------------
+
+</member><member name="P:BHS.Net.ServiceMonitor.Application.Initializer.PerfMonitorList">
+ -----------------------------------------------------------------------------
+ <summary>
+ Class property to return the ArrayList object that contains the ClassStatus 
+ objects of current class and all of its instance of sub classes.
+ </summary>
+	<returns></returns>
+	<remarks>
+	</remarks>
+	<history>
+ 	[xujian]	11/2/2005	Created
+ </history>
+ -----------------------------------------------------------------------------
+
+</member><member name="M:BHS.Net.ServiceMonitor.Application.Initializer.OnReloadSettingCompleted">
+	<summary>
+ Event handler of ReloadSettingCompleted event fired by IConfigurationLoader interface 
+ implemented class method LoadSettingFromConfigFile() upon the reloading setting from
+ changed file is successfully completed. 
+ 
+ This event handler is to make sure the reloaded settings can be taken effective 
+ immediately.
+ </summary>
+</member><member name="T:BHS.Net.ServiceMonitor.Application.Initializer">
+ -----------------------------------------------------------------------------
+ Project	 : BHS
+ Class	 : ServiceMonitor.Application.Initializer
+ 
+ -----------------------------------------------------------------------------
+ <summary>
+	</summary>
+	<remarks>
+	</remarks>
+	<history>
+ 	[xujian]	26/07/2006	Created
+ </history>
+ -----------------------------------------------------------------------------
+
+</member><member name="F:BHS.Net.ServiceMonitor.Configure.XmlSettingLoader.DESIRED_NUMBER_OF_CFG_FILES">
+ there are total 3 XML configuration files required by SortEng application: 
+ CFG_SortEngine.xml - application settings 
+ CFG_Telegrams.xml - application telegram format definations.
+ CFG_BHSConfig.xml - application Public Parameter Settings.
+
+</member><member name="F:BHS.Net.ServiceMonitor.Configure.XmlSettingLoader.XML_CONFIGSET">
+ XMLNode name of configuration sets.
+
+</member><member name="F:BHS.Net.ServiceMonitor.Configure.XmlSettingLoader._className">
+ The name of current class 
+
+</member><member name="F:BHS.Net.ServiceMonitor.Configure.XmlSettingLoader._logger">
+ Create a logger for use in this class
+
+</member><member name="P:BHS.Net.ServiceMonitor.Configure.XmlSettingLoader.Parameters_GlobalContext">
+ AppInitializer parameter classes variables for storing application settings loaded from configuration file.
+ In order to prevent the overwriting the existing system settings stored in the gloabl parameter variables  
+ due to the failure of reloading configuration file, the loaded parameters shall be stored into
+ the temporary variables and only assign to global parameter variables is the loading successed.
+
+</member><member name="M:BHS.Net.ServiceMonitor.Configure.XmlSettingLoader.LoadSettingFromConfigFile(System.Boolean,System.IO.FileInfo[])">
+	<summary>
+ This class method is the place to centralize the loading of application settings from 
+ configuration file. 
+ <para>
+ The actual implementation of IConfigurationLoader interface method LoadSettingFromConfigFile(). 
+ This method will be invoked by AppConfigurator class.
+ </para>
+		<para>
+ If the parameter isReloading = true, the interface implemented LoadSettingFromConfigFile() 
+ may raise a event after all settings have been reloaded successfully, to inform application 
+ that the reloading setting has been done. So application can take the necessary actions
+ to take effective of new settings.
+ </para>
+		<para>
+ Decode XML configuration file and load application settings shall be done by this method.
+ </para>
+	</summary>
+	<param name="isReloading">
+ If the parameter isReloading = true, the interface implemented LoadSettingFromConfigFile() 
+ may raise a event after all settings have been reloaded successfully, to inform application 
+ that the reloading setting has been done. So application can take the necessary actions
+ to take effective of new settings.
+ </param>
+	<param name="cfgFiles">
+ params type method argument, represents one or more configuration files.
+ </param>
+</member><member name="E:BHS.Net.ServiceMonitor.Configure.XmlSettingLoader.ReloadSettingCompleted">
+	<summary>
+ Event will be raised when reload setting from changed configuration 
+ file is successfully completed.
+ </summary>
+</member><member name="P:BHS.Net.My.Resources.Resources.ResourceManager">
+	<summary>
+  Returns the cached ResourceManager instance used by this class.
+</summary>
+</member><member name="P:BHS.Net.My.Resources.Resources.Culture">
+	<summary>
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
+</summary>
+</member><member name="T:BHS.Net.My.Resources.Resources">
+	<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
+</member><member name="M:BHS.Net.Utilities.LocationIDArrayToString(BHS.Net.LocationID[]@)">
+	<summary>
+ Convert LocationID structure object array to "Location1/Subsystem1, Location2/Subsystem2, ..."
+ format string for display purpose.
+ 
+ </summary>
+	<param name="Locations"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:BHS.Net.Utilities.BagTagDecoding(System.String,System.String)">
+	<summary>
+ Decode a 10-digit IATA code into a Tag structure object:
+ Public Structure Tag
+     Dim LP As String
+     Dim Valid As Boolean
+     Dim Type As TagType
+     Dim Airline As String
+     Dim Location As String
+     Dim Destination As String
+ End Structure
+ 
+ Tag.Type will indicate this bag tag is Fallback Tag or Normal IATA License Plate Tag.
+ Tag.Valid will indicate whether the Fallback tag is valid or invalid (the airport location
+ code in the 10-digit code is not identical to the specific airport location code (given by 
+ the function argument: AirportLocationCode).
+ If it is IATA tag, then  the Tag.Valid field value will alwasy be True.
+ </summary>
+	<param name="LicensePlate"></param>
+	<param name="AirportLocationCode"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member>
+</members>
+</doc>

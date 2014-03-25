@@ -1,0 +1,8 @@
+E:\XJ_MyDocuments\Visual Studio 2008\Projects\PGL\Projects\DBWC_MDS2CCTV\bin\Release\PALS.MDS2CCTVGW.exe
+E:\XJ_MyDocuments\Visual Studio 2008\Projects\PGL\Projects\DBWC_MDS2CCTV\bin\Release\PALS.MDS2CCTVGW.pdb
+E:\XJ_MyDocuments\Visual Studio 2008\Projects\PGL\Projects\DBWC_MDS2CCTV\src\Services\PALS.MDS2CCTVGW\obj\Release\ResolveAssemblyReference.cache
+E:\XJ_MyDocuments\Visual Studio 2008\Projects\PGL\Projects\DBWC_MDS2CCTV\src\Services\PALS.MDS2CCTVGW\obj\Release\PALS.MDS2CCTVGW.ProjectInstaller.resources
+E:\XJ_MyDocuments\Visual Studio 2008\Projects\PGL\Projects\DBWC_MDS2CCTV\src\Services\PALS.MDS2CCTVGW\obj\Release\PALS.MDS2CCTVGW.MDS2CCTVGW.resources
+E:\XJ_MyDocuments\Visual Studio 2008\Projects\PGL\Projects\DBWC_MDS2CCTV\src\Services\PALS.MDS2CCTVGW\obj\Release\PALS.MDS2CCTVGW.csproj.GenerateResource.Cache
+E:\XJ_MyDocuments\Visual Studio 2008\Projects\PGL\Projects\DBWC_MDS2CCTV\src\Services\PALS.MDS2CCTVGW\obj\Release\PALS.MDS2CCTVGW.exe
+E:\XJ_MyDocuments\Visual Studio 2008\Projects\PGL\Projects\DBWC_MDS2CCTV\src\Services\PALS.MDS2CCTVGW\obj\Release\PALS.MDS2CCTVGW.pdb

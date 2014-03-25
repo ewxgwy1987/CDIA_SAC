@@ -1,0 +1,8 @@
+D:\My Documents\Visual Studio 2008\Projects\PGL\Project\S01A09028Y_Phoenix T3S & T4N\PSHIA_SAC\bin\Debug\PALS.SAC2PLC6GW.exe
+D:\My Documents\Visual Studio 2008\Projects\PGL\Project\S01A09028Y_Phoenix T3S & T4N\PSHIA_SAC\bin\Debug\PALS.SAC2PLC6GW.pdb
+D:\My Documents\Visual Studio 2008\Projects\PGL\Project\S01A09028Y_Phoenix T3S & T4N\PSHIA_SAC\src\Services\PALS.SAC2PLC6GW\obj\Debug\ResolveAssemblyReference.cache
+D:\My Documents\Visual Studio 2008\Projects\PGL\Project\S01A09028Y_Phoenix T3S & T4N\PSHIA_SAC\src\Services\PALS.SAC2PLC6GW\obj\Debug\PALS.SAC2PLC6GW.ProjectInstaller.resources
+D:\My Documents\Visual Studio 2008\Projects\PGL\Project\S01A09028Y_Phoenix T3S & T4N\PSHIA_SAC\src\Services\PALS.SAC2PLC6GW\obj\Debug\PALS.SAC2PLC6GW.SAC2PLC6GW.resources
+D:\My Documents\Visual Studio 2008\Projects\PGL\Project\S01A09028Y_Phoenix T3S & T4N\PSHIA_SAC\src\Services\PALS.SAC2PLC6GW\obj\Debug\PALS.SAC2PLC6GW.csproj.GenerateResource.Cache
+D:\My Documents\Visual Studio 2008\Projects\PGL\Project\S01A09028Y_Phoenix T3S & T4N\PSHIA_SAC\src\Services\PALS.SAC2PLC6GW\obj\Debug\PALS.SAC2PLC6GW.exe
+D:\My Documents\Visual Studio 2008\Projects\PGL\Project\S01A09028Y_Phoenix T3S & T4N\PSHIA_SAC\src\Services\PALS.SAC2PLC6GW\obj\Debug\PALS.SAC2PLC6GW.pdb

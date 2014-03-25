@@ -1,0 +1,1949 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+BHS
+</name>
+</assembly>
+<members>
+<member name="F:BHS.ServiceMonitor.Configure.XmlSettingLoader.DESIRED_NUMBER_OF_CFG_FILES">
+ there are total 3 XML configuration files required by SortEng application: 
+ CFG_SortEngine.xml - application settings 
+ CFG_Telegrams.xml - application telegram format definations.
+ CFG_BHSConfig.xml - application Public Parameter Settings.
+
+</member><member name="F:BHS.ServiceMonitor.Configure.XmlSettingLoader.XML_CONFIGSET">
+ XMLNode name of configuration sets.
+
+</member><member name="F:BHS.ServiceMonitor.Configure.XmlSettingLoader._className">
+ The name of current class 
+
+</member><member name="F:BHS.ServiceMonitor.Configure.XmlSettingLoader._logger">
+ Create a logger for use in this class
+
+</member><member name="P:BHS.ServiceMonitor.Configure.XmlSettingLoader.Parameters_GlobalContext">
+ AppInitializer parameter classes variables for storing application settings loaded from configuration file.
+ In order to prevent the overwriting the existing system settings stored in the gloabl parameter variables  
+ due to the failure of reloading configuration file, the loaded parameters shall be stored into
+ the temporary variables and only assign to global parameter variables is the loading successed.
+
+</member><member name="M:BHS.ServiceMonitor.Configure.XmlSettingLoader.LoadSettingFromConfigFile(System.Boolean,System.IO.FileInfo[])">
+	<summary>
+ This class method is the place to centralize the loading of application settings from 
+ configuration file. 
+ <para>
+ The actual implementation of IConfigurationLoader interface method LoadSettingFromConfigFile(). 
+ This method will be invoked by AppConfigurator class.
+ </para>
+		<para>
+ If the parameter isReloading = true, the interface implemented LoadSettingFromConfigFile() 
+ may raise a event after all settings have been reloaded successfully, to inform application 
+ that the reloading setting has been done. So application can take the necessary actions
+ to take effective of new settings.
+ </para>
+		<para>
+ Decode XML configuration file and load application settings shall be done by this method.
+ </para>
+	</summary>
+	<param name="isReloading">
+ If the parameter isReloading = true, the interface implemented LoadSettingFromConfigFile() 
+ may raise a event after all settings have been reloaded successfully, to inform application 
+ that the reloading setting has been done. So application can take the necessary actions
+ to take effective of new settings.
+ </param>
+	<param name="cfgFiles">
+ params type method argument, represents one or more configuration files.
+ </param>
+</member><member name="E:BHS.ServiceMonitor.Configure.XmlSettingLoader.ReloadSettingCompleted">
+	<summary>
+ Event will be raised when reload setting from changed configuration 
+ file is successfully completed.
+ </summary>
+</member><member name="M:BHS.SAC2PLCGW.Application.MessageHandler.IncomingMessageHandling(PALS.Telegrams.Common.MessageAndSource@)">
+	<para>According to interface protocol design (ItemTracking protocol and 
+ TCPServer2Client protocol), the ItemTracking message will only come from the
+ SAC2PLC-GW service to PLC interfaces; the BagEvent (BEV) message will only come 
+ from the SAC2PLC-GW service to SortEngent service interface; the Running 
+ Status Request (SRQ) and Reply (SRP) message will only come from the 
+ SAC2PLC-GW service to BHSConsole GUI application interface.</para>
+</member><member name="T:BHS.SAC2PLCGW.Application.MessageHandler">
+ -----------------------------------------------------------------------------
+ Project	 : BHS
+ Class	 : SAC2PLCGW.Application.MessageHandler
+ 
+ -----------------------------------------------------------------------------
+ <summary>
+		<para>All received messages will be buffered into class internal incoming
+ queue before data handling process is taken. Only one message queue was 
+ implemented for all incoming messages that are received from both
+ MessageCollector and MessageForwarder classes.</para>
+		<para>There is no outgoing message queue was implemented in this layer class.
+ It because all acknowledge required outgoing messages will be buffered by
+ bottom ACK class. Such message won't be lost in case of the sending process
+ failure or it is not acknowledged. But for those acknowledge unrequired 
+ message, they are not buffered in any layer. Such message will be sent and 
+ forget. Hence, if the connection is broken at the time of Send() method
+ is invoked, this acknowledge unrequired message will be lost. Hence, all
+ critical messages should be defined as the acknowledge required message in 
+ the interface protocol design.</para>
+		<para>According to interface protocol design (ItemTracking protocol and 
+ TCPServer2Client protocol), the ItemTracking message will only come from the
+ SAC2PLC-GW service to PLC interfaces; the BagEvent (BEV) message will only come 
+ from the SAC2PLC-GW service to SortEngent service interface; the Running 
+ Status Request (SRQ) and Reply (SRP) message will only come from the 
+ SAC2PLC-GW service to BHSConsole GUI application interface.</para>
+		<para>All incoming ItemTracking protocol messages, which are received from 
+ remote PLC via TCPClient channel, will be encoded into BagEvent message and 
+ sent to SortEngine via TCPServer channel.</para>
+		<para>All incoming BagEvent protocol messages, which are received from 
+ SortEngine via TCPServer channel, will be decoded. If the decoded data is 
+ the ItemTracking protocol message, then the decoded data will be sent to
+ remote PLC via TCPClient channel.</para>
+		<para>If the received message is the Running Status Request (SRQ) message, then
+ the system classes internal status will be collected by this class and 
+ encapsulated into Running Status Reply (SRP) message and sent to remote 
+ requester. According to desing, the SRQ and SRP messages will be received 
+ and sent only via TCPServer channel to remote BHSConsole application, not via
+ TCPClient channel to remote PLCs.</para>
+		<para>One DataHandlingThread is implemented in the class to handle all 
+ received messages that were buffered in the incoming message queue.</para>
+		<para>In order to use TCPClient class, the follow settings has to be defined
+ in the XML configuration file. They are:</para>
+		<para><![CDATA[
+	    <configSet name="Telegram_Formats">
+         <!--The "" or "?" shall be used if the value of attributes is not constant.-->
+         <!--The value of offset and length attributes is number of bytes -->
+         <!--The "acknowledge" indicates whether this message is the acknowledgement required message -->
+         <!--The "sequence" indicates whether this sequence field need to be assigned the new value before sent out -->
+         <!--The "alias" attribute of "telegram" node is constant value for all projects-->
+         <!--The "name" attribute of "field" node is constant value for all projects-->
+         <telegramSet name="Application_Telegrams">
+             <telegram alias="SRQ" name="Status_Request_Message" sequence="True" acknowledge="False">
+	                <field name="Type" offset="0" length="4" default="49,48,48,49"/>
+	                <field name="Length" offset="4" length="4" default="?"/>
+	                <field name="Sequence" offset="8" length="4" default="?"/>
+	                <field name="Class" offset="12" length="?" default="?"/>
+             </telegram>		
+             <telegram alias="SRP" name="Status_Reply_Message" sequence="False" acknowledge="False">
+       	        <field name="Type" offset="0" length="4" default="49,48,48,50"/>
+       	        <field name="Length" offset="4" length="4" default="?"/>
+       	        <field name="Sequence" offset="8" length="4" default="?"/>
+       	        <field name="Status" offset="12" length="?" default="?"/>
+             </telegram>		
+             <telegram alias="BEV" name="Bag_Event_Message" sequence="True" acknowledge="True">
+	                <field name="Type" offset="0" length="4" default="49,48,48,51"/>
+	                <field name="Length" offset="4" length="4" default="?"/>
+	                <field name="Sequence" offset="8" length="4" default="?"/>
+	                <field name="BagEvent" offset="12" length="?" default="?"/>
+             </telegram>		
+	        </telegramSet>	
+     </configSet>	
+ ]]></para>
+	</summary>
+	<remarks>
+	</remarks>
+	<history>
+ 	[xujian]	12/5/2005	Created
+ </history>
+ -----------------------------------------------------------------------------
+
+</member><member name="T:BHS.SortEngine.AllocationProperty">
+	<summary>
+ Class to store the properties of single Flight Allocation or Function Allocation
+ 
+ </summary>
+	<remarks></remarks>
+</member><member name="M:BHS.SortEngine.Message.Handlers.MER.MessageHandling(PALS.Telegrams.Telegram@)">
+ -----------------------------------------------------------------------------
+ <summary>
+ Overrides the base class MessageHandling() method to provide the actual
+ process of handling Item Scanned message.
+ </summary>
+	<param name="Message"></param>
+	<remarks>
+	</remarks>
+	<history>
+ 	[xujian]	21 July 2006
+ </history>
+ -----------------------------------------------------------------------------
+
+</member><member name="T:BHS.SortEngine.Message.Handlers.MER">
+ -----------------------------------------------------------------------------
+ Project	 : Winipeg International Airport
+ Class	 : SortEngine.Message.Handler.MER
+ 
+ -----------------------------------------------------------------------------
+ <summary>
+ Manual Encoding Request Message handler.
+ </summary>
+	<remarks>
+	</remarks>
+	<history>
+ 	[xujian]	12/22/2005	Created
+ </history>
+ -----------------------------------------------------------------------------
+
+</member><member name="M:BHS.ServiceMonitor.Net.Handlers.ServerMsgForwarder.Send(PALS.Telegrams.Telegram@)">
+	<para>Outgoing message which is passed to MessageCollector.Send() method will
+ be forwarded down to the communication channel that was specified in the 
+ ChannelName property of the message. 
+ 
+ If there is not any ChannelName was given to this property, then the message
+ will be sent to all opened channels whose ChannelName was in the class
+ internal Opened channel list.</para>
+</member><member name="T:BHS.ServiceMonitor.Net.Handlers.ServerMsgForwarder">
+ -----------------------------------------------------------------------------
+ Project	 : DBT2_BHS
+ Class	 : ServiceMonitor.Net.Handlers.ServerMsgForwarder
+ 
+ -----------------------------------------------------------------------------
+ <summary>
+ Intermedia class between its top layer business data handler class 
+ (DBT2_BHS.SortEngine.Application.MessageHandler) and its bottom layer network
+ communication protocol chain classes. This class itself is the most top
+ class in the protocol chain classes. It receives the incoming message from 
+ its bottom chain class by its MessageReceived() method. And then forwards the 
+ received incoming message to MessageHandler class by event firing 
+ (OnReceived event). 
+ </summary>
+	<remarks>
+	</remarks>
+	<history>
+ 	[xujian]	12/19/2005	Created
+ </history>
+ -----------------------------------------------------------------------------
+
+</member><member name="P:BHS.SortEngine.Configure.GlobalContext.Company">
+	<summary>
+  Company name
+  </summary>
+</member><member name="P:BHS.SortEngine.Configure.GlobalContext.Department">
+	<summary>
+  Department name
+  </summary>
+</member><member name="P:BHS.SortEngine.Configure.GlobalContext.Author">
+	<summary>
+  Author name
+  </summary>
+</member><member name="P:BHS.SortEngine.Configure.GlobalContext.AppName">
+	<summary>
+  AppName name
+  </summary>
+</member><member name="P:BHS.SortEngine.Configure.GlobalContext.AppStartedTime">
+	<summary>
+  AppName name
+  </summary>
+</member><member name="M:BHS.SortEngine.Message.Handlers.ISC.MessageHandling(PALS.Telegrams.Telegram@)">
+ -----------------------------------------------------------------------------
+ <summary>
+ Overrides the base class MessageHandling() method to provide the actual
+ process of handling Item Scanned message.
+ </summary>
+	<param name="Message"></param>
+	<remarks>
+	</remarks>
+	<history>
+ 	[xujian]	21 July 2006
+ </history>
+ -----------------------------------------------------------------------------
+
+</member><member name="M:BHS.SortEngine.Message.Handlers.ISC.LicensePlateValidityChecking(System.String,System.String,System.String,System.String,System.String)">
+ -----------------------------------------------------------------------------
+ <summary>
+ Check the validaty of multiple license plates that were returned from PLC via 
+ ItemScanned telegram. 
+ If the parameter "ScanStatus" indicates that there is single LP was returned,
+ then this function will just return it to caller, without check this LP validaty;
+ If the parameter "ScanStatus" indicates that there are two LPs were returned,
+ then this function will check database [BAG_SORTING] table to verify the validity of 
+ each license plate (The LP is valid if it can be found in this table. Otherwise 
+ it is unknown LP or No BSM item).
+ If the parameter "ScanStatus" indicates No-Read or Scanner Failure, then the 
+ Empty LP (0000000000) will be returned.
+ </summary>
+	<param name="GlobalID"></param>
+	<param name="ChannelName"></param>
+	<param name="LicensePlate1"></param>
+	<param name="LicensePlate2"></param>
+	<param name="ScanStatus"> Scanning Status. 
+ There are 4 possible values (Refer to [BHS-504-01-x.xx IS_AP_ItemTracking.doc]):
+ "01" - Read Ok. Single Tag;
+ "02" - Read Ok. Multiple Tags;
+ "03" - No Read;
+ "04" - Scanner Failure.
+ </param>
+	<returns>
+ Single LP# will be returned if there is only one valid LP in the ISC telegram;
+ Dummy Multiple License Plate number (9999999999) will be returned if both LPs 
+ are valid or both are invalid;
+ Empty License Plate number (0000000000) will be returned if exception occurs
+ during the function executing.
+ </returns>
+	<remarks>
+ As per Panama Tocumen Airport BHS design, only up to two(2) license plates 
+ are allowed to be sent to SAC from PLC via ItemScanned telegram.
+ </remarks>
+	<history>
+ 	[xujian]	21/07/2006	Created
+ </history>
+ -----------------------------------------------------------------------------
+ 
+
+</member><member name="T:BHS.SortEngine.Message.Handlers.ISC">
+ -----------------------------------------------------------------------------
+ Project	 : Winnipeg International Airport
+ Class	 : SortEngine.Message.Handler.ISC
+ 
+ -----------------------------------------------------------------------------
+ <summary>
+ Item Scanned Message handler.
+ </summary>
+	<remarks>
+	</remarks>
+	<history>
+ 	[xujian]	12/22/2005	Created
+ </history>
+ -----------------------------------------------------------------------------
+
+</member><member name="M:BHS.SortEngine.Message.Handlers.IPR.MessageHandling(PALS.Telegrams.Telegram@)">
+ -----------------------------------------------------------------------------
+ <summary>
+ Overrides the base class MessageHandling() method to provide the actual
+ process of handling Item Proceeded message.
+ </summary>
+	<param name="Message"></param>
+	<remarks>
+	</remarks>
+	<history>
+ 	[xujian]	12/22/2005	Created
+ </history>
+ -----------------------------------------------------------------------------
+
+</member><member name="T:BHS.SortEngine.Message.Handlers.IPR">
+ -----------------------------------------------------------------------------
+ Project	 : Winnipeg International Airport
+ Class	 : SortEngine.Message.Handler.IPR
+ 
+ -----------------------------------------------------------------------------
+ <summary>
+ Item Screened Message handler.
+ </summary>
+	<remarks>
+	</remarks>
+	<history>
+ 	[xujian]	12/22/2005	Created
+ </history>
+ -----------------------------------------------------------------------------
+
+</member><member name="M:BHS.SortEngine.Net.Handlers.ClientMsgForwarder.Send(PALS.Telegrams.Telegram@)">
+	<para>Outgoing message which is passed to MessageCollector.Send() method will
+ be forwarded down to the communication channel that was specified in the 
+ ChannelName property of the message. 
+ 
+ If there is not any ChannelName was given to this property, then the message
+ will be sent to all opened channels whose ChannelName was in the class
+ internal Opened channel list.</para>
+</member><member name="T:BHS.SortEngine.Net.Handlers.ClientMsgForwarder">
+ -----------------------------------------------------------------------------
+ Project	 : BHS
+ Class	 : SortEngine.Net.Handlers.ClientMsgForwarder
+ 
+ -----------------------------------------------------------------------------
+ <summary>
+ Intermedia class between its top layer business data handler class 
+ (DBT2_BHS.SortEngine.Application.MessageHandler) and its bottom layer network
+ communication protocol chain classes. This class itself is the most top
+ class in the protocol chain classes. It receives the incoming message from 
+ its bottom chain class by its MessageReceived() method. And then forwards the 
+ received incoming message to MessageHandler class by event firing 
+ (OnReceived event). 
+ </summary>
+	<remarks>
+	</remarks>
+	<history>
+ 	[xujian]	12/19/2005	Created
+ </history>
+ -----------------------------------------------------------------------------
+
+</member><member name="M:BHS.SortEngine.Message.Handlers.IRD.ConstructTelegram(System.String,System.String@,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String@,System.String@,System.String@)">
+ -----------------------------------------------------------------------------
+ <summary>
+ Construct Item Redirect Temegram.
+ 
+ <para>
+			<![CDATA[
+     <telegram alias="IRD" name="Item_Redirect_Message" sequence="True" acknowledge="True">
+	        <field name="Type" offset="0" length="4" default="48,48,48,54"/>
+	        <field name="Length" offset="4" length="4" default="48,49,50,52"/>
+	        <field name="Sequence" offset="8" length="4" default="?"/>
+	        <field name="SubSystem1" offset="12" length="10" default="?"/>
+	        <field name="Destination1" offset="22" length="20" default="?"/>
+	        <field name="SubSystem2" offset="42" length="10" default="?"/>
+	        <field name="Destination2" offset="52" length="20" default="?"/>
+	        <field name="SubSystem3" offset="72" length="10" default="?"/>
+	        <field name="Destination3" offset="82" length="20" default="?"/>
+	        <field name="GID" offset="102" length="10" default="?"/>
+	        <field name="LicensePlate" offset="112" length="10" default="?"/>
+	        <field name="Reason" offset="122" length="2" default="?"/>
+     </telegram>		
+ ]]>
+		</para>
+	</summary>
+	<returns></returns>
+         ''' <remarks>
+	</remarks>
+         ''' <history>
+ 	[xujian]	1/11/2006	Created
+ </history>
+ -----------------------------------------------------------------------------
+
+</member><member name="M:BHS.SortEngine.Message.Handlers.IRD.PrepareThreeDestinationsForIRD(BHS.LocationID[]@)">
+ -----------------------------------------------------------------------------
+ <summary>
+ Due to one Item Redirect telegram can contain maximum 3 destinations, hence
+ the number of destinations that were returned from database query needs to be 
+ adjusted accordingly. If more than 3 destinations were returned from database,
+ then only the first 3 will be used to construct the IRD telegram. If less than 
+ 3 destination were returned, then the empty location and subsystem will be 
+ assigned to the IRD telegram destination field accordingly.
+ </summary>
+	<param name="Sources"></param>
+	<returns></returns>
+	<remarks>
+	</remarks>
+	<history>
+ 	[xujian]	17-Feb-06	Created
+ </history>
+ -----------------------------------------------------------------------------
+
+</member><member name="T:BHS.SortEngine.Message.Handlers.IRD">
+ -----------------------------------------------------------------------------
+ Project	 : Winnipeg International Airport
+ Class	 : SortEngine.Message.Handler.IRD
+ 
+ -----------------------------------------------------------------------------
+ <summary>
+ Item Redirect Message constructer.
+ 
+ <para>This class works as the Item Redirect Telegram constructor to construct
+ the IRD telegram for ICR, ISC, ISE, and IDR message handler classes.</para>
+		<para>Item Redirect message has the following telegram format.</para>
+		<para><![CDATA[
+     <telegram alias="IRD" name="Item_Redirect_Message" sequence="True" acknowledge="True">
+	        <field name="Type" offset="0" length="4" default="48,48,48,54"/>
+	        <field name="Length" offset="4" length="4" default="48,48,53,50"/>
+	        <field name="Sequence" offset="8" length="4" default="?"/>
+	        <field name="SubSystem" offset="12" length="4" default="?"/>
+	        <field name="Destination" offset="16" length="10" default="?"/>
+	        <field name="GID" offset="26" length="10" default="?"/>
+	        <field name="LicensePlate" offset="36" length="10" default="?"/>
+	        <field name="Reason" offset="46" length="2" default="?"/>
+	        <field name="BagIndex" offset="48" length="4" default="?"/>
+     </telegram>		
+ ]]></para>
+	</summary>
+	<remarks>
+	</remarks>
+	<history>
+ 	[xujian]	12/22/2005	Created
+ </history>
+ -----------------------------------------------------------------------------
+
+</member><member name="M:BHS.SortEngine.Message.Handlers.ISE.MessageHandling(PALS.Telegrams.Telegram@)">
+ -----------------------------------------------------------------------------
+ <summary>
+ Overrides the base class MessageHandling() method to provide the actual
+ process of handling Item Sortation Event message.
+ </summary>
+	<param name="Message"></param>
+	<remarks>
+	</remarks>
+	<history>
+ 	[xujian]	12/22/2005	Created
+ </history>
+ -----------------------------------------------------------------------------
+
+</member><member name="T:BHS.SortEngine.Message.Handlers.ISE">
+ -----------------------------------------------------------------------------
+ Project	 : Winnipeg International Airport
+ Class	 : SortEngine.Message.Handler.ISE
+ 
+ -----------------------------------------------------------------------------
+ <summary>
+ Item Sortation Event Message handler.
+ </summary>
+	<remarks>
+	</remarks>
+	<history>
+ 	[xujian]	12/22/2005	Created
+ </history>
+ -----------------------------------------------------------------------------
+
+</member><member name="P:BHS.SAC2PLCGW.Application.Initializer.PerfMonitor">
+ -----------------------------------------------------------------------------
+ <summary>
+ Class property to return the ClassStatus object of current class.
+ </summary>
+	<value></value>
+	<remarks>
+	</remarks>
+	<history>
+ 	[xujian]	11/2/2005	Created
+ </history>
+ -----------------------------------------------------------------------------
+
+</member><member name="P:BHS.SAC2PLCGW.Application.Initializer.PerfMonitorList">
+ -----------------------------------------------------------------------------
+ <summary>
+ Class property to return the ArrayList object that contains the ClassStatus 
+ objects of current class and all of its instance of sub classes.
+ </summary>
+	<returns></returns>
+	<remarks>
+	</remarks>
+	<history>
+ 	[xujian]	11/2/2005	Created
+ </history>
+ -----------------------------------------------------------------------------
+
+</member><member name="M:BHS.SAC2PLCGW.Application.Initializer.OnReloadSettingCompleted">
+	<summary>
+ Event handler of ReloadSettingCompleted event fired by IConfigurationLoader interface 
+ implemented class method LoadSettingFromConfigFile() upon the reloading setting from
+ changed file is successfully completed. 
+ 
+ This event handler is to make sure the reloaded settings can be taken effective 
+ immediately.
+ </summary>
+</member><member name="M:BHS.SAC2PLCGW.Application.Initializer.Init">
+ -----------------------------------------------------------------------------
+ <summary>
+ The class initialisation method. This is the main application initialization 
+ entry point. Instantial all object here.
+ </summary>
+	<returns>Return True if initialization success; otherwise return False.</returns>
+	<remarks>
+	</remarks>
+	<history>
+ 	[xujian]	12/2/2004	Created
+ </history>
+ -----------------------------------------------------------------------------
+
+</member><member name="T:BHS.SAC2PLCGW.Application.Initializer">
+ -----------------------------------------------------------------------------
+ Project	 : BHS
+ Class	 : App.Initializer
+ 
+ -----------------------------------------------------------------------------
+ <summary>
+	</summary>
+	<remarks>
+	</remarks>
+	<history>
+ 	[xujian]	10/27/2005	Created
+ </history>
+ -----------------------------------------------------------------------------
+
+</member><member name="F:BHS.SAC2PLCGW.Configure.XmlSettingLoader.DESIRED_NUMBER_OF_CFG_FILES">
+ there are total 2 XML configuration files required by SAC2PLC GW application: 
+ CFG_SAC2PLCGW.xml - application settings 
+ CFG_Telegrams.xml  - application telegram format definations.
+
+</member><member name="F:BHS.SAC2PLCGW.Configure.XmlSettingLoader.XML_CONFIGSET">
+ XMLNode name of configuration sets.
+
+</member><member name="F:BHS.SAC2PLCGW.Configure.XmlSettingLoader._className">
+ The name of current class 
+
+</member><member name="F:BHS.SAC2PLCGW.Configure.XmlSettingLoader._logger">
+ Create a logger for use in this class
+
+</member><member name="P:BHS.SAC2PLCGW.Configure.XmlSettingLoader.Parameters_GlobalContext">
+ AppInitializer parameter classes variables for storing application settings loaded from configuration file.
+ In order to prevent the overwriting the existing system settings stored in the gloabl parameter variables  
+ due to the failure of reloading configuration file, the loaded parameters shall be stored into
+ the temporary variables and only assign to global parameter variables is the loading successed.
+
+</member><member name="M:BHS.SAC2PLCGW.Configure.XmlSettingLoader.LoadSettingFromConfigFile(System.Boolean,System.IO.FileInfo[])">
+	<summary>
+ This class method is the place to centralize the loading of application settings from 
+ configuration file. 
+ <para>
+ The actual implementation of IConfigurationLoader interface method LoadSettingFromConfigFile(). 
+ This method will be invoked by AppConfigurator class.
+ </para>
+		<para>
+ If the parameter isReloading = true, the interface implemented LoadSettingFromConfigFile() 
+ may raise a event after all settings have been reloaded successfully, to inform application 
+ that the reloading setting has been done. So application can take the necessary actions
+ to take effective of new settings.
+ </para>
+		<para>
+ Decode XML configuration file and load application settings shall be done by this method.
+ </para>
+	</summary>
+	<param name="isReloading">
+ If the parameter isReloading = true, the interface implemented LoadSettingFromConfigFile() 
+ may raise a event after all settings have been reloaded successfully, to inform application 
+ that the reloading setting has been done. So application can take the necessary actions
+ to take effective of new settings.
+ </param>
+	<param name="cfgFiles">
+ params type method argument, represents one or more configuration files.
+ </param>
+</member><member name="E:BHS.SAC2PLCGW.Configure.XmlSettingLoader.ReloadSettingCompleted">
+	<summary>
+ Event will be raised when reload setting from changed configuration 
+ file is successfully completed.
+ </summary>
+</member><member name="M:BHS.SAC2PLCGW.Net.Handlers.CIPMsgForwarder.Send(PALS.Telegrams.Telegram@)">
+	<para>Outgoing message which is passed to MessageCollector.Send() method will
+ be forwarded down to all opened channels whose ChannelName was in the class
+ internal Opened channel list.</para>
+</member><member name="T:BHS.SAC2PLCGW.Net.Handlers.CIPMsgForwarder">
+ -----------------------------------------------------------------------------
+ Project	 : DBT2_BHS
+ Class	 : SAC2PLCGW.Net.Handlers.CIPMsgForwarder
+ 
+ -----------------------------------------------------------------------------
+ <summary>
+ MessageCollector class has one internal ArrayList, which contains ChannelName 
+ of all opened channels. The ChannelName will be add into this ArrayList upon
+ it is reported by MessageCollector.ConnectionOpened() methid. And it will be 
+ removed from this list upon MessageCollector.ConnectionClosed() methid is 
+ invoked by bottom chain class.
+ 
+ <para>All incoming message will be forwarded to MessageGateway class without 
+ any data handling. The incoming queues, and incoming data handling process 
+ all are implemented in the upper layer MessageGateway class, instead of this
+ MessageCollector class.</para>
+		<para>Outgoing message that is passed to MessageCollector.Send() method will
+ be forwarded down to all opened channels whose ChannelName was in the class
+ internal Opened channel list.</para>
+		<para>Due to no matter the channel is opened or not, the bottom layer 
+ PALS.Net.Filters.Acknowledge.ACK class will buffer all acknowledge required 
+ outgoing message into its re-transmit buffer first before actual sending. 
+ So such message will not be lost in the case of sending failure or channel 
+ closed. But all acknowledge unrequired outgoing message will not be buffered 
+ by ACK class or any of other bottom layer classes, hence it will be discarded 
+ after sending process, no matter the sending process is success or not.</para>
+	</summary>
+	<remarks>
+	</remarks>
+	<history>
+ 	[xujian]	12/4/2005	Created
+ </history>
+ -----------------------------------------------------------------------------
+
+</member><member name="P:BHS.ServiceMonitor.Configure.GlobalContext.Company">
+	<summary>
+  Company name
+  </summary>
+</member><member name="P:BHS.ServiceMonitor.Configure.GlobalContext.Department">
+	<summary>
+  Department name
+  </summary>
+</member><member name="P:BHS.ServiceMonitor.Configure.GlobalContext.Author">
+	<summary>
+  Author name
+  </summary>
+</member><member name="P:BHS.ServiceMonitor.Configure.GlobalContext.AppName">
+	<summary>
+  AppName name
+  </summary>
+</member><member name="P:BHS.ServiceMonitor.Configure.GlobalContext.AppStartedTime">
+	<summary>
+  AppName name
+  </summary>
+</member><member name="P:BHS.SortEngine.DataPersister.Database.DBConnector.RoutingTableSyncdHash">
+ -----------------------------------------------------------------------------
+ <summary>
+ Used to store the rounting table. These routing table will be used to 
+ calculate the shortest path.
+ In order to maintain the high application performance, these routing table
+ will be pre-loaded into memory from database table [ROUTING_TABLE] at
+ the application starting time. So there is no database access requirement 
+ for calculating shortest path at later stage.
+ Hashtable Key: Location (Data Type: String).
+ Hashtable value: RoutingItem Object Array (Data Type: RoutingItem()).
+ Once location may have more than one cost settings, because it could belongs
+ to different SubSystem. E.g. Location "CA1" can belongs to SubSystem "CT1" 
+ and "CT2".
+ </summary>
+	<returns></returns>
+	<remarks>
+	</remarks>
+	<history>
+ 	[xujian]	1/8/2006	Created
+ </history>
+ -----------------------------------------------------------------------------
+
+</member><member name="M:BHS.SortEngine.DataPersister.Database.DBConnector.GetRoutingTableFromDB(System.Data.SqlClient.SqlConnection@)">
+ -----------------------------------------------------------------------------
+ <summary>
+ Retrieve all location cost from database table into memory at the application 
+ starting time. So that there is no database query is required when calculating
+ shortest path.
+ 
+ The Subsystem, LocationID, and LocationCost of one location will be assigned
+ to one LocationCost object. Due to the same location ID may have more than 
+ one cost, the LocationCost object array will be used to represent one
+ location and assign to Hashtable object (m_RoutingTableSyncdHash) of routing 
+ table in memory.
+ 
+ Hashtable (m_RoutingTableSyncdHash) Key: Location ID
+ Hashtable (m_RoutingTableSyncdHash) value: LocationCost object array
+ </summary>
+	<param name="SqlConn"></param>
+	<returns></returns>
+	<remarks>
+	</remarks>
+	<history>
+ 	[xujian]	17-Feb-06	Created
+ </history>
+ -----------------------------------------------------------------------------
+
+</member><member name="M:BHS.SortEngine.DataPersister.Database.DBConnector.GetDestinationOfFunctionAllocation(System.String,System.String)">
+ -----------------------------------------------------------------------------
+ <summary>
+ Get allocated destination for the given type of Function Allocation.
+ One Function Type may be allocated with more than one destinations.
+ </summary>
+	<param name="FuncType"></param>
+	<returns>The Array of String will be returned.</returns>
+	<remarks>
+	</remarks>
+	<history>
+ 	[xujian]	1/9/2006	Created
+ </history>
+ -----------------------------------------------------------------------------
+
+</member><member name="M:BHS.SortEngine.DataPersister.Database.DBConnector.ReOrderDestinationSequence(System.String@,System.String,System.String,BHS.LocationID,BHS.LocationID[]@,System.String,System.String,System.Boolean)">
+ -----------------------------------------------------------------------------
+ <summary>
+ Reorder the multiple destinations (parameter: Original) sequence according 
+ to the given sortation Scheme Type (Shortest Path, Round Robin, or Waterfall).
+ </summary>
+	<param name="CurrentLocation"></param>
+	<param name="Destination"></param>
+	<param name="SchemeType"></param>
+	<returns>
+ Return re-ordered destinations (LocationIdentifier Array). Nothing will be
+ returned if Destination parameter is Nothing. 
+ The origianl destinations will be returned without sorting if only single
+ destination was given, or the current location ID is empty or the sub system 
+ of current location is empty, or any exception occurres during the sorting
+ progress.
+ </returns>
+	<remarks>
+	</remarks>
+	<history>
+ 	[xujian]	1/21/2006	Created
+         ''' </history>
+ -----------------------------------------------------------------------------
+
+</member><member name="M:BHS.SortEngine.DataPersister.Database.DBConnector.SortByRoundRobinScheme(System.String,BHS.LocationID[]@)">
+ -----------------------------------------------------------------------------
+ <summary>
+ Re-order the sequence of destinations according to Round-Robin Sortation 
+ Scheme. Round-Robin Sortation represents that sort the item to next destination 
+ which is different as the last one in the multiple destinations of the same flight.
+ 
+ </summary>
+	<param name="FlightIdentifier"></param>
+	<param name="Destinations"></param>
+	<returns></returns>
+	<remarks>
+	</remarks>
+	<history>
+ 	[xujian]	10/08/2006	Created
+ </history>
+ -----------------------------------------------------------------------------
+
+</member><member name="M:BHS.SortEngine.DataPersister.Database.DBConnector.SortByShortestPathScheme(BHS.LocationID,BHS.LocationID[]@)">
+ -----------------------------------------------------------------------------
+ <summary>
+ Re-order the sequence of destinations according to Shortest Path Sortation 
+ Scheme. Shortest path is calculated by means of comparing the location cost 
+ different between destination cost and current location cost for all given 
+ destinations: (Destination Cost - CurrentLocation Cost).
+ 
+ If all values of (Destination Cost - CurrentLocation Cost) are positive 
+ value, then the sorted sequence will be from small value to large value. 
+ If all values of (Destination Cost - CurrentLocation Cost) are negative 
+ value, then the sorted sequence will be from large value to small value. 
+ If value of (Destination Cost - CurrentLocation Cost) is conststed of 
+ positive and nagetive value, then the sorted sequence will be positive
+ values first (follow the sequence from small to large value), and then
+ negative values (follow the sequence from large to small).
+ 
+ </summary>
+	<param name="CurrentLocation"></param>
+	<param name="Destinations"></param>
+	<returns>
+ LocationID object Array which contains the re-ordered list will be returned.
+ </returns>
+	<remarks>
+	</remarks>
+	<history>
+ 	[xujian]	1/21/2006	Created
+ </history>
+ -----------------------------------------------------------------------------
+
+</member><member name="M:BHS.SortEngine.DataPersister.Database.DBConnector.SelectionSortNumbers(BHS.LocationCost[]@,System.Boolean)">
+ -----------------------------------------------------------------------------
+ <summary>
+ Sort the members (according to the sequence of cost value from either 
+ small to large, or large to small) in LocationCost oject array by using 
+ SelectionSort Algorithms.
+ 
+ </summary>
+	<param name="Locations"></param>
+	<param name="IsFromSmallToLarge">
+ If the value of IsFromSmallToLarge parameter is True, sort the number follow
+ the sequence of from small value to large value.
+ If the value of IsFromSmallToLarge parameter is False, sort the number follow
+ the sequence of from large value to small value.
+ </param>
+	<remarks>
+	</remarks>
+	<history>
+ 	[xujian]	17-Feb-06	Created
+ </history>
+ -----------------------------------------------------------------------------
+
+</member><member name="M:BHS.SortEngine.DataPersister.Database.DBConnector.GetDestinationOfBMLP(System.String,System.String,System.String,System.String,BHS.LocationID,System.String@,BHS.LocationID[]@)">
+ Get allocated destinations of BMLP (Multiple LP) function allocation.
+
+</member><member name="M:BHS.SortEngine.DataPersister.Database.DBConnector.GetDestinationOfBMLP(System.String,System.String,System.String,BHS.LocationID,System.String@,BHS.LocationID[]@)">
+ Get allocated destinations of BMLP (Multiple LP) function allocation.
+
+</member><member name="M:BHS.SortEngine.DataPersister.Database.DBConnector.GetDestinationOfNORD(System.String,System.String,BHS.LocationID,System.String@,BHS.LocationID[]@)">
+ Get allocated destinations of NORD (No Read) function allocation.
+
+</member><member name="M:BHS.SortEngine.DataPersister.Database.DBConnector.GetDestinationOfMBSM(System.String,System.String,System.String,BHS.LocationID,System.String@,BHS.LocationID[]@)">
+ Get allocated destinations of multiple BSM (MBSM) function allocation.
+
+</member><member name="M:BHS.SortEngine.DataPersister.Database.DBConnector.GetDestinationOfNBSM(System.String,System.String,System.String,BHS.LocationID,System.String@,BHS.LocationID[]@)">
+ Get allocated destinations of No BSM (Unknown LP) function allocation.
+
+</member><member name="M:BHS.SortEngine.DataPersister.Database.DBConnector.GetDestinationOfHRUC(System.String,System.String,System.String,BHS.LocationID,System.String@,BHS.LocationID[]@)">
+ Get allocated destinations of High-Risk Uncleared function allocation.
+
+</member><member name="M:BHS.SortEngine.DataPersister.Database.DBConnector.GetDestinationOfH2RJ(System.String,System.String,System.String,System.String,BHS.LocationID,System.String@,BHS.LocationID[]@)">
+ Get allocated destinations of H2RJ (L2 HBS Rejected) function allocation.
+
+</member><member name="M:BHS.SortEngine.DataPersister.Database.DBConnector.GetDestinationOfH2RJ(System.String,System.String,System.String,BHS.LocationID,System.String@,BHS.LocationID[]@)">
+ Get allocated destinations of H2RJ (L2 HBS Rejected) function allocation.
+
+</member><member name="M:BHS.SortEngine.DataPersister.Database.DBConnector.GetDestinationOfH3RJ(System.String,System.String,System.String,System.String,BHS.LocationID,System.String@,BHS.LocationID[]@)">
+ Sortation Process 1 of ICR with Level 3 Rejected:
+
+</member><member name="M:BHS.SortEngine.DataPersister.Database.DBConnector.GetDestinationOfH3RJ(System.String,System.String,System.String,BHS.LocationID,System.String@,BHS.LocationID[]@)">
+ Sortation Process 1 of ICR with Level 3 Rejected:
+
+</member><member name="M:BHS.SortEngine.DataPersister.Database.DBConnector.GetAllocationInfoFromIATATag(System.String,System.String@,System.String@,System.String@,System.String@,System.DateTime@,System.String@,System.String@,System.String@,System.String@,System.String@,BHS.SortEngine.AllocationProperty[]@)">
+ -----------------------------------------------------------------------------
+ <summary>
+	</summary>
+	<returns>
+ 1:  No BSM of specific LP# is in the [BAG_SORTING] table, it is No BSM (NBSM) item;
+ 2:  More than one BSMs of specific LP# are in the [BAG_SORTING] table, it is multiple 
+     BSM (MBSM) item;
+ 3:  Single BSM of specific LP# is in the [BAG_SORTING] table, but the flight included 
+     in the BSM can not be found in the [FLIGHT_PLAN_SORTING] table, it is Unknown flight.
+     [AIRLINE],[FLIGHT_NUMBER],[ADO] three fields will be returned caller
+     via returned recordset.
+ 4:  Flight is Slave filght, but its master flight can not be found in the 
+     [FLIGHT_PLAN_SORTING] table, it is treated as Unknown flight.
+     [AIRLINE],[FLIGHT_NUMBER],[ADO],[MASTER_AIRLINE],[MASTER_FLIGHT_NUMBER]
+     five fields will be returned caller via returned recordset.
+ 5: (Flight is Master flight and its flight info can be found in the 
+     [FLIGHT_PLAN_SORTING] table. But it has no any allocation was created 
+     (no allocation recoreds in the table [FLIGHT_PLAN_ALLOC]). It is 
+     treated as No Allocation Flight.
+     [AIRLINE],[FLIGHT_NUMBER],[ADO],[STO] four fields will be returned caller
+     via returned recordset.
+ 6: (Flight is Slave flight, its master flight is valid flight (flight 
+     info can be found in the [FLIGHT_PLAN_SORTING] table). But it has 
+     no any allocation was created (no allocation recoreds in the table 
+     [FLIGHT_PLAN_ALLOC]). It is treated as No Allocation Flight.
+     [AIRLINE],[FLIGHT_NUMBER],[ADO],[STO],[MASTER_AIRLINE],[MASTER_FLIGHT_NUMBER]
+     six fields will be returned caller via returned recordset.
+ 7: (Flight is Master flight. Its flight info can be found in the [FLIGHT_PLAN_SORTING] table. 
+     And its allocation has been created (has allocation recoreds in the table [FLIGHT_PLAN_ALLOC]). 
+     Following 21 fields will be returned to caller via returned recordset:
+     [AIRLINE],[FLIGHT_NUMBER],[SDO],[STO],[EDO],[ETO],[IDO],[ITO],[ADO],[ATO],[ERLY_OPEN_OFFSET],
+     [ALLOC_OPEN_OFFSET],[ALLOC_OPEN_RELATED],[ALLOC_CLOSE_OFFSET],[ALLOC_CLOSE_RELATED],
+     [RUSH_DURATION],[IS_MANUAL_CLOSE],[IS_CLOSED],[TRAVEL_CLASS],[RESOURCE],[SUBSYSTEM]
+ 8: (Flight is Slave flight. its master flight is valid flight (flight info can be found in 
+     the [FLIGHT_PLAN_SORTING] table). And its master flight allocation has been created 
+     (has allocation recoreds in the table [FLIGHT_PLAN_ALLOC]). 
+     Following 23 fields will be returned to caller via returned recordset:
+     [AIRLINE],[FLIGHT_NUMBER],[MASTER_AIRLINE],[MASTER_FLIGHT_NUMBER],
+     [SDO],[STO],[EDO],[ETO],[IDO],[ITO],[ADO],[ATO],
+     [ERLY_OPEN_OFFSET],[ALLOC_OPEN_OFFSET],[ALLOC_OPEN_RELATED],
+     [ALLOC_CLOSE_OFFSET],[ALLOC_CLOSE_RELATED],[RUSH_DURATION],
+     [IS_MANUAL_CLOSE],[IS_CLOSED],[TRAVEL_CLASS],[RESOURCE],[SUBSYSTEM]
+ -1: System Exception Occurs. Get flight allocation destination failure.
+ </returns>
+	<remarks>
+	</remarks>
+	<history>
+ 	[xujian]	20-Feb-06	Created
+ </history>
+         ''' -----------------------------------------------------------------------------
+
+</member><member name="M:BHS.SortEngine.DataPersister.Database.DBConnector.ValidateLicensePlates(System.String,System.String,BHS.Tag@)">
+ -----------------------------------------------------------------------------
+ <summary>
+ Check database [BAG] table to verify the validity of each license plate (The 
+ LP is valid if it can be found in this table. Otherwise it is unknown LP or 
+ No BSM item).
+ 
+ If both LPs are invalid or valid, then set output type parameter "ValidLP" to 
+ Dummy Multiple License Plate (9999999999).
+ 
+ If only one LP is valid, then set output type parameter "ValidLP" to this LP#.
+ 
+ Empty License Plate number (0000000000) will be assigned to output type 
+ parameter "ValidLP" if exception occurs during the function executing.
+ </summary>
+	<param name="LicensePlate1"></param>
+	<param name="LicensePlate2"></param>
+	<param name="ValidTag"></param>
+	<returns>
+ -1: System exception was occurred.
+ 0: Both LP are invalid LP;
+ 1: Only one license plate is valid LP;
+ 2: Both LP are valid LP;
+ </returns>
+	<remarks>
+	</remarks>
+	<history>
+ 	[xujian]	21/07/2006	Created
+ </history>
+ -----------------------------------------------------------------------------
+
+</member><member name="M:BHS.SortEngine.DataPersister.Database.DBConnector.GetDestinationOfFallbackTag(System.String,System.String,BHS.Tag,BHS.LocationID,System.String@,BHS.LocationID[]@)">
+ Get allocated destinations of No BSM (Unknown LP) function allocation.
+
+</member><member name="M:BHS.SortEngine.DataPersister.Database.DBConnector.GetDestinationOfAirline(System.String,BHS.LocationID,System.String@,BHS.LocationID[]@,System.String,System.String)">
+ -----------------------------------------------------------------------------
+ <summary>
+ Get allocated destinations of Airline.
+ </summary>
+	<param name="AirlineCode"></param>
+	<param name="CurrentLocation"></param>
+	<param name="Reason"></param>
+	<param name="Destinations"></param>
+	<remarks>
+	</remarks>
+	<history>
+ 	[Administrator]	11/26/2007	Created
+ </history>
+ -----------------------------------------------------------------------------
+
+</member><member name="M:BHS.SortEngine.DataPersister.Database.DBConnector.GetDestinationOfPROB(System.String,System.String,BHS.LocationID,System.String@,BHS.LocationID[]@)">
+ Get allocated destinations of PROB (Problem Bag) function allocation.
+
+</member><member name="M:BHS.SortEngine.DataPersister.Database.DBConnector.GetDestinationOfDUMP(System.String,System.String,BHS.LocationID,System.String@,BHS.LocationID[]@)">
+ Get allocated destinations of DUMP (DUMP) function allocation.
+
+</member><member name="M:BHS.SortEngine.DataPersister.Database.DBConnector.GetDestinationOfFEXC(System.String,System.String,BHS.LocationID,System.String@,BHS.LocationID[]@,System.String)">
+ Get allocated destinations of FEXC (FLIGHT EXCEPTION) function allocation.
+
+</member><member name="M:BHS.SortEngine.DataPersister.Database.DBConnector.GetDestinationOfBEXC(System.String,System.String,BHS.LocationID,System.String@,BHS.LocationID[]@,System.String)">
+ Get allocated destinations of BEXC (BAG EXCEPTION) function allocation.
+
+</member><member name="M:BHS.SortEngine.DataPersister.Database.DBConnector.GetAllocationInfoFromFlight(System.String,System.String,System.DateTime,System.String@,System.String@,System.String@,System.String@,System.String@,BHS.SortEngine.AllocationProperty[]@)">
+ -----------------------------------------------------------------------------
+ <summary>
+	</summary>
+	<returns>
+ 	-- @Status = 1 Reserved, not be used in this project
+ 	-- @Status = 2 Reserved, not be used in this project
+ 	-- @Status = 3 Flight can not be found in [FLIGHT_PLAN_SORTING] table, it is Unknown flight.
+ 	--			   AIRLINE],[FLIGHT_NUMBER],[SDO] three fields will be returned caller
+ 	--			   via returned recordset.
+ 	-- @Status = 4 Flight is Slave filght, but its master flight info can not be found in the
+ 	--			   [FLIGHT_PLAN_SORTING] table, it is treated as Unknown flight.
+ 	--			   [AIRLINE],[FLIGHT_NUMBER],[SDO],[MASTER_AIRLINE],[MASTER_FLIGHT_NUMBER]
+ 	--			   five fields will be returned caller via returned recordset.
+ 	-- @Status = 5 Flight is Master flight and its flight info can be found in the 
+ 	--             FLIGHT_PLAN_SORTING] table. But it has no any allocation was created 
+ 	--			   (no allocation recoreds in the table [FLIGHT_PLAN_ALLOC]). It is treated 
+ 	--             as No Allocation Flight.
+ 	--			   [AIRLINE],[FLIGHT_NUMBER],[SDO],[STO] four fields will be returned caller
+ 	--			   via returned recordset.
+ 	-- @Status = 6 Flight is Slave flight, its master flight is valid flight (flight 
+ 	--			   info can be found in the [FLIGHT_PLAN_SORTING] table). But it has 
+ 	--			   no any allocation was created (no allocation recoreds in the table 
+ 	--			   [FLIGHT_PLAN_ALLOC]). It is treated as No Allocation Flight.
+ 	--			   [AIRLINE],[FLIGHT_NUMBER],[SDO],[STO], [MASTER_AIRLINE],[MASTER_FLIGHT_NUMBER]
+ 	--			   six fields will be returned caller via returned recordset.
+ 	-- @Status = 7 Flight is Master flight. Its flight info can be found in the 
+ 	--             [FLIGHT_PLAN_SORTING] table. And its allocation has been created 
+ 	--			   (has allocation recoreds in the table [FLIGHT_PLAN_ALLOC]). 
+ 	--			   [AIRLINE],[FLIGHT_NUMBER],[SDO],[STO],[EDO],[ETO],[IDO],[ITO],
+ 	--             [ADO],[ATO],[ALLOC_OPEN_OFFSET],[ALLOC_OPEN_RELATED],[ERLY_OPEN_OFFSET],
+ 	--             [ALLOC_CLOSE_OFFSET],[ALLOC_CLOSE_RELATED],[RUSH_DURATION],
+ 	--             [IS_MANUAL_CLOSED],[IS_CLOSED],[TRAVEL_CLASS],[RESOURCE],[SUBSYSTEM]
+ 	--			   21 fields will be returned to caller via returned recordset.
+ 	-- @Status = 8 Flight is Slave flight. its master flight is valid flight 
+ 	--			   (flight info can be found in the [FLIGHT_PLAN_SORTING] table). 
+ 	--             And its master flight allocation has been created 
+ 	--			   (has allocation recoreds in the table [FLIGHT_PLAN_ALLOC]). 
+ 	--			   [AIRLINE],[FLIGHT_NUMBER],[MASTER_AIRLINE],[MASTER_FLIGHT_NUMBER],
+ 	--             [SDO],[STO],[EDO],[ETO],[IDO],[ITO],[ADO],[ATO],
+ 	--             [ERLY_OPEN_OFFSET],[ALLOC_OPEN_OFFSET],[ALLOC_OPEN_RELATED],
+ 	--             [ALLOC_CLOSE_OFFSET],[ALLOC_CLOSE_RELATED],[RUSH_DURATION],
+ 	--             [IS_MANUAL_CLOSED],[IS_CLOSED],[TRAVEL_CLASS],[RESOURCE],[SUBSYSTEM]
+ 	--			   23 fields will be returned to caller via returned recordset.
+ -1: System Exception Occurs. Get flight allocation destination failure.
+ </returns>
+	<remarks>
+	</remarks>
+	<history>
+ 	[xujian]	20-Feb-06	Created
+ </history>
+         ''' -----------------------------------------------------------------------------
+
+</member><member name="M:BHS.SAC2PLCGW.Net.Handlers.ServerMsgForwarder.Send(PALS.Telegrams.Telegram@)">
+	<para>Outgoing message type will be matched to the message booking list of 
+ each client application code. It will be sent to those clients whose booking
+ list includes the outgoing message alias name. If outgoing message alias name
+ is not in any of the client application message booking list, it will be 
+ discarded in this MessageForwarder class layer. If channel of client 
+ application was not opened, then the outgoing message will be discarded, 
+ regardless this message was booked by this client or not.</para>
+</member><member name="T:BHS.SAC2PLCGW.Net.Handlers.ServerMsgForwarder">
+ -----------------------------------------------------------------------------
+ Project	 : DBT2_BHS
+ Class	 : SAC2PLCGW.Net.Handlers.ServerMsgForwarder
+ 
+ -----------------------------------------------------------------------------
+ <summary>
+ MessageForwarder class has one internal ArrayList, which contains ChannelName 
+ of all opened channels. The ChannelName will be add into this ArrayList upon
+ it is reported by MessageForwarder.ConnectionOpened() methid. And it will be 
+ removed from this list upon MessageForwarder.ConnectionClosed() methid is 
+ invoked by bottom chain class.
+ 
+ <para>Outgoing message type will be matched to the message booking list of 
+ each client application code. It will be sent to those clients whose booking
+ list includes the outgoing message alias name. If outgoing message alias name
+ is not in any of the client application message booking list, it will be 
+ discarded in this MessageForwarder class layer. If channel of client 
+ application was not opened, then the outgoing message will be discarded, 
+ regardless this message was booked by this client or not.</para>
+		<para>Due to the outgoing message alias name will be used by Send() method,
+ hence, all outgoing message telegram format must be defined by upper layer
+ class before it pass message to this MessageForwarder clasSend() method.
+ Otherwise the outgoing message will be discarded by MessageForwarder class,
+ instead of send to remote application. </para>
+		<para>All incoming message will be forwarded to MessageGateway class without 
+ any data handling. The incoming queues, and incoming data handling process 
+ all are implemented in the upper layer MessageGateway class, instead of this
+ MessageCollector class.</para>
+		<para>Due to no matter the channel is opened or not, the bottom layer 
+ PALS.Net.Filters.Acknowledge.ACK class will buffer all acknowledge required 
+ outgoing message into its re-transmit buffer first before actual sending. 
+ So such message will not be lost in the case of sending failure or channel 
+ closed. But all acknowledge unrequired outgoing message will not be buffered 
+ by ACK class or any of other bottom layer classes, hence it will be discarded 
+ after sending process, no matter the sending process is success or not.</para>
+		<para>In order to use MessageForwarder class, the follow settings has to be defined
+ in the XML configuration file. They are:</para>
+		<para><![CDATA[
+     <configSet name="DBT2_BHS.SAC2PLCGW.Net.Handlers.MessageForwarder">
+	        <messageBooking>
+	        <!--InnerText is the telegram alias name. Comma must be used between multiple telegrams-->
+		        <client appCode="SortEngn">BEV</client>
+		        <client appCode="BHSConso">SRQ,SRP</client>
+	        </messageBooking>	
+     </configSet>
+ ]]></para>
+	</summary>
+	<remarks>
+	</remarks>
+	<history>
+ 	[xujian]	12/4/2005	Created
+ </history>
+ -----------------------------------------------------------------------------
+
+</member><member name="M:BHS.SortEngine.Message.Handlers.ITI.MessageHandling(PALS.Telegrams.Telegram@)">
+ -----------------------------------------------------------------------------
+ <summary>
+ Overrides the base class MessageHandling() method to provide the actual
+ process of handling Item Lost Tracking message.
+ </summary>
+	<param name="Message"></param>
+	<remarks>
+	</remarks>
+	<history>
+ 	[xujian]	12/22/2005	Created
+ </history>
+ -----------------------------------------------------------------------------
+
+</member><member name="T:BHS.SortEngine.Message.Handlers.ITI">
+ -----------------------------------------------------------------------------
+ Project	 : BHS
+ Class	 : SortEngine.Message.Handler.ITI
+ 
+ -----------------------------------------------------------------------------
+ <summary>
+ Item Tracking Information Message handler.
+ </summary>
+	<remarks>
+	</remarks>
+	<history>
+	</history>
+ -----------------------------------------------------------------------------
+
+</member><member name="M:BHS.Utilities.LocationIDArrayToString(BHS.LocationID[]@)">
+	<summary>
+ Convert LocationID structure object array to "Location1/Subsystem1, Location2/Subsystem2, ..."
+ format string for display purpose.
+ 
+ </summary>
+	<param name="Locations"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:BHS.Utilities.BagTagDecoding(System.String,System.String)">
+	<summary>
+ Decode a 10-digit IATA code into a Tag structure object:
+ Public Structure Tag
+     Dim LP As String
+     Dim Valid As Boolean
+     Dim Type As TagType
+     Dim Airline As String
+     Dim Location As String
+     Dim Destination As String
+ End Structure
+ 
+ Tag.Type will indicate this bag tag is Fallback Tag or Normal IATA License Plate Tag.
+ Tag.Valid will indicate whether the Fallback tag is valid or invalid (the airport location
+ code in the 10-digit code is not identical to the specific airport location code (given by 
+ the function argument: AirportLocationCode).
+ If it is IATA tag, then  the Tag.Valid field value will alwasy be True.
+ </summary>
+	<param name="LicensePlate"></param>
+	<param name="AirportLocationCode"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:BHS.SortEngine.Message.Handlers.ILT.MessageHandling(PALS.Telegrams.Telegram@)">
+ -----------------------------------------------------------------------------
+ <summary>
+ Overrides the base class MessageHandling() method to provide the actual
+ process of handling Item Lost Tracking message.
+ </summary>
+	<param name="Message"></param>
+	<remarks>
+	</remarks>
+	<history>
+ 	[xujian]	12/22/2005	Created
+ </history>
+ -----------------------------------------------------------------------------
+
+</member><member name="T:BHS.SortEngine.Message.Handlers.ILT">
+ -----------------------------------------------------------------------------
+ Project	 : Winnipeg BHS
+ Class	 : SortEngine.Message.Handler.ILT
+ 
+ -----------------------------------------------------------------------------
+ <summary>
+ Item Screened Message handler.
+ </summary>
+	<remarks>
+	</remarks>
+	<history>
+ 	[xujian]	12/22/2005	Created
+ </history>
+ -----------------------------------------------------------------------------
+
+</member><member name="T:BHS.SortEngine.DataPersister.Database.DBConfig">
+	<summary>
+ 1. The Category of Parameters
+ The BHS SAC system is consisted of number of components. These SAC components are:
+ - SAC to PLC communication gateway services;
+ - SAC Sort Engine service;
+ - SAC Service Monitoring service;
+ - Departure Flight Allocation application;
+ - Manual Encoding Station application;
+ - BHS-FIDS Interface communication gateway service;
+ - BHS-CUTE Interface communication gateway service;
+ - And other BHS related applications...
+ 
+ Each of above components has its own configuration parameters. Some of the parameters are 
+ used to provide the flexibility to developer for fine tuning the application during the 
+ development time, in-house testing time or on-site test time. Once the value of the 
+ parameters is finalized by the developer, they will not be changed at the BHS production 
+ time. Usually this type of parameters is called the ¡°Internal¡± parameter. There is no any 
+ GUI will be provided to end user for them to change the ¡°Internal¡± parameter settings.
+ 
+ Another type of parameters is called ¡°Public¡± parameters. They are provided to end user 
+ (BHS operators) for him to change the configurations according to the BHS production 
+ requirement. Usually, the configuration GUI is provided to end user, so that they can 
+ change the ¡°Public¡± parameter settings through it.
+ 
+ 2. The Location where the Parameters are Stored
+ There are two places are used to store parameter settings for SAC components:
+ - One is the XML configuration file;
+ - Another one is the database table [SYSCONFIG].
+ 
+ Each SAC component has its own XML configuration file, which is used to store the setting 
+ of whole set ¡°Internal¡± and ¡°Public¡± parameters. 
+ 
+ The table [SYSCONFIG] in the SAC database is used to store the setting of those ¡°Public¡± 
+ parameters. This database table can be accessed by all SAC components. It is the central 
+ place for all SAC applications and services to store their own ¡°Public¡± parameters. When 
+ the setting of any ¡°Public¡± parameters is changed by end user through the configuration 
+ GUI, the new setting will be updated into this database table, but not the XML configuration 
+ file.
+ 
+ Highlight:
+ The settings in the SAC database table [SYSCONFIG] have the higher priority than the 
+ settings in the XML configuration file. If the parameter setting could be found in the 
+ [SYSCONFIG] table and the value is not NULL, or not invalid, it will supersede the setting 
+ of the same parameter that is stored in the XML configuration file. Otherwise, the settings 
+ in the XML file will be used.
+ 
+ 3. The Notification of Parameter Setting Changes ¨C [ParamCHGNotification] Service
+ When end user changes the setting of ¡°Public¡± parameters, in order for them to be taken 
+ effect as soon as possible and without restart the application or service, the parameter 
+ related SAC component has to be notified about the change of setting. This can be done by 
+ [ParamCHGNotification] service. 
+ 
+ [ParamCHGNotification] is a Windows service application to centralized monitors the parameter 
+ setting changes in the database table [SYSCONFIG]. If it detects that any parameter setting 
+ (the value of column ¡°SYSVALUE¡±) is changed, it will send the ¡°Parameter Changed Notification¡± 
+ (PCN) telegram to SAC components. Once receives the PCN, the SAC component needs to reload 
+ the parameter new settings from [SYSCONFIG] table and use it in future.
+ 
+ In order to be notified by [ParamCHGNotification] service about the parameter setting changes, 
+ the component name, IP address and TCP port umber of the particular SAC component has to be 
+ pre-registered in the [ParamCHGNotification] service XML configuration file. The notification 
+ server will only send PCN telegram to those registered components. 
+ 
+ There is a TCP connection is opened between notification service and each SAC components. 
+ The notification service acts as the TCP server, and initializes the TCP connection to the 
+ registered SAC components (TCP Servers). 
+ 
+ Once receives the PCN telegram, the SAC component needs send ¡°Parameter Changed Notification 
+ Acknowledge¡± (PNA) telegram to inform the notification service that it has receives the PCN. 
+ Otherwise, the notification service will keep resending the PCN for pre-set number for times 
+ before it closes the connection to SAC components. After the connection is re-initialized by 
+ the notification service, the same PCN telegram will be resent. This process will be repeated 
+ by notification service until the PNA from SAC component is received.
+ 
+ The communication protocol of [ParamCHGNotification] service to SAC component interface, and 
+ the PCN and PNA telegram format please refer to the interface protocol 
+ [BHS-504-10-1.01 IS_AP_TCPServer2Client].
+ </summary>
+	<remarks></remarks>
+</member><member name="M:BHS.SortEngine.Message.Handlers.CSR.ConstructTelegram(System.String,System.String@,System.String@,System.String@)">
+ -----------------------------------------------------------------------------
+ <summary>
+ Construct Chute Status Request.
+ 
+ <para>
+			<![CDATA[
+     <telegram alias="CSR" name="Chute_Status_Request_Message" sequence="True" acknowledge="False">
+         <field name="Type" offset="0" length="4" default="48,48,49,49"/>
+         <field name="Length" offset="4" length="4" default="48,48,49,50"/>
+         <field name="Sequence" offset="8" length="4" default="?"/>
+     </telegram>		
+ ]]>
+		</para>
+	</summary>
+	<returns></returns>
+         ''' <remarks>
+	</remarks>
+         ''' <history>
+ 	[xujian]	1/11/2006	Created
+ </history>
+ -----------------------------------------------------------------------------
+
+</member><member name="T:BHS.SortEngine.Message.Handlers.CSR">
+ -----------------------------------------------------------------------------
+ Project	 : Winnipeg International Airport
+ Class	 : SortEngine.Message.Handler.CSR
+ 
+ -----------------------------------------------------------------------------
+ <summary>
+ Item Screened Message handler.
+ </summary>
+	<remarks>
+	</remarks>
+	<history>
+ 	[xujian]	12/22/2005	Created
+ </history>
+ -----------------------------------------------------------------------------
+
+</member><member name="M:BHS.SortEngine.Message.Handlers.GID.MessageHandling(PALS.Telegrams.Telegram@)">
+ -----------------------------------------------------------------------------
+ <summary>
+ Overrides the base class MessageHandling() method to provide the actual
+ process of handling GID Used message.
+ 
+ <para>The following actions will be taken by SAC upon received the GID Used 
+ message:</para>
+		<para>1. Insert one new record into database "BAG_INFO" table for future 
+ sortation purpose;</para>
+		<para>2. Insert one new record into database "GID_USED" bag event table
+ for future report generation purpose;</para>
+	</summary>
+	<param name="Message"></param>
+	<remarks>
+	</remarks>
+	<history>
+ 	[xujian]	12/22/2005	Created
+ </history>
+ -----------------------------------------------------------------------------
+
+</member><member name="T:BHS.SortEngine.Message.Handlers.GID">
+ -----------------------------------------------------------------------------
+ Project	 : BHS
+ Class	 : SortEngine.Message.Handler.GID
+ 
+ -----------------------------------------------------------------------------
+ <summary>
+ GID Used Message handler.
+ 
+ <para>The following actions will be taken by SAC upon received the GID Used 
+ message:</para>
+		<para>1. Insert one new record into database "BAG_INFO" table for future 
+ sortation purpose;</para>
+		<para>2. Insert one new record into database "GID_USED" bag event table
+ for future report generation purpose;</para>
+		<para>GID Used message has the following telegram format.</para>
+		<para><![CDATA[
+     <telegram alias="GID" name="GID_Used_Message" sequence="True" acknowledge="False">
+	        <field name="Type" offset="0" length="4" default="48,48,48,51"/>
+	        <field name="Length" offset="4" length="4" default="48,48,53,52"/>
+	        <field name="Sequence" offset="8" length="4" default="?"/>
+	        <field name="SubSystem" offset="12" length="10" default="?"/>
+	        <field name="Source" offset="22" length="20" default="?"/>
+	        <field name="GID" offset="42" length="10" default="?"/>
+	        <field name="BagType" offset="52" length="2" default="?"/>
+     </telegram>
+ ]]></para>
+	</summary>
+	<remarks>
+		<para>The PLC generates the Global Identifier (GID) for the item at the following time:</para>
+		<para>Before the item enter into the Level 1 and 2 X-ray machine;</para>
+		<para>Whenever the stray item was detected.</para>
+		<para>When any new item is inserted to BHS at the MES.</para>
+		<para>Due to the item is still tracked by PLC after it is pushed to ME or L3 ED 
+ line, the same GID of the item is still remained. Hence there is no new GID 
+ will be generated after the item was pushed to these 2 lines.</para>
+		<para>When a GID has been generated and attached to a item, the PLC will inform 
+ SAC by sending a GID Used (0003) telegram.</para>
+		<para>The GID Used telegram must be sent at least once for each item that was 
+ inducted into BHS.</para>
+	</remarks>
+	<history>
+ 	[xujian]	12/22/2005	Created
+ </history>
+ -----------------------------------------------------------------------------
+
+</member><member name="P:BHS.SAC2PLCGW.Configure.GlobalContext.Company">
+	<summary>
+  Company name
+  </summary>
+</member><member name="P:BHS.SAC2PLCGW.Configure.GlobalContext.Department">
+	<summary>
+  Department name
+  </summary>
+</member><member name="P:BHS.SAC2PLCGW.Configure.GlobalContext.Author">
+	<summary>
+  Author name
+  </summary>
+</member><member name="P:BHS.SAC2PLCGW.Configure.GlobalContext.AppName">
+	<summary>
+  AppName name
+  </summary>
+</member><member name="P:BHS.SAC2PLCGW.Configure.GlobalContext.AppStartedTime">
+	<summary>
+  AppName name
+  </summary>
+</member><member name="P:BHS.SortEngine.Application.Initializer.PerfMonitor">
+ -----------------------------------------------------------------------------
+ <summary>
+ Class property to return the ClassStatus object of current class.
+ </summary>
+	<value></value>
+	<remarks>
+	</remarks>
+	<history>
+ 	[xujian]	11/2/2005	Created
+ </history>
+ -----------------------------------------------------------------------------
+
+</member><member name="P:BHS.SortEngine.Application.Initializer.PerfMonitorList">
+ -----------------------------------------------------------------------------
+ <summary>
+ Class property to return the ArrayList object that contains the ClassStatus 
+ objects of current class and all of its instance of sub classes.
+ </summary>
+	<returns></returns>
+	<remarks>
+	</remarks>
+	<history>
+ 	[xujian]	11/2/2005	Created
+ </history>
+ -----------------------------------------------------------------------------
+
+</member><member name="M:BHS.SortEngine.Application.Initializer.OnReloadSettingCompleted">
+	<summary>
+ Event handler of ReloadSettingCompleted event fired by IConfigurationLoader interface 
+ implemented class method LoadSettingFromConfigFile() upon the reloading setting from
+ changed file is successfully completed. 
+ 
+ This event handler is to make sure the reloaded settings can be taken effective 
+ immediately.
+ </summary>
+</member><member name="M:BHS.SortEngine.Application.Initializer.Init">
+ -----------------------------------------------------------------------------
+ <summary>
+ The class initialisation method. This is the main application initialization 
+ entry point. Instantial all object here.
+ </summary>
+	<returns>Return True if initialization success; otherwise return False.</returns>
+	<remarks>
+	</remarks>
+	<history>
+ 	[xujian]	12/2/2004	Created
+ </history>
+ -----------------------------------------------------------------------------
+
+</member><member name="T:BHS.SortEngine.Application.Initializer">
+ -----------------------------------------------------------------------------
+ Project	 : BHS
+ Class	 : SortEngine.Application.Initializer
+ 
+ -----------------------------------------------------------------------------
+ <summary>
+	</summary>
+	<remarks>
+	</remarks>
+	<history>
+ 	[xujian]	10/27/2005	Created
+ </history>
+ -----------------------------------------------------------------------------
+
+</member><member name="P:BHS.SortEngine.Application.MessageHandler.ClientForwarder">
+ -----------------------------------------------------------------------------
+ <summary>
+ The reference to the instant of TOC_BHS.SortEngine.Net.Handlers.ClientMsgForwarder
+ class. 
+ 
+ This class property was assigned with the actual value by class constructor. 
+ </summary>
+	<value></value>
+	<remarks>
+	</remarks>
+	<history>
+ 	[xujian]	12/19/2005	Created
+ </history>
+ -----------------------------------------------------------------------------
+
+</member><member name="P:BHS.SortEngine.Application.MessageHandler.ServerForwarder">
+ -----------------------------------------------------------------------------
+ <summary>
+ The reference to the instant of TOC_BHS.SortEngine.Net.Handlers.ServerMsgForwarder
+ class. 
+ 
+ This class property was assigned with the actual value by class constructor. 
+ </summary>
+	<value></value>
+	<remarks>
+	</remarks>
+	<history>
+ 	[xujian]	12/19/2005	Created
+ </history>
+ -----------------------------------------------------------------------------
+
+</member><member name="M:BHS.SortEngine.Application.MessageHandler.IncomingMessageHandling(PALS.Telegrams.Common.MessageAndSource@)">
+	<para>According to interface protocol design (ItemTracking protocol and 
+ TCPServer2Client protocol), the ItemTracking message will only come from the
+ SAC2PLC-GW service to PLC interfaces; the BagEvent (BEV) message will only come 
+ from the SAC2PLC-GW service to SortEngent service interface; the Running 
+ Status Request (SRQ) and Reply (SRP) message will only come from the 
+ SAC2PLC-GW service to BHSConsole GUI application interface.</para>
+</member><member name="T:BHS.SortEngine.Application.MessageHandler">
+ -----------------------------------------------------------------------------
+ Project	 : DBT1_BHS
+ Class	 : SortEngine.Application.MessageHandler
+ 
+ -----------------------------------------------------------------------------
+ <summary>
+		<para>All received messages will be buffered into class internal incoming
+ queue before data handling process is taken. Only one message queue was 
+ implemented for all incoming messages that are received from both
+ MessageCollector and MessageForwarder classes.</para>
+		<para>There is no outgoing message queue was implemented in this layer class.
+ It because all acknowledge required outgoing messages will be buffered by
+ bottom ACK class. Such message won't be lost in case of the sending process
+ failure or it is not acknowledged. But for those acknowledge unrequired 
+ message, they are not buffered in any layer. Such message will be sent and 
+ forget. Hence, if the connection is broken at the time of Send() method
+ is invoked, this acknowledge unrequired message will be lost. Hence, all
+ critical messages should be defined as the acknowledge required message in 
+ the interface protocol design.</para>
+		<para>According to interface protocol design (ItemTracking protocol and 
+ TCPServer2Client protocol), the ItemTracking message will only come from the
+ SAC2PLC-GW service to PLC interfaces; the BagEvent (BEV) message will only come 
+ from the SAC2PLC-GW service to SortEngent service interface; the Running 
+ Status Request (SRQ) and Reply (SRP) message will only come from the 
+ SAC2PLC-GW service to BHSConsole GUI application interface.</para>
+		<para>All incoming ItemTracking protocol messages, which are received from 
+ remote PLC via TCPClient channel, will be encoded into BagEvent message and 
+ sent to SortEngine via TCPServer channel.</para>
+		<para>All incoming BagEvent protocol messages, which are received from 
+ SortEngine via TCPServer channel, will be decoded. If the decoded data is 
+ the ItemTracking protocol message, then the decoded data will be sent to
+ remote PLC via TCPClient channel.</para>
+		<para>If the received message is the Running Status Request (SRQ) message, then
+ the system classes internal status will be collected by this class and 
+ encapsulated into Running Status Reply (SRP) message and sent to remote 
+ requester. According to desing, the SRQ and SRP messages will be received 
+ and sent only via TCPServer channel to remote BHSConsole application, not via
+ TCPClient channel to remote PLCs.</para>
+		<para>One DataHandlingThread is implemented in the class to handle all 
+ received messages that were buffered in the incoming message queue.</para>
+		<para>In order to use TCPClient class, the follow settings has to be defined
+ in the XML configuration file. They are:</para>
+		<para><![CDATA[
+	    <configSet name="Telegram_Formats">
+         <!--The "" or "?" shall be used if the value of attributes is not constant.-->
+         <!--The value of offset and length attributes is number of bytes -->
+         <!--The "acknowledge" indicates whether this message is the acknowledgement required message -->
+         <!--The "sequence" indicates whether this sequence field need to be assigned the new value before sent out -->
+         <!--The "alias" attribute of "telegram" node is constant value for all projects-->
+         <!--The "name" attribute of "field" node is constant value for all projects-->
+         <telegramSet name="Application_Telegrams">
+             <telegram alias="SRQ" name="Status_Request_Message" sequence="True" acknowledge="False">
+	                <field name="Type" offset="0" length="4" default="49,48,48,49"/>
+	                <field name="Length" offset="4" length="4" default="?"/>
+	                <field name="Sequence" offset="8" length="4" default="?"/>
+	                <field name="Class" offset="12" length="?" default="?"/>
+             </telegram>		
+             <telegram alias="SRP" name="Status_Reply_Message" sequence="False" acknowledge="False">
+       	        <field name="Type" offset="0" length="4" default="49,48,48,50"/>
+       	        <field name="Length" offset="4" length="4" default="?"/>
+       	        <field name="Sequence" offset="8" length="4" default="?"/>
+       	        <field name="Status" offset="12" length="?" default="?"/>
+             </telegram>		
+             <telegram alias="BEV" name="Bag_Event_Message" sequence="True" acknowledge="True">
+	                <field name="Type" offset="0" length="4" default="49,48,48,51"/>
+	                <field name="Length" offset="4" length="4" default="?"/>
+	                <field name="Sequence" offset="8" length="4" default="?"/>
+	                <field name="BagEvent" offset="12" length="?" default="?"/>
+             </telegram>		
+	        </telegramSet>	
+     </configSet>	
+ ]]></para>
+	</summary>
+	<remarks>
+	</remarks>
+	<history>
+ 	[xujian]	12/5/2005	Created
+ </history>
+ -----------------------------------------------------------------------------
+
+</member><member name="M:BHS.SortEngine.Net.Handlers.ServerMsgForwarder.Send(PALS.Telegrams.Telegram@)">
+	<para>Outgoing message which is passed to MessageCollector.Send() method will
+ be forwarded down to the communication channel that was specified in the 
+ ChannelName property of the message. 
+ 
+ If there is not any ChannelName was given to this property, then the message
+ will be sent to all opened channels whose ChannelName was in the class
+ internal Opened channel list.</para>
+</member><member name="T:BHS.SortEngine.Net.Handlers.ServerMsgForwarder">
+ -----------------------------------------------------------------------------
+ Project	 : BHS
+ Class	 : SortEngine.Net.Handlers.ServerMsgForwarder
+ 
+ -----------------------------------------------------------------------------
+ <summary>
+ Intermedia class between its top layer business data handler class 
+ (DBT2_BHS.SortEngine.Application.MessageHandler) and its bottom layer network
+ communication protocol chain classes. This class itself is the most top
+ class in the protocol chain classes. It receives the incoming message from 
+ its bottom chain class by its MessageReceived() method. And then forwards the 
+ received incoming message to MessageHandler class by event firing 
+ (OnReceived event). 
+ </summary>
+	<remarks>
+	</remarks>
+	<history>
+ 	[xujian]	12/19/2005	Created
+ </history>
+ -----------------------------------------------------------------------------
+
+</member><member name="M:BHS.SortEngine.Message.Handlers.CST.MessageHandling(PALS.Telegrams.Telegram@)">
+ -----------------------------------------------------------------------------
+ <summary>
+ Overrides the base class MessageHandling() method to provide the actual
+ process of handling Item Lost Tracking message.
+ </summary>
+	<param name="Message"></param>
+	<remarks>
+	</remarks>
+	<history>
+ 	[xujian]	12/22/2005	Created
+ </history>
+ -----------------------------------------------------------------------------
+
+</member><member name="T:BHS.SortEngine.Message.Handlers.CST">
+ -----------------------------------------------------------------------------
+ Project	 : BHS
+ Class	 : SortEngine.Message.Handler.CST
+ 
+ -----------------------------------------------------------------------------
+ <summary>
+ Item Tracking Information Message handler.
+ </summary>
+	<remarks>
+	</remarks>
+	<history>
+	</history>
+ -----------------------------------------------------------------------------
+
+</member><member name="M:BHS.SortEngine.Message.Handlers.IRM.MessageHandling(PALS.Telegrams.Telegram@)">
+ -----------------------------------------------------------------------------
+ <summary>
+ Overrides the base class MessageHandling() method to provide the actual
+ process of handling GID Used message.
+ 
+ <para>The following actions will be taken by SAC upon received the GID Used 
+ message:</para>
+		<para>1. Insert one new record into database "BAG_INFO" table for future 
+ sortation purpose;</para>
+		<para>2. Insert one new record into database "GID_USED" bag event table
+ for future report generation purpose;</para>
+	</summary>
+	<param name="Message"></param>
+	<remarks>
+	</remarks>
+	<history>
+ 	[xujian]	12/22/2005	Created
+ </history>
+ -----------------------------------------------------------------------------
+
+</member><member name="T:BHS.SortEngine.Message.Handlers.IRM">
+ -----------------------------------------------------------------------------
+ Project	 : BHS
+ Class	 : SortEngine.Message.Handler.IRM
+ 
+ -----------------------------------------------------------------------------
+ <summary>
+ Item Removed Message handler.
+ </summary>
+ GID Used Message handler.
+ <history>
+ 	[xujian]	12/22/2005	Created
+ </history>
+ -----------------------------------------------------------------------------
+
+</member><member name="P:BHS.ServiceMonitor.Application.MessageHandler.ServerForwarder">
+ -----------------------------------------------------------------------------
+ <summary>
+ The reference to the instant of DBT2_BHS.ServiceMonitor.Net.Handlers.ServerMsgForwarder
+ class. 
+ 
+ This class property was assigned with the actual value by class constructor. 
+ </summary>
+	<value></value>
+	<remarks>
+	</remarks>
+	<history>
+ 	[xujian]	12/19/2005	Created
+ </history>
+ -----------------------------------------------------------------------------
+
+</member><member name="M:BHS.ServiceMonitor.Application.MessageHandler.IncomingMessageHandling(PALS.Telegrams.Common.MessageAndSource@)">
+	<para>According to interface protocol design (ItemTracking protocol and 
+ TCPServer2Client protocol), the ItemTracking message will only come from the
+ SAC2PLC-GW service to PLC interfaces; the BagEvent (BEV) message will only come 
+ from the SAC2PLC-GW service to SortEngent service interface; the Running 
+ Status Request (SRQ) and Reply (SRP) message will only come from the 
+ SAC2PLC-GW service to BHSConsole GUI application interface.</para>
+</member><member name="T:BHS.ServiceMonitor.Application.MessageHandler">
+ -----------------------------------------------------------------------------
+ Project	 : BHS
+ Class	 : ServiceMonitor.Application.MessageHandler
+ 
+ -----------------------------------------------------------------------------
+ <summary>
+		<para>All received messages will be buffered into class internal incoming
+ queue before data handling process is taken. Only one message queue was 
+ implemented for all incoming messages that are received from both
+ MessageCollector and MessageForwarder classes.</para>
+		<para>There is no outgoing message queue was implemented in this layer class.
+ It because all acknowledge required outgoing messages will be buffered by
+ bottom ACK class. Such message won't be lost in case of the sending process
+ failure or it is not acknowledged. But for those acknowledge unrequired 
+ message, they are not buffered in any layer. Such message will be sent and 
+ forget. Hence, if the connection is broken at the time of Send() method
+ is invoked, this acknowledge unrequired message will be lost. Hence, all
+ critical messages should be defined as the acknowledge required message in 
+ the interface protocol design.</para>
+		<para>According to interface protocol design (ItemTracking protocol and 
+ TCPServer2Client protocol), the ItemTracking message will only come from the
+ SAC2PLC-GW service to PLC interfaces; the BagEvent (BEV) message will only come 
+ from the SAC2PLC-GW service to SortEngent service interface; the Running 
+ Status Request (SRQ) and Reply (SRP) message will only come from the 
+ SAC2PLC-GW service to BHSConsole GUI application interface.</para>
+		<para>All incoming ItemTracking protocol messages, which are received from 
+ remote PLC via TCPClient channel, will be encoded into BagEvent message and 
+ sent to SortEngine via TCPServer channel.</para>
+		<para>All incoming BagEvent protocol messages, which are received from 
+ SortEngine via TCPServer channel, will be decoded. If the decoded data is 
+ the ItemTracking protocol message, then the decoded data will be sent to
+ remote PLC via TCPClient channel.</para>
+		<para>If the received message is the Running Status Request (SRQ) message, then
+ the system classes internal status will be collected by this class and 
+ encapsulated into Running Status Reply (SRP) message and sent to remote 
+ requester. According to desing, the SRQ and SRP messages will be received 
+ and sent only via TCPServer channel to remote BHSConsole application, not via
+ TCPClient channel to remote PLCs.</para>
+		<para>One DataHandlingThread is implemented in the class to handle all 
+ received messages that were buffered in the incoming message queue.</para>
+		<para>In order to use TCPClient class, the follow settings has to be defined
+ in the XML configuration file. They are:</para>
+		<para><![CDATA[
+	    <configSet name="Telegram_Formats">
+         <!--The "" or "?" shall be used if the value of attributes is not constant.-->
+         <!--The value of offset and length attributes is number of bytes -->
+         <!--The "acknowledge" indicates whether this message is the acknowledgement required message -->
+         <!--The "sequence" indicates whether this sequence field need to be assigned the new value before sent out -->
+         <!--The "alias" attribute of "telegram" node is constant value for all projects-->
+         <!--The "name" attribute of "field" node is constant value for all projects-->
+         <telegramSet name="Application_Telegrams">
+             <telegram alias="SRQ" name="Status_Request_Message" sequence="True" acknowledge="False">
+	                <field name="Type" offset="0" length="4" default="49,48,48,49"/>
+	                <field name="Length" offset="4" length="4" default="?"/>
+	                <field name="Sequence" offset="8" length="4" default="?"/>
+	                <field name="Class" offset="12" length="?" default="?"/>
+             </telegram>		
+             <telegram alias="SRP" name="Status_Reply_Message" sequence="False" acknowledge="False">
+       	        <field name="Type" offset="0" length="4" default="49,48,48,50"/>
+       	        <field name="Length" offset="4" length="4" default="?"/>
+       	        <field name="Sequence" offset="8" length="4" default="?"/>
+       	        <field name="Status" offset="12" length="?" default="?"/>
+             </telegram>		
+ 			<telegram alias="STR" name="Service_Start_Command_Message" sequence="True" acknowledge="False">
+ 				<field name="Type" offset="0" length="4" default="48,49,48,52"/>
+ 				<field name="Length" offset="4" length="4" default="?"/>
+ 				<field name="Sequence" offset="8" length="4" default="?"/>
+ 				<field name="Services" offset="12" length="?" default="?"/>
+ 			</telegram>		
+ 			<telegram alias="STO" name="Service_Stop_Command_Message" sequence="True" acknowledge="False">
+ 				<field name="Type" offset="0" length="4" default="48,49,48,53"/>
+ 				<field name="Length" offset="4" length="4" default="?"/>
+ 				<field name="Sequence" offset="8" length="4" default="?"/>
+ 				<field name="Services" offset="12" length="?" default="?"/>
+ 			</telegram>		
+	        </telegramSet>	
+     </configSet>	
+ ]]></para>
+	</summary>
+	<remarks>
+	</remarks>
+	<history>
+ 	[xujian]	12/5/2005	Created
+ </history>
+ -----------------------------------------------------------------------------
+
+</member><member name="P:BHS.ServiceMonitor.Application.Initializer.PerfMonitor">
+ -----------------------------------------------------------------------------
+ <summary>
+ Class property to return the ClassStatus object of current class.
+ </summary>
+	<value></value>
+	<remarks>
+	</remarks>
+	<history>
+ 	[xujian]	11/2/2005	Created
+ </history>
+ -----------------------------------------------------------------------------
+
+</member><member name="P:BHS.ServiceMonitor.Application.Initializer.PerfMonitorList">
+ -----------------------------------------------------------------------------
+ <summary>
+ Class property to return the ArrayList object that contains the ClassStatus 
+ objects of current class and all of its instance of sub classes.
+ </summary>
+	<returns></returns>
+	<remarks>
+	</remarks>
+	<history>
+ 	[xujian]	11/2/2005	Created
+ </history>
+ -----------------------------------------------------------------------------
+
+</member><member name="M:BHS.ServiceMonitor.Application.Initializer.OnReloadSettingCompleted">
+	<summary>
+ Event handler of ReloadSettingCompleted event fired by IConfigurationLoader interface 
+ implemented class method LoadSettingFromConfigFile() upon the reloading setting from
+ changed file is successfully completed. 
+ 
+ This event handler is to make sure the reloaded settings can be taken effective 
+ immediately.
+ </summary>
+</member><member name="T:BHS.ServiceMonitor.Application.Initializer">
+ -----------------------------------------------------------------------------
+ Project	 : BHS
+ Class	 : ServiceMonitor.Application.Initializer
+ 
+ -----------------------------------------------------------------------------
+ <summary>
+	</summary>
+	<remarks>
+	</remarks>
+	<history>
+ 	[xujian]	26/07/2006	Created
+ </history>
+ -----------------------------------------------------------------------------
+
+</member><member name="M:BHS.SortEngine.Message.Handlers.AbstractMessageHandler.#ctor">
+ -----------------------------------------------------------------------------
+ <summary>
+ Class constructor, to create an instance of class.
+ </summary>
+	<remarks>
+	</remarks>
+	<history>
+ 	[xujian]	10/24/2005	Created
+ </history>
+ -----------------------------------------------------------------------------
+
+</member><member name="M:BHS.SortEngine.Message.Handlers.AbstractMessageHandler.MessageHandling(PALS.Telegrams.Telegram@)">
+ -----------------------------------------------------------------------------
+ <summary>
+ The derived classes will implement the actual handling process by
+ overrides this MessageHandling() method.
+ </summary>
+	<param name="Message"></param>
+	<remarks>
+	</remarks>
+	<history>
+ 	[xujian]	12/22/2005	Created
+ </history>
+ -----------------------------------------------------------------------------
+
+</member><member name="M:BHS.SortEngine.Message.Handlers.IDR.MessageHandling(PALS.Telegrams.Telegram@)">
+ -----------------------------------------------------------------------------
+ <summary>
+ Overrides the base class MessageHandling() method to provide the actual
+ process of handling Item Sortation Event message.
+ </summary>
+	<param name="Message"></param>
+	<remarks>
+	</remarks>
+	<history>
+ 	[xujian]	12/22/2005	Created
+ </history>
+ -----------------------------------------------------------------------------
+
+</member><member name="T:BHS.SortEngine.Message.Handlers.IDR">
+ -----------------------------------------------------------------------------
+ Project	 : BHS
+ Class	 : SortEngine.Message.Handler.ISE
+ 
+ -----------------------------------------------------------------------------
+ <summary>
+ Item Destination Request Message handler.
+ </summary>
+	<remarks>
+	</remarks>
+	<history>
+ 	[xujian]	12/22/2005	Created
+ </history>
+ -----------------------------------------------------------------------------
+
+</member><member name="M:BHS.SAC2PLCGW.Net.Handlers.ServerMsgForwarderParameters.Init(System.Xml.XmlNode@,System.Xml.XmlNode@)">
+	<para><![CDATA[
+     <configSet name="DBT2_BHS.SAC2PLCGW.Net.Handlers.MessageForwarder">
+	        <messageBooking>
+	            <!--InnerText is the telegram alias name. Comma shall be used between multiple telegrams-->
+		        <client appCode="SortEngn">BEV</client>
+		        <client appCode="BHSConso">SRQ,SRP</client>
+	        </messageBooking>	
+     </configSet>
+ ]]></para>
+</member><member name="F:BHS.SortEngine.Configure.XmlSettingLoader.DESIRED_NUMBER_OF_CFG_FILES">
+ there are total 3 XML configuration files required by SortEng application: 
+ CFG_SortEngine.xml - application settings 
+ CFG_Telegrams.xml - application telegram format definations.
+ CFG_BHSConfig.xml - application Public Parameter Settings.
+
+</member><member name="F:BHS.SortEngine.Configure.XmlSettingLoader.XML_CONFIGSET">
+ XMLNode name of configuration sets.
+
+</member><member name="F:BHS.SortEngine.Configure.XmlSettingLoader._className">
+ The name of current class 
+
+</member><member name="F:BHS.SortEngine.Configure.XmlSettingLoader._logger">
+ Create a logger for use in this class
+
+</member><member name="P:BHS.SortEngine.Configure.XmlSettingLoader.Parameters_GlobalContext">
+ AppInitializer parameter classes variables for storing application settings loaded from configuration file.
+ In order to prevent the overwriting the existing system settings stored in the gloabl parameter variables  
+ due to the failure of reloading configuration file, the loaded parameters shall be stored into
+ the temporary variables and only assign to global parameter variables is the loading successed.
+
+</member><member name="M:BHS.SortEngine.Configure.XmlSettingLoader.LoadSettingFromConfigFile(System.Boolean,System.IO.FileInfo[])">
+	<summary>
+ This class method is the place to centralize the loading of application settings from 
+ configuration file. 
+ <para>
+ The actual implementation of IConfigurationLoader interface method LoadSettingFromConfigFile(). 
+ This method will be invoked by AppConfigurator class.
+ </para>
+		<para>
+ If the parameter isReloading = true, the interface implemented LoadSettingFromConfigFile() 
+ may raise a event after all settings have been reloaded successfully, to inform application 
+ that the reloading setting has been done. So application can take the necessary actions
+ to take effective of new settings.
+ </para>
+		<para>
+ Decode XML configuration file and load application settings shall be done by this method.
+ </para>
+	</summary>
+	<param name="isReloading">
+ If the parameter isReloading = true, the interface implemented LoadSettingFromConfigFile() 
+ may raise a event after all settings have been reloaded successfully, to inform application 
+ that the reloading setting has been done. So application can take the necessary actions
+ to take effective of new settings.
+ </param>
+	<param name="cfgFiles">
+ params type method argument, represents one or more configuration files.
+ </param>
+</member><member name="E:BHS.SortEngine.Configure.XmlSettingLoader.ReloadSettingCompleted">
+	<summary>
+ Event will be raised when reload setting from changed configuration 
+ file is successfully completed.
+ </summary>
+</member><member name="T:BHS.SortEngine.Message.Handlers.ICR">
+ -----------------------------------------------------------------------------
+ Project	 : Winnipeg International Airport
+ Class	 : SortEngine.Message.Handler.ICR
+ 
+ -----------------------------------------------------------------------------
+ <summary>
+ Item Screened Message handler.
+ </summary>
+	<remarks>
+	</remarks>
+	<history>
+ 	[xujian]	12/22/2005	Created
+ </history>
+ -----------------------------------------------------------------------------
+
+</member>
+</members>
+</doc>

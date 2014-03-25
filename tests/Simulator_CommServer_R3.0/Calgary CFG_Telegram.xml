@@ -1,0 +1,66 @@
+<?xml version="1.0"?>
+<config>
+  <configSet name="Telegrams">
+    <!--You can enter any other messages in this block-->
+    <!--Specical Chars Example: AB&lt;31&gt;&lt;32&gt;And&amp;-->
+<!--000500761240S5A       S5A-01    011234567837831234560000000000ATR1<00><00><00><00><00><00><03><A3>01-->
+    <telegram>EIP RegisterSession Reply</telegram>
+    <telegram>6500 0400 000a0215 00000000 53414332504c4331 00000000 0100 0000</telegram>
+    <telegram>009000120000</telegram>
+    <telegram>000200200001SAC2PLC1</telegram>
+    <telegram>000200200002SAC2PLC2</telegram>
+    <telegram>000300441232TB2       TB2-16    0123456789NB</telegram>
+    <telegram>000300441233TB2       TB2-16    9876543210SB</telegram>
+    <telegram>000400641234TB2       TB2-16    01234567891213141516X-RAY1    1R</telegram>
+    <telegram>000400641235TB2       TB2-16    98765432109897969594X-RAY1    3A</telegram>
+    <telegram>000400641236TB2       TB2-16    12323434567879707172X-RAY1    3R</telegram>
+    <telegram>000400641237TB2       TB2-16    11223344551234123455X-RAY1    1U</telegram>
+    <telegram>000400641238TB2       TB2-16    13131313139988776655X-RAY1    2T</telegram>
+    <telegram>000400641239TB2       TB2-16    14253647589911335577X-RAY1    2N</telegram>
+    <telegram>000500761240S5A       S5A-01    011234567837831234560000000000ATR10000000301</telegram>
+    <telegram>000500761241S5A       S5A-01    010203040521222324252122232425ATR10000000302</telegram>
+    <telegram>000500761242S5A       S5A-01    000000000000000000000000000000ATR10000000303</telegram>
+    <telegram>000500761243S5A       S5A-01    000000000000000000000000000000ATR10000000304</telegram>
+    <telegram>000800641264TB2       TB2-21D   CL2-01    1112223334555666777800</telegram>
+    <telegram>000800641269TB2       TB2-21D   CL2-01    1112223334555666777801</telegram>
+    <telegram>000800641265TB2       TB2-21D   CL2-01    1442553667556677889902</telegram>
+    <telegram>000800641266TB2       TB2-21D   CL2-01    1234567890098765432103</telegram>
+    <telegram>000800641267TB2       TB2-21D   CL2-01    1234123411567856785504</telegram>
+    <telegram>000800641268TB2       TB2-21D   CL2-01    7006005004100020003005</telegram>
+    <telegram>000900521269TB2       TB2-18    12345678903456789012</telegram>
+    <telegram>000900521270TB2       TB2-19    10000200003000040000</telegram>
+    <telegram>001000701271TB2       TB2-16    1112223335444555666820051227-094611234</telegram>
+    <telegram>001000701272TB2       TB2-16    2131415161827364509120060101-000000000</telegram>
+    <telegram>001200341273S5A       S5A-12    01</telegram>
+    <telegram>001200341274S5A       S5A-12    02</telegram>
+    <telegram>001200341275S5A       S5A-12    03</telegram>
+    <telegram>001200341276S5A       S5A-12    04</telegram>
+    <telegram>001200341277S5A       S5A-12    05</telegram>
+    <telegram>001200341273S5B       S5B-01    01</telegram>
+    <telegram>001200341274S5B       S5B-01    02</telegram>
+    <telegram>001200341275S5B       S5B-01    03</telegram>
+    <telegram>001200341276S5B       S5B-01    04</telegram>
+    <telegram>001200341277S5B       S5B-01    05</telegram>
+    <telegram>001200341273S6A       S6A-01    01</telegram>
+    <telegram>001200341274S6A       S6A-01    02</telegram>
+    <telegram>001200341275S6A       S6A-01    03</telegram>
+    <telegram>001200341276S6A       S6A-01    04</telegram>
+    <telegram>001200341277S6A       S6A-01    05</telegram>
+    <telegram>001200341273S6B       S6B-01    01</telegram>
+    <telegram>001200341274S6B       S6B-01    02</telegram>
+    <telegram>001200341275S6B       S6B-01    03</telegram>
+    <telegram>001200341276S6B       S6B-01    04</telegram>
+    <telegram>001200341277S6B       S6B-01    05</telegram>
+
+    <telegram>001300521277S6B       S6B-01    05111111110123456789</telegram>
+
+    <telegram>001600801277ME        ME-11     05111111110123456789                            </telegram>
+    <telegram>001600801277ME        ME-11     02111111110000000000SQ 123                      </telegram>
+    <telegram>001600801277ME        ME-11     02111111110000000000                MU5       </telegram>
+<telegram>001601021277ME        ME-11               02111111110000000000                                      04</telegram>
+    <telegram>020300521277ME        ME-11     01234567890123456709</telegram>
+
+    <telegram>009900121278</telegram>
+    <telegram>009900121279</telegram>
+  </configSet>
+</config>

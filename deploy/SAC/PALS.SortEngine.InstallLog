@@ -1,0 +1,39 @@
+﻿Installing assembly 'C:\PterisGlobal\PALS\SAC\PALS.SortEngine.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = C:\PterisGlobal\PALS\SAC\PALS.SortEngine.InstallLog
+   assemblypath = C:\PterisGlobal\PALS\SAC\PALS.SortEngine.exe
+Installing service PALS.SortEngine...
+Service PALS.SortEngine has been successfully installed.
+Creating EventLog source PALS.SortEngine in log Application...
+Committing assembly 'C:\PterisGlobal\PALS\SAC\PALS.SortEngine.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = C:\PterisGlobal\PALS\SAC\PALS.SortEngine.InstallLog
+   assemblypath = C:\PterisGlobal\PALS\SAC\PALS.SortEngine.exe
+Installing assembly 'C:\PterisGlobal\PALS\SAC\PALS.SortEngine.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = C:\PterisGlobal\PALS\SAC\PALS.SortEngine.InstallLog
+   assemblypath = C:\PterisGlobal\PALS\SAC\PALS.SortEngine.exe
+Installing service PALS.SortEngine...
+Creating EventLog source PALS.SortEngine in log Application...
+Rolling back assembly 'C:\PterisGlobal\PALS\SAC\PALS.SortEngine.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = C:\PterisGlobal\PALS\SAC\PALS.SortEngine.InstallLog
+   assemblypath = C:\PterisGlobal\PALS\SAC\PALS.SortEngine.exe
+Restoring event log to previous state for source PALS.SortEngine.
+Installing assembly 'C:\PterisGlobal\PALS\SAC\PALS.SortEngine.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = C:\PterisGlobal\PALS\SAC\PALS.SortEngine.InstallLog
+   assemblypath = C:\PterisGlobal\PALS\SAC\PALS.SortEngine.exe
+Installing service PALS.SortEngine...
+Creating EventLog source PALS.SortEngine in log Application...
+Rolling back assembly 'C:\PterisGlobal\PALS\SAC\PALS.SortEngine.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = C:\PterisGlobal\PALS\SAC\PALS.SortEngine.InstallLog
+   assemblypath = C:\PterisGlobal\PALS\SAC\PALS.SortEngine.exe
+Restoring event log to previous state for source PALS.SortEngine.

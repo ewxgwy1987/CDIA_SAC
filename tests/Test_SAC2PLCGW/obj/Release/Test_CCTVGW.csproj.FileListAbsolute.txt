@@ -1,0 +1,13 @@
+E:\XJ_MyDocuments\Visual Studio 2008\Projects\PGL\Projects\DBWC_MDS2CCTV\tests\Test_CCTVGW\bin\Release\Test_CCTVGW.exe
+E:\XJ_MyDocuments\Visual Studio 2008\Projects\PGL\Projects\DBWC_MDS2CCTV\tests\Test_CCTVGW\bin\Release\Test_CCTVGW.pdb
+E:\XJ_MyDocuments\Visual Studio 2008\Projects\PGL\Projects\DBWC_MDS2CCTV\tests\Test_CCTVGW\bin\Release\BHS.dll
+E:\XJ_MyDocuments\Visual Studio 2008\Projects\PGL\Projects\DBWC_MDS2CCTV\tests\Test_CCTVGW\bin\Release\PALS.Configure.dll
+E:\XJ_MyDocuments\Visual Studio 2008\Projects\PGL\Projects\DBWC_MDS2CCTV\tests\Test_CCTVGW\bin\Release\PALS.dll
+E:\XJ_MyDocuments\Visual Studio 2008\Projects\PGL\Projects\DBWC_MDS2CCTV\tests\Test_CCTVGW\bin\Release\log4net.dll
+E:\XJ_MyDocuments\Visual Studio 2008\Projects\PGL\Projects\DBWC_MDS2CCTV\tests\Test_CCTVGW\bin\Release\BHS.pdb
+E:\XJ_MyDocuments\Visual Studio 2008\Projects\PGL\Projects\DBWC_MDS2CCTV\tests\Test_CCTVGW\obj\Release\ResolveAssemblyReference.cache
+E:\XJ_MyDocuments\Visual Studio 2008\Projects\PGL\Projects\DBWC_MDS2CCTV\tests\Test_CCTVGW\obj\Release\Test_CCTVGW.Form1.resources
+E:\XJ_MyDocuments\Visual Studio 2008\Projects\PGL\Projects\DBWC_MDS2CCTV\tests\Test_CCTVGW\obj\Release\Test_CCTVGW.Properties.Resources.resources
+E:\XJ_MyDocuments\Visual Studio 2008\Projects\PGL\Projects\DBWC_MDS2CCTV\tests\Test_CCTVGW\obj\Release\Test_CCTVGW.csproj.GenerateResource.Cache
+E:\XJ_MyDocuments\Visual Studio 2008\Projects\PGL\Projects\DBWC_MDS2CCTV\tests\Test_CCTVGW\obj\Release\Test_CCTVGW.exe
+E:\XJ_MyDocuments\Visual Studio 2008\Projects\PGL\Projects\DBWC_MDS2CCTV\tests\Test_CCTVGW\obj\Release\Test_CCTVGW.pdb

@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<config>
+  <configSet name="Telegrams">
+    <!--You can enter any other messages in this block-->
+    <telegram>&lt;E0&gt;&lt;00&gt;</telegram>
+    <telegram>&lt;02&gt;010300381234PLCENGN CMS2PLC10403&lt;02&gt;&lt;00&gt;&lt;06&gt;&lt;32&gt;&lt;03&gt;&lt;00&gt;&lt;03&gt;</telegram>
+    <telegram>&lt;02&gt;000100200002SAC2PLC1&lt;03&gt;</telegram>
+    <telegram>&lt;02&gt;000100200002SAC2PLC2&lt;03&gt;</telegram>
+    
+    <telegram>&lt;02&gt;000100200002PLCENGN &lt;03&gt;</telegram>
+    <telegram>&lt;02&gt;000100200002MDS     &lt;03&gt;</telegram>
+    <telegram>&lt;02&gt;000100200002PALSTEST&lt;03&gt;</telegram>
+    <telegram>&lt;02&gt;009000120000&lt;03&gt;</telegram>
+    <telegram>&lt;02&gt;010300541234MDS     CCTVENGN0303030300221234CAM 000101&lt;03&gt;</telegram>
+    <telegram>&lt;02&gt;030101261234CT1       CT1-10          20090115-235959530AA_TRIP   CAM 000101Motor Trip                                        &lt;03&gt;</telegram>
+    <telegram>&lt;02&gt;030101261234CT1       CT1-15          20090115-235959530AA_TRIP   CAM 000101Motor Trip                                        &lt;03&gt;</telegram>
+    <telegram>&lt;02&gt;030101261234CT1       CT1-20          20090115-235959530AA_TRIP   CAM 000101Motor Trip                                        &lt;03&gt;</telegram>
+    <telegram>&lt;02&gt;030200761234CT1       CT1-10          20090115-235959530AA_TRIP   CAM 000101&lt;03&gt;</telegram>
+    <telegram>&lt;02&gt;030200761234CT1       CT1-15          20090115-235959530AA_TRIP   CAM 000101&lt;03&gt;</telegram>
+    <telegram>&lt;02&gt;030200761234CT1       CT1-20          20090115-235959530AA_TRIP   CAM 000101&lt;03&gt;</telegram>
+    <telegram>&lt;02&gt;030101261234CT1       CT1-10          20090115-235959530AA_TR</telegram>
+    <telegram>IP   CAM 000101Motor Trip                                        &lt;03&gt;</telegram>
+ </configSet>
+
+</config>

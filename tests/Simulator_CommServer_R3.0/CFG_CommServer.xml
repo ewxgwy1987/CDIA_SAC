@@ -1,0 +1,67 @@
+<?xml version="1.0"?>
+<config>
+  <!-- This section contains the log4net configuration settings -->
+  <log4net>
+    <!-- Define some output appenders -->
+    <appender name="RollingLogFileAppender" type="log4net.Appender.RollingFileAppender">
+      <param name="File" value="${PALS_LOG}\\CommServer.log" />
+      <param name="AppendToFile" value="True" />
+      <param name="RollingStyle" value="Size" />
+      <param name="maxSizeRollBackups" value="10" />
+      <param name="maximumFileSize" value="500KB" />
+      <param name="staticLogFileName" value="true" />
+      <layout type="log4net.Layout.PatternLayout">
+        <param name="ConversionPattern" value="%d %-5p - %m%n" />
+      </layout>
+    </appender>
+
+    <!-- Setup the root category, add the appenders and set the default level -->
+    <root>
+      <!-- Level value can be ALL, DEBUG, INFO, WARN, ERROR, FATAL, OFF -->
+      <level value="OFF" />
+      <appender-ref ref="RollingLogFileAppender" />
+    </root>
+  </log4net>
+
+  <configSet name="IREL.Net.Transports.TCP.TCPServer">
+    <threadInterval>10</threadInterval>
+    <localNode name="PLC01" ip="127.0.0.1" port="44818"/>
+<!--	<localNode name="PLC1" ip="192.168.100.65" port="44818"/> -->
+    <!--The minimum allowed client connections must be 2, one for bussiness data forwarding, another for console connection.-->
+    <maxConnections>3</maxConnections>
+  </configSet>
+
+
+  <!-- Maximum length of dst & src is 4, Maximum length of localTSAP & remoteTSAP is 8 -->
+  <rfc1006CC dst="0001" src="0002" localTSAP="PLC01" remoteTSAP="SAC2PLC1"/>
+  <!-- firstPart value is the Decimal value of chars separated by comma -->
+  <ack firstPart="02,48,48,57,48,48,48,49,50" midPartOff="8" midPartLen="4" lastPart="03"/>
+  
+  <aboutHelp>
+Description:
+This tester is implemented with TCP server and RFC1006 server functions. It can listen to the remote TCP and RFC1006 connection request and accept the TCP connection. Upon receives the RFC1006 CR telegram, you can send RFC1006 CC telegram to confirm the connection by click &quot;RFC1006 CC&quot; button.
+
+Highlights:
+1. You can pre enter a list of outgoing messages in the XML file &quot;CFG_Telegram.xml&quot; for selection;
+2. You can send Hex value by putting it into &lt;&gt;. For example, &lt;31&gt;&lt;32&gt; represents string &quot;12&quot;;
+3. You can choose to send TCP data package or convert them to RFC1006 data package before send by select &quot;TCP Data&quot; or &quot;RFC1006 Data&quot; RadioButtons;4. You can use &quot;Send Seperate&quot; button to send all selected messages plus one entered message to remote communication peer one by one;5. You can use &quot;Send Together&quot; button to send all selected messages plus one entered message to remote communication peer as combined single message to test your client side raw data seperation function.6. You can use &quot;Timer Send&quot; button to automatically send all selected messages plus one entered message to remote communication peer in time interval base.7. How to enter special characters:
+    &amp;	-	&amp;amp
+    &lt;	-	&amp;lt;
+    &gt;	-	&amp;gt;
+    &quot;	-	&amp;quot;
+  </aboutHelp>
+  <manualEnterHelp>
+    Manual Input Instructions:
+    1. If do you need key in Hex value string in "ASCII" mode, then entered Hex value must be put into "&lt;&gt;".
+    E.g.: AB&lt;31&gt;&lt;32&gt;XJ represents "AB12XJ".
+
+    2. If do you need key in Hex value string in "HEX" mode, then each hex value must be consisted of 2 digite.
+    E.g "02" instead of "2".
+
+    Space character can be used to delimitate 2 hex values.
+    E.g. both "0203" or "02 03" are valid hex value strings.
+
+    3. "&amp;" is the escape marker to allow you enter and send escape "&lt;", "&gt;", or "&amp;"
+    characters inside the telegram. E.g. "123&amp;&lt;5&amp;&amp;" represents "123&lt;5&amp;"
+  </manualEnterHelp>
+</config>

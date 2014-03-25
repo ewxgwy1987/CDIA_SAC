@@ -1,0 +1,8 @@
+D:\My Documents\Visual Studio 2008\Projects\PGL\Project\S01A09028Y_Phoenix T3S & T4N\PSHIA_SAC\src\Services\PALS.MDS2CCTVEngine\obj\Debug\ResolveAssemblyReference.cache
+D:\My Documents\Visual Studio 2008\Projects\PGL\Project\S01A09028Y_Phoenix T3S & T4N\PSHIA_SAC\src\Services\PALS.MDS2CCTVEngine\obj\Debug\PALS.MDS2CCTVEngine.MDS2CCTVEngine.resources
+D:\My Documents\Visual Studio 2008\Projects\PGL\Project\S01A09028Y_Phoenix T3S & T4N\PSHIA_SAC\src\Services\PALS.MDS2CCTVEngine\obj\Debug\PALS.MDS2CCTVEngine.ProjectInstaller.resources
+D:\My Documents\Visual Studio 2008\Projects\PGL\Project\S01A09028Y_Phoenix T3S & T4N\PSHIA_SAC\src\Services\PALS.MDS2CCTVEngine\obj\Debug\PALS.MDS2CCTVEngine.csproj.GenerateResource.Cache
+D:\My Documents\Visual Studio 2008\Projects\PGL\Project\S01A09028Y_Phoenix T3S & T4N\PSHIA_SAC\bin\Debug\PALS.MDS2CCTVEngine.exe
+D:\My Documents\Visual Studio 2008\Projects\PGL\Project\S01A09028Y_Phoenix T3S & T4N\PSHIA_SAC\bin\Debug\PALS.MDS2CCTVEngine.pdb
+D:\My Documents\Visual Studio 2008\Projects\PGL\Project\S01A09028Y_Phoenix T3S & T4N\PSHIA_SAC\src\Services\PALS.MDS2CCTVEngine\obj\Debug\PALS.MDS2CCTVEngine.exe
+D:\My Documents\Visual Studio 2008\Projects\PGL\Project\S01A09028Y_Phoenix T3S & T4N\PSHIA_SAC\src\Services\PALS.MDS2CCTVEngine\obj\Debug\PALS.MDS2CCTVEngine.pdb

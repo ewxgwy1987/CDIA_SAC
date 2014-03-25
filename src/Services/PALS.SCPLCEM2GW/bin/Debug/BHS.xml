@@ -1,0 +1,3343 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>BHS</name>
+    </assembly>
+    <members>
+        <member name="T:BHS.Engine.TCPClientChains.Messages.Handlers.ITI">
+            <summary>
+            ITI message handler class
+            </summary>
+        </member>
+        <member name="T:BHS.Engine.TCPClientChains.Messages.Handlers.AbstractMessageHandler">
+            <summary>
+            null
+            </summary>
+        </member>
+        <member name="M:BHS.Engine.TCPClientChains.Messages.Handlers.AbstractMessageHandler.MessageReceived(BHS.IncomingMessageInfo)">
+            <summary>
+            Common class method, to be available in all message handler classes.
+            </summary>
+            <param name="msgInfo"></param>
+        </member>
+        <member name="M:BHS.Engine.TCPClientChains.Messages.Handlers.AbstractMessageHandler.MessageHandling(BHS.IncomingMessageInfo)">
+            <summary>
+            Abstract method and need to be overrided by all message handler classes.
+            </summary>
+            <param name="msgInfo"></param>
+        </member>
+        <member name="P:BHS.Engine.TCPClientChains.Messages.Handlers.AbstractMessageHandler.DBPersistor">
+            <summary>
+            The reference of Persistor class object
+            </summary>
+        </member>
+        <member name="P:BHS.Engine.TCPClientChains.Messages.Handlers.AbstractMessageHandler.ObjectID">
+            <summary>
+            ID of class object
+            </summary>
+        </member>
+        <member name="P:BHS.Engine.TCPClientChains.Messages.Handlers.AbstractMessageHandler.MessageFormat">
+            <summary>
+            Telegram format of message associated to current message handler.
+            </summary>
+        </member>
+        <member name="M:BHS.Engine.TCPClientChains.Messages.Handlers.ITI.#ctor">
+            <summary>
+            Class constructer.
+            </summary>
+        </member>
+        <member name="M:BHS.Engine.TCPClientChains.Messages.Handlers.ITI.Finalize">
+            <summary>
+            Class destructer.
+            </summary>
+        </member>
+        <member name="M:BHS.Engine.TCPClientChains.Messages.Handlers.ITI.Dispose">
+            <summary>
+            Class method to be called by class wrapper for release resources explicitly.
+            </summary>
+        </member>
+        <member name="M:BHS.Engine.TCPClientChains.Messages.Handlers.ITI.Init">
+            <summary>
+            Init() method.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:BHS.Engine.TCPClientChains.Messages.Handlers.ITI.MessageHandling(BHS.IncomingMessageInfo)">
+            <summary>
+            Overridden class method for message handling.
+            </summary>
+            <param name="msgInfo"></param>
+        </member>
+        <member name="M:BHS.Engine.TCPClientChains.Messages.Handlers.ITI.MessageDecoding(PALS.Telegrams.Telegram,System.String@,System.String@,System.String@,System.String@,System.String@,System.String@)">
+            <summary>
+            Message Decoding
+            </summary>
+        </member>
+        <member name="T:BHS.Engine.TCPClientChains.Messages.Handlers.TPTI">
+            <summary>
+            TPTI message handler class
+            </summary>
+        </member>
+        <member name="F:BHS.Engine.TCPClientChains.Messages.Handlers.TPTI._messageFormat">
+            <summary>
+            TPTI message format.
+            </summary>
+        </member>
+        <member name="M:BHS.Engine.TCPClientChains.Messages.Handlers.TPTI.#ctor(PALS.Telegrams.TelegramFormat)">
+            <summary>
+            Class constructer.
+            </summary>
+        </member>
+        <member name="M:BHS.Engine.TCPClientChains.Messages.Handlers.TPTI.ConstructTPTIMessage">
+            <summary>
+            Construct TPTI message.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:BHS.Engine.TCPClientChains.Messages.Handlers.TPTI.NoOfTwoPier">
+            <summary>
+            No Of Carrier field value.
+            </summary>
+        </member>
+        <member name="P:BHS.Engine.TCPClientChains.Messages.Handlers.TPTI.AllocationData">
+            <summary>
+            Allocation Data (Code, Sort Device) field value.
+            </summary>
+        </member>
+        <member name="T:BHS.Engine.TCPClientChains.Configure.GlobalContext">
+            <summary>
+            Parameter class for storing application global context settings.
+            </summary>
+        </member>
+        <member name="P:BHS.Engine.TCPClientChains.Configure.GlobalContext.Company">
+            <summary>
+            Company name
+            </summary>
+        </member>
+        <member name="P:BHS.Engine.TCPClientChains.Configure.GlobalContext.Department">
+            <summary>
+            Department name
+            </summary>
+        </member>
+        <member name="P:BHS.Engine.TCPClientChains.Configure.GlobalContext.Author">
+            <summary>
+            Author name
+            </summary>
+        </member>
+        <member name="P:BHS.Engine.TCPClientChains.Configure.GlobalContext.AppName">
+            <summary>
+            Application name
+            </summary>
+        </member>
+        <member name="P:BHS.Engine.TCPClientChains.Configure.GlobalContext.AppStartedTime">
+            <summary>
+            Application starting time
+            </summary>
+        </member>
+        <member name="T:BHS.MessageSendRequestEventArgs">
+            <summary>
+            Define a class to hold the parameters of fired event whenever connection is 
+            opened or closed, or message is received.
+            </summary>
+        </member>
+        <member name="M:BHS.MessageSendRequestEventArgs.#ctor(System.String,System.String,System.String,PALS.Telegrams.Telegram)">
+            <summary>
+            class constructor.
+            </summary>
+            <param name="sender">Sender of outgoing message.</param>
+            <param name="receiver">Receiver of outgoing message.</param>
+            <param name="channelName">The name of communication Channel where the connection is 
+            opened/closed, or message is received from.</param>
+            <param name="message">The received message</param>
+        </member>
+        <member name="P:BHS.MessageSendRequestEventArgs.Sender">
+            <summary>
+            Sender of outgoing message.
+            </summary>
+        </member>
+        <member name="P:BHS.MessageSendRequestEventArgs.Receiver">
+            <summary>
+            Receiver of outgoing message.
+            </summary>
+        </member>
+        <member name="P:BHS.MessageSendRequestEventArgs.ChannelName">
+            <summary>
+            The name of communication Channel where the connection is opened/closed, or 
+            message is sent to. 
+            </summary>
+        </member>
+        <member name="P:BHS.MessageSendRequestEventArgs.Message">
+            <summary>
+            The outgoing message.
+            </summary>
+        </member>
+        <member name="T:BHS.Engine.TCPClientChains.Messages.Handlers.MessageHandler">
+            <summary>
+            Application layer message handler of Engine Service application. The incoming application 
+            message from TCPClient communication chains will be forwarded to this class by the  
+            OnReceived() event fired by most top class, SessionForwarder, in the chains. 
+            </summary>
+            <remarks>
+            <para>
+            There is a class level internal buffer will be created when class is instantiated for storing
+            incoming messages. All incoming messages will be stored in this internal buffer. One seperate
+            thread is running in background to retrieve the incoming messages one by one from this buffer,
+            and handle it according to the business rules.
+            </para>
+            <para>There is no outgoing message queue was implemented in this layer class. It because all 
+            acknowledge required outgoing messages will be buffered by bottom ACK class. Such message won't 
+            be lost in case of the sending process failure or it is not acknowledged. But for those acknowledge 
+            unrequired message, they are not buffered in any layer. Such message will be sent and forget. 
+            Hence, if the connection is broken at the time of Send() method is invoked, this acknowledge 
+            unrequired message will be lost. All critical messages should be defined as the acknowledge 
+            required message in the interface protocol design.
+            </para>
+            <para>
+            Usually, the Engine Service shall be set as the Depending Nodes of Gateway service. It represents
+            that 1) the Gateway service can not open connection to MessageRouter if the connection between
+            Engine Service and MessageRouter is not opened; 2) MessageRouter will send Connection Status
+            Notification (CSNF) message to Engine service once the Gateway service open or close the connection 
+            to MessageRouter. Upon receives CSNF message, Engine service can start to perform the required
+            initialization or finalization tasks.
+            </para>
+            <para>
+            Upon channel conenction is opened, closed, or message is received, MessageHandler class will
+            raise following events to wrapper class: 
+            OnConnected(object sender, MessageEventArgs e), 
+            OnDisconnected(object sender, MessageEventArgs e),
+            and OnReceived(object sender, MessageEventArgs e) 
+            
+            In the event MessageEventArgs type parameter e, the ChainName, ChannelName, OpenedChannelCount, 
+            and Message will be forwarded to wrapper class.
+            ChainName           - The name of communication Chain in which the event is fired. One Chain could have
+                                  multiple channel connections.
+            ChannelName         - The name of communication Channel where the connection is opened/closed, or 
+                                  message is received from. One Chain could have multiple channel connections.
+            OpenedChannelCount  - The number of current opened channel connections.
+            Message             - The received message.
+            </para>
+            <para>
+            Whenever Sort Engine service receives "Gateway Ready Notification" (GRNF) message sent by Gateway 
+            application upon Gateway to its both internal and external conenction are opened, Engine will
+            perform following 3 tasks:
+            1) clear all CCTV alarms stored in the database table [CCTV_STATUS].
+            2) clear all Outgoing MDS Alarm messages stored in the database table [CCTV_MDS_OUTGOING_ALARMS].
+            3) send all current MDS alarms stored in the database table [CCTV_MDS_ACTIVATED_ALARMS] to CCTV server.
+            4) Add ready Gateway application code into List object (_readyGageways) to inform HandlingThread 
+               start the monitoring of table [CCTV_MDS_OUTGOING_ALARMS] and sending its records to CCTV Gateway 
+               for forwarding to CCTV server.
+            
+            Upon receives GRNF message, Gateway application code included in themessage will be added into 
+            List object (_readyGageways). It will be removed from List upon receives CSNF message with 
+            "Disconnected" status or Engine lost the connection to MessageRouter. No MDS alarm is allowed 
+            to be sent to CCTV server if the number of items in the List object is less than 1 (no Gateway is 
+            ready), no metter CCTV Engine is connected to MessageRouter or not. 
+            
+            Whenever CCTV server is connected to CCTV Gateway Service, CCTV server shall clear all current MDS 
+            alarms maintained by CCTV server itself.
+            </para>
+            
+            </remarks>
+        </member>
+        <member name="F:BHS.Engine.TCPClientChains.Messages.Handlers.MessageHandler._forwarder">
+            <summary>
+            Reference of the most top SessionForwarder class in the TCPClient chain.
+            </summary>
+        </member>
+        <member name="M:BHS.Engine.TCPClientChains.Messages.Handlers.MessageHandler.#ctor(PALS.Common.IParameters,BHS.Engine.TCPClientChains.Messages.Handlers.SessionForwarder)">
+            <summary>
+            Class constructer.
+            </summary>
+        </member>
+        <member name="M:BHS.Engine.TCPClientChains.Messages.Handlers.MessageHandler.Finalize">
+            <summary>
+            Class destructer.
+            </summary>
+        </member>
+        <member name="M:BHS.Engine.TCPClientChains.Messages.Handlers.MessageHandler.Dispose">
+            <summary>
+            Class method to be called by class wrapper for release resources explicitly.
+            </summary>
+        </member>
+        <member name="M:BHS.Engine.TCPClientChains.Messages.Handlers.MessageHandler.Init">
+            <summary>
+            Perform MessageHandler class initialization tasks.
+            <para>Before this method is invoked, those fields of individual message handler 
+            need to be assigned with value class caller (Initializer class object).</para>
+            </summary>
+        </member>
+        <member name="M:BHS.Engine.TCPClientChains.Messages.Handlers.MessageHandler.Forwarder_OnConnected(System.Object,BHS.MessageEventArgs)">
+            <summary>
+            Gateway-Internal chain has the higher priority than Gateway-External chain. The connection 
+            (Application layer and TCP Socket layer) between gateway service to external devices shall be 
+            opened only after connection (both application and socket layers) between gateway service to 
+            Engine Service application is opened. If gateway to Engine connection is interrupted, the 
+            all connections of gateway to external devices have to be closed immediately. This design is 
+            for gateway service application that is running on the seperate SAC-COM server (B) to has the 
+            chance to open the connection to external devices, when the Engine Service on the SAC-COM
+            server (A) is dead but the gateway service on server (A) is still working. Otherwise, the 
+            gateway service running on server (A) will continue hold the connection to external devices, 
+            even its associated engine service has been dead.
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:BHS.Engine.TCPClientChains.Messages.Handlers.MessageHandler.OnSendRequest(System.Object,BHS.MessageSendRequestEventArgs)">
+            <summary>
+            For sending out MSG
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:BHS.Engine.TCPClientChains.Messages.Handlers.MessageHandler.Disconnect(System.String)">
+            <summary>
+            Close the specified connection of TCPClient communication chain.
+            If value null is passed to this method, then all connections of this chain will be closed.
+            <para>
+            Disconnect command will be passed to most top class SessionForwarder object
+            in the chain, and then passed down to every chain classes to close each layer connections.
+            </para>
+            </summary>
+            <param name="channelName">name of channel</param>
+        </member>
+        <member name="M:BHS.Engine.TCPClientChains.Messages.Handlers.MessageHandler.Send(System.Byte[])">
+            <summary>
+            Sending message to MessageRouter via TCPClient chain classes.
+            <para>
+            The message will be sent to all current opened connections of TCPClient chain.
+            </para>
+            </summary>
+            <param name="data"></param>
+        </member>
+        <member name="M:BHS.Engine.TCPClientChains.Messages.Handlers.MessageHandler.Send(PALS.Telegrams.Telegram)">
+            <summary>
+            Sending message to MessageRouter via TCPClient chain classes.
+            <para>
+            The message will be sent to all current opened connections of TCPClient chain.
+            </para>
+            </summary>
+            <param name="message"></param>
+        </member>
+        <member name="M:BHS.Engine.TCPClientChains.Messages.Handlers.MessageHandler.MessageHandlingThread">
+            <summary>
+            Message handling thread.
+            This thread will be permanently running in background after application is started.
+            </summary>
+        </member>
+        <member name="M:BHS.Engine.TCPClientChains.Messages.Handlers.MessageHandler.IncomingMessageHandling(PALS.Telegrams.Common.MessageAndSource)">
+            <summary>
+            Whenever CCTV Engine service receives "Gateway Ready Notification" (GRNF) message sent by Gateway 
+            application upon Gateway to its both internal and external conenction are opened, Engine will
+            perform following 3 tasks:
+            1) clear all CCTV alarms stored in the database table [CCTV_STATUS].
+            2) clear all Outgoing MDS Alarm messages stored in the database table [CCTV_MDS_OUTGOING_ALARMS].
+            3) send all current MDS alarms stored in the database table [CCTV_MDS_ACTIVATED_ALARMS] to CCTV server.
+            4) Add ready Gateway application code into List object (_readyGageways) to inform HandlingThread 
+               start the monitoring of table [CCTV_MDS_OUTGOING_ALARMS] and sending its records to CCTV Gateway 
+               for forwarding to CCTV server.
+            
+            Upon receives GRNF message, Gateway application code included in themessage will be added into 
+            List object (_readyGageways). It will be removed from List upon receives CSNF message with 
+            "Disconnected" status or Engine lost the connection to MessageRouter. No MDS alarm is allowed 
+            to be sent to CCTV server if the number of items in the List object is less than 1 (no Gateway is 
+            ready), no metter CCTV Engine is connected to MessageRouter or not. 
+            
+            Whenever CCTV server is connected to CCTV Gateway Service, CCTV server shall clear all current MDS 
+            alarms maintained by CCTV server itself.
+            </summary>
+            <param name="msgSource"></param>
+        </member>
+        <member name="M:BHS.Engine.TCPClientChains.Messages.Handlers.MessageHandler.IncomingINTMMessageHandling(System.String,PALS.Telegrams.Telegram)">
+            <summary>
+            All application data were encapsulated into INTM message. This handling process will decode
+            it into original application data first, and then following by business logic handling.
+            </summary>
+            <param name="channelName">ChannelName.</param>
+            <param name="message">INTM message.</param>
+        </member>
+        <member name="M:BHS.Engine.TCPClientChains.Messages.Handlers.MessageHandler.IncomingCSNFMessageHandling(System.String,PALS.Telegrams.Telegram)">
+            <summary>
+            Perform Initializing or Finalizing tasks upon associated remote interface party is 
+            conencted or disconnected to MessageRouter, by means of receive CSNF message.
+            1. If CSNF message indicates that Gateway has disconnected to MessageRouter, then
+               remove the application code included in the CSNF message from List 
+               object (_readyGageways).
+            </summary>
+            <param name="channelName">ChannelName.</param>
+            <param name="message">INTM message.</param>
+        </member>
+        <member name="M:BHS.Engine.TCPClientChains.Messages.Handlers.MessageHandler.ConstructINTMMessage(System.String,System.String,System.Byte[],PALS.Telegrams.Telegram,PALS.Telegrams.TelegramFormat)">
+            <summary>
+            Constructing BagEvent message by encapsulating ItemTracking message received from
+            external device (e.g. PLC).
+            </summary>
+            <param name="sender">Outgoing message sender. It shall be the code of current Engine application.</param>
+            <param name="receiver">Outgoing message final receiver. it shall be the code of associated Gateway application.</param>
+            <param name="originType">The type of original message that need to be encapsulated into INTM message.</param>
+            <param name="originMsg">original message.</param>
+            <param name="formatINTM">INTM message format object.</param>
+            <returns></returns>
+        </member>
+        <member name="M:BHS.Engine.TCPClientChains.Messages.Handlers.MessageHandler.ProduceAFAIMessage(BHS.IncomingMessageInfo,System.Boolean)">
+            <summary>
+            Create Airline Code and Function Allocation Message
+            </summary>
+            <param name="msgInfo"></param>
+            <param name="isGWReady"></param>
+        </member>
+        <member name="M:BHS.Engine.TCPClientChains.Messages.Handlers.MessageHandler.ProduceCRAIMessage(BHS.IncomingMessageInfo,System.Boolean,System.String)">
+            <summary>
+            Create Carrier Allocation Information Message
+            </summary>
+            <param name="msgInfo"></param>
+            <param name="isGWReady"></param>
+            <param name="dbSTPString"></param>
+        </member>
+        <member name="M:BHS.Engine.TCPClientChains.Messages.Handlers.MessageHandler.ProduceFBTIMessage(BHS.IncomingMessageInfo,System.Boolean,System.String)">
+            <summary>
+            Create Fallback Tag Information Message 
+            </summary>
+            <param name="msgInfo"></param>
+            <param name="isGWReady"></param>
+            <param name="dbSTPString"></param>
+        </member>
+        <member name="M:BHS.Engine.TCPClientChains.Messages.Handlers.MessageHandler.ProduceFPTIMessage(BHS.IncomingMessageInfo,System.Boolean,System.String)">
+            <summary>
+            Create Four Pier Tag Information 
+            </summary>
+            <param name="msgInfo"></param>
+            <param name="isGWReady"></param>
+            <param name="dbSTPString"></param>
+        </member>
+        <member name="E:BHS.Engine.TCPClientChains.Messages.Handlers.MessageHandler.OnReceived">
+            <summary>
+            Event will be raised when message is received.
+            </summary>
+        </member>
+        <member name="E:BHS.Engine.TCPClientChains.Messages.Handlers.MessageHandler.OnConnected">
+            <summary>
+            Event will be raised when specific channel connection of Gateway-External device chain is opened.
+            </summary>
+        </member>
+        <member name="E:BHS.Engine.TCPClientChains.Messages.Handlers.MessageHandler.OnDisconnected">
+            <summary>
+            Event will be raised when specific channel connection of Gateway-External device chain is closed.
+            </summary>
+        </member>
+        <member name="P:BHS.Engine.TCPClientChains.Messages.Handlers.MessageHandler.ObjectID">
+            <summary>
+            ID of class object
+            </summary>
+        </member>
+        <member name="P:BHS.Engine.TCPClientChains.Messages.Handlers.MessageHandler.ClassParameters">
+            <summary>
+            Property, object of MessageHandlerParameters class.
+            </summary>
+        </member>
+        <member name="P:BHS.Engine.TCPClientChains.Messages.Handlers.MessageHandler.GRNF">
+            <summary>
+            Business logic handler of CSNF message
+            </summary>
+        </member>
+        <member name="P:BHS.Engine.TCPClientChains.Messages.Handlers.MessageHandler.GID">
+            <summary>
+            Business logic handler of CANL message
+            </summary>
+        </member>
+        <member name="P:BHS.Engine.TCPClientChains.Messages.Handlers.MessageHandler.ICR">
+            <summary>
+            Business logic handler of ICR message
+            </summary>
+        </member>
+        <member name="P:BHS.Engine.TCPClientChains.Messages.Handlers.MessageHandler.ISC">
+            <summary>
+            Business logic handler of ISC message
+            </summary>
+        </member>
+        <member name="P:BHS.Engine.TCPClientChains.Messages.Handlers.MessageHandler.ISE">
+            <summary>
+            Business logic handler of ISE message
+            </summary>
+        </member>
+        <member name="P:BHS.Engine.TCPClientChains.Messages.Handlers.MessageHandler.IPR">
+            <summary>
+            Business logic handler of IPR message
+            </summary>
+        </member>
+        <member name="P:BHS.Engine.TCPClientChains.Messages.Handlers.MessageHandler.ILT">
+            <summary>
+            Business logic handler of ILT message
+            </summary>
+        </member>
+        <member name="P:BHS.Engine.TCPClientChains.Messages.Handlers.MessageHandler.ITI">
+            <summary>
+            Business logic handler of ITI message
+            </summary>
+        </member>
+        <member name="P:BHS.Engine.TCPClientChains.Messages.Handlers.MessageHandler.MER">
+            <summary>
+            Business logic handler of MER message
+            </summary>
+        </member>
+        <member name="P:BHS.Engine.TCPClientChains.Messages.Handlers.MessageHandler.AFAI">
+            <summary>
+            Business logic handler of AFAI message
+            </summary>
+        </member>
+        <member name="P:BHS.Engine.TCPClientChains.Messages.Handlers.MessageHandler.BMAM">
+            <summary>
+            Business logic handler of BMAM message
+            </summary>
+        </member>
+        <member name="P:BHS.Engine.TCPClientChains.Messages.Handlers.MessageHandler.CRAI">
+            <summary>
+            Business logic handler of CRAI message
+            </summary>
+        </member>
+        <member name="P:BHS.Engine.TCPClientChains.Messages.Handlers.MessageHandler.FBTI">
+            <summary>
+            Business logic handler of FBTI message
+            </summary>
+        </member>
+        <member name="P:BHS.Engine.TCPClientChains.Messages.Handlers.MessageHandler.FPTI">
+            <summary>
+            Business logic handler of FPTI message
+            </summary>
+        </member>
+        <member name="P:BHS.Engine.TCPClientChains.Messages.Handlers.MessageHandler.P1500">
+            <summary>
+            Business logic handler of P1500 message
+            </summary>
+        </member>
+        <member name="P:BHS.Engine.TCPClientChains.Messages.Handlers.MessageHandler.IRD">
+            <summary>
+            Business logic handler of IRD message
+            </summary>
+        </member>
+        <member name="P:BHS.Engine.TCPClientChains.Messages.Handlers.MessageHandler.DBPersistor">
+            <summary>
+            null
+            </summary>
+        </member>
+        <member name="P:BHS.Engine.TCPClientChains.Messages.Handlers.MessageHandler.PerfMonitor">
+            <summary>
+            null
+            </summary>
+        </member>
+        <member name="P:BHS.Engine.TCPClientChains.Messages.Handlers.MessageHandler.PerfMonitorList">
+            <summary>
+            The Hashtable that contains the ClassStatus object of current class and all of its instance of sub classes.
+            </summary> 
+        </member>
+        <member name="T:BHS.Engine.TCPClientChains.Messages.Handlers.CRAI">
+            <summary>
+            CRAI message handler class
+            </summary>
+        </member>
+        <member name="F:BHS.Engine.TCPClientChains.Messages.Handlers.CRAI._messageFormat">
+            <summary>
+            CRAI message format.
+            </summary>
+        </member>
+        <member name="M:BHS.Engine.TCPClientChains.Messages.Handlers.CRAI.#ctor(PALS.Telegrams.TelegramFormat)">
+            <summary>
+            Class constructer.
+            </summary>
+        </member>
+        <member name="M:BHS.Engine.TCPClientChains.Messages.Handlers.CRAI.ConstructCRAIMessage">
+            <summary>
+            Construct CRAI message.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:BHS.Engine.TCPClientChains.Messages.Handlers.CRAI.NoOfCarrier">
+            <summary>
+            No Of Carrier field value.
+            </summary>
+        </member>
+        <member name="P:BHS.Engine.TCPClientChains.Messages.Handlers.CRAI.AllocationData">
+            <summary>
+            Allocation Data (3 digits Carrier Code, Sort Device) field value.
+            </summary>
+        </member>
+        <member name="T:BHS.Gateway.TCPClientTCPClientChains.Messages.Handlers.MessageHandlerParameters">
+            <summary>
+            Parameter class used to store parameters of MessageHandler class.
+            </summary>
+        </member>
+        <member name="M:BHS.Gateway.TCPClientTCPClientChains.Messages.Handlers.MessageHandlerParameters.#ctor(System.Xml.XmlNode,System.Xml.XmlNode)">
+            <summary>
+            Class constructer.
+            </summary>
+        </member>
+        <member name="M:BHS.Gateway.TCPClientTCPClientChains.Messages.Handlers.MessageHandlerParameters.Finalize">
+            <summary>
+            Class destructer.
+            </summary>
+        </member>
+        <member name="M:BHS.Gateway.TCPClientTCPClientChains.Messages.Handlers.MessageHandlerParameters.Dispose">
+            <summary>
+            Class method to be called by class wrapper for release resources explicitly.
+            </summary>
+        </member>
+        <member name="M:BHS.Gateway.TCPClientTCPClientChains.Messages.Handlers.MessageHandlerParameters.Init(System.Xml.XmlNode@,System.Xml.XmlNode@)">
+            <summary>
+            Class Initialization.
+            </summary>
+            <param name="configSet"></param>
+            <param name="telegramSet"></param>
+            <returns></returns>
+        </member>
+        <member name="P:BHS.Gateway.TCPClientTCPClientChains.Messages.Handlers.MessageHandlerParameters.Sender">
+            <summary>
+            Bag Event Message (local) sender name.
+            </summary>
+        </member>
+        <member name="P:BHS.Gateway.TCPClientTCPClientChains.Messages.Handlers.MessageHandlerParameters.Receiver">
+            <summary>
+            Bag Event Message (remote) sender name.
+            </summary>
+        </member>
+        <member name="P:BHS.Gateway.TCPClientTCPClientChains.Messages.Handlers.MessageHandlerParameters.MessageType_INTM">
+            <summary>
+            INTM Message type.
+            </summary>
+        </member>
+        <member name="P:BHS.Gateway.TCPClientTCPClientChains.Messages.Handlers.MessageHandlerParameters.MessageFormat_INTM">
+            <summary>
+            INTM Message format.
+            </summary>
+        </member>
+        <member name="P:BHS.Gateway.TCPClientTCPClientChains.Messages.Handlers.MessageHandlerParameters.MessageType_CSNF">
+            <summary>
+            CSNF Message type.
+            </summary>
+        </member>
+        <member name="P:BHS.Gateway.TCPClientTCPClientChains.Messages.Handlers.MessageHandlerParameters.MessageFormat_CSNF">
+            <summary>
+            CSNF Message format.
+            </summary>
+        </member>
+        <member name="P:BHS.Gateway.TCPClientTCPClientChains.Messages.Handlers.MessageHandlerParameters.MessageType_GRNF">
+            <summary>
+            GRNF Message type.
+            </summary>
+        </member>
+        <member name="P:BHS.Gateway.TCPClientTCPClientChains.Messages.Handlers.MessageHandlerParameters.MessageFormat_GRNF">
+            <summary>
+            GRNF Message format.
+            </summary>
+        </member>
+        <member name="P:BHS.Gateway.TCPClientTCPClientChains.Messages.Handlers.MessageHandlerParameters.MessageType_SRQ">
+            <summary>
+            Status Request Message type.
+            </summary>
+        </member>
+        <member name="P:BHS.Gateway.TCPClientTCPClientChains.Messages.Handlers.MessageHandlerParameters.MessageFormat_SRQ">
+            <summary>
+            Status Request Message format.
+            </summary>
+        </member>
+        <member name="P:BHS.Gateway.TCPClientTCPClientChains.Messages.Handlers.MessageHandlerParameters.MessageType_SRP">
+            <summary>
+            Status Reply Message type.
+            </summary>
+        </member>
+        <member name="P:BHS.Gateway.TCPClientTCPClientChains.Messages.Handlers.MessageHandlerParameters.MessageFormat_SRP">
+            <summary>
+            Status Reply Message format.
+            </summary>
+        </member>
+        <member name="T:BHS.Engine.TCPClientChains.Messages.Handlers.BMAM">
+            <summary>
+            BMAM message handler class
+            </summary>
+        </member>
+        <member name="M:BHS.Engine.TCPClientChains.Messages.Handlers.BMAM.#ctor">
+            <summary>
+            Class constructer.
+            </summary>
+        </member>
+        <member name="M:BHS.Engine.TCPClientChains.Messages.Handlers.BMAM.Finalize">
+            <summary>
+            Class destructer.
+            </summary>
+        </member>
+        <member name="M:BHS.Engine.TCPClientChains.Messages.Handlers.BMAM.Dispose">
+            <summary>
+            Class method to be called by class wrapper for release resources explicitly.
+            </summary>
+        </member>
+        <member name="M:BHS.Engine.TCPClientChains.Messages.Handlers.BMAM.Init">
+            <summary>
+            Init() method.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:BHS.Engine.TCPClientChains.Messages.Handlers.BMAM.MessageHandling(BHS.IncomingMessageInfo)">
+            <summary>
+            Overridden class method for message handling.
+            </summary>
+            <param name="msgInfo"></param>
+        </member>
+        <member name="M:BHS.Engine.TCPClientChains.Messages.Handlers.BMAM.MessageDecoding(PALS.Telegrams.Telegram,System.String@,System.String@,System.String@,System.String@,System.String@,System.String@,System.String@,System.String@,System.String@)">
+            <summary>
+            Message Decoding
+            </summary>
+        </member>
+        <member name="T:BHS.Gateway.TCPClientTCPClientChains.Messages.Handlers.MessageHandler">
+            <summary>
+            Application layer message handler of Gateway Service application. The incoming application 
+            message from both Gateway-Internal and Gateway-External communication chains will be forwarded 
+            to this class by the OnReceived() event fired by most top class, GW2InternalSessionForwarder
+            and GW2ExternalSessionForwarder, in both chains. 
+            <para>
+            If messages come from Gateway-Externall chain, then this MessageHandler class will forward them
+            to Gateway-Internal chain for sending out to BHS Engine Service application. As per the 
+            <![CDATA[TCPServer&Client]]> protocol design, all messages received by Gateway-External chain
+            and reach this MessageHandler class shall be forward to Engine Service application for business
+            logic handling.
+            </para>
+            <para>
+            If messages come from Gateway-Internal chain, and this message needs to be sent to external
+            devices (e.g. PLCs, CCTV server, BIS/FIS servers, etc.), then this MessageHandler class will 
+            forward them to Gateway-Internal chain for sending out to external devices. As per the 
+            <![CDATA[TCPServer&Client]]> protocol design, not all messages received by Gateway-Internal
+            chain and reach this MessageHandler class shall be forward to external devices. For example:
+            ServiceStatusRequest message shall be handled by this MessageHandler class itself, instead
+            of forward to external devices.
+            </para>
+            </summary>
+            <remarks>
+            <para>
+            There is a class level internal buffer will be created when class is instantiated for storing
+            incoming messages. All incoming messages will be stored in this internal buffer. One seperate
+            thread is running in background to retrieve the incoming messages one by one from this buffer,
+            and handle it according to the business rules.
+            </para>
+            <para>There is no outgoing message queue was implemented in this layer class. It because all 
+            acknowledge required outgoing messages will be buffered by bottom ACK class. Such message won't 
+            be lost in case of the sending process failure or it is not acknowledged. But for those acknowledge 
+            unrequired message, they are not buffered in any layer. Such message will be sent and forget. 
+            Hence, if the connection is broken at the time of Send() method is invoked, this acknowledge 
+            unrequired message will be lost. Hence, all critical messages should be defined as the 
+            acknowledge required message in the interface protocol design.
+            </para>
+            <para>
+            As per the Gateway Service application design, this gateway application is acted as the TCP client
+            of both connections to BHS internal Engine Service applications and to external devices. Hence, 
+            the both Engine Service application and external devices are TCP server and always in the 
+            listening mode to wait for the TCP connection request from Gateway service application.
+            </para>
+            <para>
+            Gateway-Internal chain has the higher priority than Gateway-External chain. The connection 
+            (Application layer and TCP Socket layer) between gateway service to external devices shall be 
+            opened only after connection (both application and socket layers) between gateway service to 
+            Engine Service application is opened. If gateway to Engine connection is interrupted, the 
+            all connections of gateway to external devices have to be closed immediately. This design is 
+            for gateway service application, which is running on the seperate SAC-COM server (B), can has the 
+            chance to open the connection to external devices, when the Engine Service on the SAC-COM
+            server (A) is dead but the gateway service on server (A) is still working. Otherwise, the 
+            gateway service running on server (A) will continue hold the connection to external devices, 
+            even its associated engine service has been dead.
+            </para>
+            <para>
+            Upon channel conenction is opened, closed, or message is received, MessageHandler class will
+            raise 
+            OnConnected(object sender, MessageEventArgs e), 
+            OnDisconnected(object sender, MessageEventArgs e),
+            and OnReceived(object sender, MessageEventArgs e) 
+            events to wrapper class. In the event MessageEventArgs type parameter e, the ChainName, 
+            ChannelName, OpenedChannelCount, and Message will be forwarded to wrapper class.
+            ChainName   - The name of communication Chain in which the event is fired. One Chain could have
+                          multiple channel connections.
+            ChannelName - The name of communication Channel where the connection is opened/closed, or 
+                          message is received from. One Chain could have multiple channel connections.
+            OpenedChannelCount - The number of current opened channel connections.
+            Message     - The received message.
+            </para>
+            </remarks>
+        </member>
+        <member name="F:BHS.Gateway.TCPClientTCPClientChains.Messages.Handlers.MessageHandler._forwarderGW2INTERNAL">
+            <summary>
+            Message forwarder of GW2Internal channel for forwarding incoming message to centrialized message handler.
+            </summary>
+        </member>
+        <member name="F:BHS.Gateway.TCPClientTCPClientChains.Messages.Handlers.MessageHandler._forwarderGW2EXTERNAL">
+            <summary>
+            Message forwarder of GW2External channel for forwarding incoming message to centrialized message handler.
+            </summary>
+        </member>
+        <member name="M:BHS.Gateway.TCPClientTCPClientChains.Messages.Handlers.MessageHandler.#ctor(PALS.Common.IParameters,BHS.Gateway.TCPClientTCPClientChains.Messages.Handlers.GW2InternalSessionForwarder,BHS.Gateway.TCPClientTCPClientChains.Messages.Handlers.GW2ExternalSessionForwarder)">
+            <summary>
+            Class constructer.
+            </summary>
+        </member>
+        <member name="M:BHS.Gateway.TCPClientTCPClientChains.Messages.Handlers.MessageHandler.Finalize">
+            <summary>
+            Class destructer.
+            </summary>
+        </member>
+        <member name="M:BHS.Gateway.TCPClientTCPClientChains.Messages.Handlers.MessageHandler.Dispose">
+            <summary>
+            Class method to be called by class wrapper for release resources explicitly.
+            </summary>
+        </member>
+        <member name="M:BHS.Gateway.TCPClientTCPClientChains.Messages.Handlers.MessageHandler.ForwarderGW2INTERNAL_OnConnected(System.Object,BHS.MessageEventArgs)">
+            <summary>
+            Gateway-Internal chain has the higher priority than Gateway-External chain. The connection 
+            (Application layer and TCP Socket layer) between gateway service to external devices shall be 
+            opened only after connection (both application and socket layers) between gateway service to 
+            Engine Service application is opened. If gateway to Engine connection is interrupted, the 
+            all connections of gateway to external devices have to be closed immediately. This design is 
+            for gateway service application that is running on the seperate SAC-COM server (B) to has the 
+            chance to open the connection to external devices, when the Engine Service on the SAC-COM
+            server (A) is dead but the gateway service on server (A) is still working. Otherwise, the 
+            gateway service running on server (A) will continue hold the connection to external devices, 
+            even its associated engine service has been dead.
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:BHS.Gateway.TCPClientTCPClientChains.Messages.Handlers.MessageHandler.DisconnectToInternal(System.String)">
+            <summary>
+            Close the specified connection of Gateway-Internal communication chain.
+            If value null is passed to this method, then all connections of this chain will be closed.
+            <para>
+            Disconnect command will be passed to most top class GW2INTERNALSessionForwarder object
+            in the chain, and then passed down to every chain classes to close each layer connections.
+            </para>
+            </summary>
+            <param name="channelName">name of channel</param>
+        </member>
+        <member name="M:BHS.Gateway.TCPClientTCPClientChains.Messages.Handlers.MessageHandler.DisconnectToExternal(System.String)">
+            <summary>
+            Close the specified connection of Gateway-External communication chain.
+            If value null is passed to this method, then all connections of this chain will be closed.
+            <para>
+            Disconnect command will be passed to most top class GW2ExternalSessionForwarder object
+            in the chain, and then passed down to every chain classes to close each layer connections.
+            </para>
+            </summary>
+            <param name="channelName">name of channel</param>
+        </member>
+        <member name="M:BHS.Gateway.TCPClientTCPClientChains.Messages.Handlers.MessageHandler.SentToInternal(System.Byte[])">
+            <summary>
+            Sending message to BHS Internal Engine Service application via Gateway-Internal chain classes.
+            <para>
+            The message will be sent to all current opened connections of Gateway-Internal chain.
+            </para>
+            </summary>
+            <param name="data"></param>
+        </member>
+        <member name="M:BHS.Gateway.TCPClientTCPClientChains.Messages.Handlers.MessageHandler.SentToInternal(PALS.Telegrams.Telegram)">
+            <summary>
+            Sending message to BHS Internal Engine Service application via Gateway-Internal chain classes.
+            <para>
+            The message will be sent to all current opened connections of Gateway-Internal chain.
+            </para>
+            </summary>
+            <param name="message"></param>
+        </member>
+        <member name="M:BHS.Gateway.TCPClientTCPClientChains.Messages.Handlers.MessageHandler.SentToExternal(System.Byte[])">
+            <summary>
+            Sending message to BHS External devices via Gateway-External chain classes.
+            </summary>
+            <para>
+            The message will be sent to all current opened connections of Gateway-External chain.
+            </para>
+            <param name="data"></param>
+        </member>
+        <member name="M:BHS.Gateway.TCPClientTCPClientChains.Messages.Handlers.MessageHandler.SentToExternal(PALS.Telegrams.Telegram)">
+            <summary>
+            Sending message to BHS Internal Engine Service application via Gateway-Internal chain classes.
+            <para>
+            The message will be sent to all current opened connections of Gateway-Internal chain.
+            </para>
+            </summary>
+            <param name="message"></param>
+        </member>
+        <member name="M:BHS.Gateway.TCPClientTCPClientChains.Messages.Handlers.MessageHandler.MessageHandlingThread">
+            <summary>
+            Message handling thread.
+            This thread will be permanently running in background after application is started.
+            </summary>
+        </member>
+        <member name="M:BHS.Gateway.TCPClientTCPClientChains.Messages.Handlers.MessageHandler.IncomingMessageHandling(PALS.Telegrams.Common.MessageAndSource)">
+            <summary>
+            According to interface protocol design (ItemTracking protocol and TCPServer2Client 
+            protocol), there are 3 types of incoming messages:
+            <para>ItemTracking message - Only come from Gateway-External communication chain. 
+            E.g. come from PLC;</para> 
+            <para>BagEvent (BEV) message - Only come from Gateway-Internal communication chain;
+            E.g. come from SAC SortEngine Service;</para> 
+            <para>Running Status Request (SRQ) and Reply (SRP) message - Only come from 
+            Gateway-Internal communication chain. E.g. come from BHS Console Console Application;
+            </para>
+            </summary>
+            <param name="msgSource"></param>
+        </member>
+        <member name="M:BHS.Gateway.TCPClientTCPClientChains.Messages.Handlers.MessageHandler.IncomingCSNFMessageHandling(System.String,PALS.Telegrams.Telegram)">
+            <summary>
+            Perform Initializing or Finalizing tasks upon associated remote interface party is 
+            conencted or disconnected to MessageRouter, by means of receive CSNF message.
+            
+            If both internal and external chain connection of Gateway have opened, the Gateway
+            will send "Gateway Ready Notification" (GRNF) message to remote.
+            </summary>
+            <param name="channelName">ChannelName.</param>
+            <param name="message">INTM message.</param>
+        </member>
+        <member name="M:BHS.Gateway.TCPClientTCPClientChains.Messages.Handlers.MessageHandler.IncomingIntermediateMessageHandling(PALS.Telegrams.Telegram)">
+            <summary>
+            All Intermediate messages that come from GW2INTERNAL chain (e.g. SortEngine service) will 
+            be decoded into ItemTracking message and then be forwarded to remote devices (e.g. PLC)
+            via GW2EXTERNAL chain.
+            </summary>
+            <param name="message">Incoming BagEvent message.</param>
+        </member>
+        <member name="M:BHS.Gateway.TCPClientTCPClientChains.Messages.Handlers.MessageHandler.IncomingItemTrackingMessageHandling(System.String,System.Byte[],PALS.Telegrams.Telegram)">
+            <summary>
+            All incoming ItemTracking messages that received from GW2EXTERNAL chain will 
+            be encoded into INTM message and then forwarded to SortEngine via GW2INTERNAL chain.
+            </summary>
+            <param name="type">Incoming ItemTracking message type, string.</param>
+            <param name="originType">Incoming ItemTracking message type, byte array.</param>
+            <param name="message">Incoming ItemTracking message.</param>
+        </member>
+        <member name="M:BHS.Gateway.TCPClientTCPClientChains.Messages.Handlers.MessageHandler.ConstructINTMMessage(System.Byte[],PALS.Telegrams.Telegram,PALS.Telegrams.TelegramFormat)">
+            <summary>
+            Constructing BagEvent message by encapsulating ItemTracking message received from
+            external device (e.g. PLC).
+            </summary>
+            <param name="originType"></param>
+            <param name="message"></param>
+            <param name="formatINTM"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BHS.Gateway.TCPClientTCPClientChains.Messages.Handlers.MessageHandler.ProduceAndSendGRNF(System.String,System.String)">
+            <summary>
+            Upon  successfully  connected  to  external  device  and  MessageRouter,  Gateway  
+            application  will produce a GRNF message and send to its associated Engine application. 
+            Engine application can only send messages, which need to be forwarded to external 
+            device by Gateway, after receives the GRNF message from Gateway.
+            </summary>
+            <param name="sender"></param>
+            <param name="receiver"></param>
+        </member>
+        <member name="M:BHS.Gateway.TCPClientTCPClientChains.Messages.Handlers.MessageHandler.ConstructGRNFMessage(System.String,System.String)">
+            <summary>
+            Construct "Gateway Ready Notification" (GRNF) message.
+            </summary>
+            <param name="sender"></param>
+            <param name="receiver"></param>
+            <returns></returns>
+        </member>
+        <member name="E:BHS.Gateway.TCPClientTCPClientChains.Messages.Handlers.MessageHandler.OnReceived">
+            <summary>
+            Event will be raised when message is received.
+            </summary>
+        </member>
+        <member name="E:BHS.Gateway.TCPClientTCPClientChains.Messages.Handlers.MessageHandler.OnConnected">
+            <summary>
+            Event will be raised when specific channel connection of Gateway-External device chain is opened.
+            </summary>
+        </member>
+        <member name="E:BHS.Gateway.TCPClientTCPClientChains.Messages.Handlers.MessageHandler.OnDisconnected">
+            <summary>
+            Event will be raised when specific channel connection of Gateway-External device chain is closed.
+            </summary>
+        </member>
+        <member name="P:BHS.Gateway.TCPClientTCPClientChains.Messages.Handlers.MessageHandler.ObjectID">
+            <summary>
+            null
+            </summary>
+        </member>
+        <member name="P:BHS.Gateway.TCPClientTCPClientChains.Messages.Handlers.MessageHandler.ClassParameters">
+            <summary>
+            Property, object of MessageHandlerParameters class.
+            </summary>
+        </member>
+        <member name="P:BHS.Gateway.TCPClientTCPClientChains.Messages.Handlers.MessageHandler.TCPClientParames">
+            <summary>
+            Property, used to the reference of TCPClient class object in a communication channel.
+            </summary>
+        </member>
+        <member name="P:BHS.Gateway.TCPClientTCPClientChains.Messages.Handlers.MessageHandler.PerfMonitor">
+            <summary>
+            null
+            </summary>
+        </member>
+        <member name="P:BHS.Gateway.TCPClientTCPClientChains.Messages.Handlers.MessageHandler.PerfMonitorList">
+            <summary>
+            The Hashtable that contains the ClassStatus object of current class and all of its instance of sub classes.
+            </summary> 
+        </member>
+        <member name="T:BHS.Gateway.TCPClientTCPClientChains.Messages.Handlers.GW2InternalSessionForwarder">
+            <summary>
+            Message Forwarder of Gateway Service application Gateway-Internal communication chain. 
+            <para>
+            This forwarder forwards the incoming messages received from BHS internal service applications 
+            (e.g. SortEngine service, CCTVEngine service, BISEngine/FISEngine service, etc.), to 
+            MessageHandler of gateway service application. Or send outgoing messages passed down from 
+            MessageHandler to BHS external devices (e.g. PLCs, CCTV Server, BIS/FIS server, etc.) via 
+            Gateway-External communication chain.
+            </para>
+            </summary>
+        </member>
+        <member name="M:BHS.Gateway.TCPClientTCPClientChains.Messages.Handlers.GW2InternalSessionForwarder.#ctor(PALS.Common.IParameters)">
+            <summary>
+            Class constructer.
+            </summary>
+        </member>
+        <member name="M:BHS.Gateway.TCPClientTCPClientChains.Messages.Handlers.GW2InternalSessionForwarder.Finalize">
+            <summary>
+            Class destructer.
+            </summary>
+        </member>
+        <member name="M:BHS.Gateway.TCPClientTCPClientChains.Messages.Handlers.GW2InternalSessionForwarder.Dispose">
+            <summary>
+            Class method to be called by class wrapper for release resources explicitly.
+            </summary>
+        </member>
+        <member name="M:BHS.Gateway.TCPClientTCPClientChains.Messages.Handlers.GW2InternalSessionForwarder.Init(PALS.Common.IParameters@)">
+            <summary>
+            Overridden of base class Init() method.
+            </summary>
+            <param name="Param"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BHS.Gateway.TCPClientTCPClientChains.Messages.Handlers.GW2InternalSessionForwarder.ConnectionOpened(System.String)">
+            <summary>
+            Overridden of base class ConnectionOpened() method.
+            </summary>
+            <param name="channelName"></param>
+        </member>
+        <member name="M:BHS.Gateway.TCPClientTCPClientChains.Messages.Handlers.GW2InternalSessionForwarder.ConnectionClosed(System.String)">
+            <summary>
+            Overridden of base class ConnectionClosed() method.
+            </summary>
+            <param name="channelName"></param>
+        </member>
+        <member name="M:BHS.Gateway.TCPClientTCPClientChains.Messages.Handlers.GW2InternalSessionForwarder.MessageReceived(System.String,PALS.Telegrams.Telegram@)">
+            <summary>
+            Forward incoming message to upper layer by OnReceived() event firing upon message is received.
+            </summary>
+            <param name="channelName"></param>
+            <param name="message"></param>
+        </member>
+        <member name="M:BHS.Gateway.TCPClientTCPClientChains.Messages.Handlers.GW2InternalSessionForwarder.Disconnect(System.String)">
+            <summary>
+            Close the connection of specified name of channel. If value null is passed to this
+            method, then all connections of this chain will be closed.
+            </summary>
+            <param name="channelName">null</param>
+        </member>
+        <member name="M:BHS.Gateway.TCPClientTCPClientChains.Messages.Handlers.GW2InternalSessionForwarder.Send(PALS.Telegrams.Telegram)">
+            <summary>
+            Send outgoing message to engine service via all opened channel connections.
+            <para>If no any channel connection is not opened, then the outgoing message will 
+            be discarded.</para>
+            </summary>
+            <param name="message"></param>
+            <returns></returns>
+        </member>
+        <member name="E:BHS.Gateway.TCPClientTCPClientChains.Messages.Handlers.GW2InternalSessionForwarder.OnConnected">
+            <summary>
+            Event will be raised when specific channel connection of Gateway-Internal Engine 
+            Service Application chain is opened.
+            </summary>
+        </member>
+        <member name="E:BHS.Gateway.TCPClientTCPClientChains.Messages.Handlers.GW2InternalSessionForwarder.OnDisconnected">
+            <summary>
+            Event will be raised when specific channel connection of Gateway-Internal Engine 
+            Service Application chain is closed.
+            </summary>
+        </member>
+        <member name="E:BHS.Gateway.TCPClientTCPClientChains.Messages.Handlers.GW2InternalSessionForwarder.OnReceived">
+            <summary>
+            Event will be raised when message is received from engine service applications.
+            </summary>
+        </member>
+        <member name="T:BHS.Engine.TCPClientChains.Messages.Handlers.GRNF">
+            <summary>
+            CSNF message handler class
+            </summary>
+        </member>
+        <member name="M:BHS.Engine.TCPClientChains.Messages.Handlers.GRNF.#ctor">
+            <summary>
+            Class constructer.
+            </summary>
+        </member>
+        <member name="M:BHS.Engine.TCPClientChains.Messages.Handlers.GRNF.Finalize">
+            <summary>
+            Class destructer.
+            </summary>
+        </member>
+        <member name="M:BHS.Engine.TCPClientChains.Messages.Handlers.GRNF.Dispose">
+            <summary>
+            Class method to be called by class wrapper for release resources explicitly.
+            </summary>
+        </member>
+        <member name="M:BHS.Engine.TCPClientChains.Messages.Handlers.GRNF.Init">
+            <summary>
+            Init() method.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:BHS.Engine.TCPClientChains.Messages.Handlers.GRNF.MessageHandling(BHS.IncomingMessageInfo)">
+            <summary>
+            Overridden class method for message handling.
+            </summary>
+            <param name="msgInfo"></param>
+        </member>
+        <member name="M:BHS.Engine.TCPClientChains.Messages.Handlers.GRNF.MessageDecoding(PALS.Telegrams.Telegram,System.String@,System.String@,System.String@,System.String@)">
+            <summary>
+            Message Decoding
+            </summary>
+        </member>
+        <member name="P:BHS.Engine.TCPClientChains.Messages.Handlers.GRNF.MessageFormat_MAAV">
+            <summary>
+            MAAV Message format.
+            </summary>
+        </member>
+        <member name="T:BHS.Engine.TCPClientChains.Messages.Handlers.ISE">
+            <summary>
+            ISE message handler class
+            </summary>
+        </member>
+        <member name="M:BHS.Engine.TCPClientChains.Messages.Handlers.ISE.#ctor">
+            <summary>
+            Class constructer.
+            </summary>
+        </member>
+        <member name="M:BHS.Engine.TCPClientChains.Messages.Handlers.ISE.Finalize">
+            <summary>
+            Class destructer.
+            </summary>
+        </member>
+        <member name="M:BHS.Engine.TCPClientChains.Messages.Handlers.ISE.Dispose">
+            <summary>
+            Class method to be called by class wrapper for release resources explicitly.
+            </summary>
+        </member>
+        <member name="M:BHS.Engine.TCPClientChains.Messages.Handlers.ISE.Init">
+            <summary>
+            Init() method.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:BHS.Engine.TCPClientChains.Messages.Handlers.ISE.MessageHandling(BHS.IncomingMessageInfo)">
+            <summary>
+            Overridden class method for message handling.
+            </summary>
+            <param name="msgInfo"></param>
+        </member>
+        <member name="M:BHS.Engine.TCPClientChains.Messages.Handlers.ISE.MessageDecoding(PALS.Telegrams.Telegram,System.String@,System.String@,System.String@,System.String@,System.String@,System.String@,System.String@,System.String@,System.String@,System.String@)">
+            <summary>
+            Message Decoding
+            </summary>
+        </member>
+        <member name="M:BHS.Engine.TCPClientChains.Messages.Handlers.ISE.LogIRDIntoDatabase(System.String,System.String,System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            Log IRD Message into Database
+            </summary>
+            <param name="sender"></param>
+            <param name="receiver"></param>
+            <param name="gid"></param>
+            <param name="destination_1"></param>
+            <param name="destination_2"></param>
+            <param name="reason"></param>
+            <param name="plc_idx"></param>
+        </member>
+        <member name="P:BHS.Engine.TCPClientChains.Messages.Handlers.ISE.MessageFormat_IRD">
+            <summary>
+            IRD Message format
+            </summary>
+        </member>
+        <member name="E:BHS.Engine.TCPClientChains.Messages.Handlers.ISE.OnSendRequest">
+            <summary>
+            Event will be raised when message handler need send a message to external.
+            </summary>
+        </member>
+        <member name="T:BHS.Engine.TCPClientChains.Messages.Handlers.IRD">
+            <summary>
+            IRD message handler class
+            </summary>
+        </member>
+        <member name="F:BHS.Engine.TCPClientChains.Messages.Handlers.IRD._messageFormat">
+            <summary>
+            IRD message format
+            </summary>
+        </member>
+        <member name="M:BHS.Engine.TCPClientChains.Messages.Handlers.IRD.GetIRDValues">
+            <summary>
+            Get IRD value @ Pre-Main Line ATR
+            </summary>
+        </member>
+        <member name="M:BHS.Engine.TCPClientChains.Messages.Handlers.IRD.GetIRDValuesMES">
+            <summary>
+            Get IRD value @ MES
+            </summary>
+        </member>
+        <member name="M:BHS.Engine.TCPClientChains.Messages.Handlers.IRD.GetIRDValuesISE">
+            <summary>
+            Get IRD value @ ISE
+            </summary>
+        </member>
+        <member name="M:BHS.Engine.TCPClientChains.Messages.Handlers.IRD.CheckMUAvailability(System.String,System.String,System.String)">
+            <summary>
+            Check MU Availability
+            </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:BHS.Engine.TCPClientChains.Messages.Handlers.IRD.CompareLC(System.Int32)" -->
+        <member name="P:BHS.Engine.TCPClientChains.Messages.Handlers.IRD.GID_MSB">
+            <summary>
+            GID_MSB
+            </summary>
+        </member>
+        <member name="P:BHS.Engine.TCPClientChains.Messages.Handlers.IRD.GID_LSB">
+            <summary>
+            GID_LSB
+            </summary>
+        </member>
+        <member name="P:BHS.Engine.TCPClientChains.Messages.Handlers.IRD.PLC_IDX">
+            <summary>
+            PLC Index
+            </summary>
+        </member>
+        <member name="P:BHS.Engine.TCPClientChains.Messages.Handlers.IRD.DBPersistorConnStr">
+            <summary>
+            DBPersistor Connection String value
+            </summary>
+        </member>
+        <member name="P:BHS.Engine.TCPClientChains.Messages.Handlers.IRD.DBPersistor_STP_IRDINFO">
+            <summary>
+            DBPersistor STP IRD INFO
+            </summary>
+        </member>
+        <member name="P:BHS.Engine.TCPClientChains.Messages.Handlers.IRD.DBPersistor_STP_ALLOCPROP">
+            <summary>
+            DBPersistor STP Allocation Property
+            </summary>
+        </member>
+        <member name="P:BHS.Engine.TCPClientChains.Messages.Handlers.IRD.DBPersistor_STP_CheckMUAvailability">
+            <summary>
+            DBPersistor STP Check MU Availability
+            </summary>
+        </member>
+        <member name="P:BHS.Engine.TCPClientChains.Messages.Handlers.IRD.ScannerStatus">
+            <summary>
+            Scanner's Status 
+            </summary>
+        </member>
+        <member name="P:BHS.Engine.TCPClientChains.Messages.Handlers.IRD.LicensePlate1">
+            <summary>
+            License Plate 1
+            </summary>
+        </member>
+        <member name="P:BHS.Engine.TCPClientChains.Messages.Handlers.IRD.LicensePlate2">
+            <summary>
+            License Plate 2
+            </summary>
+        </member>
+        <member name="P:BHS.Engine.TCPClientChains.Messages.Handlers.IRD.Location">
+            <summary>
+            Current Location
+            </summary>
+        </member>
+        <member name="P:BHS.Engine.TCPClientChains.Messages.Handlers.IRD.Destination1">
+            <summary>
+            Destination 1
+            </summary>
+        </member>
+        <member name="P:BHS.Engine.TCPClientChains.Messages.Handlers.IRD.Destination2">
+            <summary>
+            Destination 2
+            </summary>
+        </member>
+        <member name="P:BHS.Engine.TCPClientChains.Messages.Handlers.IRD.Reason">
+            <summary>
+            Type of sortation
+            </summary>
+        </member>
+        <member name="P:BHS.Engine.TCPClientChains.Messages.Handlers.IRD.Allocation_Property">
+            <summary>
+            Allocation Property
+            </summary>
+        </member>
+        <member name="P:BHS.Engine.TCPClientChains.Messages.Handlers.IRD.strLicensePlate">
+            <summary>
+            License Plate
+            </summary>
+        </member>
+        <member name="P:BHS.Engine.TCPClientChains.Messages.Handlers.IRD.strType">
+            <summary>
+            Return IRD Type back to Main Class
+            </summary>
+        </member>
+        <member name="P:BHS.Engine.TCPClientChains.Messages.Handlers.IRD.strLen">
+            <summary>
+            Return IRD Length back to Main Class
+            </summary>
+        </member>
+        <member name="P:BHS.Engine.TCPClientChains.Messages.Handlers.IRD.strSeq">
+            <summary>
+            Return IRD Sequence No back to Main Class
+            </summary>
+        </member>
+        <member name="P:BHS.Engine.TCPClientChains.Messages.Handlers.IRD.strDestination1">
+            <summary>
+            Return IRD Destination 1 back to Main Class
+            </summary>
+        </member>
+        <member name="P:BHS.Engine.TCPClientChains.Messages.Handlers.IRD.strDestination2">
+            <summary>
+            Return IRD Destination 2 back to Main Class
+            </summary>
+        </member>
+        <member name="P:BHS.Engine.TCPClientChains.Messages.Handlers.IRD.strReason">
+            <summary>
+            Return IRD Sortation Type back to Main Class
+            </summary>
+        </member>
+        <member name="P:BHS.Engine.TCPClientChains.Messages.Handlers.IRD.strPLCIdx">
+            <summary>
+            Return PLC Index back to Main Class
+            </summary>
+        </member>
+        <member name="P:BHS.Engine.TCPClientChains.Messages.Handlers.IRD.strMode">
+            <summary>
+            Mode of Item Redirect : @MES | @PRE MAIN LINE ATR | @PRE DESTINATION CHUTE
+            </summary>
+        </member>
+        <member name="P:BHS.Engine.TCPClientChains.Messages.Handlers.IRD.Carrier">
+            <summary>
+            Carrier Code from MES. 
+            </summary>
+        </member>
+        <member name="P:BHS.Engine.TCPClientChains.Messages.Handlers.IRD.Flight">
+            <summary>
+            Flight No from MES.
+            </summary>
+        </member>
+        <member name="P:BHS.Engine.TCPClientChains.Messages.Handlers.IRD.SDO">
+            <summary>
+            SDO from MES.
+            </summary>
+        </member>
+        <member name="P:BHS.Engine.TCPClientChains.Messages.Handlers.IRD.EncodedType">
+            <summary>
+            Encoded Type from MES
+            </summary>
+        </member>
+        <member name="P:BHS.Engine.TCPClientChains.Messages.Handlers.IRD.Destination">
+            <summary>
+            Item Sortation Event : Destination
+            </summary>
+        </member>
+        <member name="T:BHS.Engine.TCPClientChains.Messages.Handlers.BSDI">
+            <summary>
+            BSDI message handler class
+            </summary>
+        </member>
+        <member name="M:BHS.Engine.TCPClientChains.Messages.Handlers.BSDI.#ctor">
+            <summary>
+            Class constructor.
+            </summary>
+        </member>
+        <member name="M:BHS.Engine.TCPClientChains.Messages.Handlers.BSDI.Finalize">
+            <summary>
+            Class destructer.
+            </summary>
+        </member>
+        <member name="M:BHS.Engine.TCPClientChains.Messages.Handlers.BSDI.Dispose">
+            <summary>
+            Class method to be called by class wrapper for release resources explicitly.
+            </summary>
+        </member>
+        <member name="M:BHS.Engine.TCPClientChains.Messages.Handlers.BSDI.Init">
+            <summary>
+            Init() method.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:BHS.Engine.TCPClientChains.Messages.Handlers.BSDI.MessageHandling(BHS.IncomingMessageInfo)">
+            <summary>
+            Overridden class method for message handling.
+            </summary>
+            <param name="msgInfo"></param>
+        </member>
+        <member name="M:BHS.Engine.TCPClientChains.Messages.Handlers.BSDI.MessageDecoding(PALS.Telegrams.Telegram,System.String@,System.String@,System.String@,System.String@,System.String@,System.String@,System.String@,System.String@)">
+            <summary>
+            Message Decoding
+            </summary>
+        </member>
+        <member name="T:BHS.Engine.TCPClientChains.Messages.Handlers.IPR">
+            <summary>
+            IPR message handler class
+            </summary>
+        </member>
+        <member name="M:BHS.Engine.TCPClientChains.Messages.Handlers.IPR.#ctor">
+            <summary>
+            Class constructer.
+            </summary>
+        </member>
+        <member name="M:BHS.Engine.TCPClientChains.Messages.Handlers.IPR.Finalize">
+            <summary>
+            Class destructer.
+            </summary>
+        </member>
+        <member name="M:BHS.Engine.TCPClientChains.Messages.Handlers.IPR.Dispose">
+            <summary>
+            Class method to be called by class wrapper for release resources explicitly.
+            </summary>
+        </member>
+        <member name="M:BHS.Engine.TCPClientChains.Messages.Handlers.IPR.Init">
+            <summary>
+            Init() method.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:BHS.Engine.TCPClientChains.Messages.Handlers.IPR.MessageHandling(BHS.IncomingMessageInfo)">
+            <summary>
+            Overridden class method for message handling.
+            </summary>
+            <param name="msgInfo"></param>
+        </member>
+        <member name="M:BHS.Engine.TCPClientChains.Messages.Handlers.IPR.MessageDecoding(PALS.Telegrams.Telegram,System.String@,System.String@,System.String@,System.String@,System.String@,System.String@,System.String@)">
+            <summary>
+            Message Decoding
+            </summary>
+        </member>
+        <member name="T:BHS.IncomingMessageInfo">
+            <summary>
+            Consist of information related to one message, e.g. ChannelName, Message, or other
+            informations needed by individual message handlers.
+            </summary>
+        </member>
+        <member name="M:BHS.IncomingMessageInfo.#ctor(System.String,System.String,System.String,PALS.Telegrams.Telegram)">
+            <summary>
+            class constructor.
+            </summary>
+            <param name="sender">Incoming message sender name</param>
+            <param name="receiver">Incoming message receiver name</param>
+            <param name="channelName">Incoming message channel name</param>
+            <param name="message">Incoming message</param>
+        </member>
+        <member name="P:BHS.IncomingMessageInfo.Sender">
+            <summary>
+            Sender of incoming message.
+            </summary>
+        </member>
+        <member name="P:BHS.IncomingMessageInfo.Receiver">
+            <summary>
+            Receiver of incoming message.
+            </summary>
+        </member>
+        <member name="P:BHS.IncomingMessageInfo.ChannelName">
+            <summary>
+            The name of communication Channel where the connection is opened/closed, or 
+            message is received from. One Chain could have multiple channel connections.
+            </summary>
+        </member>
+        <member name="P:BHS.IncomingMessageInfo.Message">
+            <summary>
+            Reference to the incoming message.
+            </summary>
+        </member>
+        <member name="P:BHS.IncomingMessageInfo.GRNF_AppCode">
+            <summary>
+            The Gateway application code extracted from incoming GRNF message.
+            </summary>
+        </member>
+        <member name="T:BHS.Engine.TCPClientChains.Messages.Handlers.ISC">
+            <summary>
+            ISC message handler class
+            </summary>
+        </member>
+        <member name="M:BHS.Engine.TCPClientChains.Messages.Handlers.ISC.#ctor">
+            <summary>
+            Class constructer.
+            </summary>
+        </member>
+        <member name="M:BHS.Engine.TCPClientChains.Messages.Handlers.ISC.Finalize">
+            <summary>
+            Class destructer.
+            </summary>
+        </member>
+        <member name="M:BHS.Engine.TCPClientChains.Messages.Handlers.ISC.Dispose">
+            <summary>
+            Class method to be called by class wrapper for release resources explicitly.
+            </summary>
+        </member>
+        <member name="M:BHS.Engine.TCPClientChains.Messages.Handlers.ISC.Init">
+            <summary>
+            Init() method.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:BHS.Engine.TCPClientChains.Messages.Handlers.ISC.MessageHandling(BHS.IncomingMessageInfo)">
+            <summary>
+            Overridden class method for message handling.
+            </summary>
+            <param name="msgInfo"></param>
+        </member>
+        <member name="M:BHS.Engine.TCPClientChains.Messages.Handlers.ISC.MessageDecoding(PALS.Telegrams.Telegram,System.String@,System.String@,System.String@,System.String@,System.String@,System.String@,System.String@,System.String@,System.String@,System.Collections.Generic.List{System.Int32}@,System.String@,System.String@)">
+            <summary>
+            Message Decoding
+            </summary>
+        </member>
+        <member name="M:BHS.Engine.TCPClientChains.Messages.Handlers.ISC.LogIRDIntoDatabase(System.String,System.String,System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            Log IRD Message into Database
+            </summary>
+            <param name="sender"></param>
+            <param name="receiver"></param>
+            <param name="gid"></param>
+            <param name="destination_1"></param>
+            <param name="destination_2"></param>
+            <param name="reason"></param>
+            <param name="plc_idx"></param>
+        </member>
+        <member name="P:BHS.Engine.TCPClientChains.Messages.Handlers.ISC.DLPSMaxRecords">
+            <summary>
+            DLPS Max Records.
+            </summary>
+        </member>
+        <member name="P:BHS.Engine.TCPClientChains.Messages.Handlers.ISC.DLPSStatusSingle">
+            <summary>
+            DLPS Status Single
+            </summary>
+        </member>
+        <member name="P:BHS.Engine.TCPClientChains.Messages.Handlers.ISC.DLPSStatusDuplicate">
+            <summary>
+            DLPS Status Duplicate
+            </summary>
+        </member>
+        <member name="P:BHS.Engine.TCPClientChains.Messages.Handlers.ISC.DLPSSubscriberATR">
+            <summary>
+            DLPS Subscriber ATRs
+            </summary>
+        </member>
+        <member name="P:BHS.Engine.TCPClientChains.Messages.Handlers.ISC.EnableSendingDLPS">
+            <summary>
+            Enable Sending DLPS from SortEngn or not.
+            </summary>
+        </member>
+        <member name="P:BHS.Engine.TCPClientChains.Messages.Handlers.ISC.EnableSendingIRD">
+            <summary>
+            Enable Sending IRD from SAC Engine or not 
+            </summary>
+        </member>
+        <member name="P:BHS.Engine.TCPClientChains.Messages.Handlers.ISC.IRDSubscriber">
+            <summary>
+            IRD Subscriber ATRs
+            </summary>
+        </member>
+        <member name="P:BHS.Engine.TCPClientChains.Messages.Handlers.ISC.MessageFormat_DLPS">
+            <summary>
+            DLPS Message format.
+            </summary>
+        </member>
+        <member name="P:BHS.Engine.TCPClientChains.Messages.Handlers.ISC.MessageFormat_IRD">
+            <summary>
+            IRD Message format.
+            </summary>
+        </member>
+        <member name="E:BHS.Engine.TCPClientChains.Messages.Handlers.ISC.OnSendRequest">
+            <summary>
+            Event will be raised when message handler need send a message to external.
+            </summary>
+        </member>
+        <member name="T:BHS.Engine.TCPClientChains.Messages.Handlers.FBTI">
+            <summary>
+            FBTI message handler class
+            </summary>
+        </member>
+        <member name="F:BHS.Engine.TCPClientChains.Messages.Handlers.FBTI._messageFormat">
+            <summary>
+            FBTI message format.
+            </summary>
+        </member>
+        <member name="M:BHS.Engine.TCPClientChains.Messages.Handlers.FBTI.#ctor(PALS.Telegrams.TelegramFormat)">
+            <summary>
+            Class constructer.
+            </summary>
+        </member>
+        <member name="M:BHS.Engine.TCPClientChains.Messages.Handlers.FBTI.ConstructFBTIMessage">
+            <summary>
+            Construct FBTI message.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:BHS.Engine.TCPClientChains.Messages.Handlers.FBTI.NoOfFallback">
+            <summary>
+            No Of Carrier field value.
+            </summary>
+        </member>
+        <member name="P:BHS.Engine.TCPClientChains.Messages.Handlers.FBTI.AllocationData">
+            <summary>
+            Allocation Data (Code, Sort Device) field value.
+            </summary>
+        </member>
+        <member name="T:BHS.Engine.TCPClientChains.DataPersistor.Database.PersistorParameters">
+            <summary>
+            Parameter class used to store parameters of MessageHandler class.
+            </summary>
+        </member>
+        <member name="M:BHS.Engine.TCPClientChains.DataPersistor.Database.PersistorParameters.#ctor(System.Xml.XmlNode,System.Xml.XmlNode)">
+            <summary>
+            Class constructer.
+            </summary>
+        </member>
+        <member name="M:BHS.Engine.TCPClientChains.DataPersistor.Database.PersistorParameters.Finalize">
+            <summary>
+            Class destructer.
+            </summary>
+        </member>
+        <member name="M:BHS.Engine.TCPClientChains.DataPersistor.Database.PersistorParameters.Dispose">
+            <summary>
+            Class method to be called by class wrapper for release resources explicitly.
+            </summary>
+        </member>
+        <member name="M:BHS.Engine.TCPClientChains.DataPersistor.Database.PersistorParameters.Init(System.Xml.XmlNode@,System.Xml.XmlNode@)">
+            <summary>
+            Class Initialization.
+            </summary>
+            <param name="configSet"></param>
+            <param name="telegramSet"></param>
+            <returns></returns>
+        </member>
+        <member name="P:BHS.Engine.TCPClientChains.DataPersistor.Database.PersistorParameters.DBConnectionString">
+            <summary>
+            Database ConnectionString.
+            </summary>
+        </member>
+        <member name="P:BHS.Engine.TCPClientChains.DataPersistor.Database.PersistorParameters.STP_SAC_GIDUSED">
+            <summary>
+            The name of DB StoredProcedure [stp_SAC_GIDUSED].
+            </summary>
+        </member>
+        <member name="P:BHS.Engine.TCPClientChains.DataPersistor.Database.PersistorParameters.STP_SAC_ITEMSCREENED">
+            <summary>
+            The name of DB StoredProcedure [stp_SAC_ITEMSCREENED].
+            </summary>
+        </member>
+        <member name="P:BHS.Engine.TCPClientChains.DataPersistor.Database.PersistorParameters.STP_SAC_ITEMSCANNED">
+            <summary>
+            The name of DB StoredProcedure [stp_SAC_ITEMSCANNED].
+            </summary>
+        </member>
+        <member name="P:BHS.Engine.TCPClientChains.DataPersistor.Database.PersistorParameters.STP_SAC_ITEMSORTATIONEVENT">
+            <summary>
+            The name of DB StoredProcedure [stp_SAC_ITEMSORTATIONEVENT].
+            </summary>
+        </member>
+        <member name="P:BHS.Engine.TCPClientChains.DataPersistor.Database.PersistorParameters.STP_SAC_ITEMPROCEEDED">
+            <summary>
+            The name of DB StoredProcedure [stp_SAC_ITEMPROCEEDED].
+            </summary>
+        </member>
+        <member name="P:BHS.Engine.TCPClientChains.DataPersistor.Database.PersistorParameters.STP_SAC_ITEMREDIRECT">
+            <summary>
+            The name of DB StoredProcedure [stp_SAC_ITEMREDIRECT].
+            </summary>
+        </member>
+        <member name="P:BHS.Engine.TCPClientChains.DataPersistor.Database.PersistorParameters.STP_SAC_ITEMLOST">
+            <summary>
+            The name of DB StoredProcedure [stp_SAC_ITEMLOST].
+            </summary>
+        </member>
+        <member name="P:BHS.Engine.TCPClientChains.DataPersistor.Database.PersistorParameters.STP_SAC_ITEMTRACKING">
+            <summary>
+            The name of DB StoredProcedure [stp_SAC_ITEMTRACKING].
+            </summary>
+        </member>
+        <member name="P:BHS.Engine.TCPClientChains.DataPersistor.Database.PersistorParameters.STP_SAC_ITEMENCODINGREQUEST">
+            <summary>
+            The name of DB StoredProcedure [stp_SAC_ITEMENCODINGREQUEST].
+            </summary>
+        </member>
+        <member name="P:BHS.Engine.TCPClientChains.DataPersistor.Database.PersistorParameters.STP_SAC_GETBAGINFO">
+            <summary>
+            The name of DB StoredProcedure [stp_SAC_GETBAGINFO]
+            </summary>
+        </member>
+        <member name="P:BHS.Engine.TCPClientChains.DataPersistor.Database.PersistorParameters.STP_SAC_AIRPORTCODEFUNCALLOCINFORMATION">
+            <summary>
+            The name of DB StoredProcedure [stp_SAC_AIRPORTCODEFUNCALLOCINFORMATION].
+            </summary>
+        </member>
+        <member name="P:BHS.Engine.TCPClientChains.DataPersistor.Database.PersistorParameters.STP_SAC_BAGGAGEMEASUREMENTARRAY">
+            <summary>
+            The name of DB StoredProcedure [stp_SAC_BAGGAGEMEASUREMENTARRAY].
+            </summary>
+        </member>
+        <member name="P:BHS.Engine.TCPClientChains.DataPersistor.Database.PersistorParameters.STP_SAC_CARRIERALLOCINFORMATION">
+            <summary>
+            The name of DB StoredProcedure [stp_SAC_CARRIERALLOCINFORMATION].
+            </summary>
+        </member>
+        <member name="P:BHS.Engine.TCPClientChains.DataPersistor.Database.PersistorParameters.STP_SAC_FALLBACKTAGINFORMATION">
+            <summary>
+            The name of DB StoredProcedure [stp_SAC_FALLBACKTAGINFORMATION].
+            </summary>
+        </member>
+        <member name="P:BHS.Engine.TCPClientChains.DataPersistor.Database.PersistorParameters.STP_SAC_FOURPIERTAGINFORMATION">
+            <summary>
+            The name of DB StoredProcedure [stp_SAC_FOURPIERTAGINFORMATION].
+            </summary>
+        </member>
+        <member name="P:BHS.Engine.TCPClientChains.DataPersistor.Database.PersistorParameters.STP_SAC_1500PINFORMATION">
+            <summary>
+            The name of DB StoredProcedure [STP_SAC_1500PINFORMATION].
+            </summary>
+        </member>
+        <member name="P:BHS.Engine.TCPClientChains.DataPersistor.Database.PersistorParameters.STP_SAC_COLLECTENTIREAFAI">
+            <summary>
+            The name of DB StoredProcedure [stp_SAC_COLLECTENTIREAFAI].
+            </summary>
+        </member>
+        <member name="P:BHS.Engine.TCPClientChains.DataPersistor.Database.PersistorParameters.STP_SAC_COLLECTENTIRECRAI">
+            <summary>
+            The name of DB StoredProcedure [stp_SAC_COLLECTENTIRECRAI].
+            </summary>
+        </member>
+        <member name="P:BHS.Engine.TCPClientChains.DataPersistor.Database.PersistorParameters.STP_SAC_COLLECTENTIREFBTI">
+            <summary>
+            The name of DB StoredProcedure [stp_SAC_COLLECTENTIREFBTI].
+            </summary>
+        </member>
+        <member name="P:BHS.Engine.TCPClientChains.DataPersistor.Database.PersistorParameters.STP_SAC_COLLECTENTIREFPTI">
+            <summary>
+            The name of DB StoredProcedure [stp_SAC_COLLECTENTIREFPTI].
+            </summary>
+        </member>
+        <member name="P:BHS.Engine.TCPClientChains.DataPersistor.Database.PersistorParameters.STP_SAC_COLLECTENTIRETPTI">
+            <summary>
+            The name of DB StoredProcedure [stp_SAC_COLLECTENTIRETPTI].
+            </summary>
+        </member>
+        <member name="P:BHS.Engine.TCPClientChains.DataPersistor.Database.PersistorParameters.STP_SAC_COLLECTCHANGEDCRAI">
+            <summary>
+            The name of DB StoredProcedure [stp_SAC_COLLECTCHANGEDCRAI].
+            </summary>
+        </member>
+        <member name="P:BHS.Engine.TCPClientChains.DataPersistor.Database.PersistorParameters.STP_SAC_COLLECTCHANGEDFBTI">
+            <summary>
+            The name of DB StoredProcedure [stp_SAC_COLLECTCHANGEDFBTI].
+            </summary>
+        </member>
+        <member name="P:BHS.Engine.TCPClientChains.DataPersistor.Database.PersistorParameters.STP_SAC_COLLECTCHANGEDFPTI">
+            <summary>
+            The name of DB StoredProcedure [stp_SAC_COLLECTCHANGEDFPTI].
+            </summary>
+        </member>
+        <member name="P:BHS.Engine.TCPClientChains.DataPersistor.Database.PersistorParameters.STP_SAC_COLLECTCHANGEDTPTI">
+            <summary>
+            The name of DB StoredProcedure [stp_SAC_COLLECTCHANGEDTPT].
+            </summary>
+        </member>
+        <member name="P:BHS.Engine.TCPClientChains.DataPersistor.Database.PersistorParameters.STP_SAC_COLLECTCHANGEDTABLES">
+            <summary>
+            The name of DB StoredProcedure [stp_SAC_COLLECTCHANGEDTABLES].
+            </summary>
+        </member>
+        <member name="P:BHS.Engine.TCPClientChains.DataPersistor.Database.PersistorParameters.STP_SAC_TAGDUPLICATIONCHECK">
+            <summary>
+            The name of DB StoredProcedure [stp_SAC_TAGDUPLICATIONCHECK].
+            </summary>
+        </member>
+        <member name="P:BHS.Engine.TCPClientChains.DataPersistor.Database.PersistorParameters.STP_SAC_DUPLICATELICENSEPLATESTATUS">
+            <summary>
+            The name of DB StoredProcedure [stp_SAC_DUPLICATELICENSEPLATESTATUS].
+            </summary>
+        </member>
+        <member name="P:BHS.Engine.TCPClientChains.DataPersistor.Database.PersistorParameters.STP_SAC_IRDVALUES">
+            <summary>
+            The name of DB Stored Procedure [stp_SAC_IRDValues]
+            </summary>
+        </member>
+        <member name="P:BHS.Engine.TCPClientChains.DataPersistor.Database.PersistorParameters.STP_SAC_IRDVALUESMES">
+            <summary>
+            The name of DB Stored Procedure [stp_SAC_IRDValuesMES]
+            </summary>
+        </member>
+        <member name="P:BHS.Engine.TCPClientChains.DataPersistor.Database.PersistorParameters.STP_SAC_ALLOCPROP">
+            <summary>
+            The name of DB Stored Procedure [stp_SAC_GetAllocProp]
+            </summary>
+        </member>
+        <member name="P:BHS.Engine.TCPClientChains.DataPersistor.Database.PersistorParameters.STP_SAC_CHECKMUAVAILABILITY">
+            <summary>
+            The name of DB Stored Procedure [stp_SAC_CheckMUAvailability]
+            </summary>
+        </member>
+        <member name="P:BHS.Engine.TCPClientChains.DataPersistor.Database.PersistorParameters.AIRPORT_CODE_DESC">
+            <summary>
+            The AIRPORT_CODE_DESC.
+            </summary>
+        </member>
+        <member name="P:BHS.Engine.TCPClientChains.DataPersistor.Database.PersistorParameters.FUNC_ALLOCATION_NOCR">
+            <summary>
+            The FUNC_ALLOCATION_NOCR.
+            </summary>
+        </member>
+        <member name="P:BHS.Engine.TCPClientChains.DataPersistor.Database.PersistorParameters.FUNC_ALLOCATION_NOAL">
+            <summary>
+            The FUNC_ALLOCATION_NOAL.
+            </summary>
+        </member>
+        <member name="P:BHS.Engine.TCPClientChains.DataPersistor.Database.PersistorParameters.FUNC_ALLOCATION_DUMP">
+            <summary>
+            The FUNC_ALLOCATION_NOCR.
+            </summary>
+        </member>
+        <member name="P:BHS.Engine.TCPClientChains.DataPersistor.Database.PersistorParameters.FUNC_ALLOCATION_NORD">
+            <summary>
+            The FUNC_ALLOCATION_NORD.
+            </summary>
+        </member>
+        <member name="P:BHS.Engine.TCPClientChains.DataPersistor.Database.PersistorParameters.TBL_CARRIER_LOG">
+            <summary>
+            The TABLE OF CARRIER_LOG.
+            </summary>
+        </member>
+        <member name="P:BHS.Engine.TCPClientChains.DataPersistor.Database.PersistorParameters.TBL_FALLBACK_TAG_MAPPING">
+            <summary>
+            The TABLE OF FALLBACK_TAG_MAPPING.
+            </summary>
+        </member>
+        <member name="P:BHS.Engine.TCPClientChains.DataPersistor.Database.PersistorParameters.TBL_FOUR_PIER_TAG_MAPPING">
+            <summary>
+            The TABLE OF FOUR_PIER_TAG_MAPPING.
+            </summary>
+        </member>
+        <member name="P:BHS.Engine.TCPClientChains.DataPersistor.Database.PersistorParameters.TBL_FUNCTION_ALLOC_LIST">
+            <summary>
+            The TABLE OF FUNCTION_ALLOC_LIST.
+            </summary>
+        </member>
+        <member name="P:BHS.Engine.TCPClientChains.DataPersistor.Database.PersistorParameters.TBL_SYS_CONFIG">
+            <summary>
+            The TABLE OF SYS_CONFIG.
+            </summary>
+        </member>
+        <member name="P:BHS.Engine.TCPClientChains.DataPersistor.Database.PersistorParameters.TablesPollingInterval">
+            <summary>
+            Time interval of polling from DB table [CHANGE_MONITORING].
+            </summary>
+        </member>
+        <member name="T:BHS.Gateway.TCPClientTCPClientChains.Application.Initializer">
+            <summary>
+            Class for centralized application initializing.
+            </summary>
+        </member>
+        <member name="M:BHS.Gateway.TCPClientTCPClientChains.Application.Initializer.#ctor(System.String,System.String)">
+            <summary>
+            Application global initizliaer for centralized performing of application initializing tasks.
+            </summary>
+            <param name="XMLFileSetting"></param>
+            <param name="XMLFileTelegram"></param>
+        </member>
+        <member name="M:BHS.Gateway.TCPClientTCPClientChains.Application.Initializer.Finalize">
+            <summary>
+            Destructer of Initializer class.
+            </summary>
+        </member>
+        <member name="M:BHS.Gateway.TCPClientTCPClientChains.Application.Initializer.Dispose">
+            <summary>
+            Class method to be called by class wrapper for release resources explicitly.
+            </summary>
+        </member>
+        <member name="M:BHS.Gateway.TCPClientTCPClientChains.Application.Initializer.Init">
+            <summary>
+            Init() method of Initializer class is the place to perform the initialization
+            tasks for current application. All initialization tasks needed to be done during
+            the application startup time should be performed here.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:BHS.Gateway.TCPClientTCPClientChains.Application.Initializer.BuildGW2InternalTCPClientChain">
+            <summary>
+            ------------------------------------------------------------------------------------
+            Build "Handler-Filter-Transport" chain for GW2Internal Engine Service application 
+            TCPClient chain by following below sequence:
+            ------------------------------------------------------------------------------------
+            BHS.Gateway.TCPClientTCPClientChains.Messages.Handlers.GW2InternalSessionForwarder
+            PALS.Net.handlers.SessionHandler
+            PALS.Net.Filters.Application.OutgoingMessageIdentifier 
+            PALS.Net.Filters.Acknowledge.ACK 
+            PALS.Net.Filters.Application.IncomingMessageIdentifier 
+            PALS.Net.Filters.SignOfLife.SOL 
+            PALS.Net.Filters.Application.APPClient 
+            PALS.Net.FiltersFrame.Frame
+            PALS.Net.Transports.TCP.TCPClient
+            ------------------------------------------------------------------------------------
+            </summary>
+        </member>
+        <member name="M:BHS.Gateway.TCPClientTCPClientChains.Application.Initializer.BuildGW2ExternalTCPClientChain">
+            <summary>
+            ------------------------------------------------------------------------------------
+            Build "Handler-Filter-Transport" chain for GW2External device TCPClient chain by following below sequence:
+            ------------------------------------------------------------------------------------
+            BHS.Gateway.Messages.Handlers.GW2ExternalSessionForwarder
+            PALS.Net.handlers.SessionHandler
+            PALS.Net.Filters.Application.OutgoingMessageIdentifier 
+            PALS.Net.Filters.Acknowledge.ACK 
+            PALS.Net.Filters.Application.IncomingMessageIdentifier 
+            PALS.Net.Filters.SignOfLife.SOL 
+            PALS.Net.Filters.Application.APPClient 
+            PALS.Net.Filters.EIPCIP.CIP
+            PALS.Net.Filters.EIPCIP.EIP
+            PALS.Net.Transports.TCP.TCPClient
+            ------------------------------------------------------------------------------------
+            </summary>
+        </member>
+        <member name="M:BHS.Gateway.TCPClientTCPClientChains.Application.Initializer.Handler_OnReloadSettingCompleted(System.Object,System.EventArgs)">
+            <summary>
+            Event handler of ReloadSettingCompleted event fired by IConfigurationLoader interface 
+            implemented class method LoadSettingFromConfigFile() upon the reloading setting from
+            changed file is successfully completed. 
+            
+            This event handler is to make sure the reloaded settings can be taken effective 
+            immediately.
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="P:BHS.Gateway.TCPClientTCPClientChains.Application.Initializer.MsgHandler">
+            <summary>
+            Get or set the BHS.Gateway.TCPClientTCPClientChains.Messages.Handlers.Messagehandler class object.
+            </summary>
+        </member>
+        <member name="P:BHS.Gateway.TCPClientTCPClientChains.Application.Initializer.ObjectID">
+            <summary>
+            null
+            </summary>
+        </member>
+        <member name="E:BHS.Gateway.TCPClientTCPClientChains.Application.Initializer.OnReceived">
+            <summary>
+            Event will be raised when message is received.
+            </summary>
+        </member>
+        <member name="E:BHS.Gateway.TCPClientTCPClientChains.Application.Initializer.OnConnected">
+            <summary>
+            Event will be raised when specific channel connection of Gateway-External device chain is opened.
+            </summary>
+        </member>
+        <member name="E:BHS.Gateway.TCPClientTCPClientChains.Application.Initializer.OnDisconnected">
+            <summary>
+            Event will be raised when specific channel connection of Gateway-External device chain is closed.
+            </summary>
+        </member>
+        <member name="P:BHS.Gateway.TCPClientTCPClientChains.Application.Initializer.PerfMonitor">
+            <summary>
+            null
+            </summary>
+        </member>
+        <member name="P:BHS.Gateway.TCPClientTCPClientChains.Application.Initializer.PerfMonitorList">
+            <summary>
+            null
+            </summary>
+        </member>
+        <member name="T:BHS.Engine.TCPClientChains.Messages.Handlers.MER">
+            <summary>
+            MER message handler class
+            </summary>
+        </member>
+        <member name="M:BHS.Engine.TCPClientChains.Messages.Handlers.MER.#ctor">
+            <summary>
+            Class constructer.
+            </summary>
+        </member>
+        <member name="M:BHS.Engine.TCPClientChains.Messages.Handlers.MER.Finalize">
+            <summary>
+            Class destructer.
+            </summary>
+        </member>
+        <member name="M:BHS.Engine.TCPClientChains.Messages.Handlers.MER.Dispose">
+            <summary>
+            Class method to be called by class wrapper for release resources explicitly.
+            </summary>
+        </member>
+        <member name="M:BHS.Engine.TCPClientChains.Messages.Handlers.MER.Init">
+            <summary>
+            Init() method.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:BHS.Engine.TCPClientChains.Messages.Handlers.MER.MessageHandling(BHS.IncomingMessageInfo)">
+            <summary>
+            Overridden class method for message handling.
+            </summary>
+            <param name="msgInfo"></param>
+        </member>
+        <member name="M:BHS.Engine.TCPClientChains.Messages.Handlers.MER.MessageDecoding(PALS.Telegrams.Telegram,System.String@,System.String@,System.String@,System.String@,System.String@,System.String@,System.String@,System.String@,System.String@,System.String@,System.String@,System.String@,System.String@)">
+            <summary>
+            Message Decoding
+            </summary>
+        </member>
+        <member name="M:BHS.Engine.TCPClientChains.Messages.Handlers.MER.LogIRDIntoDatabase(System.String,System.String,System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            Log IRD Message into Database
+            </summary>
+            <param name="sender"></param>
+            <param name="receiver"></param>
+            <param name="gid"></param>
+            <param name="destination_1"></param>
+            <param name="destination_2"></param>
+            <param name="reason"></param>
+            <param name="plc_idx"></param>
+        </member>
+        <member name="P:BHS.Engine.TCPClientChains.Messages.Handlers.MER.MessageFormat_IRD">
+            <summary>
+            IRD Message format.
+            </summary>
+        </member>
+        <member name="E:BHS.Engine.TCPClientChains.Messages.Handlers.MER.OnSendRequest">
+            <summary>
+            Event will be raised when message handler need send a message to external.
+            </summary>
+        </member>
+        <member name="T:BHS.Engine.TCPClientChains.Messages.Handlers.MessageHandlerParameters">
+            <summary>
+            Parameter class used to store parameters of MessageHandler class.
+            </summary>
+        </member>
+        <member name="M:BHS.Engine.TCPClientChains.Messages.Handlers.MessageHandlerParameters.#ctor(System.Xml.XmlNode,System.Xml.XmlNode)">
+            <summary>
+            Class constructer.
+            </summary>
+        </member>
+        <member name="M:BHS.Engine.TCPClientChains.Messages.Handlers.MessageHandlerParameters.Finalize">
+            <summary>
+            Class destructer.
+            </summary>
+        </member>
+        <member name="M:BHS.Engine.TCPClientChains.Messages.Handlers.MessageHandlerParameters.Dispose">
+            <summary>
+            Class method to be called by class wrapper for release resources explicitly.
+            </summary>
+        </member>
+        <member name="M:BHS.Engine.TCPClientChains.Messages.Handlers.MessageHandlerParameters.Init(System.Xml.XmlNode@,System.Xml.XmlNode@)">
+            <summary>
+            Class Initialization.
+            </summary>
+            <param name="configSet"></param>
+            <param name="telegramSet"></param>
+            <returns></returns>
+        </member>
+        <member name="P:BHS.Engine.TCPClientChains.Messages.Handlers.MessageHandlerParameters.Sender">
+            <summary>
+            Bag Event Message (local) sender name.
+            </summary>
+        </member>
+        <member name="P:BHS.Engine.TCPClientChains.Messages.Handlers.MessageHandlerParameters.AFAI_Receiver">
+            <summary>
+            Bag Event Message - AFAI (remote) sender name.
+            </summary>
+        </member>
+        <member name="P:BHS.Engine.TCPClientChains.Messages.Handlers.MessageHandlerParameters.CRAI_Receiver">
+            <summary>
+            Bag Event Message - CRAI (remote) sender name.
+            </summary>
+        </member>
+        <member name="P:BHS.Engine.TCPClientChains.Messages.Handlers.MessageHandlerParameters.FBTI_Receiver">
+            <summary>
+            Bag Event Message - FBTI (remote) sender name.
+            </summary>
+        </member>
+        <member name="P:BHS.Engine.TCPClientChains.Messages.Handlers.MessageHandlerParameters.FPTI_Receiver">
+            <summary>
+            Bag Event Message - FPTI (remote) sender name.
+            </summary>
+        </member>
+        <member name="P:BHS.Engine.TCPClientChains.Messages.Handlers.MessageHandlerParameters.TPTI_Receiver">
+            <summary>
+            Bag Event Message - TPTI (remote) sender name.
+            </summary>
+        </member>
+        <member name="P:BHS.Engine.TCPClientChains.Messages.Handlers.MessageHandlerParameters.IsEnable">
+            <summary>
+            Enable Sending from SortEngn or not.
+            </summary>
+        </member>
+        <member name="P:BHS.Engine.TCPClientChains.Messages.Handlers.MessageHandlerParameters.EnableSendingDLPS">
+            <summary>
+            Enable Sending DLPS from SortEngn or not.
+            </summary>
+        </member>
+        <member name="P:BHS.Engine.TCPClientChains.Messages.Handlers.MessageHandlerParameters.DLPSMaxRecords">
+            <summary>
+            DLPS Max Records.
+            </summary>
+        </member>
+        <member name="P:BHS.Engine.TCPClientChains.Messages.Handlers.MessageHandlerParameters.DLPSStatusSingle">
+            <summary>
+            DLPS Status Single
+            </summary>
+        </member>
+        <member name="P:BHS.Engine.TCPClientChains.Messages.Handlers.MessageHandlerParameters.DLPSStatusDuplicate">
+            <summary>
+            DLPS Status Duplicate
+            </summary>
+        </member>
+        <member name="P:BHS.Engine.TCPClientChains.Messages.Handlers.MessageHandlerParameters.DLPSSubscriberATR">
+            <summary>
+            DLPS Subscriber ATRs
+            </summary>
+        </member>
+        <member name="P:BHS.Engine.TCPClientChains.Messages.Handlers.MessageHandlerParameters.IRDSubscriberATR">
+            <summary>
+            IRD Subscriber ATRs
+            </summary>
+        </member>
+        <member name="P:BHS.Engine.TCPClientChains.Messages.Handlers.MessageHandlerParameters.EnabledSendingIRD">
+            <summary>
+            Enable Sending of IRD from SAC Engine
+            </summary>
+        </member>
+        <member name="P:BHS.Engine.TCPClientChains.Messages.Handlers.MessageHandlerParameters.MessageType_GID">
+            <summary>
+            GID Message type.
+            </summary>
+        </member>
+        <member name="P:BHS.Engine.TCPClientChains.Messages.Handlers.MessageHandlerParameters.MessageFormat_GID">
+            <summary>
+            GID Message format.
+            </summary>
+        </member>
+        <member name="P:BHS.Engine.TCPClientChains.Messages.Handlers.MessageHandlerParameters.MessageType_ICR">
+            <summary>
+            ICR Message type.
+            </summary>
+        </member>
+        <member name="P:BHS.Engine.TCPClientChains.Messages.Handlers.MessageHandlerParameters.MessageFormat_ICR">
+            <summary>
+            ICR Message format.
+            </summary>
+        </member>
+        <member name="P:BHS.Engine.TCPClientChains.Messages.Handlers.MessageHandlerParameters.MessageType_ISC">
+            <summary>
+            ISC Message type.
+            </summary>
+        </member>
+        <member name="P:BHS.Engine.TCPClientChains.Messages.Handlers.MessageHandlerParameters.MessageFormat_ISC">
+            <summary>
+            ISC Message format.
+            </summary>
+        </member>
+        <member name="P:BHS.Engine.TCPClientChains.Messages.Handlers.MessageHandlerParameters.MessageType_ISE">
+            <summary>
+            ISE Message type.
+            </summary>
+        </member>
+        <member name="P:BHS.Engine.TCPClientChains.Messages.Handlers.MessageHandlerParameters.MessageFormat_ISE">
+            <summary>
+            ISE Message format.
+            </summary>
+        </member>
+        <member name="P:BHS.Engine.TCPClientChains.Messages.Handlers.MessageHandlerParameters.MessageType_IPR">
+            <summary>
+            IPR Message type.
+            </summary>
+        </member>
+        <member name="P:BHS.Engine.TCPClientChains.Messages.Handlers.MessageHandlerParameters.MessageFormat_IPR">
+            <summary>
+            IPR Message format.
+            </summary>
+        </member>
+        <member name="P:BHS.Engine.TCPClientChains.Messages.Handlers.MessageHandlerParameters.MessageType_ILT">
+            <summary>
+            ILT Message type.
+            </summary>
+        </member>
+        <member name="P:BHS.Engine.TCPClientChains.Messages.Handlers.MessageHandlerParameters.MessageFormat_ILT">
+            <summary>
+            ILT Message format.
+            </summary>
+        </member>
+        <member name="P:BHS.Engine.TCPClientChains.Messages.Handlers.MessageHandlerParameters.MessageType_ITI">
+            <summary>
+            ITI Message type.
+            </summary>
+        </member>
+        <member name="P:BHS.Engine.TCPClientChains.Messages.Handlers.MessageHandlerParameters.MessageFormat_ITI">
+            <summary>
+            ITI Message format.
+            </summary>
+        </member>
+        <member name="P:BHS.Engine.TCPClientChains.Messages.Handlers.MessageHandlerParameters.MessageType_MER">
+            <summary>
+            MER Message type.
+            </summary>
+        </member>
+        <member name="P:BHS.Engine.TCPClientChains.Messages.Handlers.MessageHandlerParameters.MessageFormat_MER">
+            <summary>
+            MER Message format.
+            </summary>
+        </member>
+        <member name="P:BHS.Engine.TCPClientChains.Messages.Handlers.MessageHandlerParameters.MessageType_AFAI">
+            <summary>
+            AFAI Message type.
+            </summary>
+        </member>
+        <member name="P:BHS.Engine.TCPClientChains.Messages.Handlers.MessageHandlerParameters.MessageFormat_AFAI">
+            <summary>
+            AFAI Message format.
+            </summary>
+        </member>
+        <member name="P:BHS.Engine.TCPClientChains.Messages.Handlers.MessageHandlerParameters.MessageType_BMAM">
+            <summary>
+            BMAM Message type.
+            </summary>
+        </member>
+        <member name="P:BHS.Engine.TCPClientChains.Messages.Handlers.MessageHandlerParameters.MessageFormat_BMAM">
+            <summary>
+            BMAM Message format.
+            </summary>
+        </member>
+        <member name="P:BHS.Engine.TCPClientChains.Messages.Handlers.MessageHandlerParameters.MessageType_CRAI">
+            <summary>
+            CRAI Message type.
+            </summary>
+        </member>
+        <member name="P:BHS.Engine.TCPClientChains.Messages.Handlers.MessageHandlerParameters.MessageFormat_CRAI">
+            <summary>
+            CRAI Message format.
+            </summary>
+        </member>
+        <member name="P:BHS.Engine.TCPClientChains.Messages.Handlers.MessageHandlerParameters.MessageType_FBTI">
+            <summary>
+            FBTI Message type.
+            </summary>
+        </member>
+        <member name="P:BHS.Engine.TCPClientChains.Messages.Handlers.MessageHandlerParameters.MessageFormat_FBTI">
+            <summary>
+            FBTI Message format.
+            </summary>
+        </member>
+        <member name="P:BHS.Engine.TCPClientChains.Messages.Handlers.MessageHandlerParameters.MessageType_FPTI">
+            <summary>
+            FPTI Message type.
+            </summary>
+        </member>
+        <member name="P:BHS.Engine.TCPClientChains.Messages.Handlers.MessageHandlerParameters.MessageFormat_FPTI">
+            <summary>
+            FPTI Message format.
+            </summary>
+        </member>
+        <member name="P:BHS.Engine.TCPClientChains.Messages.Handlers.MessageHandlerParameters.MessageType_P1500">
+            <summary>
+            P1500 Message type.
+            </summary>
+        </member>
+        <member name="P:BHS.Engine.TCPClientChains.Messages.Handlers.MessageHandlerParameters.MessageFormat_P1500">
+            <summary>
+            PV1K Message format.
+            </summary>
+        </member>
+        <member name="P:BHS.Engine.TCPClientChains.Messages.Handlers.MessageHandlerParameters.MessageType_DLPS">
+            <summary>
+            DLPS Message type.
+            </summary>
+        </member>
+        <member name="P:BHS.Engine.TCPClientChains.Messages.Handlers.MessageHandlerParameters.MessageFormat_DLPS">
+            <summary>
+            DLPS Message format.
+            </summary>
+        </member>
+        <member name="P:BHS.Engine.TCPClientChains.Messages.Handlers.MessageHandlerParameters.MessageType_IRD">
+            <summary>
+            IRD Message type.
+            </summary>
+        </member>
+        <member name="P:BHS.Engine.TCPClientChains.Messages.Handlers.MessageHandlerParameters.MessageFormat_IRD">
+            <summary>
+            IRD Message format.
+            </summary>
+        </member>
+        <member name="P:BHS.Engine.TCPClientChains.Messages.Handlers.MessageHandlerParameters.MessageFormat_Header">
+            <summary>
+            Message header format.
+            </summary>
+        </member>
+        <member name="P:BHS.Engine.TCPClientChains.Messages.Handlers.MessageHandlerParameters.MessageType_INTM">
+            <summary>
+            Bag Event Message type.
+            </summary>
+        </member>
+        <member name="P:BHS.Engine.TCPClientChains.Messages.Handlers.MessageHandlerParameters.MessageFormat_INTM">
+            <summary>
+            Bag Event Message format.
+            </summary>
+        </member>
+        <member name="P:BHS.Engine.TCPClientChains.Messages.Handlers.MessageHandlerParameters.MessageType_CSNF">
+            <summary>
+            CSNF Message type.
+            </summary>
+        </member>
+        <member name="P:BHS.Engine.TCPClientChains.Messages.Handlers.MessageHandlerParameters.MessageFormat_CSNF">
+            <summary>
+            CSNF Message format.
+            </summary>
+        </member>
+        <member name="P:BHS.Engine.TCPClientChains.Messages.Handlers.MessageHandlerParameters.MessageType_GRNF">
+            <summary>
+            GRNF Message type.
+            </summary>
+        </member>
+        <member name="P:BHS.Engine.TCPClientChains.Messages.Handlers.MessageHandlerParameters.MessageFormat_GRNF">
+            <summary>
+            GRNF Message format.
+            </summary>
+        </member>
+        <member name="T:BHS.Engine.TCPClientChains.Configure.XmlSettingLoader">
+            <summary>
+            Loading application settings from XML file.
+            </summary>
+        </member>
+        <member name="M:BHS.Engine.TCPClientChains.Configure.XmlSettingLoader.#ctor">
+            <summary>
+            Class constructor
+            </summary>
+        </member>
+        <member name="M:BHS.Engine.TCPClientChains.Configure.XmlSettingLoader.Finalize">
+            <summary>
+            Class destructor
+            </summary>
+        </member>
+        <member name="M:BHS.Engine.TCPClientChains.Configure.XmlSettingLoader.Dispose">
+            <summary>
+            Class method to be called by class wrapper for release resources explicitly.
+            </summary>
+        </member>
+        <member name="M:BHS.Engine.TCPClientChains.Configure.XmlSettingLoader.PALS#Configure#IConfigurationLoader#LoadSettingFromConfigFile(System.Boolean,System.IO.FileInfo[])">
+            <summary>
+            This class method is the place to centralize the loading of application settings from 
+            configuration file. 
+            <para>
+            The actual implementation of IConfigurationLoader interface method LoadSettingFromConfigFile(). 
+            This method will be invoked by AppConfigurator class.
+            </para>
+            <para>
+            If the parameter isReloading = true, the interface implemented LoadSettingFromConfigFile() 
+            may raise a event after all settings have been reloaded successfully, to inform application 
+            that the reloading setting has been done. So application can take the necessary actions
+            to take effective of new settings.
+            </para>
+            <para>
+            Decode XML configuration file and load application settings shall be done by this method.
+            </para>
+            </summary>
+            <param name="isReloading">
+            If the parameter isReloading = true, the interface implemented LoadSettingFromConfigFile() 
+            may raise a event after all settings have been reloaded successfully, to inform application 
+            that the reloading setting has been done. So application can take the necessary actions
+            to take effective of new settings.
+            </param>
+            <param name="cfgFiles">
+            params type method argument, represents one or more configuration files.
+            </param>
+        </member>
+        <member name="P:BHS.Engine.TCPClientChains.Configure.XmlSettingLoader.Paramters_GlobalContext">
+            <summary>
+            Global object for storing GlobalContext settings.
+            </summary>
+        </member>
+        <member name="P:BHS.Engine.TCPClientChains.Configure.XmlSettingLoader.Paramters_TCPClient">
+            <summary>
+            Global object for storing TCPClient protocol settings of Sort Engine Service 
+            application communication chain.
+            </summary>
+        </member>
+        <member name="P:BHS.Engine.TCPClientChains.Configure.XmlSettingLoader.Paramters_Frame">
+            <summary>
+            Global object for storing Frame protocol settings.
+            </summary>
+        </member>
+        <member name="P:BHS.Engine.TCPClientChains.Configure.XmlSettingLoader.Paramters_AppClient">
+            <summary>
+            Global object for storing AppClient protocol settings of Sort Engine Service.
+            </summary>
+        </member>
+        <member name="P:BHS.Engine.TCPClientChains.Configure.XmlSettingLoader.Paramters_SOL">
+            <summary>
+            Global object for storing SOL protocol settings of Sort Engine Service.
+            </summary>
+        </member>
+        <member name="P:BHS.Engine.TCPClientChains.Configure.XmlSettingLoader.Paramters_ACK">
+            <summary>
+            Global object for storing ACK protocol settings.
+            </summary>
+        </member>
+        <member name="P:BHS.Engine.TCPClientChains.Configure.XmlSettingLoader.Paramters_MID">
+            <summary>
+            Global object for storing MID protocol settings.
+            </summary>
+        </member>
+        <member name="P:BHS.Engine.TCPClientChains.Configure.XmlSettingLoader.Paramters_MsgHandler">
+            <summary>
+            Global object for storing MessageHandler settings.
+            </summary>
+        </member>
+        <member name="P:BHS.Engine.TCPClientChains.Configure.XmlSettingLoader.Paramters_DBPersistor">
+            <summary>
+            Global object for storing data Persistor settings.
+            </summary>
+        </member>
+        <member name="E:BHS.Engine.TCPClientChains.Configure.XmlSettingLoader.OnReloadSettingCompleted">
+            <summary>
+            Event will be raised when reload setting from changed configuration 
+            file is successfully completed.
+            </summary>
+        </member>
+        <member name="T:BHS.Engine.TCPClientChains.Application.Initializer">
+            <summary>
+            Class for centralized application initializing.
+            </summary>
+        </member>
+        <member name="M:BHS.Engine.TCPClientChains.Application.Initializer.#ctor(System.String,System.String)">
+            <summary>
+            Application global initizliaer for centralized performing of application initializing tasks.
+            </summary>
+            <param name="XMLFileSetting"></param>
+            <param name="XMLFileTelegram"></param>
+        </member>
+        <member name="M:BHS.Engine.TCPClientChains.Application.Initializer.Finalize">
+            <summary>
+            Destructer of Initializer class.
+            </summary>
+        </member>
+        <member name="M:BHS.Engine.TCPClientChains.Application.Initializer.Dispose">
+            <summary>
+            Class method to be called by class wrapper for release resources explicitly.
+            </summary>
+        </member>
+        <member name="M:BHS.Engine.TCPClientChains.Application.Initializer.Init">
+            <summary>
+            Init() method of Initializer class is the place to perform the initialization
+            tasks for current application. All initialization tasks needed to be done during
+            the application startup time should be performed here.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:BHS.Engine.TCPClientChains.Application.Initializer.BuildTCPClientChain">
+            <summary>
+            ------------------------------------------------------------------------------------
+            Build "Handler-Filter-Transport" chain for CCTV Engine Service application 
+            TCPClient chain by following below sequence:
+            ------------------------------------------------------------------------------------
+            BHS.Engine.TCPClientChains.Messages.Handlers.SessionForwarder
+            PALS.Net.handlers.SessionHandler
+            PALS.Net.Filters.Application.OutgoingMessageIdentifier 
+            PALS.Net.Filters.Acknowledge.ACK 
+            PALS.Net.Filters.Application.IncomingMessageIdentifier 
+            PALS.Net.Filters.SignOfLife.SOL 
+            PALS.Net.Filters.Application.APPClient 
+            PALS.Net.FiltersFrame.Frame
+            PALS.Net.Transports.TCP.TCPClient
+            ------------------------------------------------------------------------------------
+            </summary>
+        </member>
+        <member name="M:BHS.Engine.TCPClientChains.Application.Initializer.Handler_OnReloadSettingCompleted(System.Object,System.EventArgs)">
+            <summary>
+            Event handler of ReloadSettingCompleted event fired by IConfigurationLoader interface 
+            implemented class method LoadSettingFromConfigFile() upon the reloading setting from
+            changed file is successfully completed. 
+            
+            This event handler is to make sure the reloaded settings can be taken effective 
+            immediately.
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="P:BHS.Engine.TCPClientChains.Application.Initializer.MsgHandler">
+            <summary>
+            Get or set the BHS.Engine.TCPClientChains.Messages.Handlers.Messagehandler class object.
+            </summary>
+        </member>
+        <member name="P:BHS.Engine.TCPClientChains.Application.Initializer.ObjectID">
+            <summary>
+            null
+            </summary>
+        </member>
+        <member name="P:BHS.Engine.TCPClientChains.Application.Initializer.PerfMonitor">
+            <summary>
+            null
+            </summary>
+        </member>
+        <member name="P:BHS.Engine.TCPClientChains.Application.Initializer.PerfMonitorList">
+            <summary>
+            null
+            </summary>
+        </member>
+        <member name="E:BHS.Engine.TCPClientChains.Application.Initializer.OnReceived">
+            <summary>
+            Event will be raised when message is received.
+            </summary>
+        </member>
+        <member name="E:BHS.Engine.TCPClientChains.Application.Initializer.OnConnected">
+            <summary>
+            Event will be raised when specific channel connection of Gateway-External device chain is opened.
+            </summary>
+        </member>
+        <member name="E:BHS.Engine.TCPClientChains.Application.Initializer.OnDisconnected">
+            <summary>
+            Event will be raised when specific channel connection of Gateway-External device chain is closed.
+            </summary>
+        </member>
+        <member name="T:BHS.Engine.TCPClientChains.Messages.Handlers.ICR">
+            <summary>
+            ICR message handler class
+            </summary>
+        </member>
+        <member name="M:BHS.Engine.TCPClientChains.Messages.Handlers.ICR.#ctor">
+            <summary>
+            Class constructer.
+            </summary>
+        </member>
+        <member name="M:BHS.Engine.TCPClientChains.Messages.Handlers.ICR.Finalize">
+            <summary>
+            Class destructer.
+            </summary>
+        </member>
+        <member name="M:BHS.Engine.TCPClientChains.Messages.Handlers.ICR.Dispose">
+            <summary>
+            Class method to be called by class wrapper for release resources explicitly.
+            </summary>
+        </member>
+        <member name="M:BHS.Engine.TCPClientChains.Messages.Handlers.ICR.Init">
+            <summary>
+            Init() method.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:BHS.Engine.TCPClientChains.Messages.Handlers.ICR.MessageHandling(BHS.IncomingMessageInfo)">
+            <summary>
+            Overridden class method for message handling.
+            </summary>
+            <param name="msgInfo"></param>
+        </member>
+        <member name="M:BHS.Engine.TCPClientChains.Messages.Handlers.ICR.MessageDecoding(PALS.Telegrams.Telegram,System.String@,System.String@,System.String@,System.String@,System.String@,System.String@,System.String@,System.String@)">
+            <summary>
+            Message Decoding
+            </summary>
+        </member>
+        <member name="M:BHS.Engine.TCPClientChains.Messages.Handlers.ICR.LogMessageIntoDatabase(System.String,System.String,System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            Log Message into database.
+            </summary>
+            <param name="sender"></param>
+            <param name="receiver"></param>
+            <param name="gid"></param>
+            <param name="location"></param>
+            <param name="hbsLevel"></param>
+            <param name="hbsResult"></param>
+            <param name="plc_idx"></param>
+        </member>
+        <member name="T:BHS.Engine.TCPClientChains.Messages.Handlers.PV1K">
+            <summary>
+            PV1K message handler class
+            </summary>
+        </member>
+        <member name="M:BHS.Engine.TCPClientChains.Messages.Handlers.PV1K.#ctor">
+            <summary>
+            Class constructer.
+            </summary>
+        </member>
+        <member name="M:BHS.Engine.TCPClientChains.Messages.Handlers.PV1K.Finalize">
+            <summary>
+            Class destructer.
+            </summary>
+        </member>
+        <member name="M:BHS.Engine.TCPClientChains.Messages.Handlers.PV1K.Dispose">
+            <summary>
+            Class method to be called by class wrapper for release resources explicitly.
+            </summary>
+        </member>
+        <member name="M:BHS.Engine.TCPClientChains.Messages.Handlers.PV1K.Init">
+            <summary>
+            Init() method.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:BHS.Engine.TCPClientChains.Messages.Handlers.PV1K.MessageHandling(BHS.IncomingMessageInfo)">
+            <summary>
+            Overridden class method for message handling.
+            </summary>
+            <param name="msgInfo"></param>
+        </member>
+        <member name="M:BHS.Engine.TCPClientChains.Messages.Handlers.PV1K.MessageDecoding(PALS.Telegrams.Telegram,System.String@,System.String@,System.String@,System.String@,System.String@,System.String@,System.String@,System.String@,System.Collections.Generic.List{System.String}@)">
+            <summary>
+            Message Decoding
+            </summary>
+        </member>
+        <member name="T:BHS.Engine.TCPClientChains.Messages.Handlers.FPTI">
+            <summary>
+            FPTI message handler class
+            </summary>
+        </member>
+        <member name="F:BHS.Engine.TCPClientChains.Messages.Handlers.FPTI._messageFormat">
+            <summary>
+            FPTI message format.
+            </summary>
+        </member>
+        <member name="M:BHS.Engine.TCPClientChains.Messages.Handlers.FPTI.#ctor(PALS.Telegrams.TelegramFormat)">
+            <summary>
+            Class constructer.
+            </summary>
+        </member>
+        <member name="M:BHS.Engine.TCPClientChains.Messages.Handlers.FPTI.ConstructFPTIMessage">
+            <summary>
+            Construct FPTI message.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:BHS.Engine.TCPClientChains.Messages.Handlers.FPTI.NoOfFourPier">
+            <summary>
+            No Of Carrier field value.
+            </summary>
+        </member>
+        <member name="P:BHS.Engine.TCPClientChains.Messages.Handlers.FPTI.AllocationData">
+            <summary>
+            Allocation Data (Code, Sort Device) field value.
+            </summary>
+        </member>
+        <member name="T:BHS.Engine.TCPClientChains.DataPersistor.Database.Persistor">
+            <summary>
+            The single contact with Database
+            </summary>
+        </member>
+        <member name="M:BHS.Engine.TCPClientChains.DataPersistor.Database.Persistor.#ctor(PALS.Common.IParameters)">
+            <summary>
+            Class constructer.
+            </summary>
+        </member>
+        <member name="M:BHS.Engine.TCPClientChains.DataPersistor.Database.Persistor.Finalize">
+            <summary>
+            Class destructer.
+            </summary>
+        </member>
+        <member name="M:BHS.Engine.TCPClientChains.DataPersistor.Database.Persistor.Dispose">
+            <summary>
+            Class method to be called by class wrapper for release resources explicitly.
+            </summary>
+        </member>
+        <member name="M:BHS.Engine.TCPClientChains.DataPersistor.Database.Persistor.DatabaseInitializing">
+            <summary>
+            Perform database initialization tasks:
+            1. Check database readiness by open DB connection to it. The opened DB connection will be closed immediately after it is opened;
+            2. Load system parameter settings from database table into global variables.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:BHS.Engine.TCPClientChains.DataPersistor.Database.Persistor.SentAFAILogging(System.String,System.String,System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            Log data for AFAI:
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:BHS.Engine.TCPClientChains.DataPersistor.Database.Persistor.SentCRAILogging(System.String,System.String,System.Int32,BHS.CRAIList[])">
+            <summary>
+            Log data for CRAI:
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:BHS.Engine.TCPClientChains.DataPersistor.Database.Persistor.SentFBTILogging(System.String,System.String,System.Int32,BHS.Tag[])">
+            <summary>
+            Log data for FBTI:
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:BHS.Engine.TCPClientChains.DataPersistor.Database.Persistor.SentFPTILogging(System.String,System.String,System.Int32,BHS.Tag[])">
+            <summary>
+            Log data for FPTI:
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:BHS.Engine.TCPClientChains.DataPersistor.Database.Persistor.DLPSTagDuplicationCheck(System.String,System.String,System.Int32,System.Int32@)">
+            <summary>
+            DLPS Tag Duplication Check
+            </summary>
+            <param name="gid"></param>
+            <param name="licensePlate"></param>
+            <param name="maxRecords"></param>
+            <param name="duplicateCount"></param>
+        </member>
+        <member name="M:BHS.Engine.TCPClientChains.DataPersistor.Database.Persistor.SentDLPSLogging(System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            Sent DLPS Logging
+            </summary>
+            <param name="sender"></param>
+            <param name="receiver"></param>
+            <param name="gid"></param>
+            <param name="licensePlate"></param>
+            <param name="status"></param>
+        </member>
+        <member name="P:BHS.Engine.TCPClientChains.DataPersistor.Database.Persistor.ObjectID">
+            <summary>
+            ID of class object
+            </summary>
+        </member>
+        <member name="P:BHS.Engine.TCPClientChains.DataPersistor.Database.Persistor.ClassParameters">
+            <summary>
+            Property, object of PersistorParameters class.
+            </summary>
+        </member>
+        <member name="M:BHS.Utilities.ToByteArray(System.String,System.Int32,System.Boolean)">
+            <summary>
+            Convert Hex Values into Byte Array
+            </summary>
+            <param name="hexVal"></param>
+            <param name="fieldLen"></param>
+            <param name="reverse"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BHS.Utilities.ConvertVal2Decimal(System.Byte[],System.String)">
+            <summary>
+            Convert Hex into Decimal 
+            </summary>
+            <param name="fieldActualValue"></param>
+            <param name="strIntType"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BHS.Utilities.AllocationProperty(System.String,System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            Allocation property : Early, Too Early, Open, Late, Too Late
+            </summary>
+            <param name="strLicensePlate"></param>
+            <param name="DBPersistorConnStr"></param>
+            <param name="DBPersistor_STP"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BHS.Utilities.timeSpan(System.String)">
+            <summary>
+            Convert string into Time Span
+            </summary>
+            <param name="offset"></param>
+            <returns></returns>
+        </member>
+        <member name="T:BHS.Engine.TCPClientChains.Messages.Handlers.P1500">
+            <summary>
+            1500P message handler class
+            </summary>
+        </member>
+        <member name="M:BHS.Engine.TCPClientChains.Messages.Handlers.P1500.#ctor">
+            <summary>
+            Class constructer.
+            </summary>
+        </member>
+        <member name="M:BHS.Engine.TCPClientChains.Messages.Handlers.P1500.Finalize">
+            <summary>
+            Class destructer.
+            </summary>
+        </member>
+        <member name="M:BHS.Engine.TCPClientChains.Messages.Handlers.P1500.Dispose">
+            <summary>
+            Class method to be called by class wrapper for release resources explicitly.
+            </summary>
+        </member>
+        <member name="M:BHS.Engine.TCPClientChains.Messages.Handlers.P1500.Init">
+            <summary>
+            Init() method.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:BHS.Engine.TCPClientChains.Messages.Handlers.P1500.MessageHandling(BHS.IncomingMessageInfo)">
+            <summary>
+            Overridden class method for message handling.
+            </summary>
+            <param name="msgInfo"></param>
+        </member>
+        <member name="M:BHS.Engine.TCPClientChains.Messages.Handlers.P1500.MessageDecoding(PALS.Telegrams.Telegram,System.String@,System.String@,System.String@,System.String@,System.String@,System.String@,System.String@,System.String@,System.String@,System.String@,System.String@)">
+            <summary>
+            Message Decoding
+            </summary>
+        </member>
+        <member name="M:BHS.Engine.TCPClientChains.Messages.Handlers.P1500.LogMessageIntoDatabase(System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            Log Message into database
+            </summary>
+            <param name="sender"></param>
+            <param name="receiver"></param>
+            <param name="gid"></param>
+            <param name="lincesePlate"></param>
+            <param name="xRayID"></param>
+            <param name="status"></param>
+            <param name="BitStation"></param>
+            <param name="ETDStation"></param>
+            <param name="PLCTimeStamp"></param>
+        </member>
+        <member name="T:BHS.Engine.TCPClientChains.Messages.Handlers.AFAI">
+            <summary>
+            AFAI message handler class
+            </summary>
+        </member>
+        <member name="F:BHS.Engine.TCPClientChains.Messages.Handlers.AFAI._messageFormat">
+            <summary>
+            AFAI message format.
+            </summary>
+        </member>
+        <member name="M:BHS.Engine.TCPClientChains.Messages.Handlers.AFAI.#ctor(PALS.Telegrams.TelegramFormat)">
+            <summary>
+            Class constructer.
+            </summary>
+        </member>
+        <member name="M:BHS.Engine.TCPClientChains.Messages.Handlers.AFAI.ConstructAFAIMessage">
+            <summary>
+            Construct AFAI message.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:BHS.Engine.TCPClientChains.Messages.Handlers.AFAI.AirportLocationCode">
+            <summary>
+            Airport Location Code field value.
+            </summary>
+        </member>
+        <member name="P:BHS.Engine.TCPClientChains.Messages.Handlers.AFAI.NoCarrierDestination">
+            <summary>
+            No Carrier Destination field value.
+            </summary>
+        </member>
+        <member name="P:BHS.Engine.TCPClientChains.Messages.Handlers.AFAI.NoAllocationDestination">
+            <summary>
+            No Allocation Destination field value.
+            </summary>
+        </member>
+        <member name="P:BHS.Engine.TCPClientChains.Messages.Handlers.AFAI.DumpDischargeDestination">
+            <summary>
+            No Carrier Destination field value.
+            </summary>
+        </member>
+        <member name="P:BHS.Engine.TCPClientChains.Messages.Handlers.AFAI.NoReadDestination">
+            <summary>
+            No Read Destination field value.
+            </summary>
+        </member>
+        <member name="T:BHS.Engine.TCPClientChains.Messages.Handlers.GID">
+            <summary>
+            GID message handler class
+            </summary>
+        </member>
+        <member name="M:BHS.Engine.TCPClientChains.Messages.Handlers.GID.#ctor">
+            <summary>
+            Class constructer.
+            </summary>
+        </member>
+        <member name="M:BHS.Engine.TCPClientChains.Messages.Handlers.GID.Finalize">
+            <summary>
+            Class destructer.
+            </summary>
+        </member>
+        <member name="M:BHS.Engine.TCPClientChains.Messages.Handlers.GID.Dispose">
+            <summary>
+            Class method to be called by class wrapper for release resources explicitly.
+            </summary>
+        </member>
+        <member name="M:BHS.Engine.TCPClientChains.Messages.Handlers.GID.Init">
+            <summary>
+            Init() method.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:BHS.Engine.TCPClientChains.Messages.Handlers.GID.MessageHandling(BHS.IncomingMessageInfo)">
+            <summary>
+            Overridden class method for message handling.
+            </summary>
+            <param name="msgInfo"></param>
+        </member>
+        <member name="M:BHS.Engine.TCPClientChains.Messages.Handlers.GID.MessageDecoding(PALS.Telegrams.Telegram,System.String@,System.String@,System.String@,System.String@,System.String@,System.String@)">
+            <summary>
+            Message Decoding
+            </summary>
+        </member>
+        <member name="M:BHS.Engine.TCPClientChains.Messages.Handlers.GID.LogMessageIntoDatabase(System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            Log Message into database
+            </summary>
+            <param name="sender"></param>
+            <param name="receiver"></param>
+            <param name="source"></param>
+            <param name="gid"></param>
+            <param name="bagType"></param>
+        </member>
+        <member name="T:BHS.Engine.TCPClientChains.Messages.Handlers.DLPS">
+            <summary>
+            DLPS message handler class
+            </summary>
+        </member>
+        <member name="F:BHS.Engine.TCPClientChains.Messages.Handlers.DLPS._messageFormat">
+            <summary>
+            DLPS message format.
+            </summary>
+        </member>
+        <member name="M:BHS.Engine.TCPClientChains.Messages.Handlers.DLPS.#ctor(PALS.Telegrams.TelegramFormat)">
+            <summary>
+            Class constructer.
+            </summary>
+        </member>
+        <member name="M:BHS.Engine.TCPClientChains.Messages.Handlers.DLPS.ConstructDLPSMessage">
+            <summary>
+            Construct DLPS message.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:BHS.Engine.TCPClientChains.Messages.Handlers.DLPS.GID">
+            <summary>
+            GID value.
+            </summary>
+        </member>
+        <member name="P:BHS.Engine.TCPClientChains.Messages.Handlers.DLPS.LicensePlate">
+            <summary>
+            License Plate field value.
+            </summary>
+        </member>
+        <member name="P:BHS.Engine.TCPClientChains.Messages.Handlers.DLPS.Status">
+            <summary>
+            Status field value.
+            </summary>
+        </member>
+        <member name="T:BHS.MessageEventArgs">
+            <summary>
+            Define a class to hold the parameters of fired event whenever connection is 
+            opened or closed, or message is received.
+            </summary>
+        </member>
+        <member name="M:BHS.MessageEventArgs.#ctor(System.String,System.String,System.Int32,PALS.Telegrams.Telegram)">
+            <summary>
+            class constructor.
+            </summary>
+            <param name="chainName">The name of communication Chain in which the event is fired.</param>
+            <param name="channelName">The name of communication Channel where the connection is 
+            opened/closed, or message is received from.</param>
+            <param name="openedChannelCount">The number of current opened channel connections.</param>
+            <param name="message">The received message</param>
+        </member>
+        <member name="P:BHS.MessageEventArgs.ChainName">
+            <summary>
+            The name of communication Chain in which the event is fired. One Chain could have
+            multiple channel connections.
+            </summary>
+        </member>
+        <member name="P:BHS.MessageEventArgs.ChannelName">
+            <summary>
+            The name of communication Channel where the connection is opened/closed, or 
+            message is received from. One Chain could have multiple channel connections.
+            </summary>
+        </member>
+        <member name="P:BHS.MessageEventArgs.OpenedChannelCount">
+            <summary>
+            The number of current opened channel connections.
+            </summary>
+        </member>
+        <member name="P:BHS.MessageEventArgs.Message">
+            <summary>
+            The received message.
+            </summary>
+        </member>
+        <member name="T:BHS.Gateway.TCPClientTCPClientChains.Configure.XmlSettingLoader">
+            <summary>
+            Loading application settings from XML file.
+            </summary>
+        </member>
+        <member name="M:BHS.Gateway.TCPClientTCPClientChains.Configure.XmlSettingLoader.#ctor">
+            <summary>
+            Class constructor
+            </summary>
+        </member>
+        <member name="M:BHS.Gateway.TCPClientTCPClientChains.Configure.XmlSettingLoader.Finalize">
+            <summary>
+            Class destructor
+            </summary>
+        </member>
+        <member name="M:BHS.Gateway.TCPClientTCPClientChains.Configure.XmlSettingLoader.Dispose">
+            <summary>
+            Class method to be called by class wrapper for release resources explicitly.
+            </summary>
+        </member>
+        <member name="M:BHS.Gateway.TCPClientTCPClientChains.Configure.XmlSettingLoader.PALS#Configure#IConfigurationLoader#LoadSettingFromConfigFile(System.Boolean,System.IO.FileInfo[])">
+            <summary>
+            This class method is the place to centralize the loading of application settings from 
+            configuration file. 
+            <para>
+            The actual implementation of IConfigurationLoader interface method LoadSettingFromConfigFile(). 
+            This method will be invoked by AppConfigurator class.
+            </para>
+            <para>
+            If the parameter isReloading = true, the interface implemented LoadSettingFromConfigFile() 
+            may raise a event after all settings have been reloaded successfully, to inform application 
+            that the reloading setting has been done. So application can take the necessary actions
+            to take effective of new settings.
+            </para>
+            <para>
+            Decode XML configuration file and load application settings shall be done by this method.
+            </para>
+            </summary>
+            <param name="isReloading">
+            If the parameter isReloading = true, the interface implemented LoadSettingFromConfigFile() 
+            may raise a event after all settings have been reloaded successfully, to inform application 
+            that the reloading setting has been done. So application can take the necessary actions
+            to take effective of new settings.
+            </param>
+            <param name="cfgFiles">
+            params type method argument, represents one or more configuration files.
+            </param>
+        </member>
+        <member name="P:BHS.Gateway.TCPClientTCPClientChains.Configure.XmlSettingLoader.Paramters_GlobalContext">
+            <summary>
+            Global object for storing GlobalContext settings.
+            </summary>
+        </member>
+        <member name="P:BHS.Gateway.TCPClientTCPClientChains.Configure.XmlSettingLoader.Paramters_TCPClient_GW2Internal">
+            <summary>
+            Global object for storing TCPClient protocol settings of GW2Internal Engine Service 
+            application communication chain.
+            </summary>
+        </member>
+        <member name="P:BHS.Gateway.TCPClientTCPClientChains.Configure.XmlSettingLoader.Paramters_TCPServerClient_GW2External">
+            <summary>
+            Global object for storing TCPClient protocol settings of GW2External device communication chain.
+            </summary>
+        </member>
+        <member name="P:BHS.Gateway.TCPClientTCPClientChains.Configure.XmlSettingLoader.Paramters_Frame">
+            <summary>
+            Global object for storing Frame protocol settings.
+            </summary>
+        </member>
+        <member name="P:BHS.Gateway.TCPClientTCPClientChains.Configure.XmlSettingLoader.Paramters_EIP">
+            <summary>
+            Global object for storing EIP protocol settings.
+            </summary>
+        </member>
+        <member name="P:BHS.Gateway.TCPClientTCPClientChains.Configure.XmlSettingLoader.Paramters_CIP">
+            <summary>
+            Global object for storing CIP protocol settings.
+            </summary>
+        </member>
+        <member name="P:BHS.Gateway.TCPClientTCPClientChains.Configure.XmlSettingLoader.Paramters_AppClient_GW2Internal">
+            <summary>
+            Global object for storing AppClient protocol settings of GW2Internal Engine Service.
+            </summary>
+        </member>
+        <member name="P:BHS.Gateway.TCPClientTCPClientChains.Configure.XmlSettingLoader.Paramters_AppClient_GW2External">
+            <summary>
+            Global object for storing AppClient protocol settings of GW2External device communication chain.
+            </summary>
+        </member>
+        <member name="P:BHS.Gateway.TCPClientTCPClientChains.Configure.XmlSettingLoader.Paramters_TSYN">
+            <summary>
+            Global object for storing TSYN protocol settings.
+            </summary>
+        </member>
+        <member name="P:BHS.Gateway.TCPClientTCPClientChains.Configure.XmlSettingLoader.Paramters_SOL_GW2Internal">
+            <summary>
+            Global object for storing SOL protocol settings of GW2Internal Engine Service.
+            </summary>
+        </member>
+        <member name="P:BHS.Gateway.TCPClientTCPClientChains.Configure.XmlSettingLoader.Paramters_SOL_GW2External">
+            <summary>
+            Global object for storing SOL protocol settings of GW2External device communication chain.
+            </summary>
+        </member>
+        <member name="P:BHS.Gateway.TCPClientTCPClientChains.Configure.XmlSettingLoader.Paramters_ACK">
+            <summary>
+            Global object for storing ACK protocol settings.
+            </summary>
+        </member>
+        <member name="P:BHS.Gateway.TCPClientTCPClientChains.Configure.XmlSettingLoader.Paramters_MID">
+            <summary>
+            Global object for storing MID protocol settings.
+            </summary>
+        </member>
+        <member name="P:BHS.Gateway.TCPClientTCPClientChains.Configure.XmlSettingLoader.Paramters_MsgHandler">
+            <summary>
+            Global object for storing MessageHandler settings.
+            </summary>
+        </member>
+        <member name="E:BHS.Gateway.TCPClientTCPClientChains.Configure.XmlSettingLoader.OnReloadSettingCompleted">
+            <summary>
+            Event will be raised when reload setting from changed configuration 
+            file is successfully completed.
+            </summary>
+        </member>
+        <member name="T:BHS.Gateway.TCPClientTCPClientChains.Messages.Handlers.GW2ExternalSessionForwarder">
+            <summary>
+            Message Forwarder of Gateway Service application Gateway-External communication chain. 
+            <para>
+            This forwarder forwards the incoming messages received from BHS external devices (e.g. PLCs, 
+            CCTV Server, BIS/FIS server, etc.), to MessageHandler of gateway service application. Or 
+            send outgoing messages passed down from MessageHandler to BHS internal service applications 
+            (e.g. SortEngine service, CCTVEngine service, BISEngine/FISEngine service, etc.) via 
+            Gateway-Internal communication chain.
+            </para>
+            </summary>
+        </member>
+        <member name="M:BHS.Gateway.TCPClientTCPClientChains.Messages.Handlers.GW2ExternalSessionForwarder.#ctor(PALS.Common.IParameters)">
+            <summary>
+            Class constructer.
+            </summary>
+        </member>
+        <member name="M:BHS.Gateway.TCPClientTCPClientChains.Messages.Handlers.GW2ExternalSessionForwarder.Finalize">
+            <summary>
+            Class destructer.
+            </summary>
+        </member>
+        <member name="M:BHS.Gateway.TCPClientTCPClientChains.Messages.Handlers.GW2ExternalSessionForwarder.Dispose">
+            <summary>
+            Class method to be called by class wrapper for release resources explicitly.
+            </summary>
+        </member>
+        <member name="M:BHS.Gateway.TCPClientTCPClientChains.Messages.Handlers.GW2ExternalSessionForwarder.Init(PALS.Common.IParameters@)">
+            <summary>
+            Overridden of base class Init() method.
+            </summary>
+            <param name="Param"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BHS.Gateway.TCPClientTCPClientChains.Messages.Handlers.GW2ExternalSessionForwarder.ConnectionOpened(System.String)">
+            <summary>
+            Overridden of base class ConnectionOpened() method.
+            </summary>
+            <param name="channelName"></param>
+        </member>
+        <member name="M:BHS.Gateway.TCPClientTCPClientChains.Messages.Handlers.GW2ExternalSessionForwarder.ConnectionClosed(System.String)">
+            <summary>
+            Overridden of base class ConnectionClosed() method.
+            </summary>
+            <param name="channelName"></param>
+        </member>
+        <member name="M:BHS.Gateway.TCPClientTCPClientChains.Messages.Handlers.GW2ExternalSessionForwarder.MessageReceived(System.String,PALS.Telegrams.Telegram@)">
+            <summary>
+            Forward incoming message to upper layer by OnReceived() event firing upon message is received.
+            </summary>
+            <param name="channelName"></param>
+            <param name="message"></param>
+        </member>
+        <member name="M:BHS.Gateway.TCPClientTCPClientChains.Messages.Handlers.GW2ExternalSessionForwarder.Disconnect(System.String)">
+            <summary>
+            Close the connection of specified name of channel. If value null is passed to this
+            method, then all connections of this chain will be closed.
+            </summary>
+            <param name="channelName">null</param>
+        </member>
+        <member name="M:BHS.Gateway.TCPClientTCPClientChains.Messages.Handlers.GW2ExternalSessionForwarder.Send(PALS.Telegrams.Telegram)">
+            <summary>
+            Send outgoing message to CCTV server via all opened channel connections.
+            <para>If no any channel connection is not opened, then the outgoing message will 
+            be discarded.</para>
+            </summary>
+            <param name="message"></param>
+            <returns></returns>
+        </member>
+        <member name="E:BHS.Gateway.TCPClientTCPClientChains.Messages.Handlers.GW2ExternalSessionForwarder.OnConnected">
+            <summary>
+            Event will be raised when specific channel connection of Gateway-External device chain is opened.
+            </summary>
+        </member>
+        <member name="E:BHS.Gateway.TCPClientTCPClientChains.Messages.Handlers.GW2ExternalSessionForwarder.OnDisconnected">
+            <summary>
+            Event will be raised when specific channel connection of Gateway-External device chain is closed.
+            </summary>
+        </member>
+        <member name="E:BHS.Gateway.TCPClientTCPClientChains.Messages.Handlers.GW2ExternalSessionForwarder.OnReceived">
+            <summary>
+            Event will be raised when message is received from external devices.
+            </summary>
+        </member>
+        <member name="T:BHS.Engine.TCPClientChains.Messages.Handlers.SessionForwarder">
+            <summary>
+            Message Forwarder of Engine Service application TCPClient communication chain. 
+            <para>
+            This forwarder forwards the incoming messages sent from Gateway service applications 
+            to MessageHandler of Engine service application (e.g. SortEngine service, CCTVEngine 
+            service, BISEngine/FISEngine service, etc.). Or send outgoing messages passed down from 
+            MessageHandler to Gateway service TCPClient communication chain.
+            </para>
+            </summary>
+        </member>
+        <member name="M:BHS.Engine.TCPClientChains.Messages.Handlers.SessionForwarder.#ctor(PALS.Common.IParameters)">
+            <summary>
+            Class constructer.
+            </summary>
+        </member>
+        <member name="M:BHS.Engine.TCPClientChains.Messages.Handlers.SessionForwarder.Finalize">
+            <summary>
+            Class destructer.
+            </summary>
+        </member>
+        <member name="M:BHS.Engine.TCPClientChains.Messages.Handlers.SessionForwarder.Dispose">
+            <summary>
+            Class method to be called by class wrapper for release resources explicitly.
+            </summary>
+        </member>
+        <member name="M:BHS.Engine.TCPClientChains.Messages.Handlers.SessionForwarder.Init(PALS.Common.IParameters@)">
+            <summary>
+            Overridden of base class Init() method.
+            </summary>
+            <param name="Param"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BHS.Engine.TCPClientChains.Messages.Handlers.SessionForwarder.ConnectionOpened(System.String)">
+            <summary>
+            Overridden of base class ConnectionOpened() method.
+            </summary>
+            <param name="channelName"></param>
+        </member>
+        <member name="M:BHS.Engine.TCPClientChains.Messages.Handlers.SessionForwarder.ConnectionClosed(System.String)">
+            <summary>
+            Overridden of base class ConnectionClosed() method.
+            </summary>
+            <param name="channelName"></param>
+        </member>
+        <member name="M:BHS.Engine.TCPClientChains.Messages.Handlers.SessionForwarder.MessageReceived(System.String,PALS.Telegrams.Telegram@)">
+            <summary>
+            Forward incoming message to upper layer by OnReceived() event firing upon message is received.
+            </summary>
+            <param name="channelName"></param>
+            <param name="message"></param>
+        </member>
+        <member name="M:BHS.Engine.TCPClientChains.Messages.Handlers.SessionForwarder.Disconnect(System.String)">
+            <summary>
+            Close the connection of specified name of channel. If value null is passed to this
+            method, then all connections of this chain will be closed.
+            </summary>
+            <param name="channelName">null</param>
+        </member>
+        <member name="M:BHS.Engine.TCPClientChains.Messages.Handlers.SessionForwarder.Send(PALS.Telegrams.Telegram)">
+            <summary>
+            Send outgoing message to engine service via all opened channel connections.
+            <para>If no any channel connection is not opened, then the outgoing message will 
+            be discarded.</para>
+            </summary>
+            <param name="message"></param>
+            <returns></returns>
+        </member>
+        <member name="E:BHS.Engine.TCPClientChains.Messages.Handlers.SessionForwarder.OnConnected">
+            <summary>
+            Event will be raised when specific channel connection of Gateway-Internal Engine 
+            Service Application chain is opened.
+            </summary>
+        </member>
+        <member name="E:BHS.Engine.TCPClientChains.Messages.Handlers.SessionForwarder.OnDisconnected">
+            <summary>
+            Event will be raised when specific channel connection of Gateway-Internal Engine 
+            Service Application chain is closed.
+            </summary>
+        </member>
+        <member name="E:BHS.Engine.TCPClientChains.Messages.Handlers.SessionForwarder.OnReceived">
+            <summary>
+            Event will be raised when message is received from engine service applications.
+            </summary>
+        </member>
+        <member name="T:BHS.Engine.TCPClientChains.Messages.Handlers.ILT">
+            <summary>
+            ILT message handler class
+            </summary>
+        </member>
+        <member name="M:BHS.Engine.TCPClientChains.Messages.Handlers.ILT.#ctor">
+            <summary>
+            Class constructer.
+            </summary>
+        </member>
+        <member name="M:BHS.Engine.TCPClientChains.Messages.Handlers.ILT.Finalize">
+            <summary>
+            Class destructer.
+            </summary>
+        </member>
+        <member name="M:BHS.Engine.TCPClientChains.Messages.Handlers.ILT.Dispose">
+            <summary>
+            Class method to be called by class wrapper for release resources explicitly.
+            </summary>
+        </member>
+        <member name="M:BHS.Engine.TCPClientChains.Messages.Handlers.ILT.Init">
+            <summary>
+            Init() method.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:BHS.Engine.TCPClientChains.Messages.Handlers.ILT.MessageHandling(BHS.IncomingMessageInfo)">
+            <summary>
+            Overridden class method for message handling.
+            </summary>
+            <param name="msgInfo"></param>
+        </member>
+        <member name="M:BHS.Engine.TCPClientChains.Messages.Handlers.ILT.MessageDecoding(PALS.Telegrams.Telegram,System.String@,System.String@,System.String@,System.String@,System.String@)">
+            <summary>
+            Message Decoding
+            </summary>
+        </member>
+        <member name="T:BHS.Gateway.TCPClientTCPClientChains.Configure.GlobalContext">
+            <summary>
+            Parameter class for storing application global context settings.
+            </summary>
+        </member>
+        <member name="P:BHS.Gateway.TCPClientTCPClientChains.Configure.GlobalContext.Company">
+            <summary>
+            Company name
+            </summary>
+        </member>
+        <member name="P:BHS.Gateway.TCPClientTCPClientChains.Configure.GlobalContext.Department">
+            <summary>
+            Department name
+            </summary>
+        </member>
+        <member name="P:BHS.Gateway.TCPClientTCPClientChains.Configure.GlobalContext.Author">
+            <summary>
+            Author name
+            </summary>
+        </member>
+        <member name="P:BHS.Gateway.TCPClientTCPClientChains.Configure.GlobalContext.AppName">
+            <summary>
+            Application name
+            </summary>
+        </member>
+        <member name="P:BHS.Gateway.TCPClientTCPClientChains.Configure.GlobalContext.AppStartedTime">
+            <summary>
+            Application starting time
+            </summary>
+        </member>
+        <member name="T:BHS.CRAIList">
+            <summary>
+            Struct for CRAI.
+            </summary>    
+        </member>
+        <member name="F:BHS.CRAIList.CarrierCode">
+            <summary>
+            Carrier Code.
+            </summary>  
+        </member>
+        <member name="F:BHS.CRAIList.SortDeviceDestination">
+            <summary>
+            Sort Device Destination.
+            </summary>  
+        </member>
+        <member name="F:BHS.CRAIList.SortDeviceDescription">
+            <summary>
+            Sort Device Destination Description
+            </summary>
+        </member>
+        <member name="T:BHS.Tag">
+            <summary>
+            Struct for Tag.
+            </summary>   
+        </member>
+        <member name="F:BHS.Tag.Code">
+            <summary>
+            Tag Code.
+            </summary>  
+        </member>
+        <member name="F:BHS.Tag.Destination">
+            <summary>
+            Tag Destination.
+            </summary>  
+        </member>
+        <member name="F:BHS.Tag.DestinationDescription">
+            <summary>
+            Tag Destination Description
+            </summary>
+        </member>
+    </members>
+</doc>

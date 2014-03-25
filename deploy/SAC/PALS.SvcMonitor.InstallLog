@@ -1,0 +1,39 @@
+﻿Installing assembly 'C:\PterisGlobal\PALS\SAC\PALS.SvcMonitor.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = C:\PterisGlobal\PALS\SAC\PALS.SvcMonitor.InstallLog
+   assemblypath = C:\PterisGlobal\PALS\SAC\PALS.SvcMonitor.exe
+Installing service PALS.SvcMonitor...
+Service PALS.SvcMonitor has been successfully installed.
+Creating EventLog source PALS.SvcMonitor in log Application...
+Committing assembly 'C:\PterisGlobal\PALS\SAC\PALS.SvcMonitor.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = C:\PterisGlobal\PALS\SAC\PALS.SvcMonitor.InstallLog
+   assemblypath = C:\PterisGlobal\PALS\SAC\PALS.SvcMonitor.exe
+Installing assembly 'C:\PterisGlobal\PALS\SAC\PALS.SvcMonitor.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = C:\PterisGlobal\PALS\SAC\PALS.SvcMonitor.InstallLog
+   assemblypath = C:\PterisGlobal\PALS\SAC\PALS.SvcMonitor.exe
+Installing service PALS.SvcMonitor...
+Creating EventLog source PALS.SvcMonitor in log Application...
+Rolling back assembly 'C:\PterisGlobal\PALS\SAC\PALS.SvcMonitor.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = C:\PterisGlobal\PALS\SAC\PALS.SvcMonitor.InstallLog
+   assemblypath = C:\PterisGlobal\PALS\SAC\PALS.SvcMonitor.exe
+Restoring event log to previous state for source PALS.SvcMonitor.
+Installing assembly 'C:\PterisGlobal\PALS\SAC\PALS.SvcMonitor.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = C:\PterisGlobal\PALS\SAC\PALS.SvcMonitor.InstallLog
+   assemblypath = C:\PterisGlobal\PALS\SAC\PALS.SvcMonitor.exe
+Installing service PALS.SvcMonitor...
+Creating EventLog source PALS.SvcMonitor in log Application...
+Rolling back assembly 'C:\PterisGlobal\PALS\SAC\PALS.SvcMonitor.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = C:\PterisGlobal\PALS\SAC\PALS.SvcMonitor.InstallLog
+   assemblypath = C:\PterisGlobal\PALS\SAC\PALS.SvcMonitor.exe
+Restoring event log to previous state for source PALS.SvcMonitor.

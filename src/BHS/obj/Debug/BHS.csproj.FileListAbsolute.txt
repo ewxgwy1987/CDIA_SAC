@@ -1,0 +1,27 @@
+E:\XJ_MyDocuments\Visual Studio 2008\Projects\PGL\Projects\DBWC_MDS2CCTVGW\Src\bin\Debug\BHS.dll
+E:\XJ_MyDocuments\Visual Studio 2008\Projects\PGL\Projects\DBWC_MDS2CCTVGW\Src\bin\Debug\BHS.pdb
+E:\XJ_MyDocuments\Visual Studio 2008\Projects\PGL\Projects\DBWC_MDS2CCTVGW\src\BHS\DBWC_MDS2CCTVGW\bin\Debug\BHS.dll
+E:\XJ_MyDocuments\Visual Studio 2008\Projects\PGL\Projects\DBWC_MDS2CCTVGW\src\BHS\DBWC_MDS2CCTVGW\bin\Debug\BHS.pdb
+E:\XJ_MyDocuments\Visual Studio 2008\Projects\PGL\Projects\DBWC_MDS2CCTVGW\src\BHS\DBWC_MDS2CCTVGW\bin\Debug\log4net.dll
+E:\XJ_MyDocuments\Visual Studio 2008\Projects\PGL\Projects\DBWC_MDS2CCTVGW\src\BHS\DBWC_MDS2CCTVGW\bin\Debug\PALS.dll
+E:\XJ_MyDocuments\Visual Studio 2008\Projects\PGL\Projects\DBWC_MDS2CCTVGW\src\BHS\bin\Debug\BHS.XML
+E:\XJ_MyDocuments\Visual Studio 2008\Projects\PGL\Projects\DBWC_MDS2CCTVGW\src\BHS\bin\Debug\BHS.dll
+E:\XJ_MyDocuments\Visual Studio 2008\Projects\PGL\Projects\DBWC_MDS2CCTVGW\src\BHS\bin\Debug\BHS.pdb
+E:\XJ_MyDocuments\Visual Studio 2008\Projects\PGL\Projects\DBWC_MDS2CCTVGW\src\BHS\bin\Debug\log4net.dll
+E:\XJ_MyDocuments\Visual Studio 2008\Projects\PGL\Projects\DBWC_MDS2CCTVGW\src\BHS\bin\Debug\PALS.Configure.dll
+E:\XJ_MyDocuments\Visual Studio 2008\Projects\PGL\Projects\DBWC_MDS2CCTVGW\src\BHS\bin\Debug\PALS.dll
+E:\XJ_MyDocuments\Visual Studio 2008\Projects\PGL\Projects\DBWC_MDS2CCTVGW\src\BHS\obj\Debug\ResolveAssemblyReference.cache
+E:\XJ_MyDocuments\Visual Studio 2008\Projects\PGL\Projects\DBWC_MDS2CCTVGW\src\BHS\obj\Debug\BHS.dll
+E:\XJ_MyDocuments\Visual Studio 2008\Projects\PGL\Projects\DBWC_MDS2CCTVGW\src\BHS\obj\Debug\BHS.pdb
+D:\My Documents\Visual Studio 2008\Projects\PGL\Project\S01A09028Y_Phoenix T3S & T4N\PSHIA_SAC\bin\Debug\BHS.dll
+D:\My Documents\Visual Studio 2008\Projects\PGL\Project\S01A09028Y_Phoenix T3S & T4N\PSHIA_SAC\bin\Debug\BHS.pdb
+D:\My Documents\Visual Studio 2008\Projects\PGL\Project\S01A09028Y_Phoenix T3S & T4N\PSHIA_SAC\bin\Debug\BHS.XML
+D:\My Documents\Visual Studio 2008\Projects\PGL\Project\S01A09028Y_Phoenix T3S & T4N\PSHIA_SAC\src\BHS\obj\Debug\ResolveAssemblyReference.cache
+D:\My Documents\Visual Studio 2008\Projects\PGL\Project\S01A09028Y_Phoenix T3S & T4N\PSHIA_SAC\src\BHS\obj\Debug\BHS.dll
+D:\My Documents\Visual Studio 2008\Projects\PGL\Project\S01A09028Y_Phoenix T3S & T4N\PSHIA_SAC\src\BHS\obj\Debug\BHS.pdb
+D:\8. Projects\2. Y2012_S01A1203800_Charlotte\4. Sources\CDIA_SAC\bin\Debug\BHS.dll
+D:\8. Projects\2. Y2012_S01A1203800_Charlotte\4. Sources\CDIA_SAC\bin\Debug\BHS.pdb
+D:\8. Projects\2. Y2012_S01A1203800_Charlotte\4. Sources\CDIA_SAC\bin\Debug\BHS.XML
+D:\8. Projects\2. Y2012_S01A1203800_Charlotte\4. Sources\CDIA_SAC\src\BHS\obj\Debug\ResolveAssemblyReference.cache
+D:\8. Projects\2. Y2012_S01A1203800_Charlotte\4. Sources\CDIA_SAC\src\BHS\obj\Debug\BHS.dll
+D:\8. Projects\2. Y2012_S01A1203800_Charlotte\4. Sources\CDIA_SAC\src\BHS\obj\Debug\BHS.pdb

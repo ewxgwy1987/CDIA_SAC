@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<configuration>
+  <!--IR Standard BHS Telegrams -->
+  <configSet name="Telegram_Formats">
+    <!--The "" or "?" shall be used if the value of attributes is not constant.-->
+    <!--The value of offset and length attributes is number of bytes -->
+    <!--The "acknowledge" indicates whether this message is the acknowledgement required message -->
+    <!--The "sequence" indicates whether this sequence field need to be assigned the new value before sent out -->
+    <!--The "alias" attribute of "telegram" node is constant value for all projects-->
+    <!--The "name" attribute of "field" node is constant value for all projects-->
+
+    <telegramSet name="Application_Telegrams">
+      <!-- Header - Message Header -->
+      <!-- 0001, CRQ - Connection Request Message -->
+      <!-- 0002, CCF - Connection Confirm Message -->
+      <!-- 0090, SOL - Sign-of-life (Keep-Alive) Message -->
+      <!-- 0099, ACK - Acknowledge Message -->
+      <!-- 0101, SRQ - Running Status Request Message -->
+      <!-- 0102, SRP - Running Status Reply Message -->
+      <!-- 0103, INTM - Intermediate Message -->
+      <!-- 0108, CSNF - Connection Status Notification Message -->
+
+      <header alias="Header" name="App_Header" sequence="False" acknowledge="False">
+        <field name="Type" offset="0" length="4" default=""/>
+        <field name="Length" offset="4" length="4" default=""/>
+        <field name="Sequence" offset="8" length="4" default=""/>
+      </header>
+      <!-- "Type, Length" field of Application message is mandatory for APP class. -->
+      <telegram alias="CRQ" name="App_Connection_Request_Message" sequence="True" acknowledge="False">
+        <!-- value="48,48,48,49" - the ASCII value (decimal) string. -->
+        <!-- "48,48,48,49" here represents the default field value are -->
+        <!-- 4 bytes (H30 H30 H30 H31). The delimiter must be comma(,). -->
+        <field name="Type" offset="0" length="4" default="48,48,48,49"/>
+        <field name="Length" offset="4" length="4" default="48,48,50,48"/>
+        <field name="Sequence" offset="8" length="4" default="?"/>
+        <field name="ClientAppCode" offset="12" length="8" default="?"/>
+      </telegram>
+      <telegram alias="CCF" name="App_Connection_Confirm_Message" sequence="False" acknowledge="False">
+        <field name="Type" offset="0" length="4" default="48,48,48,50"/>
+        <field name="Length" offset="4" length="4" default="48,48,50,48"/>
+        <field name="Sequence" offset="8" length="4" default="?"/>
+        <field name="ClientAppCode" offset="12" length="8" default="?"/>
+      </telegram>
+     
+      <telegram alias="SOL" name="SignOfLife_Message" sequence="True" acknowledge="True">
+        <field name="Type" offset="0" length="4" default="48,48,57,48"/>
+        <field name="Length" offset="4" length="4" default="48,48,49,50"/>
+        <field name="Sequence" offset="8" length="4" default="?"/>
+      </telegram>
+      <telegram alias="ACK" name="Acknowledge_Message" sequence="True" acknowledge="False">
+        <field name="Type" offset="0" length="4" default="48,48,57,57"/>
+        <field name="Length" offset="4" length="4" default="48,48,49,50"/>
+        <field name="Sequence" offset="8" length="4" default="?"/>
+      </telegram>
+      <telegram alias="SRQ" name="Status_Request_Message" sequence="True" acknowledge="False">
+        <field name="Type" offset="0" length="4" default="48,49,48,49"/>
+        <field name="Length" offset="4" length="4" default="?"/>
+        <field name="Sequence" offset="8" length="4" default="?"/>
+        <field name="Class" offset="12" length="?" default="?"/>
+      </telegram>
+      <telegram alias="SRP" name="Status_Reply_Message" sequence="False" acknowledge="False">
+        <field name="Type" offset="0" length="4" default="48,49,48,50"/>
+        <field name="Length" offset="4" length="4" default="?"/>
+        <field name="Sequence" offset="8" length="4" default="?"/>
+        <field name="Status" offset="12" length="?" default="?"/>
+      </telegram>
+      <telegram alias="INTM" name="Intermediate_Message" sequence="True" acknowledge="True">
+        <field name="Type" offset="0" length="4" default="48,49,48,51"/>
+        <field name="Length" offset="4" length="4" default="?"/>
+        <field name="Sequence" offset="8" length="4" default="?"/>
+        <field name="Sender" offset="12" length="8" default="?"/>
+        <field name="Receiver" offset="20" length="8" default="?"/>
+        <field name="OriginMsgType" offset="28" length="4" default="?"/>
+        <field name="OriginMsg" offset="32" length="?" default="?"/>
+      </telegram>
+      <telegram alias="CSNF" name="Connection_Status_Notification_Message" sequence="True" acknowledge="False">
+        <field name="Type" offset="0" length="4" default="48,49,48,56"/>
+        <field name="Length" offset="4" length="4" default="48,48,50,50"/>
+        <field name="Sequence" offset="8" length="4" default="?"/>
+        <field name="AppCode" offset="12" length="8" default="?"/>
+        <field name="Status" offset="20" length="2" default="?"/>
+      </telegram>
+    </telegramSet>
+  </configSet>
+</configuration>

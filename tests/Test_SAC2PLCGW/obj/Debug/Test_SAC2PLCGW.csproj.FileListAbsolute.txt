@@ -1,0 +1,28 @@
+D:\My Documents\Visual Studio 2008\Projects\PGL\Project\S01A09028Y_Phoenix T3S & T4N\PSHIA_SAC\tests\Test_SAC2PLCGW\bin\Debug\Test_CCTVGW.exe
+D:\My Documents\Visual Studio 2008\Projects\PGL\Project\S01A09028Y_Phoenix T3S & T4N\PSHIA_SAC\tests\Test_SAC2PLCGW\bin\Debug\Test_CCTVGW.pdb
+D:\My Documents\Visual Studio 2008\Projects\PGL\Project\S01A09028Y_Phoenix T3S & T4N\PSHIA_SAC\tests\Test_SAC2PLCGW\bin\Debug\BHS.dll
+D:\My Documents\Visual Studio 2008\Projects\PGL\Project\S01A09028Y_Phoenix T3S & T4N\PSHIA_SAC\tests\Test_SAC2PLCGW\bin\Debug\PALS.Configure.dll
+D:\My Documents\Visual Studio 2008\Projects\PGL\Project\S01A09028Y_Phoenix T3S & T4N\PSHIA_SAC\tests\Test_SAC2PLCGW\bin\Debug\PALS.dll
+D:\My Documents\Visual Studio 2008\Projects\PGL\Project\S01A09028Y_Phoenix T3S & T4N\PSHIA_SAC\tests\Test_SAC2PLCGW\bin\Debug\log4net.dll
+D:\My Documents\Visual Studio 2008\Projects\PGL\Project\S01A09028Y_Phoenix T3S & T4N\PSHIA_SAC\tests\Test_SAC2PLCGW\bin\Debug\BHS.pdb
+D:\My Documents\Visual Studio 2008\Projects\PGL\Project\S01A09028Y_Phoenix T3S & T4N\PSHIA_SAC\tests\Test_SAC2PLCGW\bin\Debug\BHS.xml
+D:\My Documents\Visual Studio 2008\Projects\PGL\Project\S01A09028Y_Phoenix T3S & T4N\PSHIA_SAC\tests\Test_SAC2PLCGW\obj\Debug\ResolveAssemblyReference.cache
+D:\My Documents\Visual Studio 2008\Projects\PGL\Project\S01A09028Y_Phoenix T3S & T4N\PSHIA_SAC\tests\Test_SAC2PLCGW\obj\Debug\Test_SAC2PLCGW.Form1.resources
+D:\My Documents\Visual Studio 2008\Projects\PGL\Project\S01A09028Y_Phoenix T3S & T4N\PSHIA_SAC\tests\Test_SAC2PLCGW\obj\Debug\Test_CCTVGW.Properties.Resources.resources
+D:\My Documents\Visual Studio 2008\Projects\PGL\Project\S01A09028Y_Phoenix T3S & T4N\PSHIA_SAC\tests\Test_SAC2PLCGW\obj\Debug\Test_SAC2PLCGW.csproj.GenerateResource.Cache
+D:\My Documents\Visual Studio 2008\Projects\PGL\Project\S01A09028Y_Phoenix T3S & T4N\PSHIA_SAC\tests\Test_SAC2PLCGW\obj\Debug\Test_CCTVGW.exe
+D:\My Documents\Visual Studio 2008\Projects\PGL\Project\S01A09028Y_Phoenix T3S & T4N\PSHIA_SAC\tests\Test_SAC2PLCGW\obj\Debug\Test_CCTVGW.pdb
+D:\8. Projects\2. Y2012_S01A1203800_Charlotte\4. Sources\CDIA_SAC\tests\Test_SAC2PLCGW\obj\Debug\Test_CCTVGW.exe
+D:\8. Projects\2. Y2012_S01A1203800_Charlotte\4. Sources\CDIA_SAC\tests\Test_SAC2PLCGW\obj\Debug\Test_CCTVGW.pdb
+D:\8. Projects\2. Y2012_S01A1203800_Charlotte\4. Sources\CDIA_SAC\tests\Test_SAC2PLCGW\bin\Debug\Test_CCTVGW.exe
+D:\8. Projects\2. Y2012_S01A1203800_Charlotte\4. Sources\CDIA_SAC\tests\Test_SAC2PLCGW\bin\Debug\Test_CCTVGW.pdb
+D:\8. Projects\2. Y2012_S01A1203800_Charlotte\4. Sources\CDIA_SAC\tests\Test_SAC2PLCGW\bin\Debug\BHS.dll
+D:\8. Projects\2. Y2012_S01A1203800_Charlotte\4. Sources\CDIA_SAC\tests\Test_SAC2PLCGW\bin\Debug\PALS.Configure.dll
+D:\8. Projects\2. Y2012_S01A1203800_Charlotte\4. Sources\CDIA_SAC\tests\Test_SAC2PLCGW\bin\Debug\PALS.dll
+D:\8. Projects\2. Y2012_S01A1203800_Charlotte\4. Sources\CDIA_SAC\tests\Test_SAC2PLCGW\bin\Debug\log4net.dll
+D:\8. Projects\2. Y2012_S01A1203800_Charlotte\4. Sources\CDIA_SAC\tests\Test_SAC2PLCGW\bin\Debug\BHS.pdb
+D:\8. Projects\2. Y2012_S01A1203800_Charlotte\4. Sources\CDIA_SAC\tests\Test_SAC2PLCGW\bin\Debug\BHS.xml
+D:\8. Projects\2. Y2012_S01A1203800_Charlotte\4. Sources\CDIA_SAC\tests\Test_SAC2PLCGW\obj\Debug\ResolveAssemblyReference.cache
+D:\8. Projects\2. Y2012_S01A1203800_Charlotte\4. Sources\CDIA_SAC\tests\Test_SAC2PLCGW\obj\Debug\Test_SAC2PLCGW.Form1.resources
+D:\8. Projects\2. Y2012_S01A1203800_Charlotte\4. Sources\CDIA_SAC\tests\Test_SAC2PLCGW\obj\Debug\Test_CCTVGW.Properties.Resources.resources
+D:\8. Projects\2. Y2012_S01A1203800_Charlotte\4. Sources\CDIA_SAC\tests\Test_SAC2PLCGW\obj\Debug\Test_SAC2PLCGW.csproj.GenerateResource.Cache

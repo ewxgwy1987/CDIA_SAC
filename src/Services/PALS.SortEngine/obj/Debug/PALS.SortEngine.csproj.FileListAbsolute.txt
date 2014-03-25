@@ -1,0 +1,18 @@
+D:\My Documents\Visual Studio 2008\Projects\PGL\Project\S01A09028Y_Phoenix T3S & T4N\PSHIA_SAC\bin\Debug\PALS.SortEngine.exe
+D:\My Documents\Visual Studio 2008\Projects\PGL\Project\S01A09028Y_Phoenix T3S & T4N\PSHIA_SAC\bin\Debug\PALS.SortEngine.pdb
+D:\My Documents\Visual Studio 2008\Projects\PGL\Project\S01A09028Y_Phoenix T3S & T4N\PSHIA_SAC\src\Services\PALS.SortEngine\obj\Debug\ResolveAssemblyReference.cache
+D:\My Documents\Visual Studio 2008\Projects\PGL\Project\S01A09028Y_Phoenix T3S & T4N\PSHIA_SAC\src\Services\PALS.SortEngine\obj\Debug\PALS.SortEngine.SortEngine.resources
+D:\My Documents\Visual Studio 2008\Projects\PGL\Project\S01A09028Y_Phoenix T3S & T4N\PSHIA_SAC\src\Services\PALS.SortEngine\obj\Debug\PALS.SortEngine.ProjectInstaller.resources
+D:\My Documents\Visual Studio 2008\Projects\PGL\Project\S01A09028Y_Phoenix T3S & T4N\PSHIA_SAC\src\Services\PALS.SortEngine\obj\Debug\PALS.SortEngine.csproj.GenerateResource.Cache
+D:\My Documents\Visual Studio 2008\Projects\PGL\Project\S01A09028Y_Phoenix T3S & T4N\PSHIA_SAC\src\Services\PALS.SortEngine\obj\Debug\PALS.SortEngine.exe
+D:\My Documents\Visual Studio 2008\Projects\PGL\Project\S01A09028Y_Phoenix T3S & T4N\PSHIA_SAC\src\Services\PALS.SortEngine\obj\Debug\PALS.SortEngine.pdb
+D:\8. Projects\2. Y2012_S01A1203800_Charlotte\4. Sources\CDIA_SAC\bin\Debug\PALS.SortEngine.exe
+D:\8. Projects\2. Y2012_S01A1203800_Charlotte\4. Sources\CDIA_SAC\bin\Debug\PALS.SortEngine.pdb
+D:\8. Projects\2. Y2012_S01A1203800_Charlotte\4. Sources\CDIA_SAC\src\Services\PALS.SortEngine\obj\Debug\ResolveAssemblyReference.cache
+D:\8. Projects\2. Y2012_S01A1203800_Charlotte\4. Sources\CDIA_SAC\src\Services\PALS.SortEngine\obj\Debug\PALS.SortEngine.SortEngine.resources
+D:\8. Projects\2. Y2012_S01A1203800_Charlotte\4. Sources\CDIA_SAC\src\Services\PALS.SortEngine\obj\Debug\PALS.SortEngine.ProjectInstaller.resources
+D:\8. Projects\2. Y2012_S01A1203800_Charlotte\4. Sources\CDIA_SAC\src\Services\PALS.SortEngine\obj\Debug\PALS.SortEngine.csproj.GenerateResource.Cache
+D:\8. Projects\2. Y2012_S01A1203800_Charlotte\4. Sources\CDIA_SAC\src\Services\PALS.SortEngine\obj\Debug\PALS.SortEngine.exe
+D:\8. Projects\2. Y2012_S01A1203800_Charlotte\4. Sources\CDIA_SAC\src\Services\PALS.SortEngine\obj\Debug\PALS.SortEngine.pdb
+D:\8. Projects\2. Y2012_S01A1203800_Charlotte\4. Sources\CDIA_SAC\bin\Release\PALS.SortEngine.exe
+D:\8. Projects\2. Y2012_S01A1203800_Charlotte\4. Sources\CDIA_SAC\bin\Release\PALS.SortEngine.pdb

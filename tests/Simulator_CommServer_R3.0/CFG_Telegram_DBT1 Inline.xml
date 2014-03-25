@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+<config>
+  <configSet name="Telegrams">
+    <!--You can enter any other messages in this block-->
+    <!--Specical Chars Example: AB&lt;31&gt;&lt;32&gt;And&amp;-->
+    <telegram>SOL MSG</telegram>
+    <telegram>009000120000</telegram>
+    <telegram>000200201231SAC2PLC2</telegram>
+    <telegram>IDR - Item Destination Request</telegram>
+    <telegram>001300501271CT1 CT1-42    012345679709350100011234</telegram>
+    <telegram>001300501271CT1 CT1-42    012345679719351319011234</telegram>
+    <telegram>ISC - Item Scanned</telegram>
+    <telegram>000500661240CT1 CT1-10    012345679411011319010000000000ATR1011234</telegram>
+    <telegram>000500661240CT1 CT1-10    012345679411011319020000000000ATR1011234</telegram>
+    <telegram>000500661240CT1 CT1-10    012345679409350100011101131901ATR1021234</telegram>
+    <telegram>000500661240CT1 CT1-10    012345679409350100020935010002ATR1021234</telegram>
+    <telegram>000500661240CT1 CT1-10    012345679400000000000000000000ATR1031234</telegram>
+    <telegram>ICR - Item Screened</telegram>
+    <telegram>000400521234CT1 CT1-20    012345678500000000001R0123</telegram>
+    <telegram>000400521234CT1 CT1-20    012345678600000000001A0123</telegram>
+    <telegram>000400521235CT1 CT1-30    012345678700000000002R0124</telegram>
+    <telegram>000400521235CT1 CT1-30    012345678800000000002A0124</telegram>
+    <telegram>000400521235CT1 CT1-30    012345678901010212342A0124</telegram>
+    <telegram>000400521236CT1 CT1-30    012345679001010212343A0125</telegram>
+    <telegram>000400521236CT1 CT1-30    012345679101010212342U0125</telegram>
+    <telegram>000400521236CT1 CT1-30    012345679201010212342T0125</telegram>
+    <telegram>000400521236CT1 CT1-30    012345679301010212342N0125</telegram>
+    <telegram>GID - GID Generated</telegram>
+    <telegram>000300381232CT1 CT1-19    0123456789NB</telegram>
+    <telegram>000300381233CT2 CT2-23    9876543210SB</telegram>
+
+    <telegram>000700621254CT1 CT1A-2    CA1       01234567940101021234011234</telegram>
+    <telegram>000700621255CT1 CT1A-2    CA1       01234567950101021235021234</telegram>
+    <telegram>000700621256CT1 CT1A-2    CA1       01234567960101021236031234</telegram>
+
+    <telegram>000800581264CT1 CT1A-2    CT1B-2    0123456797010102123701</telegram>
+    <telegram>000800581265CT1 CT1A-2    CT1B-2    0123456798010102123802</telegram>
+    <telegram>000800581266CT1 CT1A-2    CT1B-2    0123456799010102123903</telegram>
+    <telegram>000800581267CT1 CT1A-2    CT1B-2    0123456800010102124004</telegram>
+
+    <telegram>000900461269CT1 CT1-40    12345678903456789012</telegram>
+    <telegram>000900461270CT2 CT2-41    10000200003000040000</telegram>
+
+    <telegram>001600701271ME1 PA02-26-0601234567970101021237                    1234</telegram>
+    <telegram>001600701271ME1 PA02-26-060123456797          SQ123               1234</telegram>
+    <telegram>001600701271ME1 PA02-26-060123456797                    CA01      1234</telegram>
+
+    <telegram>020300501273ME1 PA02-26-06012345679701010212371234</telegram>
+  </configSet>
+</config>

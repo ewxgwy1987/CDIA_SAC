@@ -1,0 +1,23 @@
+Project Name: Charlotte Douglas International Airport BHS Project SAC Application
+Author: SC Leong
+Release History:
+
+
+Release:	1.0
+Date: 		15 Jul 2010
+Description:	
+		First release for CLT SAC-PLC interface.
+What's new:
+		1. First release for Charlotte Douglas International Airport BHS Project.
+		2. Update the interface document as refer to CLT BHS System requirements  
+Bug Fixed:       
+	    
+Remarks:         
+    1. PALS Framework R3.0.0 (Following DLLs) is required by this release.
+       PALS.dll			- R3.0.0
+       PALS.Configure.dll	- R3.0.0
+       BHS.Net.dll		- R1.0.0
+       
+
+
+

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="CDIA_SAC">
+</Property><Property Name="Solution File" Value="F:\1Pteris Global Ltd\GUO WENYU\projects\US charlotte\Charlotte Source Code\CDIA_SAC\CDIA_SAC.sln">
+</Property><Property Name="Date" Value="2014年3月21日">
+</Property><Property Name="Time" Value="16:45">
+</Property></Properties><Event ErrorLevel="0" Project="BHS" Source="src\BHS\BHS.csproj" Description="Project converted successfully">
+</Event><Event ErrorLevel="3" Project="BHS" Source="src\BHS\BHS.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="Test_SAC2PLCGW" Source="tests\Test_SAC2PLCGW\Test_SAC2PLCGW.csproj" Description="Project converted successfully">
+</Event><Event ErrorLevel="3" Project="Test_SAC2PLCGW" Source="tests\Test_SAC2PLCGW\Test_SAC2PLCGW.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="Test_SortEngine" Source="tests\Test_SortEngine\Test_SortEngine.csproj" Description="Project converted successfully">
+</Event><Event ErrorLevel="3" Project="Test_SortEngine" Source="tests\Test_SortEngine\Test_SortEngine.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="PALS.SortEngine" Source="src\Services\PALS.SortEngine\PALS.SortEngine.csproj" Description="Project converted successfully">
+</Event><Event ErrorLevel="3" Project="PALS.SortEngine" Source="src\Services\PALS.SortEngine\PALS.SortEngine.csproj" Description="Converted">
+</Event><Event ErrorLevel="1" Project="BHS.Net" Source="src\BHS.Net\BHS.Net.vbproj" Description="Your project is targeting .NET Framework 2.0 or 3.0. If your project uses assemblies requiring a newer .NET Framework, your project will fail to build. You can change the .NET Framework version by clicking Properties on the project menu and then selecting a new version in the '.NET Framework' dropdown box. (In Visual Basic, this is located on the Compile tab by clicking the 'Advanced Compiler Options...' button.)">
+</Event><Event ErrorLevel="0" Project="BHS.Net" Source="src\BHS.Net\BHS.Net.vbproj" Description="Project converted successfully">
+</Event><Event ErrorLevel="3" Project="BHS.Net" Source="src\BHS.Net\BHS.Net.vbproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="PALS.SvcMonitor" Source="src\Services\PALS.SvcMonitor\PALS.SvcMonitor.csproj" Description="Project converted successfully">
+</Event><Event ErrorLevel="3" Project="PALS.SvcMonitor" Source="src\Services\PALS.SvcMonitor\PALS.SvcMonitor.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="PALS.SCPLCEM2GW" Source="src\Services\PALS.SCPLCEM2GW\PALS.SCPLCEM2GW.csproj" Description="Project converted successfully">
+</Event><Event ErrorLevel="3" Project="PALS.SCPLCEM2GW" Source="src\Services\PALS.SCPLCEM2GW\PALS.SCPLCEM2GW.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="PALS.SCPLCEM1GW" Source="src\Services\PALS.SCPLCEM1GW\PALS.SCPLCEM1GW.csproj" Description="Project converted successfully">
+</Event><Event ErrorLevel="3" Project="PALS.SCPLCEM1GW" Source="src\Services\PALS.SCPLCEM1GW\PALS.SCPLCEM1GW.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="PALS.SCPLCEM3GW" Source="src\Services\PALS.SCPLCEM3GW\PALS.SCPLCEM3GW.csproj" Description="Project converted successfully">
+</Event><Event ErrorLevel="3" Project="PALS.SCPLCEM3GW" Source="src\Services\PALS.SCPLCEM3GW\PALS.SCPLCEM3GW.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="PALS.SCPLCEM4GW" Source="src\Services\PALS.SCPLCEM4GW\PALS.SCPLCEM4GW.csproj" Description="Project converted successfully">
+</Event><Event ErrorLevel="3" Project="PALS.SCPLCEM4GW" Source="src\Services\PALS.SCPLCEM4GW\PALS.SCPLCEM4GW.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="PALS.SCPLCOS1GW" Source="src\Services\PALS.SCPLCOS1GW\PALS.SCPLCOS1GW.csproj" Description="Project converted successfully">
+</Event><Event ErrorLevel="3" Project="PALS.SCPLCOS1GW" Source="src\Services\PALS.SCPLCOS1GW\PALS.SCPLCOS1GW.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="PALS.SCPLCSM1GW" Source="src\Services\PALS.SCPLCSM1GW\PALS.SCPLCSM1GW.csproj" Description="Project converted successfully">
+</Event><Event ErrorLevel="3" Project="PALS.SCPLCSM1GW" Source="src\Services\PALS.SCPLCSM1GW\PALS.SCPLCSM1GW.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="PALS.SCPLCSM2GW" Source="src\Services\PALS.SCPLCSM2GW\PALS.SCPLCSM2GW.csproj" Description="Project converted successfully">
+</Event><Event ErrorLevel="3" Project="PALS.SCPLCSM2GW" Source="src\Services\PALS.SCPLCSM2GW\PALS.SCPLCSM2GW.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="PALS.SCPLCSM3GW" Source="src\Services\PALS.SCPLCSM3GW\PALS.SCPLCSM3GW.csproj" Description="Project converted successfully">
+</Event><Event ErrorLevel="3" Project="PALS.SCPLCSM3GW" Source="src\Services\PALS.SCPLCSM3GW\PALS.SCPLCSM3GW.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="PALS.SCPLCSM4GW" Source="src\Services\PALS.SCPLCSM4GW\PALS.SCPLCSM4GW.csproj" Description="Project converted successfully">
+</Event><Event ErrorLevel="3" Project="PALS.SCPLCSM4GW" Source="src\Services\PALS.SCPLCSM4GW\PALS.SCPLCSM4GW.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="PALS.SCPLCSM5GW" Source="src\Services\PALS.SCPLCSM5GW\PALS.SCPLCSM5GW.csproj" Description="Project converted successfully">
+</Event><Event ErrorLevel="3" Project="PALS.SCPLCSM5GW" Source="src\Services\PALS.SCPLCSM5GW\PALS.SCPLCSM5GW.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="PALS.SCPLCWM1GW" Source="src\Services\PALS.SCPLCWM1GW\PALS.SCPLCWM1GW.csproj" Description="Project converted successfully">
+</Event><Event ErrorLevel="3" Project="PALS.SCPLCWM1GW" Source="src\Services\PALS.SCPLCWM1GW\PALS.SCPLCWM1GW.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="PALS.SCPLCWM2GW" Source="src\Services\PALS.SCPLCWM2GW\PALS.SCPLCWM2GW.csproj" Description="Project converted successfully">
+</Event><Event ErrorLevel="3" Project="PALS.SCPLCWM2GW" Source="src\Services\PALS.SCPLCWM2GW\PALS.SCPLCWM2GW.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="PALS.SCPLCWM3GW" Source="src\Services\PALS.SCPLCWM3GW\PALS.SCPLCWM3GW.csproj" Description="Project converted successfully">
+</Event><Event ErrorLevel="3" Project="PALS.SCPLCWM3GW" Source="src\Services\PALS.SCPLCWM3GW\PALS.SCPLCWM3GW.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="" Source="CDIA_SAC.sln" Description="Solution converted successfully">
+</Event><Event ErrorLevel="3" Project="" Source="CDIA_SAC.sln" Description="Converted">
+</Event><Event ErrorLevel="0" Project="Test_SAC2PLCGW" Source="tests\Test_SAC2PLCGW\Test_SAC2PLCGW.csproj" Description="Scan complete: Upgrade not required for project files.">
+</Event><Event ErrorLevel="0" Project="Test_SortEngine" Source="tests\Test_SortEngine\Test_SortEngine.csproj" Description="Scan complete: Upgrade not required for project files.">
+</Event><Event ErrorLevel="0" Project="PALS.SortEngine" Source="src\Services\PALS.SortEngine\PALS.SortEngine.csproj" Description="Scan complete: Upgrade not required for project files.">
+</Event><Event ErrorLevel="0" Project="PALS.SvcMonitor" Source="src\Services\PALS.SvcMonitor\PALS.SvcMonitor.csproj" Description="Scan complete: Upgrade not required for project files.">
+</Event><Event ErrorLevel="0" Project="PALS.SCPLCEM2GW" Source="src\Services\PALS.SCPLCEM2GW\PALS.SCPLCEM2GW.csproj" Description="Scan complete: Upgrade not required for project files.">
+</Event><Event ErrorLevel="0" Project="PALS.SCPLCEM1GW" Source="src\Services\PALS.SCPLCEM1GW\PALS.SCPLCEM1GW.csproj" Description="Scan complete: Upgrade not required for project files.">
+</Event><Event ErrorLevel="0" Project="PALS.SCPLCEM3GW" Source="src\Services\PALS.SCPLCEM3GW\PALS.SCPLCEM3GW.csproj" Description="Scan complete: Upgrade not required for project files.">
+</Event><Event ErrorLevel="0" Project="PALS.SCPLCEM4GW" Source="src\Services\PALS.SCPLCEM4GW\PALS.SCPLCEM4GW.csproj" Description="Scan complete: Upgrade not required for project files.">
+</Event><Event ErrorLevel="0" Project="PALS.SCPLCOS1GW" Source="src\Services\PALS.SCPLCOS1GW\PALS.SCPLCOS1GW.csproj" Description="Scan complete: Upgrade not required for project files.">
+</Event><Event ErrorLevel="0" Project="PALS.SCPLCSM1GW" Source="src\Services\PALS.SCPLCSM1GW\PALS.SCPLCSM1GW.csproj" Description="Scan complete: Upgrade not required for project files.">
+</Event><Event ErrorLevel="0" Project="PALS.SCPLCSM2GW" Source="src\Services\PALS.SCPLCSM2GW\PALS.SCPLCSM2GW.csproj" Description="Scan complete: Upgrade not required for project files.">
+</Event><Event ErrorLevel="0" Project="PALS.SCPLCSM3GW" Source="src\Services\PALS.SCPLCSM3GW\PALS.SCPLCSM3GW.csproj" Description="Scan complete: Upgrade not required for project files.">
+</Event><Event ErrorLevel="0" Project="PALS.SCPLCSM4GW" Source="src\Services\PALS.SCPLCSM4GW\PALS.SCPLCSM4GW.csproj" Description="Scan complete: Upgrade not required for project files.">
+</Event><Event ErrorLevel="0" Project="PALS.SCPLCSM5GW" Source="src\Services\PALS.SCPLCSM5GW\PALS.SCPLCSM5GW.csproj" Description="Scan complete: Upgrade not required for project files.">
+</Event><Event ErrorLevel="0" Project="PALS.SCPLCWM1GW" Source="src\Services\PALS.SCPLCWM1GW\PALS.SCPLCWM1GW.csproj" Description="Scan complete: Upgrade not required for project files.">
+</Event><Event ErrorLevel="0" Project="PALS.SCPLCWM2GW" Source="src\Services\PALS.SCPLCWM2GW\PALS.SCPLCWM2GW.csproj" Description="Scan complete: Upgrade not required for project files.">
+</Event><Event ErrorLevel="0" Project="PALS.SCPLCWM3GW" Source="src\Services\PALS.SCPLCWM3GW\PALS.SCPLCWM3GW.csproj" Description="Scan complete: Upgrade not required for project files.">
+</Event><Event ErrorLevel="0" Project="BHS" Source="src\BHS\BHS.csproj" Description="Scan complete: Upgrade not required for project files.">
+</Event><Event ErrorLevel="0" Project="BHS.Net" Source="src\BHS.Net\BHS.Net.vbproj" Description="Scan complete: Upgrade not required for project files.">
+</Event></UpgradeLog>

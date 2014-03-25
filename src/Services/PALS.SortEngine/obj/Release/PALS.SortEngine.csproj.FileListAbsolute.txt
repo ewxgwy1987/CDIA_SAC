@@ -1,0 +1,8 @@
+D:\My Documents\Visual Studio 2008\Projects\PGL\Project\S01A09028Y_Phoenix T3S & T4N\PSHIA_SAC\bin\Release\PALS.SortEngine.exe
+D:\My Documents\Visual Studio 2008\Projects\PGL\Project\S01A09028Y_Phoenix T3S & T4N\PSHIA_SAC\bin\Release\PALS.SortEngine.pdb
+D:\My Documents\Visual Studio 2008\Projects\PGL\Project\S01A09028Y_Phoenix T3S & T4N\PSHIA_SAC\src\Services\PALS.SortEngine\obj\Release\ResolveAssemblyReference.cache
+D:\My Documents\Visual Studio 2008\Projects\PGL\Project\S01A09028Y_Phoenix T3S & T4N\PSHIA_SAC\src\Services\PALS.SortEngine\obj\Release\PALS.SortEngine.SortEngine.resources
+D:\My Documents\Visual Studio 2008\Projects\PGL\Project\S01A09028Y_Phoenix T3S & T4N\PSHIA_SAC\src\Services\PALS.SortEngine\obj\Release\PALS.SortEngine.ProjectInstaller.resources
+D:\My Documents\Visual Studio 2008\Projects\PGL\Project\S01A09028Y_Phoenix T3S & T4N\PSHIA_SAC\src\Services\PALS.SortEngine\obj\Release\PALS.SortEngine.csproj.GenerateResource.Cache
+D:\My Documents\Visual Studio 2008\Projects\PGL\Project\S01A09028Y_Phoenix T3S & T4N\PSHIA_SAC\src\Services\PALS.SortEngine\obj\Release\PALS.SortEngine.exe
+D:\My Documents\Visual Studio 2008\Projects\PGL\Project\S01A09028Y_Phoenix T3S & T4N\PSHIA_SAC\src\Services\PALS.SortEngine\obj\Release\PALS.SortEngine.pdb

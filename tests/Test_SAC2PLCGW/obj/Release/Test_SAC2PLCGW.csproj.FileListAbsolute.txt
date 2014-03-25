@@ -1,0 +1,13 @@
+D:\My Documents\Visual Studio 2008\Projects\PGL\Project\S01A09028Y_Phoenix T3S & T4N\PSHIA_SAC\tests\Test_SAC2PLCGW\bin\Release\Test_CCTVGW.exe
+D:\My Documents\Visual Studio 2008\Projects\PGL\Project\S01A09028Y_Phoenix T3S & T4N\PSHIA_SAC\tests\Test_SAC2PLCGW\bin\Release\Test_CCTVGW.pdb
+D:\My Documents\Visual Studio 2008\Projects\PGL\Project\S01A09028Y_Phoenix T3S & T4N\PSHIA_SAC\tests\Test_SAC2PLCGW\bin\Release\BHS.dll
+D:\My Documents\Visual Studio 2008\Projects\PGL\Project\S01A09028Y_Phoenix T3S & T4N\PSHIA_SAC\tests\Test_SAC2PLCGW\bin\Release\PALS.Configure.dll
+D:\My Documents\Visual Studio 2008\Projects\PGL\Project\S01A09028Y_Phoenix T3S & T4N\PSHIA_SAC\tests\Test_SAC2PLCGW\bin\Release\PALS.dll
+D:\My Documents\Visual Studio 2008\Projects\PGL\Project\S01A09028Y_Phoenix T3S & T4N\PSHIA_SAC\tests\Test_SAC2PLCGW\bin\Release\log4net.dll
+D:\My Documents\Visual Studio 2008\Projects\PGL\Project\S01A09028Y_Phoenix T3S & T4N\PSHIA_SAC\tests\Test_SAC2PLCGW\bin\Release\BHS.pdb
+D:\My Documents\Visual Studio 2008\Projects\PGL\Project\S01A09028Y_Phoenix T3S & T4N\PSHIA_SAC\tests\Test_SAC2PLCGW\obj\Release\ResolveAssemblyReference.cache
+D:\My Documents\Visual Studio 2008\Projects\PGL\Project\S01A09028Y_Phoenix T3S & T4N\PSHIA_SAC\tests\Test_SAC2PLCGW\obj\Release\Test_SAC2PLCGW.Form1.resources
+D:\My Documents\Visual Studio 2008\Projects\PGL\Project\S01A09028Y_Phoenix T3S & T4N\PSHIA_SAC\tests\Test_SAC2PLCGW\obj\Release\Test_CCTVGW.Properties.Resources.resources
+D:\My Documents\Visual Studio 2008\Projects\PGL\Project\S01A09028Y_Phoenix T3S & T4N\PSHIA_SAC\tests\Test_SAC2PLCGW\obj\Release\Test_SAC2PLCGW.csproj.GenerateResource.Cache
+D:\My Documents\Visual Studio 2008\Projects\PGL\Project\S01A09028Y_Phoenix T3S & T4N\PSHIA_SAC\tests\Test_SAC2PLCGW\obj\Release\Test_CCTVGW.exe
+D:\My Documents\Visual Studio 2008\Projects\PGL\Project\S01A09028Y_Phoenix T3S & T4N\PSHIA_SAC\tests\Test_SAC2PLCGW\obj\Release\Test_CCTVGW.pdb

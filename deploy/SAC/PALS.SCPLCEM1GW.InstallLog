@@ -1,0 +1,13 @@
+﻿Installing assembly 'C:\PterisGlobal\PALS\SAC\PALS.SCPLCEM1GW.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = C:\PterisGlobal\PALS\SAC\PALS.SCPLCEM1GW.InstallLog
+   assemblypath = C:\PterisGlobal\PALS\SAC\PALS.SCPLCEM1GW.exe
+Installing service PALS.SCPLCEM1GW...
+Service PALS.SCPLCEM1GW has been successfully installed.
+Creating EventLog source PALS.SCPLCEM1GW in log Application...
+Committing assembly 'C:\PterisGlobal\PALS\SAC\PALS.SCPLCEM1GW.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = C:\PterisGlobal\PALS\SAC\PALS.SCPLCEM1GW.InstallLog
+   assemblypath = C:\PterisGlobal\PALS\SAC\PALS.SCPLCEM1GW.exe

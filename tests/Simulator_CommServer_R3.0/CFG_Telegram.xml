@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<config>
+  <configSet name="Telegrams">
+    <!--You can enter any other messages in this block-->
+    <!--Specical Chars Example: AB&lt;31&gt;&lt;32&gt;And&amp;-->
+<!--000500761240S5A       S5A-01    011234567837831234560000000000ATR1<00><00><00><00><00><00><03><A3>01-->
+    <telegram>EIP RegisterSession Reply</telegram>
+    <telegram>6500 0400 000a0215 00000000 53414332504c4331 00000000 0100 0000</telegram>
+    <telegram>009000120000</telegram>
+    <telegram>000200200001SAC2PLC1</telegram>
+    <telegram>000200200002SAC2PLC2</telegram>
+    <telegram>000300441232TA1       CI1-03    0123456789NB</telegram>
+    <telegram>000300441233TC1       TC1-10    9876543210SB</telegram>
+    <telegram>000400641234TC1       TC1-08    01234567890000000000X-RAY1    1A</telegram>
+    <telegram>000400641234TC1       TC1-08    01234567900000000000X-RAY1    1R</telegram>
+    <telegram>000400641234TC1       TC1-08    01234567910000000000X-RAY1    2A</telegram>
+    <telegram>000400641234TC1       TC1-08    01234567920000000000X-RAY1    2R</telegram>
+    <telegram>000800641264TC1       TC1-13    TC1-14    1112223334000000000001</telegram>
+    <telegram>000800641269TC1       TC1-13    TC1A-01   1112223335000000000002</telegram>
+    <telegram>000800641265TC1       TC1-22    TC1-23    1442553667000000000003</telegram>
+    <telegram>000900521269TC1       TC1-18    12345678900000000000</telegram>
+    <telegram>001000701271TC1       TC1-07    1112223330000000000020061227-094611234</telegram>
+    <telegram>001000701272TC1       TC1-09    2131415160000000000020061227-094900000</telegram>
+    <telegram>009900121278</telegram>
+    <telegram>009900121279</telegram>
+  </configSet>
+</config>

@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="BHS.Gateway.Application.Initializer">
+    <Position X="0.5" Y="0.5" Width="3.25" />
+    <TypeIdentifier>
+      <HashCode>ClEwQA4BQCKUDCICQBhDgCAgMEBAxQKAABACAQAoBAI=</HashCode>
+      <FileName>Gateway\Application\Initializer.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="BHS.Gateway.Messages.Handlers.GW2ExternalSessionForwarder">
+    <Position X="4" Y="0.5" Width="2.25" />
+    <NestedTypes>
+      <Delegate Name="BHS.Gateway.Messages.Handlers.GW2ExternalSessionForwarder.CustomEventHandler" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>CCTVGW\Messages\Handlers\GW2ExternalSessionForwarder.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Delegate>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAQAAAIAQCAAAAAAAGAAAAAAYAAAAAICABACARAAAAA=</HashCode>
+      <FileName>Gateway\Messages\Handlers\GW2ExternalSessionForwarder.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BHS.Gateway.Messages.Handlers.GW2InternalSessionForwarder">
+    <Position X="4" Y="5" Width="2.25" />
+    <NestedTypes>
+      <Delegate Name="BHS.Gateway.Messages.Handlers.GW2InternalSessionForwarder.CustomEventHandler" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>CCTVGW\Messages\Handlers\GW2InternalSessionForwarder.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Delegate>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAQAAAIAQCAAAAAAAGAAAAAAYAAAAAICABACARAAAAA=</HashCode>
+      <FileName>Gateway\Messages\Handlers\GW2InternalSessionForwarder.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BHS.Gateway.Messages.Handlers.MessageHandler">
+    <Position X="6.5" Y="0.5" Width="3" />
+    <NestedTypes>
+      <Delegate Name="BHS.Gateway.Messages.Handlers.MessageHandler.CustomEventHandler" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>CCTVGW\Messages\Handlers\MessageHandler.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Delegate>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>IAQFAAAAgnAAQAAESQAAQAwAIAAIAAgAABACgShABQA=</HashCode>
+      <FileName>Gateway\Messages\Handlers\MessageHandler.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BHS.MessageEventArgs">
+    <Position X="13.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAIAAAAAA=</HashCode>
+      <FileName>MessageEventArgs.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BHS.Gateway.Configure.XmlSettingLoader">
+    <Position X="9.75" Y="0.5" Width="3.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEEBACAAAEAAwBIAAAAAIIABAWAAEFACAQAAAhA=</HashCode>
+      <FileName>Gateway\Configure\XmlSettingLoader.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="BHS.Gateway.Configure.GlobalContext">
+    <Position X="13.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACAAAAAAAAAAAAAAgAAAAAAAEAABAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Gateway\Configure\GlobalContext.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Tahoma" Size="8.25" />
+</ClassDiagram>
