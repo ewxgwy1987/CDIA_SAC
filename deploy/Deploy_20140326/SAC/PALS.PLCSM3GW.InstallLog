@@ -1,0 +1,13 @@
+﻿Installing assembly 'D:\2PALS\SAC\PALS.PLCSM3GW.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = D:\2PALS\SAC\PALS.PLCSM3GW.InstallLog
+   assemblypath = D:\2PALS\SAC\PALS.PLCSM3GW.exe
+Installing service PALS.PLCSM3GW...
+Service PALS.PLCSM3GW has been successfully installed.
+Creating EventLog source PALS.PLCSM3GW in log Application...
+Committing assembly 'D:\2PALS\SAC\PALS.PLCSM3GW.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = D:\2PALS\SAC\PALS.PLCSM3GW.InstallLog
+   assemblypath = D:\2PALS\SAC\PALS.PLCSM3GW.exe

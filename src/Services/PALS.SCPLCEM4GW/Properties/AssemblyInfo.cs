@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("PALS.SCPLCEM4GW")]
+[assembly: AssemblyTitle("PALS.PLCEM4GW")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("PGL")]
-[assembly: AssemblyProduct("PALS.SCPLCEM4GW")]
+[assembly: AssemblyProduct("PALS.PLCEM4GW")]
 [assembly: AssemblyCopyright("Copyright ©  PGL 2013")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]

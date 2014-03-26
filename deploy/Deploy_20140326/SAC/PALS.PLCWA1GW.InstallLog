@@ -1,0 +1,13 @@
+﻿Installing assembly 'D:\2PALS\SAC\PALS.PLCWA1GW.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = D:\2PALS\SAC\PALS.PLCWA1GW.InstallLog
+   assemblypath = D:\2PALS\SAC\PALS.PLCWA1GW.exe
+Installing service PALS.PLCWA1GW...
+Service PALS.PLCWA1GW has been successfully installed.
+Creating EventLog source PALS.PLCWA1GW in log Application...
+Committing assembly 'D:\2PALS\SAC\PALS.PLCWA1GW.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = D:\2PALS\SAC\PALS.PLCWA1GW.InstallLog
+   assemblypath = D:\2PALS\SAC\PALS.PLCWA1GW.exe

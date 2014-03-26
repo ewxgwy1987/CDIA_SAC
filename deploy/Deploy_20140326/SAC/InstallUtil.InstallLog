@@ -1,0 +1,2047 @@
+﻿
+Running a transacted installation.
+
+Beginning the Install phase of the installation.
+See the contents of the log file for the C:\PterisGlobal\PALS\SAC\PALS.SortEngine.exe assembly's progress.
+The file is located at C:\PterisGlobal\PALS\SAC\PALS.SortEngine.InstallLog.
+
+The Install phase completed successfully, and the Commit phase is beginning.
+See the contents of the log file for the C:\PterisGlobal\PALS\SAC\PALS.SortEngine.exe assembly's progress.
+The file is located at C:\PterisGlobal\PALS\SAC\PALS.SortEngine.InstallLog.
+
+The Commit phase completed successfully.
+
+The transacted install has completed.
+
+Running a transacted installation.
+
+Beginning the Install phase of the installation.
+See the contents of the log file for the C:\PterisGlobal\PALS\SAC\PALS.SvcMonitor.exe assembly's progress.
+The file is located at C:\PterisGlobal\PALS\SAC\PALS.SvcMonitor.InstallLog.
+
+The Install phase completed successfully, and the Commit phase is beginning.
+See the contents of the log file for the C:\PterisGlobal\PALS\SAC\PALS.SvcMonitor.exe assembly's progress.
+The file is located at C:\PterisGlobal\PALS\SAC\PALS.SvcMonitor.InstallLog.
+
+The Commit phase completed successfully.
+
+The transacted install has completed.
+
+Running a transacted installation.
+
+Beginning the Install phase of the installation.
+See the contents of the log file for the C:\PterisGlobal\PALS\SAC\PALS.SortEngine.exe assembly's progress.
+The file is located at C:\PterisGlobal\PALS\SAC\PALS.SortEngine.InstallLog.
+
+An exception occurred during the Install phase.
+System.ComponentModel.Win32Exception: The specified service already exists
+
+The Rollback phase of the installation is beginning.
+See the contents of the log file for the C:\PterisGlobal\PALS\SAC\PALS.SortEngine.exe assembly's progress.
+The file is located at C:\PterisGlobal\PALS\SAC\PALS.SortEngine.InstallLog.
+
+The Rollback phase completed successfully.
+
+The transacted install has completed.
+
+Running a transacted installation.
+
+Beginning the Install phase of the installation.
+See the contents of the log file for the C:\PterisGlobal\PALS\SAC\PALS.SvcMonitor.exe assembly's progress.
+The file is located at C:\PterisGlobal\PALS\SAC\PALS.SvcMonitor.InstallLog.
+
+An exception occurred during the Install phase.
+System.ComponentModel.Win32Exception: The specified service already exists
+
+The Rollback phase of the installation is beginning.
+See the contents of the log file for the C:\PterisGlobal\PALS\SAC\PALS.SvcMonitor.exe assembly's progress.
+The file is located at C:\PterisGlobal\PALS\SAC\PALS.SvcMonitor.InstallLog.
+
+The Rollback phase completed successfully.
+
+The transacted install has completed.
+
+Running a transacted installation.
+
+Beginning the Install phase of the installation.
+See the contents of the log file for the C:\PterisGlobal\PALS\SAC\PALS.SCPLCEM1GW.exe assembly's progress.
+The file is located at C:\PterisGlobal\PALS\SAC\PALS.SCPLCEM1GW.InstallLog.
+
+The Install phase completed successfully, and the Commit phase is beginning.
+See the contents of the log file for the C:\PterisGlobal\PALS\SAC\PALS.SCPLCEM1GW.exe assembly's progress.
+The file is located at C:\PterisGlobal\PALS\SAC\PALS.SCPLCEM1GW.InstallLog.
+
+The Commit phase completed successfully.
+
+The transacted install has completed.
+
+Running a transacted installation.
+
+Beginning the Install phase of the installation.
+See the contents of the log file for the C:\PterisGlobal\PALS\SAC\PALS.SCPLCEM2GW.exe assembly's progress.
+The file is located at C:\PterisGlobal\PALS\SAC\PALS.SCPLCEM2GW.InstallLog.
+
+The Install phase completed successfully, and the Commit phase is beginning.
+See the contents of the log file for the C:\PterisGlobal\PALS\SAC\PALS.SCPLCEM2GW.exe assembly's progress.
+The file is located at C:\PterisGlobal\PALS\SAC\PALS.SCPLCEM2GW.InstallLog.
+
+The Commit phase completed successfully.
+
+The transacted install has completed.
+
+Running a transacted installation.
+
+Beginning the Install phase of the installation.
+See the contents of the log file for the C:\PterisGlobal\PALS\SAC\PALS.SCPLCEM3GW.exe assembly's progress.
+The file is located at C:\PterisGlobal\PALS\SAC\PALS.SCPLCEM3GW.InstallLog.
+
+The Install phase completed successfully, and the Commit phase is beginning.
+See the contents of the log file for the C:\PterisGlobal\PALS\SAC\PALS.SCPLCEM3GW.exe assembly's progress.
+The file is located at C:\PterisGlobal\PALS\SAC\PALS.SCPLCEM3GW.InstallLog.
+
+The Commit phase completed successfully.
+
+The transacted install has completed.
+
+Running a transacted installation.
+
+Beginning the Install phase of the installation.
+See the contents of the log file for the C:\PterisGlobal\PALS\SAC\PALS.SortEngine.exe assembly's progress.
+The file is located at C:\PterisGlobal\PALS\SAC\PALS.SortEngine.InstallLog.
+
+An exception occurred during the Install phase.
+System.ComponentModel.Win32Exception: The specified service already exists
+
+The Rollback phase of the installation is beginning.
+See the contents of the log file for the C:\PterisGlobal\PALS\SAC\PALS.SortEngine.exe assembly's progress.
+The file is located at C:\PterisGlobal\PALS\SAC\PALS.SortEngine.InstallLog.
+
+The Rollback phase completed successfully.
+
+The transacted install has completed.
+
+Running a transacted installation.
+
+Beginning the Install phase of the installation.
+See the contents of the log file for the C:\PterisGlobal\PALS\SAC\PALS.SvcMonitor.exe assembly's progress.
+The file is located at C:\PterisGlobal\PALS\SAC\PALS.SvcMonitor.InstallLog.
+
+An exception occurred during the Install phase.
+System.ComponentModel.Win32Exception: The specified service already exists
+
+The Rollback phase of the installation is beginning.
+See the contents of the log file for the C:\PterisGlobal\PALS\SAC\PALS.SvcMonitor.exe assembly's progress.
+The file is located at C:\PterisGlobal\PALS\SAC\PALS.SvcMonitor.InstallLog.
+
+The Rollback phase completed successfully.
+
+The transacted install has completed.
+
+Running a transacted installation.
+
+Beginning the Install phase of the installation.
+See the contents of the log file for the C:\PterisGlobal\PALS\SAC\PALS.SCPLCEM1GW.exe assembly's progress.
+The file is located at C:\PterisGlobal\PALS\SAC\PALS.SCPLCEM1GW.InstallLog.
+
+An exception occurred during the Install phase.
+System.ComponentModel.Win32Exception: The specified service already exists
+
+The Rollback phase of the installation is beginning.
+See the contents of the log file for the C:\PterisGlobal\PALS\SAC\PALS.SCPLCEM1GW.exe assembly's progress.
+The file is located at C:\PterisGlobal\PALS\SAC\PALS.SCPLCEM1GW.InstallLog.
+
+The Rollback phase completed successfully.
+
+The transacted install has completed.
+
+Running a transacted installation.
+
+Beginning the Install phase of the installation.
+See the contents of the log file for the C:\PterisGlobal\PALS\SAC\PALS.SCPLCEM2GW.exe assembly's progress.
+The file is located at C:\PterisGlobal\PALS\SAC\PALS.SCPLCEM2GW.InstallLog.
+
+An exception occurred during the Install phase.
+System.ComponentModel.Win32Exception: The specified service already exists
+
+The Rollback phase of the installation is beginning.
+See the contents of the log file for the C:\PterisGlobal\PALS\SAC\PALS.SCPLCEM2GW.exe assembly's progress.
+The file is located at C:\PterisGlobal\PALS\SAC\PALS.SCPLCEM2GW.InstallLog.
+
+The Rollback phase completed successfully.
+
+The transacted install has completed.
+
+Running a transacted installation.
+
+Beginning the Install phase of the installation.
+See the contents of the log file for the C:\PterisGlobal\PALS\SAC\PALS.SCPLCEM3GW.exe assembly's progress.
+The file is located at C:\PterisGlobal\PALS\SAC\PALS.SCPLCEM3GW.InstallLog.
+
+An exception occurred during the Install phase.
+System.ComponentModel.Win32Exception: The specified service already exists
+
+The Rollback phase of the installation is beginning.
+See the contents of the log file for the C:\PterisGlobal\PALS\SAC\PALS.SCPLCEM3GW.exe assembly's progress.
+The file is located at C:\PterisGlobal\PALS\SAC\PALS.SCPLCEM3GW.InstallLog.
+
+The Rollback phase completed successfully.
+
+The transacted install has completed.
+
+Running a transacted installation.
+
+Beginning the Install phase of the installation.
+See the contents of the log file for the C:\PterisGlobal\PALS\SAC\PALS.SCPLCEM4GW.exe assembly's progress.
+The file is located at C:\PterisGlobal\PALS\SAC\PALS.SCPLCEM4GW.InstallLog.
+
+The Install phase completed successfully, and the Commit phase is beginning.
+See the contents of the log file for the C:\PterisGlobal\PALS\SAC\PALS.SCPLCEM4GW.exe assembly's progress.
+The file is located at C:\PterisGlobal\PALS\SAC\PALS.SCPLCEM4GW.InstallLog.
+
+The Commit phase completed successfully.
+
+The transacted install has completed.
+
+Running a transacted installation.
+
+Beginning the Install phase of the installation.
+See the contents of the log file for the C:\PterisGlobal\PALS\SAC\PALS.SCPLCSM1GW.exe assembly's progress.
+The file is located at C:\PterisGlobal\PALS\SAC\PALS.SCPLCSM1GW.InstallLog.
+
+The Install phase completed successfully, and the Commit phase is beginning.
+See the contents of the log file for the C:\PterisGlobal\PALS\SAC\PALS.SCPLCSM1GW.exe assembly's progress.
+The file is located at C:\PterisGlobal\PALS\SAC\PALS.SCPLCSM1GW.InstallLog.
+
+The Commit phase completed successfully.
+
+The transacted install has completed.
+
+Running a transacted installation.
+
+Beginning the Install phase of the installation.
+See the contents of the log file for the C:\PterisGlobal\PALS\SAC\PALS.SCPLCSM2GW.exe assembly's progress.
+The file is located at C:\PterisGlobal\PALS\SAC\PALS.SCPLCSM2GW.InstallLog.
+
+The Install phase completed successfully, and the Commit phase is beginning.
+See the contents of the log file for the C:\PterisGlobal\PALS\SAC\PALS.SCPLCSM2GW.exe assembly's progress.
+The file is located at C:\PterisGlobal\PALS\SAC\PALS.SCPLCSM2GW.InstallLog.
+
+The Commit phase completed successfully.
+
+The transacted install has completed.
+
+Running a transacted installation.
+
+Beginning the Install phase of the installation.
+See the contents of the log file for the C:\PterisGlobal\PALS\SAC\PALS.SCPLCSM3GW.exe assembly's progress.
+The file is located at C:\PterisGlobal\PALS\SAC\PALS.SCPLCSM3GW.InstallLog.
+
+The Install phase completed successfully, and the Commit phase is beginning.
+See the contents of the log file for the C:\PterisGlobal\PALS\SAC\PALS.SCPLCSM3GW.exe assembly's progress.
+The file is located at C:\PterisGlobal\PALS\SAC\PALS.SCPLCSM3GW.InstallLog.
+
+The Commit phase completed successfully.
+
+The transacted install has completed.
+
+Running a transacted installation.
+
+Beginning the Install phase of the installation.
+See the contents of the log file for the C:\PterisGlobal\PALS\SAC\PALS.SCPLCSM4GW.exe assembly's progress.
+The file is located at C:\PterisGlobal\PALS\SAC\PALS.SCPLCSM4GW.InstallLog.
+
+The Install phase completed successfully, and the Commit phase is beginning.
+See the contents of the log file for the C:\PterisGlobal\PALS\SAC\PALS.SCPLCSM4GW.exe assembly's progress.
+The file is located at C:\PterisGlobal\PALS\SAC\PALS.SCPLCSM4GW.InstallLog.
+
+The Commit phase completed successfully.
+
+The transacted install has completed.
+
+Running a transacted installation.
+
+Beginning the Install phase of the installation.
+See the contents of the log file for the C:\PterisGlobal\PALS\SAC\PALS.SCPLCSM5GW.exe assembly's progress.
+The file is located at C:\PterisGlobal\PALS\SAC\PALS.SCPLCSM5GW.InstallLog.
+
+The Install phase completed successfully, and the Commit phase is beginning.
+See the contents of the log file for the C:\PterisGlobal\PALS\SAC\PALS.SCPLCSM5GW.exe assembly's progress.
+The file is located at C:\PterisGlobal\PALS\SAC\PALS.SCPLCSM5GW.InstallLog.
+
+The Commit phase completed successfully.
+
+The transacted install has completed.
+
+Running a transacted installation.
+
+Beginning the Install phase of the installation.
+See the contents of the log file for the C:\PterisGlobal\PALS\SAC\PALS.SCPLCWM1GW.exe assembly's progress.
+The file is located at C:\PterisGlobal\PALS\SAC\PALS.SCPLCWM1GW.InstallLog.
+
+The Install phase completed successfully, and the Commit phase is beginning.
+See the contents of the log file for the C:\PterisGlobal\PALS\SAC\PALS.SCPLCWM1GW.exe assembly's progress.
+The file is located at C:\PterisGlobal\PALS\SAC\PALS.SCPLCWM1GW.InstallLog.
+
+The Commit phase completed successfully.
+
+The transacted install has completed.
+
+Running a transacted installation.
+
+Beginning the Install phase of the installation.
+See the contents of the log file for the C:\PterisGlobal\PALS\SAC\PALS.SCPLCWM2GW.exe assembly's progress.
+The file is located at C:\PterisGlobal\PALS\SAC\PALS.SCPLCWM2GW.InstallLog.
+
+The Install phase completed successfully, and the Commit phase is beginning.
+See the contents of the log file for the C:\PterisGlobal\PALS\SAC\PALS.SCPLCWM2GW.exe assembly's progress.
+The file is located at C:\PterisGlobal\PALS\SAC\PALS.SCPLCWM2GW.InstallLog.
+
+The Commit phase completed successfully.
+
+The transacted install has completed.
+
+Running a transacted installation.
+
+Beginning the Install phase of the installation.
+See the contents of the log file for the C:\PterisGlobal\PALS\SAC\PALS.SCPLCWM3GW.exe assembly's progress.
+The file is located at C:\PterisGlobal\PALS\SAC\PALS.SCPLCWM3GW.InstallLog.
+
+The Install phase completed successfully, and the Commit phase is beginning.
+See the contents of the log file for the C:\PterisGlobal\PALS\SAC\PALS.SCPLCWM3GW.exe assembly's progress.
+The file is located at C:\PterisGlobal\PALS\SAC\PALS.SCPLCWM3GW.InstallLog.
+
+The Commit phase completed successfully.
+
+The transacted install has completed.
+
+Running a transacted installation.
+
+Beginning the Install phase of the installation.
+See the contents of the log file for the C:\PterisGlobal\PALS\SAC\PALS.SCPLCOS1GW.exe assembly's progress.
+The file is located at C:\PterisGlobal\PALS\SAC\PALS.SCPLCOS1GW.InstallLog.
+
+The Install phase completed successfully, and the Commit phase is beginning.
+See the contents of the log file for the C:\PterisGlobal\PALS\SAC\PALS.SCPLCOS1GW.exe assembly's progress.
+The file is located at C:\PterisGlobal\PALS\SAC\PALS.SCPLCOS1GW.InstallLog.
+
+The Commit phase completed successfully.
+
+The transacted install has completed.
+
+Running a transacted installation.
+
+Beginning the Install phase of the installation.
+See the contents of the log file for the C:\PterisGlobal\PALS\SAC\PALS.SortEngine.exe assembly's progress.
+The file is located at C:\PterisGlobal\PALS\SAC\PALS.SortEngine.InstallLog.
+
+An exception occurred during the Install phase.
+System.ComponentModel.Win32Exception: The specified service already exists
+
+The Rollback phase of the installation is beginning.
+See the contents of the log file for the C:\PterisGlobal\PALS\SAC\PALS.SortEngine.exe assembly's progress.
+The file is located at C:\PterisGlobal\PALS\SAC\PALS.SortEngine.InstallLog.
+
+The Rollback phase completed successfully.
+
+The transacted install has completed.
+
+Running a transacted installation.
+
+Beginning the Install phase of the installation.
+See the contents of the log file for the C:\PterisGlobal\PALS\SAC\PALS.SvcMonitor.exe assembly's progress.
+The file is located at C:\PterisGlobal\PALS\SAC\PALS.SvcMonitor.InstallLog.
+
+An exception occurred during the Install phase.
+System.ComponentModel.Win32Exception: The specified service already exists
+
+The Rollback phase of the installation is beginning.
+See the contents of the log file for the C:\PterisGlobal\PALS\SAC\PALS.SvcMonitor.exe assembly's progress.
+The file is located at C:\PterisGlobal\PALS\SAC\PALS.SvcMonitor.InstallLog.
+
+The Rollback phase completed successfully.
+
+The transacted install has completed.
+
+Running a transacted installation.
+
+Beginning the Install phase of the installation.
+See the contents of the log file for the C:\PterisGlobal\PALS\SAC\PALS.SCPLCEM1GW.exe assembly's progress.
+The file is located at C:\PterisGlobal\PALS\SAC\PALS.SCPLCEM1GW.InstallLog.
+
+The Install phase completed successfully, and the Commit phase is beginning.
+See the contents of the log file for the C:\PterisGlobal\PALS\SAC\PALS.SCPLCEM1GW.exe assembly's progress.
+The file is located at C:\PterisGlobal\PALS\SAC\PALS.SCPLCEM1GW.InstallLog.
+
+The Commit phase completed successfully.
+
+The transacted install has completed.
+
+Running a transacted installation.
+
+Beginning the Install phase of the installation.
+See the contents of the log file for the C:\PterisGlobal\PALS\SAC\PALS.SCPLCEM2GW.exe assembly's progress.
+The file is located at C:\PterisGlobal\PALS\SAC\PALS.SCPLCEM2GW.InstallLog.
+
+The Install phase completed successfully, and the Commit phase is beginning.
+See the contents of the log file for the C:\PterisGlobal\PALS\SAC\PALS.SCPLCEM2GW.exe assembly's progress.
+The file is located at C:\PterisGlobal\PALS\SAC\PALS.SCPLCEM2GW.InstallLog.
+
+The Commit phase completed successfully.
+
+The transacted install has completed.
+
+Running a transacted installation.
+
+Beginning the Install phase of the installation.
+See the contents of the log file for the C:\PterisGlobal\PALS\SAC\PALS.SCPLCEM3GW.exe assembly's progress.
+The file is located at C:\PterisGlobal\PALS\SAC\PALS.SCPLCEM3GW.InstallLog.
+
+The Install phase completed successfully, and the Commit phase is beginning.
+See the contents of the log file for the C:\PterisGlobal\PALS\SAC\PALS.SCPLCEM3GW.exe assembly's progress.
+The file is located at C:\PterisGlobal\PALS\SAC\PALS.SCPLCEM3GW.InstallLog.
+
+The Commit phase completed successfully.
+
+The transacted install has completed.
+
+Running a transacted installation.
+
+Beginning the Install phase of the installation.
+See the contents of the log file for the C:\PterisGlobal\PALS\SAC\PALS.SCPLCEM4GW.exe assembly's progress.
+The file is located at C:\PterisGlobal\PALS\SAC\PALS.SCPLCEM4GW.InstallLog.
+
+The Install phase completed successfully, and the Commit phase is beginning.
+See the contents of the log file for the C:\PterisGlobal\PALS\SAC\PALS.SCPLCEM4GW.exe assembly's progress.
+The file is located at C:\PterisGlobal\PALS\SAC\PALS.SCPLCEM4GW.InstallLog.
+
+The Commit phase completed successfully.
+
+The transacted install has completed.
+
+Running a transacted installation.
+
+Beginning the Install phase of the installation.
+See the contents of the log file for the C:\PterisGlobal\PALS\SAC\PALS.SCPLCSM1GW.exe assembly's progress.
+The file is located at C:\PterisGlobal\PALS\SAC\PALS.SCPLCSM1GW.InstallLog.
+
+The Install phase completed successfully, and the Commit phase is beginning.
+See the contents of the log file for the C:\PterisGlobal\PALS\SAC\PALS.SCPLCSM1GW.exe assembly's progress.
+The file is located at C:\PterisGlobal\PALS\SAC\PALS.SCPLCSM1GW.InstallLog.
+
+The Commit phase completed successfully.
+
+The transacted install has completed.
+
+Running a transacted installation.
+
+Beginning the Install phase of the installation.
+See the contents of the log file for the C:\PterisGlobal\PALS\SAC\PALS.SCPLCSM2GW.exe assembly's progress.
+The file is located at C:\PterisGlobal\PALS\SAC\PALS.SCPLCSM2GW.InstallLog.
+
+The Install phase completed successfully, and the Commit phase is beginning.
+See the contents of the log file for the C:\PterisGlobal\PALS\SAC\PALS.SCPLCSM2GW.exe assembly's progress.
+The file is located at C:\PterisGlobal\PALS\SAC\PALS.SCPLCSM2GW.InstallLog.
+
+The Commit phase completed successfully.
+
+The transacted install has completed.
+
+Running a transacted installation.
+
+Beginning the Install phase of the installation.
+See the contents of the log file for the C:\PterisGlobal\PALS\SAC\PALS.SCPLCSM3GW.exe assembly's progress.
+The file is located at C:\PterisGlobal\PALS\SAC\PALS.SCPLCSM3GW.InstallLog.
+
+The Install phase completed successfully, and the Commit phase is beginning.
+See the contents of the log file for the C:\PterisGlobal\PALS\SAC\PALS.SCPLCSM3GW.exe assembly's progress.
+The file is located at C:\PterisGlobal\PALS\SAC\PALS.SCPLCSM3GW.InstallLog.
+
+The Commit phase completed successfully.
+
+The transacted install has completed.
+
+Running a transacted installation.
+
+Beginning the Install phase of the installation.
+See the contents of the log file for the C:\PterisGlobal\PALS\SAC\PALS.SCPLCSM4GW.exe assembly's progress.
+The file is located at C:\PterisGlobal\PALS\SAC\PALS.SCPLCSM4GW.InstallLog.
+
+The Install phase completed successfully, and the Commit phase is beginning.
+See the contents of the log file for the C:\PterisGlobal\PALS\SAC\PALS.SCPLCSM4GW.exe assembly's progress.
+The file is located at C:\PterisGlobal\PALS\SAC\PALS.SCPLCSM4GW.InstallLog.
+
+The Commit phase completed successfully.
+
+The transacted install has completed.
+
+Running a transacted installation.
+
+Beginning the Install phase of the installation.
+See the contents of the log file for the C:\PterisGlobal\PALS\SAC\PALS.SCPLCSM5GW.exe assembly's progress.
+The file is located at C:\PterisGlobal\PALS\SAC\PALS.SCPLCSM5GW.InstallLog.
+
+The Install phase completed successfully, and the Commit phase is beginning.
+See the contents of the log file for the C:\PterisGlobal\PALS\SAC\PALS.SCPLCSM5GW.exe assembly's progress.
+The file is located at C:\PterisGlobal\PALS\SAC\PALS.SCPLCSM5GW.InstallLog.
+
+The Commit phase completed successfully.
+
+The transacted install has completed.
+
+Running a transacted installation.
+
+Beginning the Install phase of the installation.
+See the contents of the log file for the C:\PterisGlobal\PALS\SAC\PALS.SCPLCWM1GW.exe assembly's progress.
+The file is located at C:\PterisGlobal\PALS\SAC\PALS.SCPLCWM1GW.InstallLog.
+
+The Install phase completed successfully, and the Commit phase is beginning.
+See the contents of the log file for the C:\PterisGlobal\PALS\SAC\PALS.SCPLCWM1GW.exe assembly's progress.
+The file is located at C:\PterisGlobal\PALS\SAC\PALS.SCPLCWM1GW.InstallLog.
+
+The Commit phase completed successfully.
+
+The transacted install has completed.
+
+Running a transacted installation.
+
+Beginning the Install phase of the installation.
+See the contents of the log file for the C:\PterisGlobal\PALS\SAC\PALS.SCPLCWM2GW.exe assembly's progress.
+The file is located at C:\PterisGlobal\PALS\SAC\PALS.SCPLCWM2GW.InstallLog.
+
+The Install phase completed successfully, and the Commit phase is beginning.
+See the contents of the log file for the C:\PterisGlobal\PALS\SAC\PALS.SCPLCWM2GW.exe assembly's progress.
+The file is located at C:\PterisGlobal\PALS\SAC\PALS.SCPLCWM2GW.InstallLog.
+
+The Commit phase completed successfully.
+
+The transacted install has completed.
+
+Running a transacted installation.
+
+Beginning the Install phase of the installation.
+See the contents of the log file for the C:\PterisGlobal\PALS\SAC\PALS.SCPLCWM3GW.exe assembly's progress.
+The file is located at C:\PterisGlobal\PALS\SAC\PALS.SCPLCWM3GW.InstallLog.
+
+The Install phase completed successfully, and the Commit phase is beginning.
+See the contents of the log file for the C:\PterisGlobal\PALS\SAC\PALS.SCPLCWM3GW.exe assembly's progress.
+The file is located at C:\PterisGlobal\PALS\SAC\PALS.SCPLCWM3GW.InstallLog.
+
+The Commit phase completed successfully.
+
+The transacted install has completed.
+
+Running a transacted installation.
+
+Beginning the Install phase of the installation.
+See the contents of the log file for the C:\PterisGlobal\PALS\SAC\PALS.SCPLCOS1GW.exe assembly's progress.
+The file is located at C:\PterisGlobal\PALS\SAC\PALS.SCPLCOS1GW.InstallLog.
+
+The Install phase completed successfully, and the Commit phase is beginning.
+See the contents of the log file for the C:\PterisGlobal\PALS\SAC\PALS.SCPLCOS1GW.exe assembly's progress.
+The file is located at C:\PterisGlobal\PALS\SAC\PALS.SCPLCOS1GW.InstallLog.
+
+The Commit phase completed successfully.
+
+The transacted install has completed.
+
+Running a transacted installation.
+
+Beginning the Install phase of the installation.
+See the contents of the log file for the C:\PterisGlobal\PALS\SAC\PALS.SortEngine.exe assembly's progress.
+The file is located at C:\PterisGlobal\PALS\SAC\PALS.SortEngine.InstallLog.
+
+The Install phase completed successfully, and the Commit phase is beginning.
+See the contents of the log file for the C:\PterisGlobal\PALS\SAC\PALS.SortEngine.exe assembly's progress.
+The file is located at C:\PterisGlobal\PALS\SAC\PALS.SortEngine.InstallLog.
+
+The Commit phase completed successfully.
+
+The transacted install has completed.
+
+Running a transacted installation.
+
+Beginning the Install phase of the installation.
+See the contents of the log file for the C:\PterisGlobal\PALS\SAC\PALS.SvcMonitor.exe assembly's progress.
+The file is located at C:\PterisGlobal\PALS\SAC\PALS.SvcMonitor.InstallLog.
+
+The Install phase completed successfully, and the Commit phase is beginning.
+See the contents of the log file for the C:\PterisGlobal\PALS\SAC\PALS.SvcMonitor.exe assembly's progress.
+The file is located at C:\PterisGlobal\PALS\SAC\PALS.SvcMonitor.InstallLog.
+
+The Commit phase completed successfully.
+
+The transacted install has completed.
+
+Running a transacted installation.
+
+Beginning the Install phase of the installation.
+See the contents of the log file for the D:\2PALS\SAC\PALS.SCPLCEM1GW.exe assembly's progress.
+The file is located at D:\2PALS\SAC\PALS.SCPLCEM1GW.InstallLog.
+
+An exception occurred during the Install phase.
+System.Security.SecurityException: The source was not found, but some or all event logs could not be searched.  Inaccessible logs: Security.
+
+The Rollback phase of the installation is beginning.
+See the contents of the log file for the D:\2PALS\SAC\PALS.SCPLCEM1GW.exe assembly's progress.
+The file is located at D:\2PALS\SAC\PALS.SCPLCEM1GW.InstallLog.
+
+The Rollback phase completed successfully.
+
+The transacted install has completed.
+
+Running a transacted installation.
+
+Beginning the Install phase of the installation.
+See the contents of the log file for the D:\2PALS\SAC\PALS.SCPLCEM2GW.exe assembly's progress.
+The file is located at D:\2PALS\SAC\PALS.SCPLCEM2GW.InstallLog.
+
+An exception occurred during the Install phase.
+System.Security.SecurityException: The source was not found, but some or all event logs could not be searched.  Inaccessible logs: Security.
+
+The Rollback phase of the installation is beginning.
+See the contents of the log file for the D:\2PALS\SAC\PALS.SCPLCEM2GW.exe assembly's progress.
+The file is located at D:\2PALS\SAC\PALS.SCPLCEM2GW.InstallLog.
+
+The Rollback phase completed successfully.
+
+The transacted install has completed.
+
+Running a transacted installation.
+
+Beginning the Install phase of the installation.
+See the contents of the log file for the D:\2PALS\SAC\PALS.SCPLCEM3GW.exe assembly's progress.
+The file is located at D:\2PALS\SAC\PALS.SCPLCEM3GW.InstallLog.
+
+An exception occurred during the Install phase.
+System.Security.SecurityException: The source was not found, but some or all event logs could not be searched.  Inaccessible logs: Security.
+
+The Rollback phase of the installation is beginning.
+See the contents of the log file for the D:\2PALS\SAC\PALS.SCPLCEM3GW.exe assembly's progress.
+The file is located at D:\2PALS\SAC\PALS.SCPLCEM3GW.InstallLog.
+
+The Rollback phase completed successfully.
+
+The transacted install has completed.
+
+Running a transacted installation.
+
+Beginning the Install phase of the installation.
+See the contents of the log file for the D:\2PALS\SAC\PALS.SCPLCEM4GW.exe assembly's progress.
+The file is located at D:\2PALS\SAC\PALS.SCPLCEM4GW.InstallLog.
+
+An exception occurred during the Install phase.
+System.Security.SecurityException: The source was not found, but some or all event logs could not be searched.  Inaccessible logs: Security.
+
+The Rollback phase of the installation is beginning.
+See the contents of the log file for the D:\2PALS\SAC\PALS.SCPLCEM4GW.exe assembly's progress.
+The file is located at D:\2PALS\SAC\PALS.SCPLCEM4GW.InstallLog.
+
+The Rollback phase completed successfully.
+
+The transacted install has completed.
+
+Running a transacted installation.
+
+Beginning the Install phase of the installation.
+See the contents of the log file for the D:\2PALS\SAC\PALS.SCPLCSM1GW.exe assembly's progress.
+The file is located at D:\2PALS\SAC\PALS.SCPLCSM1GW.InstallLog.
+
+An exception occurred during the Install phase.
+System.Security.SecurityException: The source was not found, but some or all event logs could not be searched.  Inaccessible logs: Security.
+
+The Rollback phase of the installation is beginning.
+See the contents of the log file for the D:\2PALS\SAC\PALS.SCPLCSM1GW.exe assembly's progress.
+The file is located at D:\2PALS\SAC\PALS.SCPLCSM1GW.InstallLog.
+
+The Rollback phase completed successfully.
+
+The transacted install has completed.
+
+Running a transacted installation.
+
+Beginning the Install phase of the installation.
+See the contents of the log file for the D:\2PALS\SAC\PALS.SCPLCSM2GW.exe assembly's progress.
+The file is located at D:\2PALS\SAC\PALS.SCPLCSM2GW.InstallLog.
+
+An exception occurred during the Install phase.
+System.Security.SecurityException: The source was not found, but some or all event logs could not be searched.  Inaccessible logs: Security.
+
+The Rollback phase of the installation is beginning.
+See the contents of the log file for the D:\2PALS\SAC\PALS.SCPLCSM2GW.exe assembly's progress.
+The file is located at D:\2PALS\SAC\PALS.SCPLCSM2GW.InstallLog.
+
+The Rollback phase completed successfully.
+
+The transacted install has completed.
+
+Running a transacted installation.
+
+Beginning the Install phase of the installation.
+See the contents of the log file for the D:\2PALS\SAC\PALS.SCPLCSM3GW.exe assembly's progress.
+The file is located at D:\2PALS\SAC\PALS.SCPLCSM3GW.InstallLog.
+
+An exception occurred during the Install phase.
+System.Security.SecurityException: The source was not found, but some or all event logs could not be searched.  Inaccessible logs: Security.
+
+The Rollback phase of the installation is beginning.
+See the contents of the log file for the D:\2PALS\SAC\PALS.SCPLCSM3GW.exe assembly's progress.
+The file is located at D:\2PALS\SAC\PALS.SCPLCSM3GW.InstallLog.
+
+The Rollback phase completed successfully.
+
+The transacted install has completed.
+
+Running a transacted installation.
+
+Beginning the Install phase of the installation.
+See the contents of the log file for the D:\2PALS\SAC\PALS.SCPLCSM4GW.exe assembly's progress.
+The file is located at D:\2PALS\SAC\PALS.SCPLCSM4GW.InstallLog.
+
+An exception occurred during the Install phase.
+System.Security.SecurityException: The source was not found, but some or all event logs could not be searched.  Inaccessible logs: Security.
+
+The Rollback phase of the installation is beginning.
+See the contents of the log file for the D:\2PALS\SAC\PALS.SCPLCSM4GW.exe assembly's progress.
+The file is located at D:\2PALS\SAC\PALS.SCPLCSM4GW.InstallLog.
+
+The Rollback phase completed successfully.
+
+The transacted install has completed.
+
+Running a transacted installation.
+
+Beginning the Install phase of the installation.
+See the contents of the log file for the D:\2PALS\SAC\PALS.SCPLCSM5GW.exe assembly's progress.
+The file is located at D:\2PALS\SAC\PALS.SCPLCSM5GW.InstallLog.
+
+An exception occurred during the Install phase.
+System.Security.SecurityException: The source was not found, but some or all event logs could not be searched.  Inaccessible logs: Security.
+
+The Rollback phase of the installation is beginning.
+See the contents of the log file for the D:\2PALS\SAC\PALS.SCPLCSM5GW.exe assembly's progress.
+The file is located at D:\2PALS\SAC\PALS.SCPLCSM5GW.InstallLog.
+
+The Rollback phase completed successfully.
+
+The transacted install has completed.
+
+Running a transacted installation.
+
+Beginning the Install phase of the installation.
+See the contents of the log file for the D:\2PALS\SAC\PALS.SCPLCWM1GW.exe assembly's progress.
+The file is located at D:\2PALS\SAC\PALS.SCPLCWM1GW.InstallLog.
+
+An exception occurred during the Install phase.
+System.Security.SecurityException: The source was not found, but some or all event logs could not be searched.  Inaccessible logs: Security.
+
+The Rollback phase of the installation is beginning.
+See the contents of the log file for the D:\2PALS\SAC\PALS.SCPLCWM1GW.exe assembly's progress.
+The file is located at D:\2PALS\SAC\PALS.SCPLCWM1GW.InstallLog.
+
+The Rollback phase completed successfully.
+
+The transacted install has completed.
+
+Running a transacted installation.
+
+Beginning the Install phase of the installation.
+See the contents of the log file for the D:\2PALS\SAC\PALS.SCPLCWM2GW.exe assembly's progress.
+The file is located at D:\2PALS\SAC\PALS.SCPLCWM2GW.InstallLog.
+
+An exception occurred during the Install phase.
+System.Security.SecurityException: The source was not found, but some or all event logs could not be searched.  Inaccessible logs: Security.
+
+The Rollback phase of the installation is beginning.
+See the contents of the log file for the D:\2PALS\SAC\PALS.SCPLCWM2GW.exe assembly's progress.
+The file is located at D:\2PALS\SAC\PALS.SCPLCWM2GW.InstallLog.
+
+The Rollback phase completed successfully.
+
+The transacted install has completed.
+
+Running a transacted installation.
+
+Beginning the Install phase of the installation.
+See the contents of the log file for the D:\2PALS\SAC\PALS.SCPLCWM3GW.exe assembly's progress.
+The file is located at D:\2PALS\SAC\PALS.SCPLCWM3GW.InstallLog.
+
+An exception occurred during the Install phase.
+System.Security.SecurityException: The source was not found, but some or all event logs could not be searched.  Inaccessible logs: Security.
+
+The Rollback phase of the installation is beginning.
+See the contents of the log file for the D:\2PALS\SAC\PALS.SCPLCWM3GW.exe assembly's progress.
+The file is located at D:\2PALS\SAC\PALS.SCPLCWM3GW.InstallLog.
+
+The Rollback phase completed successfully.
+
+The transacted install has completed.
+
+Running a transacted installation.
+
+Beginning the Install phase of the installation.
+See the contents of the log file for the D:\2PALS\SAC\PALS.SCPLCOS1GW.exe assembly's progress.
+The file is located at D:\2PALS\SAC\PALS.SCPLCOS1GW.InstallLog.
+
+An exception occurred during the Install phase.
+System.Security.SecurityException: The source was not found, but some or all event logs could not be searched.  Inaccessible logs: Security.
+
+The Rollback phase of the installation is beginning.
+See the contents of the log file for the D:\2PALS\SAC\PALS.SCPLCOS1GW.exe assembly's progress.
+The file is located at D:\2PALS\SAC\PALS.SCPLCOS1GW.InstallLog.
+
+The Rollback phase completed successfully.
+
+The transacted install has completed.
+
+Running a transacted installation.
+
+Beginning the Install phase of the installation.
+See the contents of the log file for the D:\2PALS\SAC\PALS.SortEngine.exe assembly's progress.
+The file is located at D:\2PALS\SAC\PALS.SortEngine.InstallLog.
+
+An exception occurred during the Install phase.
+System.Security.SecurityException: The source was not found, but some or all event logs could not be searched.  Inaccessible logs: Security.
+
+The Rollback phase of the installation is beginning.
+See the contents of the log file for the D:\2PALS\SAC\PALS.SortEngine.exe assembly's progress.
+The file is located at D:\2PALS\SAC\PALS.SortEngine.InstallLog.
+
+The Rollback phase completed successfully.
+
+The transacted install has completed.
+
+Running a transacted installation.
+
+Beginning the Install phase of the installation.
+See the contents of the log file for the D:\2PALS\SAC\PALS.SvcMonitor.exe assembly's progress.
+The file is located at D:\2PALS\SAC\PALS.SvcMonitor.InstallLog.
+
+An exception occurred during the Install phase.
+System.Security.SecurityException: The source was not found, but some or all event logs could not be searched.  Inaccessible logs: Security.
+
+The Rollback phase of the installation is beginning.
+See the contents of the log file for the D:\2PALS\SAC\PALS.SvcMonitor.exe assembly's progress.
+The file is located at D:\2PALS\SAC\PALS.SvcMonitor.InstallLog.
+
+The Rollback phase completed successfully.
+
+The transacted install has completed.
+
+Running a transacted installation.
+
+Beginning the Install phase of the installation.
+See the contents of the log file for the D:\2PALS\SAC\PALS.SCPLCEM1GW.exe assembly's progress.
+The file is located at D:\2PALS\SAC\PALS.SCPLCEM1GW.InstallLog.
+
+An exception occurred during the Install phase.
+System.Security.SecurityException: The source was not found, but some or all event logs could not be searched.  Inaccessible logs: Security.
+
+The Rollback phase of the installation is beginning.
+See the contents of the log file for the D:\2PALS\SAC\PALS.SCPLCEM1GW.exe assembly's progress.
+The file is located at D:\2PALS\SAC\PALS.SCPLCEM1GW.InstallLog.
+
+The Rollback phase completed successfully.
+
+The transacted install has completed.
+
+Running a transacted installation.
+
+Beginning the Install phase of the installation.
+See the contents of the log file for the D:\2PALS\SAC\PALS.SCPLCEM2GW.exe assembly's progress.
+The file is located at D:\2PALS\SAC\PALS.SCPLCEM2GW.InstallLog.
+
+An exception occurred during the Install phase.
+System.Security.SecurityException: The source was not found, but some or all event logs could not be searched.  Inaccessible logs: Security.
+
+The Rollback phase of the installation is beginning.
+See the contents of the log file for the D:\2PALS\SAC\PALS.SCPLCEM2GW.exe assembly's progress.
+The file is located at D:\2PALS\SAC\PALS.SCPLCEM2GW.InstallLog.
+
+The Rollback phase completed successfully.
+
+The transacted install has completed.
+
+Running a transacted installation.
+
+Beginning the Install phase of the installation.
+See the contents of the log file for the D:\2PALS\SAC\PALS.SCPLCEM3GW.exe assembly's progress.
+The file is located at D:\2PALS\SAC\PALS.SCPLCEM3GW.InstallLog.
+
+An exception occurred during the Install phase.
+System.Security.SecurityException: The source was not found, but some or all event logs could not be searched.  Inaccessible logs: Security.
+
+The Rollback phase of the installation is beginning.
+See the contents of the log file for the D:\2PALS\SAC\PALS.SCPLCEM3GW.exe assembly's progress.
+The file is located at D:\2PALS\SAC\PALS.SCPLCEM3GW.InstallLog.
+
+The Rollback phase completed successfully.
+
+The transacted install has completed.
+
+Running a transacted installation.
+
+Beginning the Install phase of the installation.
+See the contents of the log file for the D:\2PALS\SAC\PALS.SCPLCEM4GW.exe assembly's progress.
+The file is located at D:\2PALS\SAC\PALS.SCPLCEM4GW.InstallLog.
+
+An exception occurred during the Install phase.
+System.Security.SecurityException: The source was not found, but some or all event logs could not be searched.  Inaccessible logs: Security.
+
+The Rollback phase of the installation is beginning.
+See the contents of the log file for the D:\2PALS\SAC\PALS.SCPLCEM4GW.exe assembly's progress.
+The file is located at D:\2PALS\SAC\PALS.SCPLCEM4GW.InstallLog.
+
+The Rollback phase completed successfully.
+
+The transacted install has completed.
+
+Running a transacted installation.
+
+Beginning the Install phase of the installation.
+See the contents of the log file for the D:\2PALS\SAC\PALS.SCPLCSM1GW.exe assembly's progress.
+The file is located at D:\2PALS\SAC\PALS.SCPLCSM1GW.InstallLog.
+
+An exception occurred during the Install phase.
+System.Security.SecurityException: The source was not found, but some or all event logs could not be searched.  Inaccessible logs: Security.
+
+The Rollback phase of the installation is beginning.
+See the contents of the log file for the D:\2PALS\SAC\PALS.SCPLCSM1GW.exe assembly's progress.
+The file is located at D:\2PALS\SAC\PALS.SCPLCSM1GW.InstallLog.
+
+The Rollback phase completed successfully.
+
+The transacted install has completed.
+
+Running a transacted installation.
+
+Beginning the Install phase of the installation.
+See the contents of the log file for the D:\2PALS\SAC\PALS.SCPLCSM2GW.exe assembly's progress.
+The file is located at D:\2PALS\SAC\PALS.SCPLCSM2GW.InstallLog.
+
+An exception occurred during the Install phase.
+System.Security.SecurityException: The source was not found, but some or all event logs could not be searched.  Inaccessible logs: Security.
+
+The Rollback phase of the installation is beginning.
+See the contents of the log file for the D:\2PALS\SAC\PALS.SCPLCSM2GW.exe assembly's progress.
+The file is located at D:\2PALS\SAC\PALS.SCPLCSM2GW.InstallLog.
+
+The Rollback phase completed successfully.
+
+The transacted install has completed.
+
+Running a transacted installation.
+
+Beginning the Install phase of the installation.
+See the contents of the log file for the D:\2PALS\SAC\PALS.SCPLCSM3GW.exe assembly's progress.
+The file is located at D:\2PALS\SAC\PALS.SCPLCSM3GW.InstallLog.
+
+An exception occurred during the Install phase.
+System.Security.SecurityException: The source was not found, but some or all event logs could not be searched.  Inaccessible logs: Security.
+
+The Rollback phase of the installation is beginning.
+See the contents of the log file for the D:\2PALS\SAC\PALS.SCPLCSM3GW.exe assembly's progress.
+The file is located at D:\2PALS\SAC\PALS.SCPLCSM3GW.InstallLog.
+
+The Rollback phase completed successfully.
+
+The transacted install has completed.
+
+Running a transacted installation.
+
+Beginning the Install phase of the installation.
+See the contents of the log file for the D:\2PALS\SAC\PALS.SCPLCSM4GW.exe assembly's progress.
+The file is located at D:\2PALS\SAC\PALS.SCPLCSM4GW.InstallLog.
+
+An exception occurred during the Install phase.
+System.Security.SecurityException: The source was not found, but some or all event logs could not be searched.  Inaccessible logs: Security.
+
+The Rollback phase of the installation is beginning.
+See the contents of the log file for the D:\2PALS\SAC\PALS.SCPLCSM4GW.exe assembly's progress.
+The file is located at D:\2PALS\SAC\PALS.SCPLCSM4GW.InstallLog.
+
+The Rollback phase completed successfully.
+
+The transacted install has completed.
+
+Running a transacted installation.
+
+Beginning the Install phase of the installation.
+See the contents of the log file for the D:\2PALS\SAC\PALS.SCPLCSM5GW.exe assembly's progress.
+The file is located at D:\2PALS\SAC\PALS.SCPLCSM5GW.InstallLog.
+
+An exception occurred during the Install phase.
+System.Security.SecurityException: The source was not found, but some or all event logs could not be searched.  Inaccessible logs: Security.
+
+The Rollback phase of the installation is beginning.
+See the contents of the log file for the D:\2PALS\SAC\PALS.SCPLCSM5GW.exe assembly's progress.
+The file is located at D:\2PALS\SAC\PALS.SCPLCSM5GW.InstallLog.
+
+The Rollback phase completed successfully.
+
+The transacted install has completed.
+
+Running a transacted installation.
+
+Beginning the Install phase of the installation.
+See the contents of the log file for the D:\2PALS\SAC\PALS.SCPLCWM1GW.exe assembly's progress.
+The file is located at D:\2PALS\SAC\PALS.SCPLCWM1GW.InstallLog.
+
+An exception occurred during the Install phase.
+System.Security.SecurityException: The source was not found, but some or all event logs could not be searched.  Inaccessible logs: Security.
+
+The Rollback phase of the installation is beginning.
+See the contents of the log file for the D:\2PALS\SAC\PALS.SCPLCWM1GW.exe assembly's progress.
+The file is located at D:\2PALS\SAC\PALS.SCPLCWM1GW.InstallLog.
+
+The Rollback phase completed successfully.
+
+The transacted install has completed.
+
+Running a transacted installation.
+
+Beginning the Install phase of the installation.
+See the contents of the log file for the D:\2PALS\SAC\PALS.SCPLCWM2GW.exe assembly's progress.
+The file is located at D:\2PALS\SAC\PALS.SCPLCWM2GW.InstallLog.
+
+An exception occurred during the Install phase.
+System.Security.SecurityException: The source was not found, but some or all event logs could not be searched.  Inaccessible logs: Security.
+
+The Rollback phase of the installation is beginning.
+See the contents of the log file for the D:\2PALS\SAC\PALS.SCPLCWM2GW.exe assembly's progress.
+The file is located at D:\2PALS\SAC\PALS.SCPLCWM2GW.InstallLog.
+
+The Rollback phase completed successfully.
+
+The transacted install has completed.
+
+Running a transacted installation.
+
+Beginning the Install phase of the installation.
+See the contents of the log file for the D:\2PALS\SAC\PALS.SCPLCWM3GW.exe assembly's progress.
+The file is located at D:\2PALS\SAC\PALS.SCPLCWM3GW.InstallLog.
+
+An exception occurred during the Install phase.
+System.Security.SecurityException: The source was not found, but some or all event logs could not be searched.  Inaccessible logs: Security.
+
+The Rollback phase of the installation is beginning.
+See the contents of the log file for the D:\2PALS\SAC\PALS.SCPLCWM3GW.exe assembly's progress.
+The file is located at D:\2PALS\SAC\PALS.SCPLCWM3GW.InstallLog.
+
+The Rollback phase completed successfully.
+
+The transacted install has completed.
+
+Running a transacted installation.
+
+Beginning the Install phase of the installation.
+See the contents of the log file for the D:\2PALS\SAC\PALS.SCPLCOS1GW.exe assembly's progress.
+The file is located at D:\2PALS\SAC\PALS.SCPLCOS1GW.InstallLog.
+
+An exception occurred during the Install phase.
+System.Security.SecurityException: The source was not found, but some or all event logs could not be searched.  Inaccessible logs: Security.
+
+The Rollback phase of the installation is beginning.
+See the contents of the log file for the D:\2PALS\SAC\PALS.SCPLCOS1GW.exe assembly's progress.
+The file is located at D:\2PALS\SAC\PALS.SCPLCOS1GW.InstallLog.
+
+The Rollback phase completed successfully.
+
+The transacted install has completed.
+
+Running a transacted installation.
+
+Beginning the Install phase of the installation.
+See the contents of the log file for the D:\2PALS\SAC\PALS.SortEngine.exe assembly's progress.
+The file is located at D:\2PALS\SAC\PALS.SortEngine.InstallLog.
+
+An exception occurred during the Install phase.
+System.Security.SecurityException: The source was not found, but some or all event logs could not be searched.  Inaccessible logs: Security.
+
+The Rollback phase of the installation is beginning.
+See the contents of the log file for the D:\2PALS\SAC\PALS.SortEngine.exe assembly's progress.
+The file is located at D:\2PALS\SAC\PALS.SortEngine.InstallLog.
+
+The Rollback phase completed successfully.
+
+The transacted install has completed.
+
+Running a transacted installation.
+
+Beginning the Install phase of the installation.
+See the contents of the log file for the D:\2PALS\SAC\PALS.SvcMonitor.exe assembly's progress.
+The file is located at D:\2PALS\SAC\PALS.SvcMonitor.InstallLog.
+
+An exception occurred during the Install phase.
+System.Security.SecurityException: The source was not found, but some or all event logs could not be searched.  Inaccessible logs: Security.
+
+The Rollback phase of the installation is beginning.
+See the contents of the log file for the D:\2PALS\SAC\PALS.SvcMonitor.exe assembly's progress.
+The file is located at D:\2PALS\SAC\PALS.SvcMonitor.InstallLog.
+
+The Rollback phase completed successfully.
+
+The transacted install has completed.
+
+Running a transacted installation.
+
+Beginning the Install phase of the installation.
+See the contents of the log file for the D:\2PALS\SAC\PALS.PLCEA1GW.exe assembly's progress.
+The file is located at D:\2PALS\SAC\PALS.PLCEA1GW.InstallLog.
+
+An exception occurred during the Install phase.
+System.Security.SecurityException: The source was not found, but some or all event logs could not be searched.  Inaccessible logs: Security.
+
+The Rollback phase of the installation is beginning.
+See the contents of the log file for the D:\2PALS\SAC\PALS.PLCEA1GW.exe assembly's progress.
+The file is located at D:\2PALS\SAC\PALS.PLCEA1GW.InstallLog.
+
+The Rollback phase completed successfully.
+
+The transacted install has completed.
+
+Running a transacted installation.
+
+Beginning the Install phase of the installation.
+See the contents of the log file for the D:\2PALS\SAC\PALS.PLCET1GW.exe assembly's progress.
+The file is located at D:\2PALS\SAC\PALS.PLCET1GW.InstallLog.
+
+An exception occurred during the Install phase.
+System.Security.SecurityException: The source was not found, but some or all event logs could not be searched.  Inaccessible logs: Security.
+
+The Rollback phase of the installation is beginning.
+See the contents of the log file for the D:\2PALS\SAC\PALS.PLCET1GW.exe assembly's progress.
+The file is located at D:\2PALS\SAC\PALS.PLCET1GW.InstallLog.
+
+The Rollback phase completed successfully.
+
+The transacted install has completed.
+
+Running a transacted installation.
+
+Beginning the Install phase of the installation.
+See the contents of the log file for the D:\2PALS\SAC\PALS.PLCET2GW.exe assembly's progress.
+The file is located at D:\2PALS\SAC\PALS.PLCET2GW.InstallLog.
+
+An exception occurred during the Install phase.
+System.Security.SecurityException: The source was not found, but some or all event logs could not be searched.  Inaccessible logs: Security.
+
+The Rollback phase of the installation is beginning.
+See the contents of the log file for the D:\2PALS\SAC\PALS.PLCET2GW.exe assembly's progress.
+The file is located at D:\2PALS\SAC\PALS.PLCET2GW.InstallLog.
+
+The Rollback phase completed successfully.
+
+The transacted install has completed.
+
+Running a transacted installation.
+
+Beginning the Install phase of the installation.
+See the contents of the log file for the D:\2PALS\SAC\PALS.PLCET3GW.exe assembly's progress.
+The file is located at D:\2PALS\SAC\PALS.PLCET3GW.InstallLog.
+
+An exception occurred during the Install phase.
+System.Security.SecurityException: The source was not found, but some or all event logs could not be searched.  Inaccessible logs: Security.
+
+The Rollback phase of the installation is beginning.
+See the contents of the log file for the D:\2PALS\SAC\PALS.PLCET3GW.exe assembly's progress.
+The file is located at D:\2PALS\SAC\PALS.PLCET3GW.InstallLog.
+
+The Rollback phase completed successfully.
+
+The transacted install has completed.
+
+Running a transacted installation.
+
+Beginning the Install phase of the installation.
+See the contents of the log file for the D:\2PALS\SAC\PALS.PLCWA1GW.exe assembly's progress.
+The file is located at D:\2PALS\SAC\PALS.PLCWA1GW.InstallLog.
+
+An exception occurred during the Install phase.
+System.Security.SecurityException: The source was not found, but some or all event logs could not be searched.  Inaccessible logs: Security.
+
+The Rollback phase of the installation is beginning.
+See the contents of the log file for the D:\2PALS\SAC\PALS.PLCWA1GW.exe assembly's progress.
+The file is located at D:\2PALS\SAC\PALS.PLCWA1GW.InstallLog.
+
+The Rollback phase completed successfully.
+
+The transacted install has completed.
+
+Running a transacted installation.
+
+Beginning the Install phase of the installation.
+See the contents of the log file for the D:\2PALS\SAC\PALS.PLCWA2GW.exe assembly's progress.
+The file is located at D:\2PALS\SAC\PALS.PLCWA2GW.InstallLog.
+
+An exception occurred during the Install phase.
+System.Security.SecurityException: The source was not found, but some or all event logs could not be searched.  Inaccessible logs: Security.
+
+The Rollback phase of the installation is beginning.
+See the contents of the log file for the D:\2PALS\SAC\PALS.PLCWA2GW.exe assembly's progress.
+The file is located at D:\2PALS\SAC\PALS.PLCWA2GW.InstallLog.
+
+The Rollback phase completed successfully.
+
+The transacted install has completed.
+
+Running a transacted installation.
+
+Beginning the Install phase of the installation.
+See the contents of the log file for the D:\2PALS\SAC\PALS.PLCWT1GW.exe assembly's progress.
+The file is located at D:\2PALS\SAC\PALS.PLCWT1GW.InstallLog.
+
+An exception occurred during the Install phase.
+System.Security.SecurityException: The source was not found, but some or all event logs could not be searched.  Inaccessible logs: Security.
+
+The Rollback phase of the installation is beginning.
+See the contents of the log file for the D:\2PALS\SAC\PALS.PLCWT1GW.exe assembly's progress.
+The file is located at D:\2PALS\SAC\PALS.PLCWT1GW.InstallLog.
+
+The Rollback phase completed successfully.
+
+The transacted install has completed.
+
+Running a transacted installation.
+
+Beginning the Install phase of the installation.
+See the contents of the log file for the D:\2PALS\SAC\PALS.PLCWT2GW.exe assembly's progress.
+The file is located at D:\2PALS\SAC\PALS.PLCWT2GW.InstallLog.
+
+An exception occurred during the Install phase.
+System.Security.SecurityException: The source was not found, but some or all event logs could not be searched.  Inaccessible logs: Security.
+
+The Rollback phase of the installation is beginning.
+See the contents of the log file for the D:\2PALS\SAC\PALS.PLCWT2GW.exe assembly's progress.
+The file is located at D:\2PALS\SAC\PALS.PLCWT2GW.InstallLog.
+
+The Rollback phase completed successfully.
+
+The transacted install has completed.
+
+Running a transacted installation.
+
+Beginning the Install phase of the installation.
+See the contents of the log file for the D:\2PALS\SAC\PALS.SCPLCEM1GW.exe assembly's progress.
+The file is located at D:\2PALS\SAC\PALS.SCPLCEM1GW.InstallLog.
+
+An exception occurred during the Install phase.
+System.InvalidOperationException: Cannot open Service Control Manager on computer '.'. This operation might require other privileges.
+The inner exception System.ComponentModel.Win32Exception was thrown with the following error message: Access is denied.
+
+The Rollback phase of the installation is beginning.
+See the contents of the log file for the D:\2PALS\SAC\PALS.SCPLCEM1GW.exe assembly's progress.
+The file is located at D:\2PALS\SAC\PALS.SCPLCEM1GW.InstallLog.
+
+The Rollback phase completed successfully.
+
+The transacted install has completed.
+
+Running a transacted installation.
+
+Beginning the Install phase of the installation.
+See the contents of the log file for the D:\2PALS\SAC\PALS.SCPLCEM2GW.exe assembly's progress.
+The file is located at D:\2PALS\SAC\PALS.SCPLCEM2GW.InstallLog.
+
+An exception occurred during the Install phase.
+System.InvalidOperationException: Cannot open Service Control Manager on computer '.'. This operation might require other privileges.
+The inner exception System.ComponentModel.Win32Exception was thrown with the following error message: Access is denied.
+
+The Rollback phase of the installation is beginning.
+See the contents of the log file for the D:\2PALS\SAC\PALS.SCPLCEM2GW.exe assembly's progress.
+The file is located at D:\2PALS\SAC\PALS.SCPLCEM2GW.InstallLog.
+
+The Rollback phase completed successfully.
+
+The transacted install has completed.
+
+Running a transacted installation.
+
+Beginning the Install phase of the installation.
+See the contents of the log file for the D:\2PALS\SAC\PALS.SCPLCEM3GW.exe assembly's progress.
+The file is located at D:\2PALS\SAC\PALS.SCPLCEM3GW.InstallLog.
+
+An exception occurred during the Install phase.
+System.InvalidOperationException: Cannot open Service Control Manager on computer '.'. This operation might require other privileges.
+The inner exception System.ComponentModel.Win32Exception was thrown with the following error message: Access is denied.
+
+The Rollback phase of the installation is beginning.
+See the contents of the log file for the D:\2PALS\SAC\PALS.SCPLCEM3GW.exe assembly's progress.
+The file is located at D:\2PALS\SAC\PALS.SCPLCEM3GW.InstallLog.
+
+The Rollback phase completed successfully.
+
+The transacted install has completed.
+
+Running a transacted installation.
+
+Beginning the Install phase of the installation.
+See the contents of the log file for the D:\2PALS\SAC\PALS.SCPLCEM4GW.exe assembly's progress.
+The file is located at D:\2PALS\SAC\PALS.SCPLCEM4GW.InstallLog.
+
+An exception occurred during the Install phase.
+System.InvalidOperationException: Cannot open Service Control Manager on computer '.'. This operation might require other privileges.
+The inner exception System.ComponentModel.Win32Exception was thrown with the following error message: Access is denied.
+
+The Rollback phase of the installation is beginning.
+See the contents of the log file for the D:\2PALS\SAC\PALS.SCPLCEM4GW.exe assembly's progress.
+The file is located at D:\2PALS\SAC\PALS.SCPLCEM4GW.InstallLog.
+
+The Rollback phase completed successfully.
+
+The transacted install has completed.
+
+Running a transacted installation.
+
+Beginning the Install phase of the installation.
+See the contents of the log file for the D:\2PALS\SAC\PALS.SCPLCSM1GW.exe assembly's progress.
+The file is located at D:\2PALS\SAC\PALS.SCPLCSM1GW.InstallLog.
+
+An exception occurred during the Install phase.
+System.InvalidOperationException: Cannot open Service Control Manager on computer '.'. This operation might require other privileges.
+The inner exception System.ComponentModel.Win32Exception was thrown with the following error message: Access is denied.
+
+The Rollback phase of the installation is beginning.
+See the contents of the log file for the D:\2PALS\SAC\PALS.SCPLCSM1GW.exe assembly's progress.
+The file is located at D:\2PALS\SAC\PALS.SCPLCSM1GW.InstallLog.
+
+The Rollback phase completed successfully.
+
+The transacted install has completed.
+
+Running a transacted installation.
+
+Beginning the Install phase of the installation.
+See the contents of the log file for the D:\2PALS\SAC\PALS.SCPLCSM2GW.exe assembly's progress.
+The file is located at D:\2PALS\SAC\PALS.SCPLCSM2GW.InstallLog.
+
+An exception occurred during the Install phase.
+System.InvalidOperationException: Cannot open Service Control Manager on computer '.'. This operation might require other privileges.
+The inner exception System.ComponentModel.Win32Exception was thrown with the following error message: Access is denied.
+
+The Rollback phase of the installation is beginning.
+See the contents of the log file for the D:\2PALS\SAC\PALS.SCPLCSM2GW.exe assembly's progress.
+The file is located at D:\2PALS\SAC\PALS.SCPLCSM2GW.InstallLog.
+
+The Rollback phase completed successfully.
+
+The transacted install has completed.
+
+Running a transacted installation.
+
+Beginning the Install phase of the installation.
+See the contents of the log file for the D:\2PALS\SAC\PALS.SCPLCSM3GW.exe assembly's progress.
+The file is located at D:\2PALS\SAC\PALS.SCPLCSM3GW.InstallLog.
+
+An exception occurred during the Install phase.
+System.InvalidOperationException: Cannot open Service Control Manager on computer '.'. This operation might require other privileges.
+The inner exception System.ComponentModel.Win32Exception was thrown with the following error message: Access is denied.
+
+The Rollback phase of the installation is beginning.
+See the contents of the log file for the D:\2PALS\SAC\PALS.SCPLCSM3GW.exe assembly's progress.
+The file is located at D:\2PALS\SAC\PALS.SCPLCSM3GW.InstallLog.
+
+The Rollback phase completed successfully.
+
+The transacted install has completed.
+
+Running a transacted installation.
+
+Beginning the Install phase of the installation.
+See the contents of the log file for the D:\2PALS\SAC\PALS.SCPLCSM4GW.exe assembly's progress.
+The file is located at D:\2PALS\SAC\PALS.SCPLCSM4GW.InstallLog.
+
+An exception occurred during the Install phase.
+System.InvalidOperationException: Cannot open Service Control Manager on computer '.'. This operation might require other privileges.
+The inner exception System.ComponentModel.Win32Exception was thrown with the following error message: Access is denied.
+
+The Rollback phase of the installation is beginning.
+See the contents of the log file for the D:\2PALS\SAC\PALS.SCPLCSM4GW.exe assembly's progress.
+The file is located at D:\2PALS\SAC\PALS.SCPLCSM4GW.InstallLog.
+
+The Rollback phase completed successfully.
+
+The transacted install has completed.
+
+Running a transacted installation.
+
+Beginning the Install phase of the installation.
+See the contents of the log file for the D:\2PALS\SAC\PALS.SCPLCSM5GW.exe assembly's progress.
+The file is located at D:\2PALS\SAC\PALS.SCPLCSM5GW.InstallLog.
+
+An exception occurred during the Install phase.
+System.InvalidOperationException: Cannot open Service Control Manager on computer '.'. This operation might require other privileges.
+The inner exception System.ComponentModel.Win32Exception was thrown with the following error message: Access is denied.
+
+The Rollback phase of the installation is beginning.
+See the contents of the log file for the D:\2PALS\SAC\PALS.SCPLCSM5GW.exe assembly's progress.
+The file is located at D:\2PALS\SAC\PALS.SCPLCSM5GW.InstallLog.
+
+The Rollback phase completed successfully.
+
+The transacted install has completed.
+
+Running a transacted installation.
+
+Beginning the Install phase of the installation.
+See the contents of the log file for the D:\2PALS\SAC\PALS.SCPLCWM1GW.exe assembly's progress.
+The file is located at D:\2PALS\SAC\PALS.SCPLCWM1GW.InstallLog.
+
+An exception occurred during the Install phase.
+System.InvalidOperationException: Cannot open Service Control Manager on computer '.'. This operation might require other privileges.
+The inner exception System.ComponentModel.Win32Exception was thrown with the following error message: Access is denied.
+
+The Rollback phase of the installation is beginning.
+See the contents of the log file for the D:\2PALS\SAC\PALS.SCPLCWM1GW.exe assembly's progress.
+The file is located at D:\2PALS\SAC\PALS.SCPLCWM1GW.InstallLog.
+
+The Rollback phase completed successfully.
+
+The transacted install has completed.
+
+Running a transacted installation.
+
+Beginning the Install phase of the installation.
+See the contents of the log file for the D:\2PALS\SAC\PALS.SCPLCWM2GW.exe assembly's progress.
+The file is located at D:\2PALS\SAC\PALS.SCPLCWM2GW.InstallLog.
+
+An exception occurred during the Install phase.
+System.InvalidOperationException: Cannot open Service Control Manager on computer '.'. This operation might require other privileges.
+The inner exception System.ComponentModel.Win32Exception was thrown with the following error message: Access is denied.
+
+The Rollback phase of the installation is beginning.
+See the contents of the log file for the D:\2PALS\SAC\PALS.SCPLCWM2GW.exe assembly's progress.
+The file is located at D:\2PALS\SAC\PALS.SCPLCWM2GW.InstallLog.
+
+The Rollback phase completed successfully.
+
+The transacted install has completed.
+
+Running a transacted installation.
+
+Beginning the Install phase of the installation.
+See the contents of the log file for the D:\2PALS\SAC\PALS.SCPLCWM3GW.exe assembly's progress.
+The file is located at D:\2PALS\SAC\PALS.SCPLCWM3GW.InstallLog.
+
+An exception occurred during the Install phase.
+System.InvalidOperationException: Cannot open Service Control Manager on computer '.'. This operation might require other privileges.
+The inner exception System.ComponentModel.Win32Exception was thrown with the following error message: Access is denied.
+
+The Rollback phase of the installation is beginning.
+See the contents of the log file for the D:\2PALS\SAC\PALS.SCPLCWM3GW.exe assembly's progress.
+The file is located at D:\2PALS\SAC\PALS.SCPLCWM3GW.InstallLog.
+
+The Rollback phase completed successfully.
+
+The transacted install has completed.
+
+Running a transacted installation.
+
+Beginning the Install phase of the installation.
+See the contents of the log file for the D:\2PALS\SAC\PALS.SCPLCOS1GW.exe assembly's progress.
+The file is located at D:\2PALS\SAC\PALS.SCPLCOS1GW.InstallLog.
+
+An exception occurred during the Install phase.
+System.InvalidOperationException: Cannot open Service Control Manager on computer '.'. This operation might require other privileges.
+The inner exception System.ComponentModel.Win32Exception was thrown with the following error message: Access is denied.
+
+The Rollback phase of the installation is beginning.
+See the contents of the log file for the D:\2PALS\SAC\PALS.SCPLCOS1GW.exe assembly's progress.
+The file is located at D:\2PALS\SAC\PALS.SCPLCOS1GW.InstallLog.
+
+The Rollback phase completed successfully.
+
+The transacted install has completed.
+
+Running a transacted installation.
+
+Beginning the Install phase of the installation.
+See the contents of the log file for the D:\2PALS\SAC\PALS.PLCEA1GW.exe assembly's progress.
+The file is located at D:\2PALS\SAC\PALS.PLCEA1GW.InstallLog.
+
+An exception occurred during the Install phase.
+System.InvalidOperationException: Cannot open Service Control Manager on computer '.'. This operation might require other privileges.
+The inner exception System.ComponentModel.Win32Exception was thrown with the following error message: Access is denied.
+
+The Rollback phase of the installation is beginning.
+See the contents of the log file for the D:\2PALS\SAC\PALS.PLCEA1GW.exe assembly's progress.
+The file is located at D:\2PALS\SAC\PALS.PLCEA1GW.InstallLog.
+
+The Rollback phase completed successfully.
+
+The transacted install has completed.
+
+Running a transacted installation.
+
+Beginning the Install phase of the installation.
+See the contents of the log file for the D:\2PALS\SAC\PALS.PLCET1GW.exe assembly's progress.
+The file is located at D:\2PALS\SAC\PALS.PLCET1GW.InstallLog.
+
+An exception occurred during the Install phase.
+System.InvalidOperationException: Cannot open Service Control Manager on computer '.'. This operation might require other privileges.
+The inner exception System.ComponentModel.Win32Exception was thrown with the following error message: Access is denied.
+
+The Rollback phase of the installation is beginning.
+See the contents of the log file for the D:\2PALS\SAC\PALS.PLCET1GW.exe assembly's progress.
+The file is located at D:\2PALS\SAC\PALS.PLCET1GW.InstallLog.
+
+The Rollback phase completed successfully.
+
+The transacted install has completed.
+
+Running a transacted installation.
+
+Beginning the Install phase of the installation.
+See the contents of the log file for the D:\2PALS\SAC\PALS.PLCET2GW.exe assembly's progress.
+The file is located at D:\2PALS\SAC\PALS.PLCET2GW.InstallLog.
+
+An exception occurred during the Install phase.
+System.InvalidOperationException: Cannot open Service Control Manager on computer '.'. This operation might require other privileges.
+The inner exception System.ComponentModel.Win32Exception was thrown with the following error message: Access is denied.
+
+The Rollback phase of the installation is beginning.
+See the contents of the log file for the D:\2PALS\SAC\PALS.PLCET2GW.exe assembly's progress.
+The file is located at D:\2PALS\SAC\PALS.PLCET2GW.InstallLog.
+
+The Rollback phase completed successfully.
+
+The transacted install has completed.
+
+Running a transacted installation.
+
+Beginning the Install phase of the installation.
+See the contents of the log file for the D:\2PALS\SAC\PALS.PLCET3GW.exe assembly's progress.
+The file is located at D:\2PALS\SAC\PALS.PLCET3GW.InstallLog.
+
+An exception occurred during the Install phase.
+System.InvalidOperationException: Cannot open Service Control Manager on computer '.'. This operation might require other privileges.
+The inner exception System.ComponentModel.Win32Exception was thrown with the following error message: Access is denied.
+
+The Rollback phase of the installation is beginning.
+See the contents of the log file for the D:\2PALS\SAC\PALS.PLCET3GW.exe assembly's progress.
+The file is located at D:\2PALS\SAC\PALS.PLCET3GW.InstallLog.
+
+The Rollback phase completed successfully.
+
+The transacted install has completed.
+
+Running a transacted installation.
+
+Beginning the Install phase of the installation.
+See the contents of the log file for the D:\2PALS\SAC\PALS.PLCWA1GW.exe assembly's progress.
+The file is located at D:\2PALS\SAC\PALS.PLCWA1GW.InstallLog.
+
+An exception occurred during the Install phase.
+System.InvalidOperationException: Cannot open Service Control Manager on computer '.'. This operation might require other privileges.
+The inner exception System.ComponentModel.Win32Exception was thrown with the following error message: Access is denied.
+
+The Rollback phase of the installation is beginning.
+See the contents of the log file for the D:\2PALS\SAC\PALS.PLCWA1GW.exe assembly's progress.
+The file is located at D:\2PALS\SAC\PALS.PLCWA1GW.InstallLog.
+
+The Rollback phase completed successfully.
+
+The transacted install has completed.
+
+Running a transacted installation.
+
+Beginning the Install phase of the installation.
+See the contents of the log file for the D:\2PALS\SAC\PALS.PLCWA2GW.exe assembly's progress.
+The file is located at D:\2PALS\SAC\PALS.PLCWA2GW.InstallLog.
+
+An exception occurred during the Install phase.
+System.InvalidOperationException: Cannot open Service Control Manager on computer '.'. This operation might require other privileges.
+The inner exception System.ComponentModel.Win32Exception was thrown with the following error message: Access is denied.
+
+The Rollback phase of the installation is beginning.
+See the contents of the log file for the D:\2PALS\SAC\PALS.PLCWA2GW.exe assembly's progress.
+The file is located at D:\2PALS\SAC\PALS.PLCWA2GW.InstallLog.
+
+The Rollback phase completed successfully.
+
+The transacted install has completed.
+
+Running a transacted installation.
+
+Beginning the Install phase of the installation.
+See the contents of the log file for the D:\2PALS\SAC\PALS.PLCWT1GW.exe assembly's progress.
+The file is located at D:\2PALS\SAC\PALS.PLCWT1GW.InstallLog.
+
+An exception occurred during the Install phase.
+System.InvalidOperationException: Cannot open Service Control Manager on computer '.'. This operation might require other privileges.
+The inner exception System.ComponentModel.Win32Exception was thrown with the following error message: Access is denied.
+
+The Rollback phase of the installation is beginning.
+See the contents of the log file for the D:\2PALS\SAC\PALS.PLCWT1GW.exe assembly's progress.
+The file is located at D:\2PALS\SAC\PALS.PLCWT1GW.InstallLog.
+
+The Rollback phase completed successfully.
+
+The transacted install has completed.
+
+Running a transacted installation.
+
+Beginning the Install phase of the installation.
+See the contents of the log file for the D:\2PALS\SAC\PALS.PLCWT2GW.exe assembly's progress.
+The file is located at D:\2PALS\SAC\PALS.PLCWT2GW.InstallLog.
+
+An exception occurred during the Install phase.
+System.InvalidOperationException: Cannot open Service Control Manager on computer '.'. This operation might require other privileges.
+The inner exception System.ComponentModel.Win32Exception was thrown with the following error message: Access is denied.
+
+The Rollback phase of the installation is beginning.
+See the contents of the log file for the D:\2PALS\SAC\PALS.PLCWT2GW.exe assembly's progress.
+The file is located at D:\2PALS\SAC\PALS.PLCWT2GW.InstallLog.
+
+The Rollback phase completed successfully.
+
+The transacted install has completed.
+
+Running a transacted installation.
+
+Beginning the Install phase of the installation.
+See the contents of the log file for the D:\2PALS\SAC\PALS.SortEngine.exe assembly's progress.
+The file is located at D:\2PALS\SAC\PALS.SortEngine.InstallLog.
+
+An exception occurred during the Install phase.
+System.InvalidOperationException: Cannot open Service Control Manager on computer '.'. This operation might require other privileges.
+The inner exception System.ComponentModel.Win32Exception was thrown with the following error message: Access is denied.
+
+The Rollback phase of the installation is beginning.
+See the contents of the log file for the D:\2PALS\SAC\PALS.SortEngine.exe assembly's progress.
+The file is located at D:\2PALS\SAC\PALS.SortEngine.InstallLog.
+
+The Rollback phase completed successfully.
+
+The transacted install has completed.
+
+Running a transacted installation.
+
+Beginning the Install phase of the installation.
+See the contents of the log file for the D:\2PALS\SAC\PALS.SvcMonitor.exe assembly's progress.
+The file is located at D:\2PALS\SAC\PALS.SvcMonitor.InstallLog.
+
+An exception occurred during the Install phase.
+System.InvalidOperationException: Cannot open Service Control Manager on computer '.'. This operation might require other privileges.
+The inner exception System.ComponentModel.Win32Exception was thrown with the following error message: Access is denied.
+
+The Rollback phase of the installation is beginning.
+See the contents of the log file for the D:\2PALS\SAC\PALS.SvcMonitor.exe assembly's progress.
+The file is located at D:\2PALS\SAC\PALS.SvcMonitor.InstallLog.
+
+The Rollback phase completed successfully.
+
+The transacted install has completed.
+
+Running a transacted installation.
+
+Beginning the Install phase of the installation.
+See the contents of the log file for the D:\2PALS\SAC\PALS.SCPLCEM1GW.exe assembly's progress.
+The file is located at D:\2PALS\SAC\PALS.SCPLCEM1GW.InstallLog.
+
+An exception occurred during the Install phase.
+System.InvalidOperationException: Cannot open Service Control Manager on computer '.'. This operation might require other privileges.
+The inner exception System.ComponentModel.Win32Exception was thrown with the following error message: Access is denied.
+
+The Rollback phase of the installation is beginning.
+See the contents of the log file for the D:\2PALS\SAC\PALS.SCPLCEM1GW.exe assembly's progress.
+The file is located at D:\2PALS\SAC\PALS.SCPLCEM1GW.InstallLog.
+
+The Rollback phase completed successfully.
+
+The transacted install has completed.
+
+Running a transacted installation.
+
+Beginning the Install phase of the installation.
+See the contents of the log file for the D:\2PALS\SAC\PALS.SCPLCEM2GW.exe assembly's progress.
+The file is located at D:\2PALS\SAC\PALS.SCPLCEM2GW.InstallLog.
+
+An exception occurred during the Install phase.
+System.InvalidOperationException: Cannot open Service Control Manager on computer '.'. This operation might require other privileges.
+The inner exception System.ComponentModel.Win32Exception was thrown with the following error message: Access is denied.
+
+The Rollback phase of the installation is beginning.
+See the contents of the log file for the D:\2PALS\SAC\PALS.SCPLCEM2GW.exe assembly's progress.
+The file is located at D:\2PALS\SAC\PALS.SCPLCEM2GW.InstallLog.
+
+The Rollback phase completed successfully.
+
+The transacted install has completed.
+
+Running a transacted installation.
+
+Beginning the Install phase of the installation.
+See the contents of the log file for the D:\2PALS\SAC\PALS.SCPLCEM3GW.exe assembly's progress.
+The file is located at D:\2PALS\SAC\PALS.SCPLCEM3GW.InstallLog.
+
+An exception occurred during the Install phase.
+System.InvalidOperationException: Cannot open Service Control Manager on computer '.'. This operation might require other privileges.
+The inner exception System.ComponentModel.Win32Exception was thrown with the following error message: Access is denied.
+
+The Rollback phase of the installation is beginning.
+See the contents of the log file for the D:\2PALS\SAC\PALS.SCPLCEM3GW.exe assembly's progress.
+The file is located at D:\2PALS\SAC\PALS.SCPLCEM3GW.InstallLog.
+
+The Rollback phase completed successfully.
+
+The transacted install has completed.
+
+Running a transacted installation.
+
+Beginning the Install phase of the installation.
+See the contents of the log file for the D:\2PALS\SAC\PALS.SCPLCEM4GW.exe assembly's progress.
+The file is located at D:\2PALS\SAC\PALS.SCPLCEM4GW.InstallLog.
+
+An exception occurred during the Install phase.
+System.InvalidOperationException: Cannot open Service Control Manager on computer '.'. This operation might require other privileges.
+The inner exception System.ComponentModel.Win32Exception was thrown with the following error message: Access is denied.
+
+The Rollback phase of the installation is beginning.
+See the contents of the log file for the D:\2PALS\SAC\PALS.SCPLCEM4GW.exe assembly's progress.
+The file is located at D:\2PALS\SAC\PALS.SCPLCEM4GW.InstallLog.
+
+The Rollback phase completed successfully.
+
+The transacted install has completed.
+
+Running a transacted installation.
+
+Beginning the Install phase of the installation.
+See the contents of the log file for the D:\2PALS\SAC\PALS.SCPLCSM1GW.exe assembly's progress.
+The file is located at D:\2PALS\SAC\PALS.SCPLCSM1GW.InstallLog.
+
+An exception occurred during the Install phase.
+System.InvalidOperationException: Cannot open Service Control Manager on computer '.'. This operation might require other privileges.
+The inner exception System.ComponentModel.Win32Exception was thrown with the following error message: Access is denied.
+
+The Rollback phase of the installation is beginning.
+See the contents of the log file for the D:\2PALS\SAC\PALS.SCPLCSM1GW.exe assembly's progress.
+The file is located at D:\2PALS\SAC\PALS.SCPLCSM1GW.InstallLog.
+
+The Rollback phase completed successfully.
+
+The transacted install has completed.
+
+Running a transacted installation.
+
+Beginning the Install phase of the installation.
+See the contents of the log file for the D:\2PALS\SAC\PALS.SCPLCSM2GW.exe assembly's progress.
+The file is located at D:\2PALS\SAC\PALS.SCPLCSM2GW.InstallLog.
+
+An exception occurred during the Install phase.
+System.InvalidOperationException: Cannot open Service Control Manager on computer '.'. This operation might require other privileges.
+The inner exception System.ComponentModel.Win32Exception was thrown with the following error message: Access is denied.
+
+The Rollback phase of the installation is beginning.
+See the contents of the log file for the D:\2PALS\SAC\PALS.SCPLCSM2GW.exe assembly's progress.
+The file is located at D:\2PALS\SAC\PALS.SCPLCSM2GW.InstallLog.
+
+The Rollback phase completed successfully.
+
+The transacted install has completed.
+
+Running a transacted installation.
+
+Beginning the Install phase of the installation.
+See the contents of the log file for the D:\2PALS\SAC\PALS.SCPLCSM3GW.exe assembly's progress.
+The file is located at D:\2PALS\SAC\PALS.SCPLCSM3GW.InstallLog.
+
+An exception occurred during the Install phase.
+System.InvalidOperationException: Cannot open Service Control Manager on computer '.'. This operation might require other privileges.
+The inner exception System.ComponentModel.Win32Exception was thrown with the following error message: Access is denied.
+
+The Rollback phase of the installation is beginning.
+See the contents of the log file for the D:\2PALS\SAC\PALS.SCPLCSM3GW.exe assembly's progress.
+The file is located at D:\2PALS\SAC\PALS.SCPLCSM3GW.InstallLog.
+
+The Rollback phase completed successfully.
+
+The transacted install has completed.
+
+Running a transacted installation.
+
+Beginning the Install phase of the installation.
+See the contents of the log file for the D:\2PALS\SAC\PALS.SCPLCSM4GW.exe assembly's progress.
+The file is located at D:\2PALS\SAC\PALS.SCPLCSM4GW.InstallLog.
+
+An exception occurred during the Install phase.
+System.InvalidOperationException: Cannot open Service Control Manager on computer '.'. This operation might require other privileges.
+The inner exception System.ComponentModel.Win32Exception was thrown with the following error message: Access is denied.
+
+The Rollback phase of the installation is beginning.
+See the contents of the log file for the D:\2PALS\SAC\PALS.SCPLCSM4GW.exe assembly's progress.
+The file is located at D:\2PALS\SAC\PALS.SCPLCSM4GW.InstallLog.
+
+The Rollback phase completed successfully.
+
+The transacted install has completed.
+
+Running a transacted installation.
+
+Beginning the Install phase of the installation.
+See the contents of the log file for the D:\2PALS\SAC\PALS.SCPLCSM5GW.exe assembly's progress.
+The file is located at D:\2PALS\SAC\PALS.SCPLCSM5GW.InstallLog.
+
+An exception occurred during the Install phase.
+System.InvalidOperationException: Cannot open Service Control Manager on computer '.'. This operation might require other privileges.
+The inner exception System.ComponentModel.Win32Exception was thrown with the following error message: Access is denied.
+
+The Rollback phase of the installation is beginning.
+See the contents of the log file for the D:\2PALS\SAC\PALS.SCPLCSM5GW.exe assembly's progress.
+The file is located at D:\2PALS\SAC\PALS.SCPLCSM5GW.InstallLog.
+
+The Rollback phase completed successfully.
+
+The transacted install has completed.
+
+Running a transacted installation.
+
+Beginning the Install phase of the installation.
+See the contents of the log file for the D:\2PALS\SAC\PALS.SCPLCWM1GW.exe assembly's progress.
+The file is located at D:\2PALS\SAC\PALS.SCPLCWM1GW.InstallLog.
+
+An exception occurred during the Install phase.
+System.InvalidOperationException: Cannot open Service Control Manager on computer '.'. This operation might require other privileges.
+The inner exception System.ComponentModel.Win32Exception was thrown with the following error message: Access is denied.
+
+The Rollback phase of the installation is beginning.
+See the contents of the log file for the D:\2PALS\SAC\PALS.SCPLCWM1GW.exe assembly's progress.
+The file is located at D:\2PALS\SAC\PALS.SCPLCWM1GW.InstallLog.
+
+The Rollback phase completed successfully.
+
+The transacted install has completed.
+
+Running a transacted installation.
+
+Beginning the Install phase of the installation.
+See the contents of the log file for the D:\2PALS\SAC\PALS.SCPLCWM2GW.exe assembly's progress.
+The file is located at D:\2PALS\SAC\PALS.SCPLCWM2GW.InstallLog.
+
+An exception occurred during the Install phase.
+System.InvalidOperationException: Cannot open Service Control Manager on computer '.'. This operation might require other privileges.
+The inner exception System.ComponentModel.Win32Exception was thrown with the following error message: Access is denied.
+
+The Rollback phase of the installation is beginning.
+See the contents of the log file for the D:\2PALS\SAC\PALS.SCPLCWM2GW.exe assembly's progress.
+The file is located at D:\2PALS\SAC\PALS.SCPLCWM2GW.InstallLog.
+
+The Rollback phase completed successfully.
+
+The transacted install has completed.
+
+Running a transacted installation.
+
+Beginning the Install phase of the installation.
+See the contents of the log file for the D:\2PALS\SAC\PALS.SCPLCWM3GW.exe assembly's progress.
+The file is located at D:\2PALS\SAC\PALS.SCPLCWM3GW.InstallLog.
+
+An exception occurred during the Install phase.
+System.InvalidOperationException: Cannot open Service Control Manager on computer '.'. This operation might require other privileges.
+The inner exception System.ComponentModel.Win32Exception was thrown with the following error message: Access is denied.
+
+The Rollback phase of the installation is beginning.
+See the contents of the log file for the D:\2PALS\SAC\PALS.SCPLCWM3GW.exe assembly's progress.
+The file is located at D:\2PALS\SAC\PALS.SCPLCWM3GW.InstallLog.
+
+The Rollback phase completed successfully.
+
+The transacted install has completed.
+
+Running a transacted installation.
+
+Beginning the Install phase of the installation.
+See the contents of the log file for the D:\2PALS\SAC\PALS.SCPLCOS1GW.exe assembly's progress.
+The file is located at D:\2PALS\SAC\PALS.SCPLCOS1GW.InstallLog.
+
+An exception occurred during the Install phase.
+System.InvalidOperationException: Cannot open Service Control Manager on computer '.'. This operation might require other privileges.
+The inner exception System.ComponentModel.Win32Exception was thrown with the following error message: Access is denied.
+
+The Rollback phase of the installation is beginning.
+See the contents of the log file for the D:\2PALS\SAC\PALS.SCPLCOS1GW.exe assembly's progress.
+The file is located at D:\2PALS\SAC\PALS.SCPLCOS1GW.InstallLog.
+
+The Rollback phase completed successfully.
+
+The transacted install has completed.
+
+Running a transacted installation.
+
+Beginning the Install phase of the installation.
+See the contents of the log file for the D:\2PALS\SAC\PALS.PLCEA1GW.exe assembly's progress.
+The file is located at D:\2PALS\SAC\PALS.PLCEA1GW.InstallLog.
+
+An exception occurred during the Install phase.
+System.InvalidOperationException: Cannot open Service Control Manager on computer '.'. This operation might require other privileges.
+The inner exception System.ComponentModel.Win32Exception was thrown with the following error message: Access is denied.
+
+The Rollback phase of the installation is beginning.
+See the contents of the log file for the D:\2PALS\SAC\PALS.PLCEA1GW.exe assembly's progress.
+The file is located at D:\2PALS\SAC\PALS.PLCEA1GW.InstallLog.
+
+The Rollback phase completed successfully.
+
+The transacted install has completed.
+
+Running a transacted installation.
+
+Beginning the Install phase of the installation.
+See the contents of the log file for the D:\2PALS\SAC\PALS.PLCET1GW.exe assembly's progress.
+The file is located at D:\2PALS\SAC\PALS.PLCET1GW.InstallLog.
+
+An exception occurred during the Install phase.
+System.InvalidOperationException: Cannot open Service Control Manager on computer '.'. This operation might require other privileges.
+The inner exception System.ComponentModel.Win32Exception was thrown with the following error message: Access is denied.
+
+The Rollback phase of the installation is beginning.
+See the contents of the log file for the D:\2PALS\SAC\PALS.PLCET1GW.exe assembly's progress.
+The file is located at D:\2PALS\SAC\PALS.PLCET1GW.InstallLog.
+
+The Rollback phase completed successfully.
+
+The transacted install has completed.
+
+Running a transacted installation.
+
+Beginning the Install phase of the installation.
+See the contents of the log file for the D:\2PALS\SAC\PALS.PLCET2GW.exe assembly's progress.
+The file is located at D:\2PALS\SAC\PALS.PLCET2GW.InstallLog.
+
+An exception occurred during the Install phase.
+System.InvalidOperationException: Cannot open Service Control Manager on computer '.'. This operation might require other privileges.
+The inner exception System.ComponentModel.Win32Exception was thrown with the following error message: Access is denied.
+
+The Rollback phase of the installation is beginning.
+See the contents of the log file for the D:\2PALS\SAC\PALS.PLCET2GW.exe assembly's progress.
+The file is located at D:\2PALS\SAC\PALS.PLCET2GW.InstallLog.
+
+The Rollback phase completed successfully.
+
+The transacted install has completed.
+
+Running a transacted installation.
+
+Beginning the Install phase of the installation.
+See the contents of the log file for the D:\2PALS\SAC\PALS.PLCET3GW.exe assembly's progress.
+The file is located at D:\2PALS\SAC\PALS.PLCET3GW.InstallLog.
+
+An exception occurred during the Install phase.
+System.InvalidOperationException: Cannot open Service Control Manager on computer '.'. This operation might require other privileges.
+The inner exception System.ComponentModel.Win32Exception was thrown with the following error message: Access is denied.
+
+The Rollback phase of the installation is beginning.
+See the contents of the log file for the D:\2PALS\SAC\PALS.PLCET3GW.exe assembly's progress.
+The file is located at D:\2PALS\SAC\PALS.PLCET3GW.InstallLog.
+
+The Rollback phase completed successfully.
+
+The transacted install has completed.
+
+Running a transacted installation.
+
+Beginning the Install phase of the installation.
+See the contents of the log file for the D:\2PALS\SAC\PALS.PLCWA1GW.exe assembly's progress.
+The file is located at D:\2PALS\SAC\PALS.PLCWA1GW.InstallLog.
+
+An exception occurred during the Install phase.
+System.InvalidOperationException: Cannot open Service Control Manager on computer '.'. This operation might require other privileges.
+The inner exception System.ComponentModel.Win32Exception was thrown with the following error message: Access is denied.
+
+The Rollback phase of the installation is beginning.
+See the contents of the log file for the D:\2PALS\SAC\PALS.PLCWA1GW.exe assembly's progress.
+The file is located at D:\2PALS\SAC\PALS.PLCWA1GW.InstallLog.
+
+The Rollback phase completed successfully.
+
+The transacted install has completed.
+
+Running a transacted installation.
+
+Beginning the Install phase of the installation.
+See the contents of the log file for the D:\2PALS\SAC\PALS.PLCWA2GW.exe assembly's progress.
+The file is located at D:\2PALS\SAC\PALS.PLCWA2GW.InstallLog.
+
+An exception occurred during the Install phase.
+System.InvalidOperationException: Cannot open Service Control Manager on computer '.'. This operation might require other privileges.
+The inner exception System.ComponentModel.Win32Exception was thrown with the following error message: Access is denied.
+
+The Rollback phase of the installation is beginning.
+See the contents of the log file for the D:\2PALS\SAC\PALS.PLCWA2GW.exe assembly's progress.
+The file is located at D:\2PALS\SAC\PALS.PLCWA2GW.InstallLog.
+
+The Rollback phase completed successfully.
+
+The transacted install has completed.
+
+Running a transacted installation.
+
+Beginning the Install phase of the installation.
+See the contents of the log file for the D:\2PALS\SAC\PALS.PLCWT1GW.exe assembly's progress.
+The file is located at D:\2PALS\SAC\PALS.PLCWT1GW.InstallLog.
+
+An exception occurred during the Install phase.
+System.InvalidOperationException: Cannot open Service Control Manager on computer '.'. This operation might require other privileges.
+The inner exception System.ComponentModel.Win32Exception was thrown with the following error message: Access is denied.
+
+The Rollback phase of the installation is beginning.
+See the contents of the log file for the D:\2PALS\SAC\PALS.PLCWT1GW.exe assembly's progress.
+The file is located at D:\2PALS\SAC\PALS.PLCWT1GW.InstallLog.
+
+The Rollback phase completed successfully.
+
+The transacted install has completed.
+
+Running a transacted installation.
+
+Beginning the Install phase of the installation.
+See the contents of the log file for the D:\2PALS\SAC\PALS.PLCWT2GW.exe assembly's progress.
+The file is located at D:\2PALS\SAC\PALS.PLCWT2GW.InstallLog.
+
+An exception occurred during the Install phase.
+System.InvalidOperationException: Cannot open Service Control Manager on computer '.'. This operation might require other privileges.
+The inner exception System.ComponentModel.Win32Exception was thrown with the following error message: Access is denied.
+
+The Rollback phase of the installation is beginning.
+See the contents of the log file for the D:\2PALS\SAC\PALS.PLCWT2GW.exe assembly's progress.
+The file is located at D:\2PALS\SAC\PALS.PLCWT2GW.InstallLog.
+
+The Rollback phase completed successfully.
+
+The transacted install has completed.
+
+Running a transacted installation.
+
+Beginning the Install phase of the installation.
+See the contents of the log file for the D:\2PALS\SAC\PALS.SortEngine.exe assembly's progress.
+The file is located at D:\2PALS\SAC\PALS.SortEngine.InstallLog.
+
+An exception occurred during the Install phase.
+System.InvalidOperationException: Cannot open Service Control Manager on computer '.'. This operation might require other privileges.
+The inner exception System.ComponentModel.Win32Exception was thrown with the following error message: Access is denied.
+
+The Rollback phase of the installation is beginning.
+See the contents of the log file for the D:\2PALS\SAC\PALS.SortEngine.exe assembly's progress.
+The file is located at D:\2PALS\SAC\PALS.SortEngine.InstallLog.
+
+The Rollback phase completed successfully.
+
+The transacted install has completed.
+
+Running a transacted installation.
+
+Beginning the Install phase of the installation.
+See the contents of the log file for the D:\2PALS\SAC\PALS.SvcMonitor.exe assembly's progress.
+The file is located at D:\2PALS\SAC\PALS.SvcMonitor.InstallLog.
+
+An exception occurred during the Install phase.
+System.InvalidOperationException: Cannot open Service Control Manager on computer '.'. This operation might require other privileges.
+The inner exception System.ComponentModel.Win32Exception was thrown with the following error message: Access is denied.
+
+The Rollback phase of the installation is beginning.
+See the contents of the log file for the D:\2PALS\SAC\PALS.SvcMonitor.exe assembly's progress.
+The file is located at D:\2PALS\SAC\PALS.SvcMonitor.InstallLog.
+
+The Rollback phase completed successfully.
+
+The transacted install has completed.

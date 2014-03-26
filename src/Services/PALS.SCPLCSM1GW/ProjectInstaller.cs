@@ -6,7 +6,7 @@ using System.Configuration.Install;
 using System.Linq;
 
 
-namespace PALS.SCPLCSM1GW
+namespace PALS.PLCSM1GW
 {
     [RunInstaller(true)]
     public partial class ProjectInstaller : Installer

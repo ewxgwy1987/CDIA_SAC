@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<configuration>
+  <!-- This section contains the log4net configuration settings -->
+  <log4net>
+    <!-- Define some output appenders -->
+    <appender name="RollingLogFile" type="log4net.Appender.RollingFileAppender">
+      <param name="File" value="${PALS_LOG}\\SortEngine.log" />
+      <param name="AppendToFile" value="True" />
+      <param name="DatePattern" value=".yyyyMMdd" />
+      <param name="RollingStyle" value="Date" />
+      <layout type="log4net.Layout.PatternLayout">
+        <param name="ConversionPattern" value="%d %-5p - %m%n" />
+      </layout>
+    </appender>
+    <!-- Setup the root category, add the appenders and set the default level -->
+    <root>
+      <!-- Level value can be ALL, DEBUG, INFO, WARN, ERROR, FATAL, OFF -->
+      <level value="ALL" />
+      <appender-ref ref="RollingLogFile" />
+    </root>
+    <!-- Print only messages of level INFO or above in the PALS framework package -->
+    <logger name="PALS.Net.Transports.TCP.TCPServer">
+      <level value="ALL" />
+    </logger>
+    <logger name="PALS.Net.Transports.TCP.TCPClient">
+      <level value="ALL" />
+    </logger>
+    <logger name="PALS.Net.Filters.Frame.Frame">
+      <level value="ALL" />
+    </logger>
+    <logger name="PALS.Net.Filters.Application.AppServer">
+      <level value="ALL" />
+    </logger>
+    <logger name="PALS.Net.Filters.Application.AppClient">
+      <level value="ALL" />
+    </logger>
+    <logger name="PALS.Net.Common.SocketChannel">
+      <level value="INFO" />
+    </logger>
+  </log4net>
+
+  <configSet name="GlobalContext">
+    <appName>SORTENGN</appName>
+    <company>PterisGlobal</company>
+    <department>EST-CSD</department>
+    <author>SCLeong</author>
+  </configSet>
+   
+  <configSet name="PALS.Net.Transports.TCP.TCPClient">
+    <threadInterval>10</threadInterval>
+    <isAutoReconnect>True</isAutoReconnect>
+    <reconnectTimeout>10000</reconnectTimeout>
+    <!--Maximum length of name is 1~8 characters-->
+    <!-- SAC Server 1 IP: 10.200.208.81, PLC01 IP: 10.200.208.135, PLC02 IP: 10.200.208.137, PLC03 IP: 10.200.208.139,
+      PLC04 IP: 10.200.208.141, PLC05 IP: 10.200.208.43, PLC06 IP: 10.200.208.145, PLCHM IP: 10.200.208.147 -->
+    <localNode name="SORTENGN" ip="127.0.0.1" port="0"/>
+    <remoteNodes>
+      <!--SocketConnector object is able to connect to multiple remote TCP servers-->
+      <!--If there are more than one TCP server, just add following server element accordingly-->
+      <!--Maximum length of name is 8 characters-->
+      <server name="MSGROUTE" ip="127.0.0.1" port="26214"/>
+    </remoteNodes>
+  </configSet>
+
+  <configSet name="PALS.Net.Filters.Frame.Frame">
+    <!--Only single character can be used as startMarker, endMarker, and specialMarker-->
+    <startMarker>02</startMarker>
+    <endMarker>03</endMarker>
+    <!--If the character of startMarker or endMarker is included in the outgoing-->
+    <!--data, the specialMarker is required to be prefixed in order to differentiate-->
+    <!--the start or end marker and the actual data character.-->
+    <specialMarker>27</specialMarker>
+    <!--If accumulated incoming telegram length has been more than maxTelegramSize-->
+    <!--(number of byte) but no EndMarker received, all accumulated data will be discarded.-->
+    <maxTelegramSize>10240</maxTelegramSize>
+  </configSet>
+
+  <configSet name="PALS.Net.Filters.Application.AppClient">
+    <threadInterval>100</threadInterval>
+    <!--Maximum length of clientAppCode is 8 characters-->
+    <clientAppCode>SORTENGN</clientAppCode>
+    <!--connectionConfirmTimeout value must bigger than the same parameter of bottom layer (RFC1006)-->
+    <connectionConfirmTimeout>3000</connectionConfirmTimeout>
+    <connectionRequestRetries>3</connectionRequestRetries>
+    <minSequenceNo>1</minSequenceNo>
+    <maxSequenceNo>9999</maxSequenceNo>
+  </configSet>
+
+  <configSet name="PALS.Net.Filters.SignOfLife.SOL">
+    <threadInterval>100</threadInterval>
+    <solSendTimeout>10000</solSendTimeout>
+    <solReceiveTimeout>25000</solReceiveTimeout>
+  </configSet>
+  
+  <configSet name="PALS.Net.Filters.Acknowledge.ACK">
+    <threadInterval>100</threadInterval>
+    <retransmitBufferSize>1</retransmitBufferSize>
+    <retransmitTimeour>3000</retransmitTimeour>
+    <retransmitRetries>3</retransmitRetries>
+  </configSet>
+
+  <configSet name="BHS.Engine.TCPClientChains.Messages.Handlers.MessageHandler">
+    <!-- INTM message (local) sender, max 8 characters-->
+    <sender>SORTENGN</sender>
+    <!-- INTM message (remote) receiver, max 8 characters-->
+    <afai_Receiver>SCPLCSM1</afai_Receiver>
+    <crai_Receiver>SCPLCSM1</crai_Receiver>
+    <fbti_Receiver>SCPLCSM1</fbti_Receiver>
+    <fpti_Receiver>SCPLCSM1</fpti_Receiver>
+    <!-- Enable of sending from SortEngn.  Possible values - TRUE, True, true, FALSE, False, false-->
+    <enable_Sending>True</enable_Sending>
+    <enable_Sending_DLPS>True</enable_Sending_DLPS>
+    <!-- Max records can LicensePlate list up to. Default value - 100-->
+    <dlps_Max_Records>100</dlps_Max_Records>
+    <dlps_Status_Single>00</dlps_Status_Single>
+    <dlps_Status_Duplicate>01</dlps_Status_Duplicate>
+    <!-- Use "," as a seperator if more than one, e.g SF1,SF2-->
+    <dlps_Subscriber_ATR>SF1,SF2</dlps_Subscriber_ATR>
+    <!-- Use "," as separator if more than one, e.g ATR1, ATR2. At where IRD will be reply by SAC. -->
+    <ird_Subscriber>3302,3102</ird_Subscriber>
+    <!-- Enable sending of IRD from SAC Engine -->
+    <enable_Sending_IRD>True</enable_Sending_IRD>
+  </configSet>
+  
+  <configSet name="BHS.Engine.TCPClientChains.DataPersistor.Database.Persistor">
+    <!--Data Source=SACDB, value needs to be changed to actual SQL Server computer name.-->
+    <!--<connectionString>Persist Security Info=False;User ID=sa;Pwd=DBAdm1n@BHS.irel;Initial Catalog=BHSDB_Charlotte;Data Source=CSI-EENIE;Packet Size=4096</connectionString>-->
+    <!--<connectionString>Persist Security Info=False;User ID=sa;Pwd=DBAdm1n@BHS.irel;Initial Catalog=BHSDB;Data Source=CSI-SCLEONG\SQLEXPRESS;Packet Size=4096</connectionString>-->
+	<connectionString>Persist Security Info=False;User ID=sa;Pwd=DBAdm1n@BHS.irel;Initial Catalog=BHSDB;Data Source=SG10031CSD6782;Packet Size=4096</connectionString>
+
+	
+    <stp_SAC_GIDUsed>stp_SAC_GIDUSED</stp_SAC_GIDUsed>    
+    <stp_SAC_ItemScreened>stp_SAC_ITEMSCREENED</stp_SAC_ItemScreened>    
+    <stp_SAC_ItemScanned>stp_SAC_ITEMSCANNED</stp_SAC_ItemScanned>
+    <stp_SAC_ItemSortationEvent>stp_SAC_ITEMSORTATIONEVENT</stp_SAC_ItemSortationEvent>
+    <stp_SAC_ItemProceeded>stp_SAC_ITEMPROCEEDED</stp_SAC_ItemProceeded>
+    <stp_SAC_ItemLost>stp_SAC_ITEMLOST</stp_SAC_ItemLost>
+    <stp_SAC_ItemTrackingInformation>stp_SAC_ITEMTRACKING</stp_SAC_ItemTrackingInformation>
+    <stp_SAC_ItemEncodingRequest>stp_SAC_ITEMENCODINGREQUEST</stp_SAC_ItemEncodingRequest>
+    <stp_SAC_AirportCodeFuncAllocInfomation>stp_SAC_AIRPORTCODEFUNCALLOCINFORMATION</stp_SAC_AirportCodeFuncAllocInfomation>
+    <stp_SAC_BaggageMeasurementArray>stp_SAC_BAGGAGEMEASUREMENTARRAY</stp_SAC_BaggageMeasurementArray>
+    <stp_SAC_CarrierAllocInformation>stp_SAC_CARRIERALLOCINFORMATION</stp_SAC_CarrierAllocInformation>
+    <stp_SAC_FallbackTagInformation>stp_SAC_FALLBACKTAGINFORMATION</stp_SAC_FallbackTagInformation>
+    <stp_SAC_FourPierTagInformation>stp_SAC_FOURPIERTAGINFORMATION</stp_SAC_FourPierTagInformation>
+    <stp_SAC_TwoPierTagInformation>stp_SAC_TWOPIERTAGINFORMATION</stp_SAC_TwoPierTagInformation>
+    <stp_SAC_PVP1000Information>stp_SAC_PVP1000INFORMATION</stp_SAC_PVP1000Information>
+    <stp_SAC_BagStatusDisplayInformation>stp_SAC_BAGSTATUSDISPLAYINFORATION</stp_SAC_BagStatusDisplayInformation>
+    <stp_SAC_ItemRedirect>stp_SAC_ItemRedirect</stp_SAC_ItemRedirect>
+    <stp_SAC_Item1500P>stp_SAC_Item1500P</stp_SAC_Item1500P>
+    <stp_SAC_GetIRDValues>stp_SAC_GetIRDValues</stp_SAC_GetIRDValues>
+    <stp_SAC_GetAllocProp>stp_SAC_GetAllocProp</stp_SAC_GetAllocProp>
+    <stp_SAC_GetIRDValuesMES>stp_SAC_GETIRDVALUES@MES</stp_SAC_GetIRDValuesMES>
+    <stp_SAC_GetIRDValuesISE>stp_SAC_GETIRDVALUES@ISE</stp_SAC_GetIRDValuesISE>
+    <stp_SAC_CheckMUAvailability>stp_SAC_CHECKMUAVAILABILITY</stp_SAC_CheckMUAvailability>
+    <stp_SAC_GETBAGINFO>stp_SAC_GETBAGINFO</stp_SAC_GETBAGINFO>
+    <stp_SAC_CHECKTAGDEST>stp_SAC_CHECKTAGDEST</stp_SAC_CHECKTAGDEST>
+    
+    <stp_SAC_CollectEntireAFAI>stp_SAC_COLLECTENTIREAFAI</stp_SAC_CollectEntireAFAI>
+    <stp_SAC_CollectEntireCRAI>stp_SAC_COLLECTENTIRECRAI</stp_SAC_CollectEntireCRAI>
+    <stp_SAC_CollectEntireFBTI>stp_SAC_COLLECTENTIREFBTI</stp_SAC_CollectEntireFBTI>
+    <stp_SAC_CollectEntireFPTI>stp_SAC_COLLECTENTIREFPTI</stp_SAC_CollectEntireFPTI>
+    <stp_SAC_CollectEntireTPTI>stp_SAC_COLLECTENTIRETPTI</stp_SAC_CollectEntireTPTI>
+    <stp_SAC_CollectChangedCRAI>stp_SAC_COLLECTCHANGEDCRAI</stp_SAC_CollectChangedCRAI>
+    <stp_SAC_CollectChangedFBTI>stp_SAC_COLLECTCHANGEDFBTI</stp_SAC_CollectChangedFBTI>
+    <stp_SAC_CollectChangedFPTI>stp_SAC_COLLECTCHANGEDFPTI</stp_SAC_CollectChangedFPTI>
+    <stp_SAC_CollectChangedTPTI>stp_SAC_COLLECTCHANGEDTPTI</stp_SAC_CollectChangedTPTI>
+    <stp_SAC_CollectChangedTables>stp_SAC_COLLECTCHANGEDTABLES</stp_SAC_CollectChangedTables>
+    <stp_SAC_TagDuplicationCheck>stp_SAC_TAGDUPLICATIONCHECK</stp_SAC_TagDuplicationCheck>
+    <stp_SAC_DuplicationLicensePlateStatus>stp_SAC_DUPLICATELICENSEPLATESTATUS</stp_SAC_DuplicationLicensePlateStatus>
+    
+    <airportCodeDesc>AIRPORT_LOCATION_CODE</airportCodeDesc>
+    <funcAllocation_NOAL>NOAL</funcAllocation_NOAL>
+    <funcAllocation_NOCR>NOCR</funcAllocation_NOCR>
+    <funcAllocation_NORD>NORD</funcAllocation_NORD>
+    <funcAllocation_DUMP>DUMP</funcAllocation_DUMP>
+
+    <table_CarrierLog>TB_AIRLINES</table_CarrierLog>
+    <table_FallbackMapping>TB_FALLBACK_MAPPING</table_FallbackMapping>
+    <table_FourPierTagMapping>TB_FOUR_DIGITS_MAPPING</table_FourPierTagMapping>
+    <table_FunctionAllocList>TB_FUNCTION_ALLOC_LIST</table_FunctionAllocList>
+    <table_SysConfig>TB_SYS_CONFIG</table_SysConfig>
+    <table_TwoPierTagMapping>TB_TWO_PIER_TAG_MAPPING</table_TwoPierTagMapping>
+
+    <!-- Time Interval for Checking [CHANGE_MONITORING] tables in msec-->
+    <polling_Time>3000</polling_Time>
+      
+  </configSet>
+
+</configuration>

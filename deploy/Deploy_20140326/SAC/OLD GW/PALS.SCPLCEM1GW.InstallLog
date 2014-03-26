@@ -1,0 +1,149 @@
+﻿Installing assembly 'C:\PterisGlobal\PALS\SAC\PALS.SCPLCEM1GW.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = C:\PterisGlobal\PALS\SAC\PALS.SCPLCEM1GW.InstallLog
+   assemblypath = C:\PterisGlobal\PALS\SAC\PALS.SCPLCEM1GW.exe
+Installing service PALS.SCPLCEM1GW...
+Service PALS.SCPLCEM1GW has been successfully installed.
+Creating EventLog source PALS.SCPLCEM1GW in log Application...
+Committing assembly 'C:\PterisGlobal\PALS\SAC\PALS.SCPLCEM1GW.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = C:\PterisGlobal\PALS\SAC\PALS.SCPLCEM1GW.InstallLog
+   assemblypath = C:\PterisGlobal\PALS\SAC\PALS.SCPLCEM1GW.exe
+Installing assembly 'C:\PterisGlobal\PALS\SAC\PALS.SCPLCEM1GW.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = C:\PterisGlobal\PALS\SAC\PALS.SCPLCEM1GW.InstallLog
+   assemblypath = C:\PterisGlobal\PALS\SAC\PALS.SCPLCEM1GW.exe
+Installing service PALS.SCPLCEM1GW...
+Creating EventLog source PALS.SCPLCEM1GW in log Application...
+Rolling back assembly 'C:\PterisGlobal\PALS\SAC\PALS.SCPLCEM1GW.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = C:\PterisGlobal\PALS\SAC\PALS.SCPLCEM1GW.InstallLog
+   assemblypath = C:\PterisGlobal\PALS\SAC\PALS.SCPLCEM1GW.exe
+Restoring event log to previous state for source PALS.SCPLCEM1GW.
+Installing assembly 'C:\PterisGlobal\PALS\SAC\PALS.SCPLCEM1GW.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = C:\PterisGlobal\PALS\SAC\PALS.SCPLCEM1GW.InstallLog
+   assemblypath = C:\PterisGlobal\PALS\SAC\PALS.SCPLCEM1GW.exe
+Installing service PALS.SCPLCEM1GW...
+Service PALS.SCPLCEM1GW has been successfully installed.
+Creating EventLog source PALS.SCPLCEM1GW in log Application...
+Committing assembly 'C:\PterisGlobal\PALS\SAC\PALS.SCPLCEM1GW.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = C:\PterisGlobal\PALS\SAC\PALS.SCPLCEM1GW.InstallLog
+   assemblypath = C:\PterisGlobal\PALS\SAC\PALS.SCPLCEM1GW.exe
+Installing assembly 'D:\2PALS\SAC\PALS.SCPLCEM1GW.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = D:\2PALS\SAC\PALS.SCPLCEM1GW.InstallLog
+   assemblypath = D:\2PALS\SAC\PALS.SCPLCEM1GW.exe
+Installing service PALS.SCPLCEM1GW...
+Creating EventLog source PALS.SCPLCEM1GW in log Application...
+Rolling back assembly 'D:\2PALS\SAC\PALS.SCPLCEM1GW.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = D:\2PALS\SAC\PALS.SCPLCEM1GW.InstallLog
+   assemblypath = D:\2PALS\SAC\PALS.SCPLCEM1GW.exe
+Restoring event log to previous state for source PALS.SCPLCEM1GW.
+An exception occurred during the Rollback phase of the System.Diagnostics.EventLogInstaller installer.
+System.Security.SecurityException: The source was not found, but some or all event logs could not be searched.  Inaccessible logs: Security.
+An exception occurred during the Rollback phase of the installation. This exception will be ignored and the rollback will continue. However, the machine might not fully revert to its initial state after the rollback is complete.
+Installing assembly 'D:\2PALS\SAC\PALS.SCPLCEM1GW.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = D:\2PALS\SAC\PALS.SCPLCEM1GW.InstallLog
+   assemblypath = D:\2PALS\SAC\PALS.SCPLCEM1GW.exe
+Installing service PALS.SCPLCEM1GW...
+Creating EventLog source PALS.SCPLCEM1GW in log Application...
+Rolling back assembly 'D:\2PALS\SAC\PALS.SCPLCEM1GW.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = D:\2PALS\SAC\PALS.SCPLCEM1GW.InstallLog
+   assemblypath = D:\2PALS\SAC\PALS.SCPLCEM1GW.exe
+Restoring event log to previous state for source PALS.SCPLCEM1GW.
+An exception occurred during the Rollback phase of the System.Diagnostics.EventLogInstaller installer.
+System.Security.SecurityException: The source was not found, but some or all event logs could not be searched.  Inaccessible logs: Security.
+An exception occurred during the Rollback phase of the installation. This exception will be ignored and the rollback will continue. However, the machine might not fully revert to its initial state after the rollback is complete.
+Installing assembly 'D:\2PALS\SAC\PALS.SCPLCEM1GW.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = D:\2PALS\SAC\PALS.SCPLCEM1GW.InstallLog
+   assemblypath = D:\2PALS\SAC\PALS.SCPLCEM1GW.exe
+Installing service PALS.SCPLCEM1GW...
+Service PALS.SCPLCEM1GW has been successfully installed.
+Creating EventLog source PALS.SCPLCEM1GW in log Application...
+Committing assembly 'D:\2PALS\SAC\PALS.SCPLCEM1GW.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = D:\2PALS\SAC\PALS.SCPLCEM1GW.InstallLog
+   assemblypath = D:\2PALS\SAC\PALS.SCPLCEM1GW.exe
+Installing assembly 'D:\2PALS\SAC\PALS.SCPLCEM1GW.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = D:\2PALS\SAC\PALS.SCPLCEM1GW.InstallLog
+   assemblypath = D:\2PALS\SAC\PALS.SCPLCEM1GW.exe
+Installing service PALS.SCPLCEM1GW...
+Creating EventLog source PALS.SCPLCEM1GW in log Application...
+Rolling back assembly 'D:\2PALS\SAC\PALS.SCPLCEM1GW.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = D:\2PALS\SAC\PALS.SCPLCEM1GW.InstallLog
+   assemblypath = D:\2PALS\SAC\PALS.SCPLCEM1GW.exe
+Restoring event log to previous state for source PALS.SCPLCEM1GW.
+Installing assembly 'D:\2PALS\SAC\PALS.SCPLCEM1GW.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = D:\2PALS\SAC\PALS.SCPLCEM1GW.InstallLog
+   assemblypath = D:\2PALS\SAC\PALS.SCPLCEM1GW.exe
+Installing service PALS.SCPLCEM1GW...
+Creating EventLog source PALS.SCPLCEM1GW in log Application...
+Rolling back assembly 'D:\2PALS\SAC\PALS.SCPLCEM1GW.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = D:\2PALS\SAC\PALS.SCPLCEM1GW.InstallLog
+   assemblypath = D:\2PALS\SAC\PALS.SCPLCEM1GW.exe
+Restoring event log to previous state for source PALS.SCPLCEM1GW.
+Installing assembly 'D:\2PALS\SAC\PALS.SCPLCEM1GW.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = D:\2PALS\SAC\PALS.SCPLCEM1GW.InstallLog
+   assemblypath = D:\2PALS\SAC\PALS.SCPLCEM1GW.exe
+Installing service PALS.SCPLCEM1GW...
+Creating EventLog source PALS.SCPLCEM1GW in log Application...
+Rolling back assembly 'D:\2PALS\SAC\PALS.SCPLCEM1GW.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = D:\2PALS\SAC\PALS.SCPLCEM1GW.InstallLog
+   assemblypath = D:\2PALS\SAC\PALS.SCPLCEM1GW.exe
+Restoring event log to previous state for source PALS.SCPLCEM1GW.
+Installing assembly 'D:\2PALS\SAC\PALS.SCPLCEM1GW.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = D:\2PALS\SAC\PALS.SCPLCEM1GW.InstallLog
+   assemblypath = D:\2PALS\SAC\PALS.SCPLCEM1GW.exe
+Installing service PALS.SCPLCEM1GW...
+Creating EventLog source PALS.SCPLCEM1GW in log Application...
+Rolling back assembly 'D:\2PALS\SAC\PALS.SCPLCEM1GW.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = D:\2PALS\SAC\PALS.SCPLCEM1GW.InstallLog
+   assemblypath = D:\2PALS\SAC\PALS.SCPLCEM1GW.exe
+Restoring event log to previous state for source PALS.SCPLCEM1GW.
+Installing assembly 'D:\2PALS\SAC\PALS.SCPLCEM1GW.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = D:\2PALS\SAC\PALS.SCPLCEM1GW.InstallLog
+   assemblypath = D:\2PALS\SAC\PALS.SCPLCEM1GW.exe
+Installing service PALS.SCPLCEM1GW...
+Creating EventLog source PALS.SCPLCEM1GW in log Application...
+Rolling back assembly 'D:\2PALS\SAC\PALS.SCPLCEM1GW.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = D:\2PALS\SAC\PALS.SCPLCEM1GW.InstallLog
+   assemblypath = D:\2PALS\SAC\PALS.SCPLCEM1GW.exe
+Restoring event log to previous state for source PALS.SCPLCEM1GW.

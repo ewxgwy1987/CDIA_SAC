@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<configuration>
+  <!-- This section contains the log4net configuration settings -->
+  <log4net>
+    <!-- Define some output appenders -->
+    <appender name="RollingLogFile" type="log4net.Appender.RollingFileAppender">
+      <param name="File" value="${PALS_LOG}\\SCPLCEM2.log" />
+      <param name="AppendToFile" value="True" />
+      <param name="DatePattern" value=".yyyyMMdd" />
+      <param name="RollingStyle" value="Date" />
+      <layout type="log4net.Layout.PatternLayout">
+        <param name="ConversionPattern" value="%d %-5p - %m%n" />
+      </layout>
+    </appender>
+    <!-- Setup the root category, add the appenders and set the default level -->
+    <root>
+      <!-- Level value can be ALL, DEBUG, INFO, WARN, ERROR, FATAL, OFF -->
+      <level value="ALL" />
+      <appender-ref ref="RollingLogFile" />
+    </root>
+    <!-- Print only messages of level INFO or above in the PALS framework package -->
+    <logger name="PALS.Net.Transports.TCP.TCPServer">
+      <level value="ALL" />
+    </logger>
+    <logger name="PALS.Net.Transports.TCP.TCPClient">
+      <level value="ALL" />
+    </logger>
+    <logger name="PALS.Net.Filters.Frame.Frame">
+      <level value="ALL" />
+    </logger>
+    <logger name="PALS.Net.Filters.Application.AppServer">
+      <level value="ALL" />
+    </logger>
+    <logger name="PALS.Net.Filters.Application.AppClient">
+      <level value="ALL" />
+    </logger>
+    <logger name="PALS.Net.Common.SocketChannel">
+      <level value="ALL" />
+    </logger>
+  </log4net>
+
+  <configSet name="GlobalContext">
+    <appName>SCPLCEM2</appName>
+    <company>PterisGlobal</company>
+    <department>CSI</department>
+    <author>SCLeong</author>
+  </configSet>
+
+  <configSet name="[Channel:GW2Internal]PALS.Net.Transports.TCP.TCPClient">
+    <threadInterval>10</threadInterval>
+    <!-- valid values: True or False -->
+    <isAutoReconnect>True</isAutoReconnect>
+    <reconnectTimeout>10000</reconnectTimeout>
+    <!--Maximum length of name is 1~8 characters-->
+    <!-- SAC Server 1 IP: 10.200.207.81, PLC01 IP: 10.200.207.129 -->
+    <localNode name="SCPLCEM2" ip="10.0.10.24" port="0"/>
+    <remoteNodes>
+      <!--SocketConnector object is able to connect to multiple remote TCP servers-->
+      <!--If there are more than one TCP server, just add following server element accordingly-->
+      <!--Maximum length of name is 8 characters-->
+      <!-- SAC Server 1 IP: 10.200.207.81, PLC01 IP: 10.200.207.129 -->
+      <server name="MSGROUTE" ip="10.0.10.24" port="26214"/>
+    </remoteNodes>
+  </configSet>
+
+  <configSet name="[Channel:GW2External]PALS.Net.Transports.TCP.TCPServerClient">
+    <!-- ChannelPath defines the direction of message transmission.  -->
+    <!-- 0: via TCP Server channel, 1: via TCP Client channgel, 2: both Server & Client channels can have own in & out messages-->
+    <incomingChannelPath>2</incomingChannelPath>
+    <outgoingChannelPath>2</outgoingChannelPath>
+
+    <configSet name="TCPServer">
+      <threadInterval>10</threadInterval>
+      <!-- SAC Server 1 IP: 10.200.207.81, PLC01 IP: 10.200.207.129 -->
+      <localNode name="SCPLCEM2" ip="10.0.10.24" port="44820"/>
+      <!--The minimum allowed client connections must be 1, only one remote TCP client is allowed to connect to current SAC2PLCGW service.-->
+      <maxConnections>1</maxConnections>
+    </configSet>
+    <configSet name="TCPClient">
+      <threadInterval>10</threadInterval>
+      <isAutoReconnect>True</isAutoReconnect>
+      <reconnectTimeout>20000</reconnectTimeout>
+      <!--Maximum length of name is 1~8 characters-->
+      <localNode name="SCPLCEM2" ip="10.0.10.24" port="0"/>
+      <remoteNodes>
+        <!--Maximum length of name is 8 characters-->
+        <server name="PLCEM2" ip="10.0.10.213" port="44818"/>
+      </remoteNodes>
+    </configSet>
+  </configSet>
+
+  <configSet name="PALS.Net.Filters.EIPCIP.EIP">
+    <!-- Socket connection will be closed if -
+         1) no RegisterSession Request received TCP connection has been opened for 5sec;
+         2) no RegisterSession Reply returned from remote after Request has been sent for 5sec.-->
+    <registerSessionTimeout>5000</registerSessionTimeout>
+    <!-- SenderContext = SCPLCEM2, Array of 8 USINT -->
+    <senderContext>83,65,67,50,80,76,67,49</senderContext>
+    <!-- Success status value = 0x0000, 4-byte integer -->
+    <successStatus>0,0,0,0</successStatus>
+    <!-- Unsupported EIP command status value = 0x0001 -->
+    <unsupportedCmdStatus>0,0,0,1</unsupportedCmdStatus>
+    <maximumDataFieldLength>1024</maximumDataFieldLength>
+  </configSet>
+
+  <configSet name="PALS.Net.Filters.EIPCIP.CIP">
+    <!-- outgoingQueueCapacity: the capacity of CIP class internal outgoing queue to buffer Table Write 
+         Request messages. The next TWRQ message needs to be buffered in the queue to wait for TWRS (Response)
+         of last TWRQ message before it can be sent out. Default: 100  -->
+    <outgoingQueueCapacity>1500</outgoingQueueCapacity>
+    <!-- EIP and Socket connection will be closed if -
+         1) no Fwd_Open Request received after EIP connection has been opened for 5sec;
+         2) no Fwd_Open Response returned from remote after Request has been sent for 5sec.-->
+    <cipConnectionTimeout>5000</cipConnectionTimeout>
+    <!-- retriesForResponse: Resend times of CIP Connected message before close the CIP connection
+         because no response is returned from Target. Default: 1 -->
+    <retriesForResponse>3</retriesForResponse>
+    <!-- Success value of CIP General Status = 0x00, 1 byte integer -->
+    <successStatus>0</successStatus>
+    <!-- tableWriteSymbolPath: The default Tag name defined in the remote node to receive the 
+         data table write messages from SAC2PLCGW Service. SAC-COM1: TAG_PLC1, SAC-COM2: TAG_PLC2 -->
+    <tableWriteSymbolPath>TAG_PLC1</tableWriteSymbolPath>
+    <!-- If SAC send message to PLC too fast, PLC could miss receiving some of them. Hence, the 
+         message sending delay is implemented in SAC and it can be enabled by setting below. -->
+    <enableSendingDelay>True</enableSendingDelay>
+    <!-- the CIP Data Table Write Request sending delay time in milisecond. its value should be within 10~100ms. Default is 10ms. -->
+    <sendingDelayTime>10</sendingDelayTime>
+    <!-- the CIP Data Table Write Response sending delay time in milisecond. its value should be within 0~100ms. Default is 50ms. -->
+    <sendingCIPResponseDelayTime>50</sendingCIPResponseDelayTime>
+  </configSet>
+
+  <configSet name="PALS.Net.Filters.Frame.Frame">
+    <!--Only single character can be used as startMarker, endMarker, and specialMarker-->
+    <startMarker>02</startMarker>
+    <endMarker>03</endMarker>
+    <!--If the character of startMarker or endMarker is included in the outgoing-->
+    <!--data, the specialMarker is required to be prefixed in order to differentiate-->
+    <!--the start or end marker and the actual data character.-->
+    <specialMarker>27</specialMarker>
+    <!--If accumulated incoming telegram length has been more than maxTelegramSize-->
+    <!--(number of byte) but no EndMarker received, all accumulated data will be discarded.-->
+    <maxTelegramSize>10240</maxTelegramSize>
+  </configSet>
+
+  <configSet name="[Channel:GW2Internal]PALS.Net.Filters.Application.AppClient">
+    <threadInterval>100</threadInterval>
+    <!--Maximum length of clientAppCode is 8 characters-->
+    <clientAppCode>SCPLCEM2</clientAppCode>
+    <!--connectionConfirmTimeout value must bigger than the same parameter of bottom layer (RFC1006)-->
+    <connectionConfirmTimeout>3000</connectionConfirmTimeout>
+    <connectionRequestRetries>3</connectionRequestRetries>
+    <minSequenceNo>1</minSequenceNo>
+    <maxSequenceNo>9999</maxSequenceNo>
+  </configSet>
+
+  <configSet name="[Channel:GW2External]PALS.Net.Filters.Application.AppClient">
+    <threadInterval>100</threadInterval>
+    <!--Maximum length of clientAppCode is 8 characters-->
+    <clientAppCode>SCPLCEM2</clientAppCode>
+    <!--connectionConfirmTimeout value must bigger than the same parameter of bottom layer (RFC1006)-->
+    <connectionConfirmTimeout>3000</connectionConfirmTimeout>
+    <connectionRequestRetries>3</connectionRequestRetries>
+    <minSequenceNo>1</minSequenceNo>
+    <maxSequenceNo>9999</maxSequenceNo>
+  </configSet>
+  
+  <configSet name="[Channel:GW2Internal]PALS.Net.Filters.SignOfLife.SOL">
+    <threadInterval>100</threadInterval>
+    <solSendTimeout>10000</solSendTimeout>
+    <solReceiveTimeout>25000</solReceiveTimeout>
+  </configSet>
+
+  <configSet name="[Channel:GW2External]PALS.Net.Filters.SignOfLife.SOL">
+    <threadInterval>100</threadInterval>
+    <solSendTimeout>10000</solSendTimeout>
+    <solReceiveTimeout>35000</solReceiveTimeout>
+  </configSet>
+ 
+  <configSet name="PALS.Net.Filters.TimeSynchronizing.TimeSync">
+    <!--threadInterval value must >=1000 (1 second) and <timeSyncInterval value -->
+    <threadInterval>1000</threadInterval>
+    <!--timeSyncInterval value must >=60000 (10 minutes) -->
+    <timeSyncInterval>3600000</timeSyncInterval>
+    <!-- (y)Year, (M)Month, (d)Day, (h)Hour, (m)Minute, (s)Second, (f)Millisecond-->
+    <dateTimeFormat>yyyyMMdd-HHmmssfff</dateTimeFormat>
+  </configSet>
+  
+  <configSet name="PALS.Net.Filters.Acknowledge.ACK">
+    <threadInterval>100</threadInterval>
+    <retransmitBufferSize>1</retransmitBufferSize>
+    <retransmitTimeour>3000</retransmitTimeour>
+    <retransmitRetries>3</retransmitRetries>
+  </configSet>
+
+  <configSet name="BHS.Gateway.TCPClientTCPClientChains.Messages.Handlers.MessageHandler">
+    <!-- INTM message (local) sender, max 8 characters-->
+    <sender>SCPLCEM2</sender>
+    <!-- INTM message (remote) receiver, max 8 characters-->
+    <receiver>SORTENGN</receiver>
+  </configSet>
+
+</configuration>

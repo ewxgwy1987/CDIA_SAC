@@ -1,0 +1,93 @@
+<!--SAC SvcMonitor Service Application Configuration-->
+<application name="SvcMonitor">
+	<!--Configuration Parameters that are divided into different configSet-->
+	<configSet name="BHS.ServiceMonitor.Application.Initializer">
+		<!--Generate Application Information-->
+		<company>Pteris Global</company>
+		<department>CSI</department>
+		<author>HSChia</author>
+	</configSet>
+	<!-- This section contains the log4net configuration settings -->
+	<log4net>
+		<!-- Define some output appenders -->
+		<appender name="RollingLogFileAppender" type="log4net.Appender.RollingFileAppender">
+			<param name="File" value="${PALS_LOG}\\SvcMonitor.log" />
+			<param name="AppendToFile" value="True" />
+			<param name="DatePattern" value=".yyyyMMdd" />
+			<param name="RollingStyle" value="Date" />
+			<layout type="log4net.Layout.PatternLayout">
+				<param name="ConversionPattern" value="%d %-5p - %m%n" />
+			</layout>
+		</appender>
+		<!-- Setup the root category, add the appenders and set the default level -->
+		<root>
+			<!-- Level value can be ALL, DEBUG, INFO, WARN, ERROR, FATAL, OFF -->
+			<level value="INFO" />
+			<appender-ref ref="RollingLogFileAppender" />
+		</root>
+	</log4net>		
+	<configSet name="BHS.ServiceMonitor.Monitoring.Monitor">
+		<threadInterval>3000</threadInterval>
+		<svcRestartTimeDelay>60000</svcRestartTimeDelay>
+		<perfMonTimerInterval>60000</perfMonTimerInterval>
+		<enableServiceControl>True</enableServiceControl>
+		<!--Machine and services that need to be monitored/controlled by this service-->
+		<!--PALS.SvcMonitor can also monitor or control (Start/Stop) itself by add its entry here-->
+		<!--PALS.SvcMonitor can start or stop services if its isControllable is True. The start/stop-->
+		<!--sequence will follow the running sequence as this list. So PALS.SvcMonitor service-->
+		<!--must be put as the last one in this list.-->
+    <service serviceName="PALS.MessageRouter" processName="PALS.MessageRouter" machineName="SACCOM01" serverIP="10.0.10.24" isControllable="True"></service>
+    <service serviceName="PALS.SortEngine" processName="PALS.SortEngine" machineName="SACCOM01" serverIP="10.0.10.24" isControllable="True"></service>
+    <service serviceName="PALS.SCPLCEM1GW" processName="PALS.SCPLCEM1GW" machineName="SACCOM01" serverIP="10.0.10.24" isControllable="True"></service>
+ 		<service serviceName="PALS.SCPLCEM2GW" processName="PALS.SCPLCEM2GW" machineName="SACCOM01" serverIP="10.0.10.24" isControllable="True"></service>
+ 		<service serviceName="PALS.SCPLCEM3GW" processName="PALS.SCPLCEM3GW" machineName="SACCOM01" serverIP="10.0.10.24" isControllable="True"></service>
+ 		<service serviceName="PALS.SCPLCEM4GW" processName="PALS.SCPLCEM4GW" machineName="SACCOM01" serverIP="10.0.10.24" isControllable="True"></service>
+    <service serviceName="PALS.SCPLCOS1GW" processName="PALS.SCPLCOS1GW" machineName="SACCOM01" serverIP="10.0.10.24" isControllable="True"></service>
+    <service serviceName="PALS.SCPLCSM1GW" processName="PALS.SCPLCSM1GW" machineName="SACCOM01" serverIP="10.0.10.24" isControllable="True"></service>
+    <service serviceName="PALS.SCPLCSM2GW" processName="PALS.SCPLCSM2GW" machineName="SACCOM01" serverIP="10.0.10.24" isControllable="True"></service>
+    <service serviceName="PALS.SCPLCSM3GW" processName="PALS.SCPLCSM3GW" machineName="SACCOM01" serverIP="10.0.10.24" isControllable="True"></service>
+    <service serviceName="PALS.SCPLCSM4GW" processName="PALS.SCPLCSM4GW" machineName="SACCOM01" serverIP="10.0.10.24" isControllable="True"></service>
+    <service serviceName="PALS.SCPLCSM5GW" processName="PALS.SCPLCSM5GW" machineName="SACCOM01" serverIP="10.0.10.24" isControllable="True"></service>
+    <service serviceName="PALS.SCPLCWM1GW" processName="PALS.SCPLCWM1GW" machineName="SACCOM01" serverIP="10.0.10.24" isControllable="True"></service>
+    <service serviceName="PALS.SCPLCWM2GW" processName="PALS.SCPLCWM2GW" machineName="SACCOM01" serverIP="10.0.10.24" isControllable="True"></service>
+    <service serviceName="PALS.SCPLCWM3GW" processName="PALS.SCPLCWM3GW" machineName="SACCOM01" serverIP="10.0.10.24" isControllable="True"></service>
+    <service serviceName="PALS.SvcMonitor" processName="PALS.SvcMonitor" machineName="SACCOM01" serverIP="10.0.10.24" isControllable="True"></service>
+	</configSet>		
+	<configSet name="PALS.Net.Transports.TCP.TCPServer">
+		<threadInterval>10</threadInterval>
+    <!-- SAC Server 1 IP: 10.200.208.81, PLC01 IP: 10.200.208.135, PLC02 IP: 10.200.208.137, PLC03 IP: 10.200.208.139,
+      PLC04 IP: 10.200.208.141, PLC05 IP: 10.200.208.43, PLC06 IP: 10.200.208.145, PLCHM IP: 10.200.208.147 -->
+    <localNode name="SvcMontr" ip="10.0.10.24" port="24042"/>
+		<!--The minimum allowed client connections must be 2, one for bussiness data forwarding, another for console connection.-->
+		<maxConnections>3</maxConnections>
+	</configSet>
+	<configSet name="PALS.Net.Filters.Frame.Frame">
+		<!--Only single character can be used as startMarker, endMarker, and specialMarker-->
+		<startMarker>02</startMarker>
+		<endMarker>03</endMarker>
+		<!--If the character of startMarker or endMarker is included in the outgoing-->
+		<!--data, the specialMarker is required to be prefixed in order to differentiate-->
+		<!--the start or end marker and the actual data character.-->
+		<specialMarker>27</specialMarker>
+		<!--If accumulated incoming telegram length has been more than maxTelegramSize-->
+		<!--(number of byte) but no EndMarker received, all accumulated data will be discarded.-->
+		<maxTelegramSize>10240</maxTelegramSize>
+	</configSet>
+	<configSet name="PALS.Net.Filters.Application.AppServer">
+		<threadInterval>100</threadInterval>
+		<connectionRequestTimeout>3000</connectionRequestTimeout>
+		<minSequenceNo>1</minSequenceNo>
+		<maxSequenceNo>9999</maxSequenceNo>
+		<clients>
+			<!--The max length of client application code is 8.-->
+			<appCode>SCPLCEM1</appCode>
+			<appCode>SCPLCEM2</appCode>
+		</clients>
+	</configSet>
+	<configSet name="PALS.Net.Filters.SignOfLife.SOL">
+		<threadInterval>100</threadInterval>
+		<solSendTimeout>10000</solSendTimeout>
+		<solReceiveTimeout>25000</solReceiveTimeout>
+	</configSet>	
+
+</application>

@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<configuration>
+  <!-- This section contains the log4net configuration settings -->
+  <log4net>
+    <!-- Define some output appenders -->
+    <appender name="RollingLogFile" type="log4net.Appender.RollingFileAppender">
+      <param name="File" value="${PALS_LOG}\\MsgRouter.log" />
+      <param name="AppendToFile" value="True" />
+      <param name="DatePattern" value=".yyyyMMdd" />
+      <param name="RollingStyle" value="Date" />
+      <layout type="log4net.Layout.PatternLayout">
+        <param name="ConversionPattern" value="%d %-5p - %m%n" />
+      </layout>
+    </appender>
+    <!-- Setup the root category, add the appenders and set the default level -->
+    <root>
+      <!-- Level value can be ALL, DEBUG, INFO, WARN, ERROR, FATAL, OFF -->
+      <level value="ALL" />
+      <appender-ref ref="RollingLogFile" />
+    </root>
+    <!-- Print only messages of level INFO or above in the PALS framework package -->
+    <logger name="PALS.Net.Transports.TCP.TCPServer">
+      <level value="INFO" />
+    </logger>
+    <logger name="PALS.Net.Filters.Frame.Frame">
+      <level value="INFO" />
+    </logger>
+    <logger name="PALS.Net.Filters.Application.AppServer">
+      <level value="INFO" />
+    </logger>
+    <logger name="PALS.Net.Common.SocketChannel">
+      <level value="INFO" />
+    </logger>    
+  </log4net>
+
+  <configSet name="GlobalContext">
+    <appName>MessageRouter</appName>
+    <company>PterisGlobal</company>
+    <department>CSI</department>
+    <author>XuJian</author>
+  </configSet>
+
+  <configSet name="PALS.Net.Transports.TCP.TCPServer">
+    <threadInterval>10</threadInterval>
+    <!--SAC-COM Svr IP: ?, CCTV Svr IP: ? -->
+    <!--Maximum length of name is 8 characters, port: 0x6666 (Dec 26214)-->
+    <localNode name="MSGROUTE" ip="127.0.0.1" port="26214"/>
+    <!--The minimum allowed TCP connections. Subsequence TCPClient connection request will be rejected if this limites is exceeded.-->
+    <maxConnections>10</maxConnections>
+  </configSet>
+
+  <configSet name="PALS.Net.Filters.Frame.Frame">
+    <!--Only single character can be used as startMarker, endMarker, and specialMarker-->
+    <startMarker>02</startMarker>
+    <endMarker>03</endMarker>
+    <!--If the character of startMarker or endMarker is included in the outgoing-->
+    <!--data, the specialMarker is required to be prefixed in order to differentiate-->
+    <!--the start or end marker and the actual data character.-->
+    <specialMarker>27</specialMarker>
+    <!--If accumulated incoming telegram length has been more than maxTelegramSize-->
+    <!--(number of byte) but no EndMarker received, all accumulated data will be discarded.-->
+    <maxTelegramSize>10240</maxTelegramSize>
+  </configSet>
+
+  <configSet name="PALS.Net.Filters.Application.AppServer">
+    <threadInterval>100</threadInterval>
+    <connectionRequestTimeout>3000</connectionRequestTimeout>
+    <minSequenceNo>1</minSequenceNo>
+    <maxSequenceNo>9999</maxSequenceNo>
+    <clients>
+      <!--The max length of client application code is 8.-->
+      <!--<appCode>PLCGW</appCode>-->
+      <appCode>SORTENGN</appCode>     
+      <appCode>SCPLCEM1</appCode>
+	  <appCode>SCPLCEM2</appCode>
+      <appCode>SCPLCEM3</appCode>
+      <appCode>SCPLCEM4</appCode>
+      <appCode>SCPLCSM1</appCode> 
+      <appCode>SCPLCSM2</appCode>
+      <appCode>SCPLCSM3</appCode>
+      <appCode>SCPLCSM4</appCode> 
+      <appCode>SCPLCSM5</appCode>
+      <appCode>SCPLCWM1</appCode>
+      <appCode>SCPLCWM2</appCode>
+      <appCode>SCPLCWM3</appCode>
+      <appCode>SCPLCOS1</appCode>
+	  
+	  <appCode>PLCEA1GW</appCode>
+	  <appCode>PLCET1GW</appCode>
+	  <appCode>PLCET2GW</appCode>
+	  <appCode>PLCET3GW</appCode>
+	  <appCode>PLCWA1GW</appCode>
+	  <appCode>PLCWA2GW</appCode>
+	  <appCode>PLCWT1GW</appCode>
+	  <appCode>PLCWT2GW</appCode>
+    </clients>
+  </configSet>
+
+  <configSet name="PALS.Net.Filters.SignOfLife.SOL">
+    <threadInterval>100</threadInterval>
+    <solSendTimeout>10000</solSendTimeout>
+    <solReceiveTimeout>25000</solReceiveTimeout>
+  </configSet>
+
+  <configSet name="PALS.Net.Filters.Acknowledge.ACK">
+    <threadInterval>100</threadInterval>
+    <retransmitBufferSize>1</retransmitBufferSize>
+    <retransmitTimeour>3000</retransmitTimeour>
+    <retransmitRetries>3</retransmitRetries>
+  </configSet>
+
+
+  <configSet name="PALS.Net.Filters.Redundancy.Coordinator">
+    <!-- Via Coordinator filter class, MessageRouter can treat two (2) application layer connections initiated 
+         by 2 remote application client as one pair redundant connections. One redundant pair connections has 
+         one common name (application code), and each individual connection of redundant pair has own application 
+         code too. Depend on the outgoing rule setting, MR could send all outgoing message via primary connection
+         only, or secondary connection only, or via both connections. -->
+    <comms>
+      <!-- common - The common channel name of one redundant APP connection pair; 
+           primary - The channel name of primary connection of redundant pair; 
+           secondary - The channel name of secondary connection of redundant pair;
+           route -     0 - send outgoing message to both primary & secondary connections;
+                       1 - only send outgoing message via primary connection; 
+                       2 - only send outgoing message via secondary connection. -->
+      <!-- Common name must be unique in the comms list. And anyone of common, primary and secondary names 
+           can only be registered once. In other words, one single connection can only belong to one 
+           redundant pair. Each redundant pair could have own route settings for outgoing message. -->
+      <!-- Just remove all [comm] XML nodes if there is no any redundant pair need to be defined. -->
+      <comm common="ENGN1A2B" primary="ENGN1A" secondary="ENGN2B" route="1"/>
+      <comm common="ENGN2A1B" primary="ENGN2A" secondary="ENGN1B" route="1"/>
+    </comms>
+  </configSet>
+  <!-- 0001, CRQ - Connection Request Message -->
+  <!-- 0002, CCF - Connection Confirm Message -->
+  <!-- 0101, SRQ - Running Status Request Message -->
+  <!-- 0103, INTM - Intermediate Message -->
+  <!-- 0301, MAAV - MDS Alarm Activated Message -->
+  <!-- 0302, MANL - MDS Alarm Normalized Message -->
+  <!-- 0303, MSDC - MDS Spot Display Command Message -->
+  <!-- 0304, CSRP - CCTV Status Report Message -->
+  <!-- 0305, CANL - CCTV Alarm Normalized Message -->
+  <!-- 0090, SOL - Sign-of-life (Keep-Alive) Message -->
+  <!-- 0099, ACK - Acknowledge Message -->
+  <configSet name="BHS.Router.TCPServerChains.Messages.Handlers.MessageHandler">
+    <!--INTM message (local) sender, max 8 characters-->
+    <sender>MSGROUTE</sender>
+    <!--
+        Registered remote nodes and its subscribed messages.
+        1. node name must be same as the remote node client application code name, as registered 
+           in the "PALS.Net.Filters.Application.AppServer" configSet.
+        2. Multiple messages need to be separated by comma. MessageRouter routes the incoming 
+           message to all subscribed nodes.
+        3. Remote node is not allowed to open the connection to MessageRouter if its depending
+           node has not yet connected to MessageRouter.
+        4. When one node lost the connection to MessageRouter, then the connections between its
+           affecting nodes and MessageRouter will close immediately by MessageRouter.
+        5. <dependingNode> and <affectingNode> could contain more than one node name with the 
+           separation by comma. 
+        6. <dependingNode> and <affectingNode> can not point to application itself.
+        7. If one node name has been assigned to <dependingNode>, then it is not allowed to be 
+           reassigned to <affectingNode> any more.
+        8. <dependingNode> and <affectingNode> can be omitted in the XML configuration. If do so,
+           the empty string will be assigned to them.
+    -->
+    <nodes>
+      <node>
+        <name>SORTENGN</name>
+        <message></message>
+        <dependingNodes></dependingNodes>
+        <affectingNodes>SCPLCEM1,SCPLCEM2,SCPLCEM3,SCPLCEM4,SCPLCSM1,SCPLCSM2,SCPLCSM3,SCPLCSM4,SCPLCSM5,SCPLCWM1,SCPLCWM2,SCPLCWM3,SCPLCOS1,PLCEA1GW,PLCET1GW,PLCET2GW,PLCET3GW,PLCWA1GW,PLCWA2GW,PLCWT1GW,PLCWT2GW</affectingNodes>    
+      </node>
+      <node>
+        <name>SCPLCEM1</name>
+        <message></message>
+        <dependingNodes>SORTENGN</dependingNodes>
+        <affectingNodes></affectingNodes>    
+      </node>
+      <node>
+        <name>SCPLCEM2</name>
+        <message></message>
+        <dependingNodes>SORTENGN</dependingNodes>
+        <affectingNodes></affectingNodes>    
+      </node>
+      <node>
+        <name>SCPLCEM3</name>
+        <message></message>
+        <dependingNodes>SORTENGN</dependingNodes>
+        <affectingNodes></affectingNodes>    
+      </node>
+      <node>
+        <name>SCPLCEM4</name>
+        <message></message>
+        <dependingNodes>SORTENGN</dependingNodes>
+        <affectingNodes></affectingNodes>    
+      </node>
+      <node>
+        <name>SCPLCSM1</name>
+        <message></message>
+        <dependingNodes>SORTENGN</dependingNodes>
+        <affectingNodes></affectingNodes>    
+      </node>
+      <node>
+        <name>SCPLCSM2</name>
+        <message></message>
+        <dependingNodes>SORTENGN</dependingNodes>
+        <affectingNodes></affectingNodes>    
+      </node>
+      <node>
+        <name>SCPLCSM3</name>
+        <message></message>
+        <dependingNodes>SORTENGN</dependingNodes>
+        <affectingNodes></affectingNodes>    
+      </node>
+      <node>
+        <name>SCPLCSM4</name>
+        <message></message>
+        <dependingNodes>SORTENGN</dependingNodes>
+        <affectingNodes></affectingNodes>    
+      </node>
+      <node>
+        <name>SCPLCSM5</name>
+        <message></message>
+        <dependingNodes>SORTENGN</dependingNodes>
+        <affectingNodes></affectingNodes>    
+      </node>
+      <node>
+        <name>SCPLCWM1</name>
+        <message></message>
+        <dependingNodes>SORTENGN</dependingNodes>
+        <affectingNodes></affectingNodes>    
+      </node>
+      <node>
+        <name>SCPLCWM2</name>
+        <message></message>
+        <dependingNodes>SORTENGN</dependingNodes>
+        <affectingNodes></affectingNodes>    
+      </node>
+      <node>
+        <name>SCPLCWM3</name>
+        <message></message>
+        <dependingNodes>SORTENGN</dependingNodes>
+        <affectingNodes></affectingNodes>    
+      </node>
+      <node>
+        <name>SCPLCOS1</name>
+        <message></message>
+        <dependingNodes>SORTENGN</dependingNodes>
+        <affectingNodes></affectingNodes>    
+      </node>
+	  
+	  <!--Additional 8 PLCs-->
+	  <node>
+        <name>PLCEA1GW</name>
+        <message></message>
+        <dependingNodes>SORTENGN</dependingNodes>
+        <affectingNodes></affectingNodes>    
+      </node>
+	  <node>
+        <name>PLCET1GW</name>
+        <message></message>
+        <dependingNodes>SORTENGN</dependingNodes>
+        <affectingNodes></affectingNodes>    
+      </node>
+	  <node>
+        <name>PLCET2GW</name>
+        <message></message>
+        <dependingNodes>SORTENGN</dependingNodes>
+        <affectingNodes></affectingNodes>    
+      </node>
+	  <node>
+        <name>PLCET3GW</name>
+        <message></message>
+        <dependingNodes>SORTENGN</dependingNodes>
+        <affectingNodes></affectingNodes>    
+      </node>
+	  <node>
+        <name>PLCWA1GW</name>
+        <message></message>
+        <dependingNodes>SORTENGN</dependingNodes>
+        <affectingNodes></affectingNodes>    
+      </node>
+	  <node>
+        <name>PLCWA2GW</name>
+        <message></message>
+        <dependingNodes>SORTENGN</dependingNodes>
+        <affectingNodes></affectingNodes>    
+      </node>
+	  <node>
+        <name>PLCWT1GW</name>
+        <message></message>
+        <dependingNodes>SORTENGN</dependingNodes>
+        <affectingNodes></affectingNodes>    
+      </node>
+	  <node>
+        <name>PLCWT2GW</name>
+        <message></message>
+        <dependingNodes>SORTENGN</dependingNodes>
+        <affectingNodes></affectingNodes>    
+      </node>
+    </nodes>  
+		
+  </configSet>
+
+</configuration>

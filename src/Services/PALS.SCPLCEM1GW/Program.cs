@@ -4,7 +4,7 @@ using System.Linq;
 using System.ServiceProcess;
 using System.Text;
 
-namespace PALS.SCPLCEM1GW
+namespace PALS.PLCEM1GW
 {
     static class Program
     {
@@ -17,7 +17,7 @@ namespace PALS.SCPLCEM1GW
             ServiceBase[] ServicesToRun;
             ServicesToRun = new ServiceBase[]
             {
-                new SCPLCEM1GW()
+                new PLCEM1GW()
             };
             ServiceBase.Run(ServicesToRun);
         }

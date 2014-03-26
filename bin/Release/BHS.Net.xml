@@ -6,123 +6,7 @@ BHS.Net
 </name>
 </assembly>
 <members>
-<member name="P:BHS.Net.ServiceMonitor.Configure.GlobalContext.Company">
-	<summary>
-  Company name
-  </summary>
-</member><member name="P:BHS.Net.ServiceMonitor.Configure.GlobalContext.Department">
-	<summary>
-  Department name
-  </summary>
-</member><member name="P:BHS.Net.ServiceMonitor.Configure.GlobalContext.Author">
-	<summary>
-  Author name
-  </summary>
-</member><member name="P:BHS.Net.ServiceMonitor.Configure.GlobalContext.AppName">
-	<summary>
-  AppName name
-  </summary>
-</member><member name="P:BHS.Net.ServiceMonitor.Configure.GlobalContext.AppStartedTime">
-	<summary>
-  AppName name
-  </summary>
-</member><member name="F:BHS.Net.ServiceMonitor.Configure.XmlSettingLoader.DESIRED_NUMBER_OF_CFG_FILES">
- there are total 3 XML configuration files required by SortEng application: 
- CFG_SortEngine.xml - application settings 
- CFG_Telegrams.xml - application telegram format definations.
- CFG_BHSConfig.xml - application Public Parameter Settings.
-
-</member><member name="F:BHS.Net.ServiceMonitor.Configure.XmlSettingLoader.XML_CONFIGSET">
- XMLNode name of configuration sets.
-
-</member><member name="F:BHS.Net.ServiceMonitor.Configure.XmlSettingLoader._className">
- The name of current class 
-
-</member><member name="F:BHS.Net.ServiceMonitor.Configure.XmlSettingLoader._logger">
- Create a logger for use in this class
-
-</member><member name="P:BHS.Net.ServiceMonitor.Configure.XmlSettingLoader.Parameters_GlobalContext">
- AppInitializer parameter classes variables for storing application settings loaded from configuration file.
- In order to prevent the overwriting the existing system settings stored in the gloabl parameter variables  
- due to the failure of reloading configuration file, the loaded parameters shall be stored into
- the temporary variables and only assign to global parameter variables is the loading successed.
-
-</member><member name="M:BHS.Net.ServiceMonitor.Configure.XmlSettingLoader.LoadSettingFromConfigFile(System.Boolean,System.IO.FileInfo[])">
-	<summary>
- This class method is the place to centralize the loading of application settings from 
- configuration file. 
- <para>
- The actual implementation of IConfigurationLoader interface method LoadSettingFromConfigFile(). 
- This method will be invoked by AppConfigurator class.
- </para>
-		<para>
- If the parameter isReloading = true, the interface implemented LoadSettingFromConfigFile() 
- may raise a event after all settings have been reloaded successfully, to inform application 
- that the reloading setting has been done. So application can take the necessary actions
- to take effective of new settings.
- </para>
-		<para>
- Decode XML configuration file and load application settings shall be done by this method.
- </para>
-	</summary>
-	<param name="isReloading">
- If the parameter isReloading = true, the interface implemented LoadSettingFromConfigFile() 
- may raise a event after all settings have been reloaded successfully, to inform application 
- that the reloading setting has been done. So application can take the necessary actions
- to take effective of new settings.
- </param>
-	<param name="cfgFiles">
- params type method argument, represents one or more configuration files.
- </param>
-</member><member name="E:BHS.Net.ServiceMonitor.Configure.XmlSettingLoader.ReloadSettingCompleted">
-	<summary>
- Event will be raised when reload setting from changed configuration 
- file is successfully completed.
- </summary>
-</member><member name="P:BHS.Net.My.Resources.Resources.ResourceManager">
-	<summary>
-  Returns the cached ResourceManager instance used by this class.
-</summary>
-</member><member name="P:BHS.Net.My.Resources.Resources.Culture">
-	<summary>
-  Overrides the current thread's CurrentUICulture property for all
-  resource lookups using this strongly typed resource class.
-</summary>
-</member><member name="T:BHS.Net.My.Resources.Resources">
-	<summary>
-  A strongly-typed resource class, for looking up localized strings, etc.
-</summary>
-</member><member name="M:BHS.Net.ServiceMonitor.Net.Handlers.ServerMsgForwarder.Send(PALS.Telegrams.Telegram@)">
-	<para>Outgoing message which is passed to MessageCollector.Send() method will
- be forwarded down to the communication channel that was specified in the 
- ChannelName property of the message. 
- 
- If there is not any ChannelName was given to this property, then the message
- will be sent to all opened channels whose ChannelName was in the class
- internal Opened channel list.</para>
-</member><member name="T:BHS.Net.ServiceMonitor.Net.Handlers.ServerMsgForwarder">
- -----------------------------------------------------------------------------
- Project	 : DBT2_BHS
- Class	 : ServiceMonitor.Net.Handlers.ServerMsgForwarder
- 
- -----------------------------------------------------------------------------
- <summary>
- Intermedia class between its top layer business data handler class 
- (DBT2_BHS.SortEngine.Application.MessageHandler) and its bottom layer network
- communication protocol chain classes. This class itself is the most top
- class in the protocol chain classes. It receives the incoming message from 
- its bottom chain class by its MessageReceived() method. And then forwards the 
- received incoming message to MessageHandler class by event firing 
- (OnReceived event). 
- </summary>
-	<remarks>
-	</remarks>
-	<history>
- 	[xujian]	12/19/2005	Created
- </history>
- -----------------------------------------------------------------------------
-
-</member><member name="P:BHS.Net.ServiceMonitor.Application.Initializer.PerfMonitor">
+<member name="P:BHS.Net.ServiceMonitor.Application.Initializer.PerfMonitor">
  -----------------------------------------------------------------------------
  <summary>
  Class property to return the ClassStatus object of current class.
@@ -173,6 +57,67 @@ BHS.Net
  </history>
  -----------------------------------------------------------------------------
 
+</member><member name="M:BHS.Net.ServiceMonitor.Net.Handlers.ServerMsgForwarder.Send(PALS.Telegrams.Telegram@)">
+	<para>Outgoing message which is passed to MessageCollector.Send() method will
+ be forwarded down to the communication channel that was specified in the 
+ ChannelName property of the message. 
+ 
+ If there is not any ChannelName was given to this property, then the message
+ will be sent to all opened channels whose ChannelName was in the class
+ internal Opened channel list.</para>
+</member><member name="T:BHS.Net.ServiceMonitor.Net.Handlers.ServerMsgForwarder">
+ -----------------------------------------------------------------------------
+ Project	 : DBT2_BHS
+ Class	 : ServiceMonitor.Net.Handlers.ServerMsgForwarder
+ 
+ -----------------------------------------------------------------------------
+ <summary>
+ Intermedia class between its top layer business data handler class 
+ (DBT2_BHS.SortEngine.Application.MessageHandler) and its bottom layer network
+ communication protocol chain classes. This class itself is the most top
+ class in the protocol chain classes. It receives the incoming message from 
+ its bottom chain class by its MessageReceived() method. And then forwards the 
+ received incoming message to MessageHandler class by event firing 
+ (OnReceived event). 
+ </summary>
+	<remarks>
+	</remarks>
+	<history>
+ 	[xujian]	12/19/2005	Created
+ </history>
+ -----------------------------------------------------------------------------
+
+</member><member name="M:BHS.Net.Utilities.LocationIDArrayToString(BHS.Net.LocationID[]@)">
+	<summary>
+ Convert LocationID structure object array to "Location1/Subsystem1, Location2/Subsystem2, ..."
+ format string for display purpose.
+ 
+ </summary>
+	<param name="Locations"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:BHS.Net.Utilities.BagTagDecoding(System.String,System.String)">
+	<summary>
+ Decode a 10-digit IATA code into a Tag structure object:
+ Public Structure Tag
+     Dim LP As String
+     Dim Valid As Boolean
+     Dim Type As TagType
+     Dim Airline As String
+     Dim Location As String
+     Dim Destination As String
+ End Structure
+ 
+ Tag.Type will indicate this bag tag is Fallback Tag or Normal IATA License Plate Tag.
+ Tag.Valid will indicate whether the Fallback tag is valid or invalid (the airport location
+ code in the 10-digit code is not identical to the specific airport location code (given by 
+ the function argument: AirportLocationCode).
+ If it is IATA tag, then  the Tag.Valid field value will alwasy be True.
+ </summary>
+	<param name="LicensePlate"></param>
+	<param name="AirportLocationCode"></param>
+	<returns></returns>
+	<remarks></remarks>
 </member><member name="P:BHS.Net.ServiceMonitor.Application.MessageHandler.ServerForwarder">
  -----------------------------------------------------------------------------
  <summary>
@@ -283,37 +228,92 @@ BHS.Net
  </history>
  -----------------------------------------------------------------------------
 
-</member><member name="M:BHS.Net.Utilities.LocationIDArrayToString(BHS.Net.LocationID[]@)">
+</member><member name="P:BHS.Net.ServiceMonitor.Configure.GlobalContext.Company">
 	<summary>
- Convert LocationID structure object array to "Location1/Subsystem1, Location2/Subsystem2, ..."
- format string for display purpose.
- 
- </summary>
-	<param name="Locations"></param>
-	<returns></returns>
-	<remarks></remarks>
-</member><member name="M:BHS.Net.Utilities.BagTagDecoding(System.String,System.String)">
+  Company name
+  </summary>
+</member><member name="P:BHS.Net.ServiceMonitor.Configure.GlobalContext.Department">
 	<summary>
- Decode a 10-digit IATA code into a Tag structure object:
- Public Structure Tag
-     Dim LP As String
-     Dim Valid As Boolean
-     Dim Type As TagType
-     Dim Airline As String
-     Dim Location As String
-     Dim Destination As String
- End Structure
- 
- Tag.Type will indicate this bag tag is Fallback Tag or Normal IATA License Plate Tag.
- Tag.Valid will indicate whether the Fallback tag is valid or invalid (the airport location
- code in the 10-digit code is not identical to the specific airport location code (given by 
- the function argument: AirportLocationCode).
- If it is IATA tag, then  the Tag.Valid field value will alwasy be True.
+  Department name
+  </summary>
+</member><member name="P:BHS.Net.ServiceMonitor.Configure.GlobalContext.Author">
+	<summary>
+  Author name
+  </summary>
+</member><member name="P:BHS.Net.ServiceMonitor.Configure.GlobalContext.AppName">
+	<summary>
+  AppName name
+  </summary>
+</member><member name="P:BHS.Net.ServiceMonitor.Configure.GlobalContext.AppStartedTime">
+	<summary>
+  AppName name
+  </summary>
+</member><member name="P:BHS.Net.My.Resources.Resources.ResourceManager">
+	<summary>
+  Returns the cached ResourceManager instance used by this class.
+</summary>
+</member><member name="P:BHS.Net.My.Resources.Resources.Culture">
+	<summary>
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
+</summary>
+</member><member name="T:BHS.Net.My.Resources.Resources">
+	<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
+</member><member name="F:BHS.Net.ServiceMonitor.Configure.XmlSettingLoader.DESIRED_NUMBER_OF_CFG_FILES">
+ there are total 3 XML configuration files required by SortEng application: 
+ CFG_SortEngine.xml - application settings 
+ CFG_Telegrams.xml - application telegram format definations.
+ CFG_BHSConfig.xml - application Public Parameter Settings.
+
+</member><member name="F:BHS.Net.ServiceMonitor.Configure.XmlSettingLoader.XML_CONFIGSET">
+ XMLNode name of configuration sets.
+
+</member><member name="F:BHS.Net.ServiceMonitor.Configure.XmlSettingLoader._className">
+ The name of current class 
+
+</member><member name="F:BHS.Net.ServiceMonitor.Configure.XmlSettingLoader._logger">
+ Create a logger for use in this class
+
+</member><member name="P:BHS.Net.ServiceMonitor.Configure.XmlSettingLoader.Parameters_GlobalContext">
+ AppInitializer parameter classes variables for storing application settings loaded from configuration file.
+ In order to prevent the overwriting the existing system settings stored in the gloabl parameter variables  
+ due to the failure of reloading configuration file, the loaded parameters shall be stored into
+ the temporary variables and only assign to global parameter variables is the loading successed.
+
+</member><member name="M:BHS.Net.ServiceMonitor.Configure.XmlSettingLoader.LoadSettingFromConfigFile(System.Boolean,System.IO.FileInfo[])">
+	<summary>
+ This class method is the place to centralize the loading of application settings from 
+ configuration file. 
+ <para>
+ The actual implementation of IConfigurationLoader interface method LoadSettingFromConfigFile(). 
+ This method will be invoked by AppConfigurator class.
+ </para>
+		<para>
+ If the parameter isReloading = true, the interface implemented LoadSettingFromConfigFile() 
+ may raise a event after all settings have been reloaded successfully, to inform application 
+ that the reloading setting has been done. So application can take the necessary actions
+ to take effective of new settings.
+ </para>
+		<para>
+ Decode XML configuration file and load application settings shall be done by this method.
+ </para>
+	</summary>
+	<param name="isReloading">
+ If the parameter isReloading = true, the interface implemented LoadSettingFromConfigFile() 
+ may raise a event after all settings have been reloaded successfully, to inform application 
+ that the reloading setting has been done. So application can take the necessary actions
+ to take effective of new settings.
+ </param>
+	<param name="cfgFiles">
+ params type method argument, represents one or more configuration files.
+ </param>
+</member><member name="E:BHS.Net.ServiceMonitor.Configure.XmlSettingLoader.ReloadSettingCompleted">
+	<summary>
+ Event will be raised when reload setting from changed configuration 
+ file is successfully completed.
  </summary>
-	<param name="LicensePlate"></param>
-	<param name="AirportLocationCode"></param>
-	<returns></returns>
-	<remarks></remarks>
 </member>
 </members>
 </doc>

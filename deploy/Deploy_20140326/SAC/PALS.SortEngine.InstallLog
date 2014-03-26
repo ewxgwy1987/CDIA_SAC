@@ -1,0 +1,188 @@
+﻿Installing assembly 'C:\PterisGlobal\PALS\SAC\PALS.SortEngine.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = C:\PterisGlobal\PALS\SAC\PALS.SortEngine.InstallLog
+   assemblypath = C:\PterisGlobal\PALS\SAC\PALS.SortEngine.exe
+Installing service PALS.SortEngine...
+Service PALS.SortEngine has been successfully installed.
+Creating EventLog source PALS.SortEngine in log Application...
+Committing assembly 'C:\PterisGlobal\PALS\SAC\PALS.SortEngine.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = C:\PterisGlobal\PALS\SAC\PALS.SortEngine.InstallLog
+   assemblypath = C:\PterisGlobal\PALS\SAC\PALS.SortEngine.exe
+Installing assembly 'C:\PterisGlobal\PALS\SAC\PALS.SortEngine.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = C:\PterisGlobal\PALS\SAC\PALS.SortEngine.InstallLog
+   assemblypath = C:\PterisGlobal\PALS\SAC\PALS.SortEngine.exe
+Installing service PALS.SortEngine...
+Creating EventLog source PALS.SortEngine in log Application...
+Rolling back assembly 'C:\PterisGlobal\PALS\SAC\PALS.SortEngine.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = C:\PterisGlobal\PALS\SAC\PALS.SortEngine.InstallLog
+   assemblypath = C:\PterisGlobal\PALS\SAC\PALS.SortEngine.exe
+Restoring event log to previous state for source PALS.SortEngine.
+Installing assembly 'C:\PterisGlobal\PALS\SAC\PALS.SortEngine.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = C:\PterisGlobal\PALS\SAC\PALS.SortEngine.InstallLog
+   assemblypath = C:\PterisGlobal\PALS\SAC\PALS.SortEngine.exe
+Installing service PALS.SortEngine...
+Creating EventLog source PALS.SortEngine in log Application...
+Rolling back assembly 'C:\PterisGlobal\PALS\SAC\PALS.SortEngine.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = C:\PterisGlobal\PALS\SAC\PALS.SortEngine.InstallLog
+   assemblypath = C:\PterisGlobal\PALS\SAC\PALS.SortEngine.exe
+Restoring event log to previous state for source PALS.SortEngine.
+Installing assembly 'C:\PterisGlobal\PALS\SAC\PALS.SortEngine.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = C:\PterisGlobal\PALS\SAC\PALS.SortEngine.InstallLog
+   assemblypath = C:\PterisGlobal\PALS\SAC\PALS.SortEngine.exe
+Installing service PALS.SortEngine...
+Creating EventLog source PALS.SortEngine in log Application...
+Rolling back assembly 'C:\PterisGlobal\PALS\SAC\PALS.SortEngine.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = C:\PterisGlobal\PALS\SAC\PALS.SortEngine.InstallLog
+   assemblypath = C:\PterisGlobal\PALS\SAC\PALS.SortEngine.exe
+Restoring event log to previous state for source PALS.SortEngine.
+Installing assembly 'C:\PterisGlobal\PALS\SAC\PALS.SortEngine.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = C:\PterisGlobal\PALS\SAC\PALS.SortEngine.InstallLog
+   assemblypath = C:\PterisGlobal\PALS\SAC\PALS.SortEngine.exe
+Installing service PALS.SortEngine...
+Service PALS.SortEngine has been successfully installed.
+Creating EventLog source PALS.SortEngine in log Application...
+Committing assembly 'C:\PterisGlobal\PALS\SAC\PALS.SortEngine.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = C:\PterisGlobal\PALS\SAC\PALS.SortEngine.InstallLog
+   assemblypath = C:\PterisGlobal\PALS\SAC\PALS.SortEngine.exe
+Installing assembly 'D:\2PALS\SAC\PALS.SortEngine.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = D:\2PALS\SAC\PALS.SortEngine.InstallLog
+   assemblypath = D:\2PALS\SAC\PALS.SortEngine.exe
+Installing service PALS.SortEngine...
+Creating EventLog source PALS.SortEngine in log Application...
+Rolling back assembly 'D:\2PALS\SAC\PALS.SortEngine.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = D:\2PALS\SAC\PALS.SortEngine.InstallLog
+   assemblypath = D:\2PALS\SAC\PALS.SortEngine.exe
+Restoring event log to previous state for source PALS.SortEngine.
+An exception occurred during the Rollback phase of the System.Diagnostics.EventLogInstaller installer.
+System.Security.SecurityException: The source was not found, but some or all event logs could not be searched.  Inaccessible logs: Security.
+An exception occurred during the Rollback phase of the installation. This exception will be ignored and the rollback will continue. However, the machine might not fully revert to its initial state after the rollback is complete.
+Installing assembly 'D:\2PALS\SAC\PALS.SortEngine.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = D:\2PALS\SAC\PALS.SortEngine.InstallLog
+   assemblypath = D:\2PALS\SAC\PALS.SortEngine.exe
+Installing service PALS.SortEngine...
+Creating EventLog source PALS.SortEngine in log Application...
+Rolling back assembly 'D:\2PALS\SAC\PALS.SortEngine.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = D:\2PALS\SAC\PALS.SortEngine.InstallLog
+   assemblypath = D:\2PALS\SAC\PALS.SortEngine.exe
+Restoring event log to previous state for source PALS.SortEngine.
+An exception occurred during the Rollback phase of the System.Diagnostics.EventLogInstaller installer.
+System.Security.SecurityException: The source was not found, but some or all event logs could not be searched.  Inaccessible logs: Security.
+An exception occurred during the Rollback phase of the installation. This exception will be ignored and the rollback will continue. However, the machine might not fully revert to its initial state after the rollback is complete.
+Installing assembly 'D:\2PALS\SAC\PALS.SortEngine.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = D:\2PALS\SAC\PALS.SortEngine.InstallLog
+   assemblypath = D:\2PALS\SAC\PALS.SortEngine.exe
+Installing service PALS.SortEngine...
+Service PALS.SortEngine has been successfully installed.
+Creating EventLog source PALS.SortEngine in log Application...
+Committing assembly 'D:\2PALS\SAC\PALS.SortEngine.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = D:\2PALS\SAC\PALS.SortEngine.InstallLog
+   assemblypath = D:\2PALS\SAC\PALS.SortEngine.exe
+Installing assembly 'D:\2PALS\SAC\PALS.SortEngine.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = D:\2PALS\SAC\PALS.SortEngine.InstallLog
+   assemblypath = D:\2PALS\SAC\PALS.SortEngine.exe
+Installing service PALS.SortEngine...
+Creating EventLog source PALS.SortEngine in log Application...
+Rolling back assembly 'D:\2PALS\SAC\PALS.SortEngine.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = D:\2PALS\SAC\PALS.SortEngine.InstallLog
+   assemblypath = D:\2PALS\SAC\PALS.SortEngine.exe
+Restoring event log to previous state for source PALS.SortEngine.
+Installing assembly 'D:\2PALS\SAC\PALS.SortEngine.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = D:\2PALS\SAC\PALS.SortEngine.InstallLog
+   assemblypath = D:\2PALS\SAC\PALS.SortEngine.exe
+Installing service PALS.SortEngine...
+Creating EventLog source PALS.SortEngine in log Application...
+Rolling back assembly 'D:\2PALS\SAC\PALS.SortEngine.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = D:\2PALS\SAC\PALS.SortEngine.InstallLog
+   assemblypath = D:\2PALS\SAC\PALS.SortEngine.exe
+Restoring event log to previous state for source PALS.SortEngine.
+Installing assembly 'D:\2PALS\SAC\PALS.SortEngine.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = D:\2PALS\SAC\PALS.SortEngine.InstallLog
+   assemblypath = D:\2PALS\SAC\PALS.SortEngine.exe
+Installing service PALS.SortEngine...
+Creating EventLog source PALS.SortEngine in log Application...
+Rolling back assembly 'D:\2PALS\SAC\PALS.SortEngine.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = D:\2PALS\SAC\PALS.SortEngine.InstallLog
+   assemblypath = D:\2PALS\SAC\PALS.SortEngine.exe
+Restoring event log to previous state for source PALS.SortEngine.
+Installing assembly 'D:\2PALS\SAC\PALS.SortEngine.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = D:\2PALS\SAC\PALS.SortEngine.InstallLog
+   assemblypath = D:\2PALS\SAC\PALS.SortEngine.exe
+Installing service PALS.SortEngine...
+Creating EventLog source PALS.SortEngine in log Application...
+Rolling back assembly 'D:\2PALS\SAC\PALS.SortEngine.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = D:\2PALS\SAC\PALS.SortEngine.InstallLog
+   assemblypath = D:\2PALS\SAC\PALS.SortEngine.exe
+Restoring event log to previous state for source PALS.SortEngine.
+Installing assembly 'D:\2PALS\SAC\PALS.SortEngine.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = D:\2PALS\SAC\PALS.SortEngine.InstallLog
+   assemblypath = D:\2PALS\SAC\PALS.SortEngine.exe
+Installing service PALS.SortEngine...
+Creating EventLog source PALS.SortEngine in log Application...
+Rolling back assembly 'D:\2PALS\SAC\PALS.SortEngine.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = D:\2PALS\SAC\PALS.SortEngine.InstallLog
+   assemblypath = D:\2PALS\SAC\PALS.SortEngine.exe
+Restoring event log to previous state for source PALS.SortEngine.
+Installing assembly 'D:\2PALS\SAC\PALS.SortEngine.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = D:\2PALS\SAC\PALS.SortEngine.InstallLog
+   assemblypath = D:\2PALS\SAC\PALS.SortEngine.exe
+Installing service PALS.SortEngine...
+Service PALS.SortEngine has been successfully installed.
+Creating EventLog source PALS.SortEngine in log Application...
+Committing assembly 'D:\2PALS\SAC\PALS.SortEngine.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = D:\2PALS\SAC\PALS.SortEngine.InstallLog
+   assemblypath = D:\2PALS\SAC\PALS.SortEngine.exe

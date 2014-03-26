@@ -1,4 +1,4 @@
-﻿namespace PALS.SCPLCEM4GW
+﻿namespace PALS.PLCEM4GW
 {
     partial class ProjectInstaller
     {
@@ -33,7 +33,7 @@
             // 
             // serviceInstaller1
             // 
-            this.serviceInstaller1.ServiceName = "PALS.SCPLCEM4GW";
+            this.serviceInstaller1.ServiceName = "PALS.PLCEM4GW";
             this.serviceInstaller1.ServicesDependedOn = new string[] {
         "PALS.MessageRouter"};
             // 
