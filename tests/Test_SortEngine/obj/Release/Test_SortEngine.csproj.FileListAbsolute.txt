@@ -15,3 +15,17 @@ D:\8. Projects\PSHIA_SAC\tests\Test_SortEngine\obj\Release\Test_CCTVEngine.exe
 D:\8. Projects\PSHIA_SAC\tests\Test_SortEngine\obj\Release\Test_CCTVEngine.pdb
 D:\8. Projects\5. Phoenix\Sources Code\PSHIA_SAC\tests\Test_SortEngine\obj\Release\Test_CCTVEngine.exe
 D:\8. Projects\5. Phoenix\Sources Code\PSHIA_SAC\tests\Test_SortEngine\obj\Release\Test_CCTVEngine.pdb
+D:\1Pteris Global Ltd\GUO WENYU\projects\US charlotte\SAC\CDIA_SAC\tests\Test_SortEngine\obj\Release\Test_CCTVEngine.exe
+D:\1Pteris Global Ltd\GUO WENYU\projects\US charlotte\SAC\CDIA_SAC\tests\Test_SortEngine\obj\Release\Test_CCTVEngine.pdb
+D:\1Pteris Global Ltd\GUO WENYU\projects\US charlotte\SAC\CDIA_SAC\tests\Test_SortEngine\bin\Release\Test_CCTVEngine.exe
+D:\1Pteris Global Ltd\GUO WENYU\projects\US charlotte\SAC\CDIA_SAC\tests\Test_SortEngine\bin\Release\Test_CCTVEngine.pdb
+D:\1Pteris Global Ltd\GUO WENYU\projects\US charlotte\SAC\CDIA_SAC\tests\Test_SortEngine\bin\Release\BHS.dll
+D:\1Pteris Global Ltd\GUO WENYU\projects\US charlotte\SAC\CDIA_SAC\tests\Test_SortEngine\bin\Release\PALS.Configure.dll
+D:\1Pteris Global Ltd\GUO WENYU\projects\US charlotte\SAC\CDIA_SAC\tests\Test_SortEngine\bin\Release\PALS.dll
+D:\1Pteris Global Ltd\GUO WENYU\projects\US charlotte\SAC\CDIA_SAC\tests\Test_SortEngine\bin\Release\log4net.dll
+D:\1Pteris Global Ltd\GUO WENYU\projects\US charlotte\SAC\CDIA_SAC\tests\Test_SortEngine\bin\Release\BHS.pdb
+D:\1Pteris Global Ltd\GUO WENYU\projects\US charlotte\SAC\CDIA_SAC\tests\Test_SortEngine\bin\Release\BHS.xml
+D:\1Pteris Global Ltd\GUO WENYU\projects\US charlotte\SAC\CDIA_SAC\tests\Test_SortEngine\obj\Release\Test_SortEngine.csprojResolveAssemblyReference.cache
+D:\1Pteris Global Ltd\GUO WENYU\projects\US charlotte\SAC\CDIA_SAC\tests\Test_SortEngine\obj\Release\Test_SortEngine.Form1.resources
+D:\1Pteris Global Ltd\GUO WENYU\projects\US charlotte\SAC\CDIA_SAC\tests\Test_SortEngine\obj\Release\Test_CCTVEngine.Properties.Resources.resources
+D:\1Pteris Global Ltd\GUO WENYU\projects\US charlotte\SAC\CDIA_SAC\tests\Test_SortEngine\obj\Release\Test_SortEngine.csproj.GenerateResource.Cache

@@ -1,0 +1,8 @@
+D:\1Pteris Global Ltd\GUO WENYU\projects\US charlotte\SAC\CDIA_SAC\bin\Debug\PALS.PLCET3GW.exe
+D:\1Pteris Global Ltd\GUO WENYU\projects\US charlotte\SAC\CDIA_SAC\bin\Debug\PALS.PLCET3GW.pdb
+D:\1Pteris Global Ltd\GUO WENYU\projects\US charlotte\SAC\CDIA_SAC\src\Services\PALS.PLCET3GW\obj\Debug\PALS.PLCET3GW.csprojResolveAssemblyReference.cache
+D:\1Pteris Global Ltd\GUO WENYU\projects\US charlotte\SAC\CDIA_SAC\src\Services\PALS.PLCET3GW\obj\Debug\PALS.PLCET3GW.ProjectInstaller.resources
+D:\1Pteris Global Ltd\GUO WENYU\projects\US charlotte\SAC\CDIA_SAC\src\Services\PALS.PLCET3GW\obj\Debug\PALS.PLCET3GW.PLCET3GW.resources
+D:\1Pteris Global Ltd\GUO WENYU\projects\US charlotte\SAC\CDIA_SAC\src\Services\PALS.PLCET3GW\obj\Debug\PALS.PLCET3GW.csproj.GenerateResource.Cache
+D:\1Pteris Global Ltd\GUO WENYU\projects\US charlotte\SAC\CDIA_SAC\src\Services\PALS.PLCET3GW\obj\Debug\PALS.PLCET3GW.exe
+D:\1Pteris Global Ltd\GUO WENYU\projects\US charlotte\SAC\CDIA_SAC\src\Services\PALS.PLCET3GW\obj\Debug\PALS.PLCET3GW.pdb

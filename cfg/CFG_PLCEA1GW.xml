@@ -4,7 +4,7 @@
   <log4net>
     <!-- Define some output appenders -->
     <appender name="RollingLogFile" type="log4net.Appender.RollingFileAppender">
-      <param name="File" value="${PALS_LOG}\\SCPLCEM1.log" />
+      <param name="File" value="${PALS_LOG}\\PLCEA1GW.log" />
       <param name="AppendToFile" value="True" />
       <param name="DatePattern" value=".yyyyMMdd" />
       <param name="RollingStyle" value="Date" />
@@ -40,7 +40,7 @@
   </log4net>
 
   <configSet name="GlobalContext">
-    <appName>SCPLCEM1</appName>
+    <appName>PLCEA1GW</appName>
     <company>PterisGlobal</company>
     <department>EST-CSD</department>
     <author>SCLeong</author>
@@ -53,13 +53,13 @@
     <reconnectTimeout>10000</reconnectTimeout>
     <!--Maximum length of name is 1~8 characters-->
     <!-- SAC Server 1 IP: 10.200.207.81, PLC01 IP: 10.200.207.129 -->
-    <localNode name="SCPLCEM1" ip="10.0.10.249" port="0"/>
+    <localNode name="PLCEA1GW" ip="127.0.0.1" port="0"/>
     <remoteNodes>
       <!--SocketConnector object is able to connect to multiple remote TCP servers-->
       <!--If there are more than one TCP server, just add following server element accordingly-->
       <!--Maximum length of name is 8 characters-->
       <!-- SAC Server 1 IP: 10.200.207.81, PLC01 IP: 10.200.207.129 -->
-      <server name="MSGROUTE" ip="10.0.10.249" port="26214"/>
+      <server name="MSGROUTE" ip="127.0.0.1" port="26214"/>
     </remoteNodes>
   </configSet>
   
@@ -72,7 +72,7 @@
     <configSet name="TCPServer">
       <threadInterval>10</threadInterval>
       <!-- SAC Server 1 IP: 10.200.207.81, PLC01 IP: 10.200.207.129 -->
-      <localNode name="SCPLCEM1" ip="10.0.10.249" port="44810"/>
+      <localNode name="PLCEA1GW" ip="127.0.0.1" port="44810"/>
       <!--The minimum allowed client connections must be 1, only one remote TCP client is allowed to connect to current SAC2PLCGW service.-->
       <maxConnections>1</maxConnections>
     </configSet>
@@ -81,10 +81,10 @@
       <isAutoReconnect>True</isAutoReconnect>
       <reconnectTimeout>20000</reconnectTimeout>
       <!--Maximum length of name is 1~8 characters-->
-      <localNode name="SCPLCEM1" ip="10.0.10.249" port="0"/>
+      <localNode name="PLCEA1GW" ip="127.0.0.1" port="0"/>
       <remoteNodes>
         <!--Maximum length of name is 8 characters-->
-        <server name="PLCEM1" ip="10.0.10.249" port="44818"/>
+        <server name="PLCEA1" ip="127.0.0.1" port="44818"/>
       </remoteNodes>
     </configSet>
   </configSet>
@@ -94,7 +94,7 @@
          1) no RegisterSession Request received TCP connection has been opened for 5sec;
          2) no RegisterSession Reply returned from remote after Request has been sent for 5sec.-->
     <registerSessionTimeout>5000</registerSessionTimeout>
-    <!-- SenderContext = SCPLCEM1, Array of 8 USINT -->
+    <!-- SenderContext = PLCEA1GW, Array of 8 USINT -->
     <senderContext>83,65,67,50,80,76,67,49</senderContext>
     <!-- Success status value = 0x0000, 4-byte integer -->
     <successStatus>0,0,0,0</successStatus>
@@ -145,7 +145,7 @@
   <configSet name="[Channel:GW2Internal]PALS.Net.Filters.Application.AppClient">
     <threadInterval>100</threadInterval>
     <!--Maximum length of clientAppCode is 8 characters-->
-    <clientAppCode>SCPLCEM1</clientAppCode>
+    <clientAppCode>PLCEA1GW</clientAppCode>
     <!--connectionConfirmTimeout value must bigger than the same parameter of bottom layer (RFC1006)-->
     <connectionConfirmTimeout>3000</connectionConfirmTimeout>
     <connectionRequestRetries>3</connectionRequestRetries>
@@ -156,7 +156,7 @@
   <configSet name="[Channel:GW2External]PALS.Net.Filters.Application.AppClient">
     <threadInterval>100</threadInterval>
     <!--Maximum length of clientAppCode is 8 characters-->
-    <clientAppCode>SCPLCEM1</clientAppCode>
+    <clientAppCode>PLCEA1GW</clientAppCode>
     <!--connectionConfirmTimeout value must bigger than the same parameter of bottom layer (RFC1006)-->
     <connectionConfirmTimeout>3000</connectionConfirmTimeout>
     <connectionRequestRetries>3</connectionRequestRetries>
@@ -194,7 +194,7 @@
 
   <configSet name="BHS.Gateway.TCPClientTCPClientChains.Messages.Handlers.MessageHandler">
     <!-- INTM message (local) sender, max 8 characters-->
-    <sender>SCPLCEM1</sender>
+    <sender>PLCEA1GW</sender>
     <!-- INTM message (remote) receiver, max 8 characters-->
     <receiver>SORTENGN</receiver>
   </configSet>

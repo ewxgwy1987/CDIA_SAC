@@ -26,3 +26,17 @@ D:\8. Projects\2. Y2012_S01A1203800_Charlotte\4. Sources\CDIA_SAC\tests\Test_SAC
 D:\8. Projects\2. Y2012_S01A1203800_Charlotte\4. Sources\CDIA_SAC\tests\Test_SAC2PLCGW\obj\Debug\Test_SAC2PLCGW.Form1.resources
 D:\8. Projects\2. Y2012_S01A1203800_Charlotte\4. Sources\CDIA_SAC\tests\Test_SAC2PLCGW\obj\Debug\Test_CCTVGW.Properties.Resources.resources
 D:\8. Projects\2. Y2012_S01A1203800_Charlotte\4. Sources\CDIA_SAC\tests\Test_SAC2PLCGW\obj\Debug\Test_SAC2PLCGW.csproj.GenerateResource.Cache
+D:\1Pteris Global Ltd\GUO WENYU\projects\US charlotte\SAC\CDIA_SAC\tests\Test_SAC2PLCGW\bin\Debug\Test_CCTVGW.exe
+D:\1Pteris Global Ltd\GUO WENYU\projects\US charlotte\SAC\CDIA_SAC\tests\Test_SAC2PLCGW\bin\Debug\Test_CCTVGW.pdb
+D:\1Pteris Global Ltd\GUO WENYU\projects\US charlotte\SAC\CDIA_SAC\tests\Test_SAC2PLCGW\bin\Debug\BHS.dll
+D:\1Pteris Global Ltd\GUO WENYU\projects\US charlotte\SAC\CDIA_SAC\tests\Test_SAC2PLCGW\bin\Debug\PALS.Configure.dll
+D:\1Pteris Global Ltd\GUO WENYU\projects\US charlotte\SAC\CDIA_SAC\tests\Test_SAC2PLCGW\bin\Debug\PALS.dll
+D:\1Pteris Global Ltd\GUO WENYU\projects\US charlotte\SAC\CDIA_SAC\tests\Test_SAC2PLCGW\bin\Debug\log4net.dll
+D:\1Pteris Global Ltd\GUO WENYU\projects\US charlotte\SAC\CDIA_SAC\tests\Test_SAC2PLCGW\bin\Debug\BHS.pdb
+D:\1Pteris Global Ltd\GUO WENYU\projects\US charlotte\SAC\CDIA_SAC\tests\Test_SAC2PLCGW\bin\Debug\BHS.xml
+D:\1Pteris Global Ltd\GUO WENYU\projects\US charlotte\SAC\CDIA_SAC\tests\Test_SAC2PLCGW\obj\Debug\Test_SAC2PLCGW.csprojResolveAssemblyReference.cache
+D:\1Pteris Global Ltd\GUO WENYU\projects\US charlotte\SAC\CDIA_SAC\tests\Test_SAC2PLCGW\obj\Debug\Test_SAC2PLCGW.Form1.resources
+D:\1Pteris Global Ltd\GUO WENYU\projects\US charlotte\SAC\CDIA_SAC\tests\Test_SAC2PLCGW\obj\Debug\Test_CCTVGW.Properties.Resources.resources
+D:\1Pteris Global Ltd\GUO WENYU\projects\US charlotte\SAC\CDIA_SAC\tests\Test_SAC2PLCGW\obj\Debug\Test_SAC2PLCGW.csproj.GenerateResource.Cache
+D:\1Pteris Global Ltd\GUO WENYU\projects\US charlotte\SAC\CDIA_SAC\tests\Test_SAC2PLCGW\obj\Debug\Test_CCTVGW.exe
+D:\1Pteris Global Ltd\GUO WENYU\projects\US charlotte\SAC\CDIA_SAC\tests\Test_SAC2PLCGW\obj\Debug\Test_CCTVGW.pdb

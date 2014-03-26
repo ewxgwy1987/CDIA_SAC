@@ -1,0 +1,14 @@
+D:\1Pteris Global Ltd\GUO WENYU\projects\US charlotte\SAC\CDIA_SAC\src\Services\PALS.SCPLCEM3GW\bin\Release\PALS.SCPLCEM3GW.exe
+D:\1Pteris Global Ltd\GUO WENYU\projects\US charlotte\SAC\CDIA_SAC\src\Services\PALS.SCPLCEM3GW\bin\Release\PALS.SCPLCEM3GW.pdb
+D:\1Pteris Global Ltd\GUO WENYU\projects\US charlotte\SAC\CDIA_SAC\src\Services\PALS.SCPLCEM3GW\bin\Release\BHS.dll
+D:\1Pteris Global Ltd\GUO WENYU\projects\US charlotte\SAC\CDIA_SAC\src\Services\PALS.SCPLCEM3GW\bin\Release\PALS.dll
+D:\1Pteris Global Ltd\GUO WENYU\projects\US charlotte\SAC\CDIA_SAC\src\Services\PALS.SCPLCEM3GW\bin\Release\PALS.Configure.dll
+D:\1Pteris Global Ltd\GUO WENYU\projects\US charlotte\SAC\CDIA_SAC\src\Services\PALS.SCPLCEM3GW\bin\Release\log4net.dll
+D:\1Pteris Global Ltd\GUO WENYU\projects\US charlotte\SAC\CDIA_SAC\src\Services\PALS.SCPLCEM3GW\bin\Release\BHS.pdb
+D:\1Pteris Global Ltd\GUO WENYU\projects\US charlotte\SAC\CDIA_SAC\src\Services\PALS.SCPLCEM3GW\bin\Release\BHS.xml
+D:\1Pteris Global Ltd\GUO WENYU\projects\US charlotte\SAC\CDIA_SAC\src\Services\PALS.SCPLCEM3GW\obj\Release\PALS.SCPLCEM3GW.csprojResolveAssemblyReference.cache
+D:\1Pteris Global Ltd\GUO WENYU\projects\US charlotte\SAC\CDIA_SAC\src\Services\PALS.SCPLCEM3GW\obj\Release\PALS.SCPLCEM3GW.ProjectInstaller.resources
+D:\1Pteris Global Ltd\GUO WENYU\projects\US charlotte\SAC\CDIA_SAC\src\Services\PALS.SCPLCEM3GW\obj\Release\PALS.SCPLCEM3GW.SCPLCEM3GW.resources
+D:\1Pteris Global Ltd\GUO WENYU\projects\US charlotte\SAC\CDIA_SAC\src\Services\PALS.SCPLCEM3GW\obj\Release\PALS.SCPLCEM3GW.csproj.GenerateResource.Cache
+D:\1Pteris Global Ltd\GUO WENYU\projects\US charlotte\SAC\CDIA_SAC\src\Services\PALS.SCPLCEM3GW\obj\Release\PALS.SCPLCEM3GW.exe
+D:\1Pteris Global Ltd\GUO WENYU\projects\US charlotte\SAC\CDIA_SAC\src\Services\PALS.SCPLCEM3GW\obj\Release\PALS.SCPLCEM3GW.pdb

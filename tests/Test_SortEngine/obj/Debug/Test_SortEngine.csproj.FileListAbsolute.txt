@@ -32,5 +32,17 @@ F:\1Pteris Global Ltd\GUO WENYU\projects\US charlotte\Charlotte Source Code\CDIA
 F:\1Pteris Global Ltd\GUO WENYU\projects\US charlotte\Charlotte Source Code\CDIA_SAC\tests\Test_SortEngine\obj\Debug\Test_CCTVEngine.pdb
 F:\1Pteris Global Ltd\GUO WENYU\projects\US charlotte\SAC\CDIA_SAC\tests\Test_SortEngine\obj\Debug\Test_CCTVEngine.exe
 F:\1Pteris Global Ltd\GUO WENYU\projects\US charlotte\SAC\CDIA_SAC\tests\Test_SortEngine\obj\Debug\Test_CCTVEngine.pdb
+D:\1Pteris Global Ltd\GUO WENYU\projects\US charlotte\SAC\CDIA_SAC\tests\Test_SortEngine\bin\Debug\Test_CCTVEngine.exe
+D:\1Pteris Global Ltd\GUO WENYU\projects\US charlotte\SAC\CDIA_SAC\tests\Test_SortEngine\bin\Debug\Test_CCTVEngine.pdb
+D:\1Pteris Global Ltd\GUO WENYU\projects\US charlotte\SAC\CDIA_SAC\tests\Test_SortEngine\bin\Debug\BHS.dll
+D:\1Pteris Global Ltd\GUO WENYU\projects\US charlotte\SAC\CDIA_SAC\tests\Test_SortEngine\bin\Debug\PALS.Configure.dll
+D:\1Pteris Global Ltd\GUO WENYU\projects\US charlotte\SAC\CDIA_SAC\tests\Test_SortEngine\bin\Debug\PALS.dll
+D:\1Pteris Global Ltd\GUO WENYU\projects\US charlotte\SAC\CDIA_SAC\tests\Test_SortEngine\bin\Debug\log4net.dll
+D:\1Pteris Global Ltd\GUO WENYU\projects\US charlotte\SAC\CDIA_SAC\tests\Test_SortEngine\bin\Debug\BHS.pdb
+D:\1Pteris Global Ltd\GUO WENYU\projects\US charlotte\SAC\CDIA_SAC\tests\Test_SortEngine\bin\Debug\BHS.xml
+D:\1Pteris Global Ltd\GUO WENYU\projects\US charlotte\SAC\CDIA_SAC\tests\Test_SortEngine\obj\Debug\Test_SortEngine.csprojResolveAssemblyReference.cache
+D:\1Pteris Global Ltd\GUO WENYU\projects\US charlotte\SAC\CDIA_SAC\tests\Test_SortEngine\obj\Debug\Test_SortEngine.Form1.resources
+D:\1Pteris Global Ltd\GUO WENYU\projects\US charlotte\SAC\CDIA_SAC\tests\Test_SortEngine\obj\Debug\Test_CCTVEngine.Properties.Resources.resources
+D:\1Pteris Global Ltd\GUO WENYU\projects\US charlotte\SAC\CDIA_SAC\tests\Test_SortEngine\obj\Debug\Test_SortEngine.csproj.GenerateResource.Cache
 D:\1Pteris Global Ltd\GUO WENYU\projects\US charlotte\SAC\CDIA_SAC\tests\Test_SortEngine\obj\Debug\Test_CCTVEngine.exe
 D:\1Pteris Global Ltd\GUO WENYU\projects\US charlotte\SAC\CDIA_SAC\tests\Test_SortEngine\obj\Debug\Test_CCTVEngine.pdb

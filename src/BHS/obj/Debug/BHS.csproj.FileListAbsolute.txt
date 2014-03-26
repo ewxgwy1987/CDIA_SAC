@@ -25,3 +25,9 @@ D:\8. Projects\2. Y2012_S01A1203800_Charlotte\4. Sources\CDIA_SAC\bin\Debug\BHS.
 D:\8. Projects\2. Y2012_S01A1203800_Charlotte\4. Sources\CDIA_SAC\src\BHS\obj\Debug\ResolveAssemblyReference.cache
 D:\8. Projects\2. Y2012_S01A1203800_Charlotte\4. Sources\CDIA_SAC\src\BHS\obj\Debug\BHS.dll
 D:\8. Projects\2. Y2012_S01A1203800_Charlotte\4. Sources\CDIA_SAC\src\BHS\obj\Debug\BHS.pdb
+D:\1Pteris Global Ltd\GUO WENYU\projects\US charlotte\SAC\CDIA_SAC\bin\Debug\BHS.dll
+D:\1Pteris Global Ltd\GUO WENYU\projects\US charlotte\SAC\CDIA_SAC\bin\Debug\BHS.pdb
+D:\1Pteris Global Ltd\GUO WENYU\projects\US charlotte\SAC\CDIA_SAC\bin\Debug\BHS.XML
+D:\1Pteris Global Ltd\GUO WENYU\projects\US charlotte\SAC\CDIA_SAC\src\BHS\obj\Debug\BHS.csprojResolveAssemblyReference.cache
+D:\1Pteris Global Ltd\GUO WENYU\projects\US charlotte\SAC\CDIA_SAC\src\BHS\obj\Debug\BHS.dll
+D:\1Pteris Global Ltd\GUO WENYU\projects\US charlotte\SAC\CDIA_SAC\src\BHS\obj\Debug\BHS.pdb

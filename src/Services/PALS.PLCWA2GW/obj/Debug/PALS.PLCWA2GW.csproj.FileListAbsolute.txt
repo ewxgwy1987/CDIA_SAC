@@ -1,0 +1,8 @@
+D:\1Pteris Global Ltd\GUO WENYU\projects\US charlotte\SAC\CDIA_SAC\bin\Debug\PALS.PLCWA2GW.exe
+D:\1Pteris Global Ltd\GUO WENYU\projects\US charlotte\SAC\CDIA_SAC\bin\Debug\PALS.PLCWA2GW.pdb
+D:\1Pteris Global Ltd\GUO WENYU\projects\US charlotte\SAC\CDIA_SAC\src\Services\PALS.PLCWA2GW\obj\Debug\PALS.PLCWA2GW.csprojResolveAssemblyReference.cache
+D:\1Pteris Global Ltd\GUO WENYU\projects\US charlotte\SAC\CDIA_SAC\src\Services\PALS.PLCWA2GW\obj\Debug\PALS.PLCWA2GW.ProjectInstaller.resources
+D:\1Pteris Global Ltd\GUO WENYU\projects\US charlotte\SAC\CDIA_SAC\src\Services\PALS.PLCWA2GW\obj\Debug\PALS.PLCWA2GW.PLCWA2GW.resources
+D:\1Pteris Global Ltd\GUO WENYU\projects\US charlotte\SAC\CDIA_SAC\src\Services\PALS.PLCWA2GW\obj\Debug\PALS.PLCWA2GW.csproj.GenerateResource.Cache
+D:\1Pteris Global Ltd\GUO WENYU\projects\US charlotte\SAC\CDIA_SAC\src\Services\PALS.PLCWA2GW\obj\Debug\PALS.PLCWA2GW.exe
+D:\1Pteris Global Ltd\GUO WENYU\projects\US charlotte\SAC\CDIA_SAC\src\Services\PALS.PLCWA2GW\obj\Debug\PALS.PLCWA2GW.pdb

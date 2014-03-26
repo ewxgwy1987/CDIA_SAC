@@ -11,3 +11,17 @@ D:\My Documents\Visual Studio 2008\Projects\PGL\Project\S01A09028Y_Phoenix T3S &
 D:\My Documents\Visual Studio 2008\Projects\PGL\Project\S01A09028Y_Phoenix T3S & T4N\PSHIA_SAC\tests\Test_SAC2PLCGW\obj\Release\Test_SAC2PLCGW.csproj.GenerateResource.Cache
 D:\My Documents\Visual Studio 2008\Projects\PGL\Project\S01A09028Y_Phoenix T3S & T4N\PSHIA_SAC\tests\Test_SAC2PLCGW\obj\Release\Test_CCTVGW.exe
 D:\My Documents\Visual Studio 2008\Projects\PGL\Project\S01A09028Y_Phoenix T3S & T4N\PSHIA_SAC\tests\Test_SAC2PLCGW\obj\Release\Test_CCTVGW.pdb
+D:\1Pteris Global Ltd\GUO WENYU\projects\US charlotte\SAC\CDIA_SAC\tests\Test_SAC2PLCGW\bin\Release\Test_CCTVGW.exe
+D:\1Pteris Global Ltd\GUO WENYU\projects\US charlotte\SAC\CDIA_SAC\tests\Test_SAC2PLCGW\bin\Release\Test_CCTVGW.pdb
+D:\1Pteris Global Ltd\GUO WENYU\projects\US charlotte\SAC\CDIA_SAC\tests\Test_SAC2PLCGW\bin\Release\BHS.dll
+D:\1Pteris Global Ltd\GUO WENYU\projects\US charlotte\SAC\CDIA_SAC\tests\Test_SAC2PLCGW\bin\Release\PALS.Configure.dll
+D:\1Pteris Global Ltd\GUO WENYU\projects\US charlotte\SAC\CDIA_SAC\tests\Test_SAC2PLCGW\bin\Release\PALS.dll
+D:\1Pteris Global Ltd\GUO WENYU\projects\US charlotte\SAC\CDIA_SAC\tests\Test_SAC2PLCGW\bin\Release\log4net.dll
+D:\1Pteris Global Ltd\GUO WENYU\projects\US charlotte\SAC\CDIA_SAC\tests\Test_SAC2PLCGW\bin\Release\BHS.pdb
+D:\1Pteris Global Ltd\GUO WENYU\projects\US charlotte\SAC\CDIA_SAC\tests\Test_SAC2PLCGW\bin\Release\BHS.xml
+D:\1Pteris Global Ltd\GUO WENYU\projects\US charlotte\SAC\CDIA_SAC\tests\Test_SAC2PLCGW\obj\Release\Test_SAC2PLCGW.csprojResolveAssemblyReference.cache
+D:\1Pteris Global Ltd\GUO WENYU\projects\US charlotte\SAC\CDIA_SAC\tests\Test_SAC2PLCGW\obj\Release\Test_SAC2PLCGW.Form1.resources
+D:\1Pteris Global Ltd\GUO WENYU\projects\US charlotte\SAC\CDIA_SAC\tests\Test_SAC2PLCGW\obj\Release\Test_CCTVGW.Properties.Resources.resources
+D:\1Pteris Global Ltd\GUO WENYU\projects\US charlotte\SAC\CDIA_SAC\tests\Test_SAC2PLCGW\obj\Release\Test_SAC2PLCGW.csproj.GenerateResource.Cache
+D:\1Pteris Global Ltd\GUO WENYU\projects\US charlotte\SAC\CDIA_SAC\tests\Test_SAC2PLCGW\obj\Release\Test_CCTVGW.exe
+D:\1Pteris Global Ltd\GUO WENYU\projects\US charlotte\SAC\CDIA_SAC\tests\Test_SAC2PLCGW\obj\Release\Test_CCTVGW.pdb

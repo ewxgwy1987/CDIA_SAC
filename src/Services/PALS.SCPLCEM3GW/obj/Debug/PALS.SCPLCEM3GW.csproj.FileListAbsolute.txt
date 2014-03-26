@@ -8,3 +8,11 @@ D:\8. Projects\2. Y2012_S01A1203800_Charlotte\4. Sources\CDIA_SAC\src\Services\P
 D:\8. Projects\2. Y2012_S01A1203800_Charlotte\4. Sources\CDIA_SAC\src\Services\PALS.SCPLCEM3GW\obj\Debug\PALS.SCPLCEM3GW.pdb
 D:\8. Projects\2. Y2012_S01A1203800_Charlotte\4. Sources\CDIA_SAC\bin\Release\PALS.SCPLCEM3GW.exe
 D:\8. Projects\2. Y2012_S01A1203800_Charlotte\4. Sources\CDIA_SAC\bin\Release\PALS.SCPLCEM3GW.pdb
+D:\1Pteris Global Ltd\GUO WENYU\projects\US charlotte\SAC\CDIA_SAC\bin\Release\PALS.SCPLCEM3GW.exe
+D:\1Pteris Global Ltd\GUO WENYU\projects\US charlotte\SAC\CDIA_SAC\bin\Release\PALS.SCPLCEM3GW.pdb
+D:\1Pteris Global Ltd\GUO WENYU\projects\US charlotte\SAC\CDIA_SAC\src\Services\PALS.SCPLCEM3GW\obj\Debug\PALS.SCPLCEM3GW.csprojResolveAssemblyReference.cache
+D:\1Pteris Global Ltd\GUO WENYU\projects\US charlotte\SAC\CDIA_SAC\src\Services\PALS.SCPLCEM3GW\obj\Debug\PALS.SCPLCEM3GW.ProjectInstaller.resources
+D:\1Pteris Global Ltd\GUO WENYU\projects\US charlotte\SAC\CDIA_SAC\src\Services\PALS.SCPLCEM3GW\obj\Debug\PALS.SCPLCEM3GW.SCPLCEM3GW.resources
+D:\1Pteris Global Ltd\GUO WENYU\projects\US charlotte\SAC\CDIA_SAC\src\Services\PALS.SCPLCEM3GW\obj\Debug\PALS.SCPLCEM3GW.csproj.GenerateResource.Cache
+D:\1Pteris Global Ltd\GUO WENYU\projects\US charlotte\SAC\CDIA_SAC\src\Services\PALS.SCPLCEM3GW\obj\Debug\PALS.SCPLCEM3GW.exe
+D:\1Pteris Global Ltd\GUO WENYU\projects\US charlotte\SAC\CDIA_SAC\src\Services\PALS.SCPLCEM3GW\obj\Debug\PALS.SCPLCEM3GW.pdb

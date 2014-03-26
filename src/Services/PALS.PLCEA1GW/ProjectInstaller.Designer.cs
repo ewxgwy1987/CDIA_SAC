@@ -1,4 +1,4 @@
-﻿namespace PALS.SCPLCWM3GW
+﻿namespace PALS.PLCEA1GW
 {
     partial class ProjectInstaller
     {

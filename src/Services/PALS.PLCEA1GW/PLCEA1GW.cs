@@ -68,7 +68,7 @@ namespace PALS.PLCEA1GW
                     if (xmlSettingFile == null)
                         throw new Exception("XML configuration file (CFG_PLCEA1GW.xml) could not be found! " +
                                     "Please verify whether the Windows environment parameter (PALS_BASE) has been defined, " +
-                                    "or file CFG_SCPLCWM3GW.xml is existing in the folder {PALS_BASE}\\SAC\\");
+                                    "or file CFG_PLCEA1GW.xml is existing in the folder {PALS_BASE}\\SAC\\");
                 }
 
                 string xmlTelegramFile = PALS.Utilities.Functions.GetXMLFileFullName("PALS_BASE", "CFG_Telegrams.xml", 5);
