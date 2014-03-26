@@ -32,3 +32,5 @@ F:\1Pteris Global Ltd\GUO WENYU\projects\US charlotte\Charlotte Source Code\CDIA
 F:\1Pteris Global Ltd\GUO WENYU\projects\US charlotte\Charlotte Source Code\CDIA_SAC\tests\Test_SortEngine\obj\Debug\Test_CCTVEngine.pdb
 F:\1Pteris Global Ltd\GUO WENYU\projects\US charlotte\SAC\CDIA_SAC\tests\Test_SortEngine\obj\Debug\Test_CCTVEngine.exe
 F:\1Pteris Global Ltd\GUO WENYU\projects\US charlotte\SAC\CDIA_SAC\tests\Test_SortEngine\obj\Debug\Test_CCTVEngine.pdb
+D:\1Pteris Global Ltd\GUO WENYU\projects\US charlotte\SAC\CDIA_SAC\tests\Test_SortEngine\obj\Debug\Test_CCTVEngine.exe
+D:\1Pteris Global Ltd\GUO WENYU\projects\US charlotte\SAC\CDIA_SAC\tests\Test_SortEngine\obj\Debug\Test_CCTVEngine.pdb
