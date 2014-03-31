@@ -257,8 +257,6 @@
       <!-- 0101, SRQ - Running Status Request Message -->
       <!-- 0102, SRP - Running Status Reply Message -->
       <!-- 0103, INTM - Intermediate Message -->
-      <!-- 0104, STR - Service Start Command Message -->
-      <!-- 0105, STO - Service Stop Command Message -->
       <!-- 0108, CSNF - Connection Status Notification Message -->
       <!-- 0109, GRNF - Gateway Ready Notification Message -->
       

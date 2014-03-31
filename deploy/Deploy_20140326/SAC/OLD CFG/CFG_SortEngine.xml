@@ -53,12 +53,12 @@
     <!--Maximum length of name is 1~8 characters-->
     <!-- SAC Server 1 IP: 10.200.208.81, PLC01 IP: 10.200.208.135, PLC02 IP: 10.200.208.137, PLC03 IP: 10.200.208.139,
       PLC04 IP: 10.200.208.141, PLC05 IP: 10.200.208.43, PLC06 IP: 10.200.208.145, PLCHM IP: 10.200.208.147 -->
-    <localNode name="SORTENGN" ip="10.0.10.24" port="0"/>
+    <localNode name="SORTENGN" ip="127.0.0.1" port="0"/>
     <remoteNodes>
       <!--SocketConnector object is able to connect to multiple remote TCP servers-->
       <!--If there are more than one TCP server, just add following server element accordingly-->
       <!--Maximum length of name is 8 characters-->
-      <server name="MSGROUTE" ip="10.0.10.24" port="26214"/>
+      <server name="MSGROUTE" ip="127.0.0.1" port="26214"/>
     </remoteNodes>
   </configSet>
 
@@ -103,10 +103,10 @@
     <!-- INTM message (local) sender, max 8 characters-->
     <sender>SORTENGN</sender>
     <!-- INTM message (remote) receiver, max 8 characters-->
-    <afai_Receiver>SAC2PLC2</afai_Receiver>
-    <crai_Receiver>SAC2PLC2</crai_Receiver>
-    <fbti_Receiver>SAC2PLC2</fbti_Receiver>
-    <fpti_Receiver>SAC2PLC2</fpti_Receiver>
+    <afai_Receiver>SCPLCSM1</afai_Receiver>
+    <crai_Receiver>SCPLCSM1</crai_Receiver>
+    <fbti_Receiver>SCPLCSM1</fbti_Receiver>
+    <fpti_Receiver>SCPLCSM1</fpti_Receiver>
     <!-- Enable of sending from SortEngn.  Possible values - TRUE, True, true, FALSE, False, false-->
     <enable_Sending>True</enable_Sending>
     <enable_Sending_DLPS>True</enable_Sending_DLPS>
@@ -117,7 +117,7 @@
     <!-- Use "," as a seperator if more than one, e.g SF1,SF2-->
     <dlps_Subscriber_ATR>SF1,SF2</dlps_Subscriber_ATR>
     <!-- Use "," as separator if more than one, e.g ATR1, ATR2. At where IRD will be reply by SAC. -->
-    <ird_Subscriber>3102,3202,3302,3402</ird_Subscriber>
+    <ird_Subscriber>3302,3102</ird_Subscriber>
     <!-- Enable sending of IRD from SAC Engine -->
     <enable_Sending_IRD>True</enable_Sending_IRD>
   </configSet>
@@ -125,9 +125,10 @@
   <configSet name="BHS.Engine.TCPClientChains.DataPersistor.Database.Persistor">
     <!--Data Source=SACDB, value needs to be changed to actual SQL Server computer name.-->
     <!--<connectionString>Persist Security Info=False;User ID=sa;Pwd=DBAdm1n@BHS.irel;Initial Catalog=BHSDB_Charlotte;Data Source=CSI-EENIE;Packet Size=4096</connectionString>-->
-    <!--<connectionString>Persist Security Info=False;User ID=sa;Pwd=DBAdm1n@BHS.irel;Initial Catalog=BHSDB;Data Source=BHSDB;Packet Size=4096</connectionString>-->
-    <connectionString>Persist Security Info=False;User ID=sa;Pwd=DBAdm1n@BHS.irel;Initial Catalog=BHSDB;Data Source=CS09169;Packet Size=4096</connectionString>
-    
+    <!--<connectionString>Persist Security Info=False;User ID=sa;Pwd=DBAdm1n@BHS.irel;Initial Catalog=BHSDB;Data Source=CSI-SCLEONG\SQLEXPRESS;Packet Size=4096</connectionString>-->
+	<connectionString>Persist Security Info=False;User ID=sa;Pwd=DBAdm1n@BHS.irel;Initial Catalog=BHSDB;Data Source=SG10031CSD6782;Packet Size=4096</connectionString>
+
+	
     <stp_SAC_GIDUsed>stp_SAC_GIDUSED</stp_SAC_GIDUsed>    
     <stp_SAC_ItemScreened>stp_SAC_ITEMSCREENED</stp_SAC_ItemScreened>    
     <stp_SAC_ItemScanned>stp_SAC_ITEMSCANNED</stp_SAC_ItemScanned>

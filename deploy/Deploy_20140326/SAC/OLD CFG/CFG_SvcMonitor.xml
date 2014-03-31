@@ -36,13 +36,12 @@
 		<!--PALS.SvcMonitor can start or stop services if its isControllable is True. The start/stop-->
 		<!--sequence will follow the running sequence as this list. So PALS.SvcMonitor service-->
 		<!--must be put as the last one in this list.-->
-    <service serviceName="PALS.MessageRouter" processName="PALS.MessageRouter" machineName="CS09169" serverIP="10.0.10.24" isControllable="True"></service>
-    <service serviceName="PALS.SortEngine" processName="PALS.SortEngine" machineName="CS09169" serverIP="10.0.10.24" isControllable="True"></service>
-    <service serviceName="PALS.SCPLCEM1GW" processName="PALS.SCPLCEM1GW" machineName="CS09169" serverIP="10.0.10.24" isControllable="True"></service>
- 	<service serviceName="PALS.SCPLCEM2GW" processName="PALS.SCPLCEM2GW" machineName="CS09169" serverIP="10.0.10.24" isControllable="True"></service>
- 	<service serviceName="PALS.SCPLCEM3GW" processName="PALS.SCPLCEM3GW" machineName="CS09169" serverIP="10.0.10.24" isControllable="True"></service>
- 	<!--
-	<service serviceName="PALS.SCPLCEM4GW" processName="PALS.SCPLCEM4GW" machineName="SACCOM01" serverIP="10.0.10.24" isControllable="True"></service>
+    <service serviceName="PALS.MessageRouter" processName="PALS.MessageRouter" machineName="SACCOM01" serverIP="10.0.10.24" isControllable="True"></service>
+    <service serviceName="PALS.SortEngine" processName="PALS.SortEngine" machineName="SACCOM01" serverIP="10.0.10.24" isControllable="True"></service>
+    <service serviceName="PALS.SCPLCEM1GW" processName="PALS.SCPLCEM1GW" machineName="SACCOM01" serverIP="10.0.10.24" isControllable="True"></service>
+ 		<service serviceName="PALS.SCPLCEM2GW" processName="PALS.SCPLCEM2GW" machineName="SACCOM01" serverIP="10.0.10.24" isControllable="True"></service>
+ 		<service serviceName="PALS.SCPLCEM3GW" processName="PALS.SCPLCEM3GW" machineName="SACCOM01" serverIP="10.0.10.24" isControllable="True"></service>
+ 		<service serviceName="PALS.SCPLCEM4GW" processName="PALS.SCPLCEM4GW" machineName="SACCOM01" serverIP="10.0.10.24" isControllable="True"></service>
     <service serviceName="PALS.SCPLCOS1GW" processName="PALS.SCPLCOS1GW" machineName="SACCOM01" serverIP="10.0.10.24" isControllable="True"></service>
     <service serviceName="PALS.SCPLCSM1GW" processName="PALS.SCPLCSM1GW" machineName="SACCOM01" serverIP="10.0.10.24" isControllable="True"></service>
     <service serviceName="PALS.SCPLCSM2GW" processName="PALS.SCPLCSM2GW" machineName="SACCOM01" serverIP="10.0.10.24" isControllable="True"></service>
@@ -52,8 +51,7 @@
     <service serviceName="PALS.SCPLCWM1GW" processName="PALS.SCPLCWM1GW" machineName="SACCOM01" serverIP="10.0.10.24" isControllable="True"></service>
     <service serviceName="PALS.SCPLCWM2GW" processName="PALS.SCPLCWM2GW" machineName="SACCOM01" serverIP="10.0.10.24" isControllable="True"></service>
     <service serviceName="PALS.SCPLCWM3GW" processName="PALS.SCPLCWM3GW" machineName="SACCOM01" serverIP="10.0.10.24" isControllable="True"></service>
-    -->
-	<service serviceName="PALS.SvcMonitor" processName="PALS.SvcMonitor" machineName="CS09169" serverIP="10.0.10.24" isControllable="True"></service>
+    <service serviceName="PALS.SvcMonitor" processName="PALS.SvcMonitor" machineName="SACCOM01" serverIP="10.0.10.24" isControllable="True"></service>
 	</configSet>		
 	<configSet name="PALS.Net.Transports.TCP.TCPServer">
 		<threadInterval>10</threadInterval>
@@ -82,8 +80,8 @@
 		<maxSequenceNo>9999</maxSequenceNo>
 		<clients>
 			<!--The max length of client application code is 8.-->
-			<appCode>BHSCons1</appCode>
-			<appCode>BHSCons2</appCode>
+			<appCode>SCPLCEM1</appCode>
+			<appCode>SCPLCEM2</appCode>
 		</clients>
 	</configSet>
 	<configSet name="PALS.Net.Filters.SignOfLife.SOL">
